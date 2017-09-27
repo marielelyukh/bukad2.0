@@ -1,0 +1,19 @@
+<ion-view view-title="Головна" class="tax_templates">
+    <ion-content>
+        <ion-list class="item" ng-repeat="item in vm.templates">
+            <ion-item>
+                <div class="item-icon-left">
+                    <i  class="icon ion-ios-list-outline"></i>
+                </div>
+                <div class="item-icon-left" ui-sref="app.single_fop({template_data: item})">
+                    <h2>Звітність</h2>
+                    <p class="secondText">ЄСВ річний</p>
+                    <p class="date">Отримувач: {{item.getter}}</p>
+                </div>
+                <div class="item-icon-right" ng-click="vm.templateDelete(item.id)">
+                    <i  class="icon ion-trash-b"></i>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

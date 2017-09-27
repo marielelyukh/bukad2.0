@@ -1,0 +1,50 @@
+<ion-view class="login" >
+    <ion-content>
+        <p class="title">
+            Авторизація
+        </p>
+        <form>
+            <md-input-container class="md-block" flex>
+                <label for="email">Електронна пошта</label>
+                <input ng-model="vm.data.email"
+                       type="email"
+                       name="email"
+                       id="email"
+                       autocomplete="off"
+                       required>
+                <div ng-messages="vm.form.email.$error">
+                    <div class="error-block" ng-message="required">
+                        {{"ERROR_REQUIRED"|translate}}
+                    </div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" flex>
+                <label for="password">Пароль</label>
+                <input ng-model="vm.data.password"
+                       type="password"
+                       name="password"
+                       id="password"
+                       required>
+                <div ng-messages="vm.form.password.$error">
+                    <div class="error-block" ng-message="required">
+                        {{"ERROR_REQUIRED"|translate}}
+                    </div>
+                </div>
+            </md-input-container>
+        </form>
+        <div layout="column" layout-margin>
+            <md-button class=" md-raised waves-effect waves-light"
+                       style="background-color: grey; color: white"
+                       ng-click="vm.login()"
+                       aria-label="true">
+                Увійти
+            </md-button>
+        </div>
+        <!--<div class="link">-->
+            <!--<a  ng-click="vm.reset()">Відновити пароль</a>-->
+        <!--</div>-->
+        <div class="link">
+            <a ng-click="vm.signup()">Ви ще не зареєстровані?</a>
+        </div>
+    </ion-content>
+</ion-view>

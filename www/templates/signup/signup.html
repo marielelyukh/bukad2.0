@@ -1,0 +1,129 @@
+<ion-view class="signup">
+    <ion-content>
+        <p class="md-whiteframe-3dp title">
+            Реєстрація
+        </p>
+        <form style="margin-top: 25px">
+            <div>
+                <label style="color: #666666; font-size: 1em;">Ідентифікаційний код</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px" ng-model="vm.data.profile.ident_code" type="text" >
+                </md-input-container>
+            </div>
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Номер страхівника</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px" ng-model="vm.data.profile.insurance" type="text" >
+                </md-input-container>
+            </div>
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">ПІП</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px" ng-model="vm.data.profile.initials" type="text" >
+                </md-input-container>
+            </div>
+
+            <h4>Адреса:</h4>
+
+
+            <div>
+                <label style="color: #666666; font-size: 1em;">Область</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px" ng-model="vm.data.profile.state" type="text">
+                </md-input-container>
+            </div>
+
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Місто/район</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px" ng-model="vm.data.profile.city" type="text" >
+                </md-input-container>
+            </div>
+
+            <!--<md-input-container class="md-block" flex>-->
+                <!--<input ng-model="vm.data.profile.postcode" type="text" placeholder="Індекс">-->
+            <!--</md-input-container>-->
+
+            <h4>Деталі:</h4>
+
+            <div>
+                <label style="color: #666666; font-size: 1em;">Група єдиного податку:</label>
+                <md-input-container class="md-block" flex>
+                    <md-select style="margin-top: -25px" id="group" ng-model="vm.data.profile.group"
+                               name="group"
+                               aria-label="group">
+                        <md-option value="group1">1</md-option>
+                        <md-option value="group2">2</md-option>
+                        <md-option value="group3">3</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+
+            <div layout="row" layout-align="space-between center">
+            <span style="color: #666666; font-size: 1.1em">Особливий статус ФОП: <br>
+                <span class="secondText">(пенсіонер/інвалід)</span></span>
+            <div style="margin-top: 15px" layout="row" layout-align="space-around">
+                <md-checkbox id="first_group_special"
+                             ng-model="vm.data.profile.status"
+                             aria-label="first_group">
+                    <span style="color: black">Так</span>
+                </md-checkbox>
+            </div>
+            </div>
+
+            <div>
+                <label style="color: #666666; font-size: 1em;">Основний КВЄД</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px" ng-model="vm.data.profile.kved_code" type="text" >
+                </md-input-container>
+            </div>
+
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Код ДФС</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px" ng-model="vm.data.profile.dfs_code" type="text" >
+                </md-input-container>
+            </div>
+
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Код ПФУ</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px" ng-model="vm.data.profile.pfu_code" type="text" >
+                </md-input-container>
+            </div>
+
+
+
+
+            <h4>Дані акаунту:</h4>
+
+            <div>
+                <label style="color: #666666; font-size: 1em;">Електронна пошта</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px" ng-model="vm.data.email" type="text" >
+                </md-input-container>
+            </div>
+
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Пароль</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px" ng-model="vm.data.password" type="password" >
+                </md-input-container>
+            </div>
+
+
+
+        </form>
+        <div layout="column" class="link" layout-margin>
+            <div class="link">
+                <a style="text-decoration: none" ng-click="vm.signup()">>Продовжити</a>
+            </div>
+            <div class="link">
+               <span style="color: #333">У Вас вже є акаунт?</span>
+                <a  style="text-decoration: none"href="#/login">Увійти</a>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

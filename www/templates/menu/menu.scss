@@ -1,0 +1,18 @@
+.menu {
+    background-color: #ffffff;
+    ion-item,
+    ion-item.activated
+    {
+        color: #000000;
+        background-color: white;
+        //border-top: 1px solid black;
+        //border-bottom: 2px solid black;
+        &:first-of-type {
+            border-top: none;
+        }
+        .icon {
+            font-size: 1em;
+            color: black;
+        }
+    }
+}

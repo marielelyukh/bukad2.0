@@ -1,0 +1,38 @@
+.signup {
+    p.title {
+        color: #333;
+        padding: 5%;
+        text-align: center;
+        font-size: 1.8em;
+    }
+
+    form {
+        md-input-container{
+            input {
+                border-bottom: 1px solid grey;
+
+            }
+            label{
+                color: #333;
+                font-size: 1.1em;
+            }
+
+        }
+
+        padding: 0 20px;
+        .secondText {
+            color: gray;
+            font-size: 1em;
+        }
+    }
+
+    .link {
+        text-align: center;
+        color: #039BE5;
+        font-size: 1.2em;
+        a {
+            padding: 0 5px;
+            color: #039BE5;
+        }
+    }
+}

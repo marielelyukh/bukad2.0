@@ -1,0 +1,85 @@
+<ion-view view-title="Податок з найманих працівників" class="staff_tax">
+    <ion-content>
+        <form>
+            <div layout="row" style="margin-top: 20px" layout-align="space-between center">
+                <h4>Кількість найманиx працівників: <br><span style="color: #666666; font-size: 1em">(до 10 чоловік)</span> </h4>
+               <span style="height: 25px; width: 25px; border: 1px solid #666666"><span style="margin-left: 5px">{{vm.number}}</span></span>
+            </div>
+
+            <div layout="row" ng-repeat="input in inputs" layout-align="space-between center">
+                <h4>{{$index+1}}</h4>
+                <md-input-container class="md-block" flex>
+                <input style="margin-left: 20px; width: 80%;" ng-model="vm.data[$index].staff_salary" type="number">
+            </md-input-container>
+            <h4>грн</h4>
+                <i ng-show="inputs.length >= 2"
+                   ng-click="removeInput($index)"
+                   style="margin-left: 15px;  color: grey" class="icon fa fa-close " aria-hidden="true"></i>
+              </div>
+            <div layout="row" style="margin-top: 20px;" layout-align="end end">
+
+                <md-button class=" md-icon-button md-fab waves-effect waves-light"
+                           md-colors="{background: 'red-300'}"
+                           aria-label="true"
+                           ng-click="addInput()"
+                           ng-show="inputs.length < 10">
+
+                    <md-icon md-font-icon="fa fa-plus fa-lg" aria-hidden="true"></md-icon>
+                </md-button>
+
+            </div>
+
+            <div layout="column" layout-align="center center" class="link" layout-margin>
+                <md-button class=" md-raised waves-effect waves-light"
+                           style="background-color: grey; color: white"
+                           aria-label="true">
+                    Розрахувати дані
+                </md-button>
+            </div>
+            <div>
+                <label style="color: #666666; font-size: 1em;">Фонд ЗП, грн</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"  ng-model="vm.data.payer" type="text" >
+                </md-input-container>
+            </div>
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">ЄСВ наймані працівникі, грн</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"  ng-model="vm.data.int_number" type="text" >
+                </md-input-container>
+            </div>
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Військовий збір, грн</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"  ng-model="vm.data.insurance_number" type="text" >
+                </md-input-container>
+            </div>
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Прибутковий податок, грн</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"  ng-model="vm.data.fio" type="text" >
+                </md-input-container>
+            </div>
+
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Загальная сума податку (ЄСВ, ВЗ, Приб., грн)</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"  ng-model="vm.data.payer54" type="text" >
+                </md-input-container>
+            </div>
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Комісія</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"  ng-model="vm.data.fio1" type="text" >
+                </md-input-container>
+            </div>
+
+        </form>
+        <div layout="column" layout-align="center end" class="link" layout-margin>
+            <div class="link">
+                <a  ui-sref="app.pay_staff_tax({staff_tax: vm.data})">>Продовжити</a>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

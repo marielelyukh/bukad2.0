@@ -1,0 +1,62 @@
+<ion-view view-title="Сплата податку з найманих працівників" class="pay_staff_tax">
+    <ion-content>
+        <form>
+            <!--<md-input-container style="margin-top: 25px" class="md-block" flex>-->
+                <!--<input ng-model="vm.data.payer" type="text" maxlength="11" placeholder="Загальная сума податку (ЄСВ, ВЗ, Приб., грн)">-->
+            <!--</md-input-container>-->
+            <!--<md-input-container class="md-block" flex>-->
+                <!--<input ng-model="vm.data.int_number" type="number" maxlength="11" placeholder="Комісія">-->
+            <!--</md-input-container>-->
+
+
+            <h4 style="margin-top: 25px" >Сума до сплати:</h4>
+            <label style="color: #666666; font-size: 1.2em; ">Номер картки:</label>
+            <md-input-container class="md-block" flex>
+                <input ng-model="vm.data.requisites.card_number"
+                       ui-mask-placeholder
+                       ui-mask-placeholder-char="_"
+                       ui-mask="9999-9999-9999-9999"
+                >
+            </md-input-container>
+
+            <div layout="row" style="margin-top: 25px">
+                <span style="font-size: 1.2em; color:  #666666">Срок<br> дії:</span>
+                <md-input-container style="margin-left: 10px" class="md-block">
+                    <input style="width: 30px; height: 30px; font-size: 1.1em; border: 1px solid #666666; margin-top: -10px;"
+                           ng-model="vm.data.month" type="text"
+                    >
+                </md-input-container>
+                <md-input-container style="margin-left: 10px" class="md-block">
+                    <input style="width: 30px; height: 30px; font-size: 1.1em; border: 1px solid #666666; margin-top: -10px;"
+                           ng-model="vm.data.year" type="text"
+                    >
+                </md-input-container>
+                <span style="font-size: 1.2em; color:  #666666; margin-left: 10px">CVV2/<br>CVC2:</span>
+                <md-input-container style="margin-left: 10px" class="md-block">
+                    <input style="width: 50px; height: 30px; font-size: 1.3em; border: 1px solid #666666; margin-top: -10px;"
+                           ng-model="vm.data.cvv" type="text"
+                    >
+                </md-input-container>
+            </div>
+
+        </form>
+        <div layout="column" style="margin-top: 25px" layout-align="center center" class="link">
+            <md-checkbox ng-model="vm.data.receipt" aria-label="Checkbox 1">
+                <span style="color: black">Отримати квитанцію на пошту</span>
+            </md-checkbox>
+            <md-checkbox ng-model="vm.data.template" aria-label="Checkbox 2">
+                <span style="color: black">Створити шаблон</span>
+            </md-checkbox>
+
+        </div>
+        <div layout="column" style="margin-top: 25px" layout-align="center center" class="link">
+            <md-button class=" md-raised waves-effect waves-light BTN"
+                       ui-sref="app.main"
+                       aria-label="true">
+                Oплатити
+            </md-button>
+
+        </div>
+
+    </ion-content>
+</ion-view>

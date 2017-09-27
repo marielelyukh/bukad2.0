@@ -14,10 +14,22 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
+$dark:                            #212121 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+@import "www/templates/login/login";
+@import "www/templates/main/main";
+@import "www/templates/menu/menu";
+@import "www/templates/signup/signup";
+@import "www/templates/single_fop/single_fop";
+@import "www/templates/pay.single_fop/pay.single_fop";
+@import "www/templates/staff_tax/staff_tax";
+@import "www/templates/pay.staff_tax/pay.staff_tax";
+@import "www/templates/tax_templates/tax_templates";
+@import "www/templates/profile/profile";
+@import "www/img/helpers.scss/profile";
 

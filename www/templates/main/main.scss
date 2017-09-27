@@ -1,0 +1,23 @@
+.main {
+    color: black;
+    .item {
+
+        padding: 15px 10px;
+        h2 {
+            color: black;
+            font-size: 1.15em;
+            font-weight: bold;
+        }
+        .secondText {
+            color: gray;
+            font-size: 1em;
+        }
+        .icon {
+            font-size: 32px;
+        }
+        p {
+            color: black;
+            white-space: normal;
+        }
+    }
+}
