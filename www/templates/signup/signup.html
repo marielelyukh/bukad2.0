@@ -4,52 +4,206 @@
             Реєстрація
         </p>
         <form style="margin-top: 25px">
+            <h4>Дані акаунту:</h4>
+
             <div>
+                <label style="color: #666666; font-size: 1em;">Електронна пошта</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"
+                           ng-model="vm.data.email"
+                           aria-label="email"
+                           type="text" >
+                </md-input-container>
+            </div>
+
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Пароль</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"
+                           ng-model="vm.data.password"
+                           aria-label="password"
+                           type="password" >
+                </md-input-container>
+            </div>
+
+            <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">Ідентифікаційний код</label>
                 <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px" ng-model="vm.data.profile.ident_code" type="text" >
+                    <input style="margin-top: -25px"
+                           ng-model="vm.data.profile.ident_code"
+                           aria-label="ident_code"
+                           type="text" >
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Номер страхівника</label>
+                <label style="color: #666666; font-size: 1em;">Номер страхувальника</label>
                 <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px" ng-model="vm.data.profile.insurance" type="text" >
+                    <input style="margin-top: -25px"
+                           ng-model="vm.data.profile.insurance"
+                           aria-label="insurance"
+                           type="text" >
+                </md-input-container>
+            </div>
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Номер картки</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"
+                           ng-model="vm.data.profile.card_number"
+                           aria-label="card_number"
+                           type="text" >
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">ПІП</label>
                 <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px" ng-model="vm.data.profile.initials" type="text" >
+                    <input style="margin-top: -25px"
+                           ng-model="vm.data.profile.initials"
+                           aria-label="initials"
+                           type="text" >
                 </md-input-container>
             </div>
 
             <h4>Адреса:</h4>
 
+            <div>
+                <label style="color: #666666; font-size: 1em;">Індекс</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"
+                           ng-model="vm.data.profile.postcode"
+                           aria-label="postcode"
+                           type="number" >
+                </md-input-container>
+            </div>
 
             <div>
-                <label style="color: #666666; font-size: 1em;">Область</label>
-                <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px" ng-model="vm.data.profile.state" type="text">
-                </md-input-container>
-            </div>
+            <label style="color: #666666; font-size: 1em;">Область</label>
+            <md-input-container class="md-block" style="margin-top: -5px" flex>
+                <md-select style="border-bottom: 1px solid #333"
+                           ng-change="vm.getCities(vm.region)"
+                           id="region" ng-model="vm.region"
+                           aria-label="sort">
+                    <md-option   ng-value="region" ng-repeat="region in vm.regions">{{region}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+               </div>
 
-            <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Місто/район</label>
-                <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px" ng-model="vm.data.profile.city" type="text" >
-                </md-input-container>
-            </div>
+            <!--<div>-->
+                <!--<label style="color: #666666; font-size: 1em;">Район</label>-->
+                <!--<md-input-container class="md-block" style="margin-top: -5px" flex>-->
+                    <!--<md-select ng-disabled="!vm.region" style="border-bottom: 1px solid #333" ng-change="vm.getCities(vm.area)" id="area" ng-model="vm.area"-->
+                               <!--aria-label="sort">-->
+                        <!--<md-option ng-value="area" ng-repeat="area in vm.areas">{{area.name}}-->
+                        <!--</md-option>-->
+                    <!--</md-select>-->
+                <!--</md-input-container>-->
+               <!--</div>-->
 
-            <!--<md-input-container class="md-block" flex>-->
-                <!--<input ng-model="vm.data.profile.postcode" type="text" placeholder="Індекс">-->
-            <!--</md-input-container>-->
+            <div ng-if="vm.region">
+                <label style="color: #666666; font-size: 1em;">Місто/село</label>
+                <md-input-container class="md-block" style="margin-top: -5px" flex>
+                    <md-select  style="border-bottom: 1px solid #333"  id="city"  ng-model="vm.city"
+                               aria-label="sort">
+                        <md-option ng-value="city" ng-repeat="city in vm.cities">{{city}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+               </div>
+
 
             <h4>Деталі:</h4>
+
+
+            <div ng-if="vm.region">
+                <label style="color: #666666; font-size: 1em;">Назва органу ДФС</label>
+                <md-input-container class="md-block" style="margin-top: -5px" flex>
+                    <md-select style="border-bottom: 1px solid #333"
+                               id="pfu" ng-model="vm.data.profile.dfs_name"
+                               aria-label="sort">
+                        <md-option ng-value="dfs_code" ng-repeat="dfs_code in vm.dfs_code">{{dfs_code}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+
+            <div ng-if="vm.region">
+                <label style="color: #666666; font-size: 1em;">Код ДФС</label>
+                <md-input-container class="md-block" style="margin-top: -5px" flex>
+                    <md-select style="border-bottom: 1px solid #333"
+                               id="pfu_code" ng-model="vm.data.profile.dfs_code"
+                               aria-label="sort">
+                        <md-option ng-value="dfs_code.code" ng-repeat="dfs_code in vm.dfs_code_code">{{dfs_code.name}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div>
+                <label style="color: #666666; font-size: 1em;">Розділ КВЄД</label>
+                <md-input-container class="md-block" style="margin-top: -5px" flex>
+                    <md-select style="border-bottom: 1px solid #333" ng-change="vm.getGroups(vm.kved_topic)"  id="topic" ng-model="vm.kved_topic"
+                               aria-label="sort">
+                        <md-option ng-value="topic" ng-repeat="topic in vm.topic">{{topic}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+
+            <div ng-if="vm.kved_topic">
+                <label style="color: #666666; font-size: 1em;">Група КВЄД</label>
+                <md-input-container class="md-block" style="margin-top: -5px" flex>
+                    <md-select  style="border-bottom: 1px solid #333" ng-change="vm.getClass(vm.kved_group)"   id="group" ng-model="vm.kved_group"
+                               aria-label="sort">
+                        <md-option ng-value="group" ng-repeat="group in vm.groups">{{group}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div ng-if="vm.kved_group">
+                <label style="color: #666666; font-size: 1em;">Клас КВЄД</label>
+                <md-input-container class="md-block" style="margin-top: -5px" flex>
+                    <md-select  style="border-bottom: 1px solid #333"  id="class"  ng-model="vm.data.profile.kved_code"
+                               aria-label="sort">
+                        <md-option ng-value="class" ng-repeat="class in vm.class">{{class}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <!--<div>-->
+                <!--<label style="color: #666666; font-size: 1em;">Код ПФУ</label>-->
+                <!--<md-input-container class="md-block" style="margin-top: -5px" flex>-->
+                    <!--<md-select style="border-bottom: 1px solid #333"-->
+                               <!--id="pfu" ng-model="vm.data.profile.pfu_code"-->
+                               <!--aria-label="sort">-->
+                        <!--<md-option ng-value="code_pfu" ng-repeat="code_pfu in vm.pfu_code">{{code_pfu}}-->
+                        <!--</md-option>-->
+                    <!--</md-select>-->
+                <!--</md-input-container>-->
+            <!--</div>-->
+
+            <div style="margin-top: 25px">
+                <label style="color: #666666; font-size: 1em;">Код ПФУ</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px" ng-model="vm.data.profile.pfu_code" aria-label="dfs_code" type="text" >
+                </md-input-container>
+            </div>
+
+            <!--<div style="margin-top: 25px">-->
+                <!--<label style="color: #666666; font-size: 1em;">Код ДФС</label>-->
+                <!--<md-input-container class="md-block" flex>-->
+                    <!--<input style="margin-top: -25px" ng-model="vm.data.profile.dfs_code" aria-label="dfs_code" type="text" >-->
+                <!--</md-input-container>-->
+            <!--</div>-->
+
 
             <div>
                 <label style="color: #666666; font-size: 1em;">Група єдиного податку:</label>
                 <md-input-container class="md-block" flex>
-                    <md-select style="margin-top: -25px" id="group" ng-model="vm.data.profile.group"
+                    <md-select style="margin-top: -25px" id="group_esv" ng-model="vm.data.profile.group"
                                name="group"
                                aria-label="group">
                         <md-option value="group1">1</md-option>
@@ -63,55 +217,14 @@
             <div layout="row" layout-align="space-between center">
             <span style="color: #666666; font-size: 1.1em">Особливий статус ФОП: <br>
                 <span class="secondText">(пенсіонер/інвалід)</span></span>
-            <div style="margin-top: 15px" layout="row" layout-align="space-around">
-                <md-checkbox id="first_group_special"
-                             ng-model="vm.data.profile.status"
-                             aria-label="first_group">
-                    <span style="color: black">Так</span>
-                </md-checkbox>
+                <div style="margin-top: 15px" layout="row" layout-align="space-around">
+                    <md-checkbox id="first_group_special"
+                                 ng-model="vm.data.profile.status"
+                                 aria-label="first_group">
+                        <span style="color: black">Так</span>
+                    </md-checkbox>
+                </div>
             </div>
-            </div>
-
-            <div>
-                <label style="color: #666666; font-size: 1em;">Основний КВЄД</label>
-                <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px" ng-model="vm.data.profile.kved_code" type="text" >
-                </md-input-container>
-            </div>
-
-            <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Код ДФС</label>
-                <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px" ng-model="vm.data.profile.dfs_code" type="text" >
-                </md-input-container>
-            </div>
-
-            <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Код ПФУ</label>
-                <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px" ng-model="vm.data.profile.pfu_code" type="text" >
-                </md-input-container>
-            </div>
-
-
-
-
-            <h4>Дані акаунту:</h4>
-
-            <div>
-                <label style="color: #666666; font-size: 1em;">Електронна пошта</label>
-                <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px" ng-model="vm.data.email" type="text" >
-                </md-input-container>
-            </div>
-
-            <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Пароль</label>
-                <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px" ng-model="vm.data.password" type="password" >
-                </md-input-container>
-            </div>
-
 
 
         </form>

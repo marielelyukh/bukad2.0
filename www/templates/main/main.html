@@ -11,7 +11,7 @@
             </div>
             </ion-item>
             <ion-item>
-                <div class="item-icon-left">
+                <div class="item-icon-left"  ui-sref="app.single_fop_esv({group: 'group1'})">
                     <h2>Податок ФОП</h2>
                     <p class="secondText">ЄCB</p>
                 </div>
@@ -19,7 +19,7 @@
                     <i style="color: red !important;" class="icon ion-alert-circled"></i>
                 </div>
             </ion-item>
-            <ion-item>
+            <ion-item ng-if="vm.user_group == 'group2' || vm.user_group == 'group3'">
                 <div class="item-icon-left" ui-sref="app.staff_tax">
                     <h2>Податок з найманих <br> працівників</h2>
                     <p class="secondText">ЄCB, ВЗ, <br> Прибутковий податок</p>

@@ -8,6 +8,11 @@
                 <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
                 </button>
             </ion-nav-buttons>
+
+            <ion-nav-buttons side="right">
+                <button style="color: indianred" class="button button-icon button-clear ion-home" ui-sref="app.main">
+                </button>
+            </ion-nav-buttons>
         </ion-nav-bar>
         <ion-nav-view name="menuContent"></ion-nav-view>
     </ion-side-menu-content>
@@ -29,11 +34,11 @@
                     <i class="icon ion-ios-person-outline"></i>
                     Профіль
                 </ion-item>
-                <ion-item menu-close
-                          class="item-icon-left" ui-sref="app.tax_templates">
-                    <i class="icon ion-ios-pricetag-outline"></i>
-                    Шаблони
-                </ion-item>
+                <!--<ion-item menu-close-->
+                          <!--class="item-icon-left" ui-sref="app.tax_templates">-->
+                    <!--<i class="icon ion-ios-pricetag-outline"></i>-->
+                    <!--Шаблони-->
+                <!--</ion-item>-->
                 <ion-item  ng-click="vm.logout()"
                           menu-close
                           class="item-icon-left">

@@ -14,6 +14,23 @@
                     <i  class="icon ion-trash-b"></i>
                 </div>
             </ion-item>
+
+        </ion-list>
+        <ion-list class="item" ng-repeat="item in vm.third_templates">
+            <ion-item>
+                <div class="item-icon-left">
+                    <i  class="icon ion-ios-list-outline"></i>
+                </div>
+                <div class="item-icon-left" ui-sref="app.staff_tax({template_data: item})">
+                    <h2>Звітність</h2>
+                    <p class="secondText">Податок з найманних <br> працівників</p>
+                    <p class="date">Отримувач: {{item.getter}}</p>
+                </div>
+                <div class="item-icon-right" ng-click="vm.templateThirdDelete(item.id)">
+                    <i  class="icon ion-trash-b"></i>
+                </div>
+            </ion-item>
+
         </ion-list>
     </ion-content>
 </ion-view>

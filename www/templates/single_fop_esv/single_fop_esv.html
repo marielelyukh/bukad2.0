@@ -1,0 +1,69 @@
+<ion-view view-title="Єдиний податок ФОП" class="single_fop">
+    <ion-content>
+        <form  style="padding: 20px">
+            <div>
+                <label for="data_payer" style="color: #666666; font-size: 1em;">Платник</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px" name="data_payer" id="data_payer" ng-model="vm.data.payer" type="text" maxlength="11" >
+                </md-input-container>
+            </div>
+
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Отримувач</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"  ng-model="vm.data.getter" type="text" maxlength="11" >
+                </md-input-container>
+            </div>
+
+
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Код отримувача</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"  ng-model="vm.data.getter_code" type="text" >
+                </md-input-container>
+            </div>
+
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Банк отримувача</label>
+                <md-input-container class="md-block" flex>
+                    <input style="margin-top: -25px"  ng-model="vm.data.getter_bank" type="text" >
+                </md-input-container>
+            </div>
+
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Сума податку,грн</label>
+                <md-input-container class="md-block" flex>
+                    <input
+                            style="margin-top: -25px"
+                            ng-model="vm.data.sum"
+                            ng-pattern="/^[+-]?([0-9]*[.])?[0-9]+$/"
+                            type="number" >
+                </md-input-container>
+            </div>
+
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">Призначення</label>
+                <md-input-container class="md-block" flex>
+                    <textarea disabled style="margin-top: -20px" rows="2"  ng-model="vm.data.appointment" type="text" ></textarea>
+                </md-input-container>
+            </div>
+
+            <div style="margin-top: -25px">
+                <label style="color: #666666; font-size: 1em;">ЄСВ ФОП за</label>
+                <md-input-container class="md-block" flex>
+                    <input ng-model="vm.data.for_time"
+                           type="text"
+                           ng-pattern="vm.dateRegExp"
+                           style="margin-top: -25px">
+                </md-input-container>
+            </div>
+        </form>
+
+        <div layout="column" layout-align="center end" class="link" layout-margin>
+            <div class="link" style="color: #039BE5 !important;">
+                <a ui-sref="app.pay_single_fop_esv({data: vm.data})">>Продовжити</a>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

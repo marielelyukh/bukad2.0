@@ -1,4 +1,4 @@
-<ion-view view-title="Сплата єдиного рахунку" class="pay_single_fop">
+<ion-view view-title="Сплата ЄСВ" class="pay_single_fop">
     <ion-content>
         <form>
 
@@ -11,38 +11,38 @@
             </div>
 
             <div layout="row" style="margin-top: 25px" layout-align="space-between">
-               <span style="font-size: 1.2em; color:  #666666">Срок <br> дії:</span>
+                <span style="font-size: 1.2em; color:  #666666">Срок <br> дії:</span>
                 <md-input-container style="margin-left: 10px" class="md-block">
                     <input style="width: 30px; height: 30px; font-size: 1.3em; border: 1px solid #666666; margin-top: -10px;"
                            ng-model="vm.data.month " type="number"
-                           >
+                    >
                 </md-input-container>
                 <md-input-container style="margin-left: 10px" class="md-block">
                     <input style="width: 30px; height: 30px; font-size: 1.3em; border: 1px solid #666666; margin-top: -10px;"
                            ng-model="vm.data.year" type="number"
-                           >
+                    >
                 </md-input-container>
                 <span style="font-size: 1.2em; color:  #666666; margin-left: 10px">CVV2/<br>CVC2:</span>
                 <md-input-container style="margin-left: 10px" class="md-block">
                     <input style="width: 50px; height: 30px; font-size: 1.3em; border: 1px solid #666666; margin-top: -10px;"
                            ng-model="vm.data.cvv_code" type="number"
-                           >
+                    >
                 </md-input-container>
             </div>
 
         </form>
         <div layout="column" style="margin-top: 25px" layout-align="center center" class="link">
             <md-checkbox ng-model="vm.data.email_invoice" aria-label="Checkbox 1">
-               <span style="color: black">Отримати квитанцію на пошту</span>
+                <span style="color: black">Отримати квитанцію на пошту</span>
             </md-checkbox>
             <!--<md-checkbox ng-model="vm.data.template" aria-label="Checkbox 2">-->
-                <!--<span style="color: black">Створити шаблон</span>-->
+            <!--<span style="color: black">Створити шаблон</span>-->
             <!--</md-checkbox>-->
 
         </div>
         <div layout="column" style="margin-top: 25px" layout-align="center center" class="link">
             <md-button class=" md-raised waves-effect waves-light BTN"
-                       ng-click="vm.payFirstGroup()"
+                       ng-click="vm.paySecondGroup()"
                        aria-label="true">
                 Oплатити
             </md-button>

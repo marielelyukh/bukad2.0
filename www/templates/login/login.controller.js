@@ -25,6 +25,7 @@
             user.login(vm.data)
                 .then(function (res){
                     $sessionStorage.token = res.token;
+                    $sessionStorage.group = res.group;
                     $sessionStorage.id = res.user_id;
                     $state.go('app.main');
                 })

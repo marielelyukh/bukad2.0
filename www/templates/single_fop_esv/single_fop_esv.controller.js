@@ -3,17 +3,15 @@
 
     angular
         .module('app')
-        .controller('SingleFop', SingleFop);
+        .controller('SingleFopE', SingleFopE);
 
-    SingleFop.$inject = ['$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group'];
+    SingleFopE.$inject = ['$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group'];
 
-    function SingleFop($rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams,  $scope, group) {
+    function SingleFopE($rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams,  $scope, group) {
 
         var vm = this;
-        vm.getSum = getSum;
-        vm.editDate = editDate;
+        vm.getEsvSum = getEsvSum;
         vm.user_group = $sessionStorage.group;
-        vm.tmp = {};
         vm.data = {
 
         };
@@ -33,25 +31,21 @@
             value: null
         }];
 
-        group.getFirstGroupData()
+        function getEsvSum() {
+            group.secondTaxIncome({income: vm.tmp.income})
+                .then(function (res) {
+                    vm.data.sum = res.value
+                })
+
+        }
+
+        group.getSecondGroupData()
             .then(function (res) {
                 vm.data = res;
                 var re = /{date}/g;
                 vm.data.appointment = vm.data.appointment.replace(re, vm.data.for_time);
 
             });
-
-        function getSum() {
-            group.firstTaxIncome({income: vm.tmp.income})
-                .then(function (res) {
-                 vm.data.sum = res.value
-                })
-
-        }
-
-        function editDate() {
-            vm.data.appointment = vm.data.for_time;
-        }
 
         $scope.addInput = function () {
             $scope.inputs.push({

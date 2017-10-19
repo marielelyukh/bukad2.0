@@ -7,6 +7,21 @@
     }
 
     form {
+        .myAutocomplete{
+            md-autocomplete{
+                border: 1px solid white;
+                input {
+                    border-bottom: 1px solid white !important;
+                }
+            }
+            md-input-container{
+                margin-top: -2px;
+                input {
+                    border-bottom: 1px solid white !important;
+
+                }
+            }
+        }
         md-input-container{
             input {
                 border-bottom: 1px solid grey;
@@ -15,6 +30,12 @@
             label{
                 color: #333;
                 font-size: 1.1em;
+            }
+            md-select {
+                md-option {
+                    border-bottom: 1px solid grey;
+                }
+
             }
 
         }

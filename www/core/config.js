@@ -72,12 +72,49 @@
                 }
                 })
 
+            .state('app.single_fop_esv', {
+                url: '/single_fop_esv',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/single_fop_esv/single_fop_esv.html',
+                        controller: 'SingleFopE',
+                        controllerAs: 'vm'
+                    }
+                },
+                params: {
+                    template_data: null,
+                    group: null
+                }
+            })
+
             .state('app.pay_single_fop', {
                 url: '/pay-single_fop',
                 views: {
                     'menuContent': {
                         templateUrl: 'templates/pay.single_fop/pay.single_fop.html',
                         controller: 'paySingleFop',
+                        controllerAs: 'vm'
+                    }
+                },
+                params:{
+                    single_fop: null,
+                    getter: null,
+                    getter_code: null,
+                    getter_bank: null,
+                    sum: null,
+                    appointment: null,
+                    for_time: null,
+                    data: null
+                }
+
+            })
+
+            .state('app.pay_single_fop_esv', {
+                url: '/pay-single_fop_esv',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/pay.single_fop_esv/pay.single_fop_esv.html',
+                        controller: 'paySingleFopEsv',
                         controllerAs: 'vm'
                     }
                 },
@@ -104,7 +141,8 @@
                        }
                    },
                 params: {
-                    group: null
+                    group: null,
+                    template_data: null
                 }
                })
 
@@ -117,10 +155,14 @@
                             controllerAs: 'vm'
                         }
                     },
-                params: {
-                    staff_tax: null
-                }
+                    params: {
+                        staff_tax: null,
+                        values: null,
+                        data_salary: null
+                    }
                 })
+
+
             .state('app.tax_templates', {
                 url: '/tax_templates',
                 views: {
