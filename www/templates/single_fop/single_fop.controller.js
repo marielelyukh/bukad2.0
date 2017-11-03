@@ -21,8 +21,8 @@
         // vm.data.template = false;
         // vm.template_data = $stateParams.template_data;
         vm.group = $stateParams.group;
-        console.log($stateParams.group);
-        console.log(vm.template_data);
+        // console.log($stateParams.group);
+        // console.log(vm.template_data);
         vm.data.user = $sessionStorage.id;
 
         if(vm.template_data) {
@@ -36,7 +36,8 @@
         group.getFirstGroupData()
             .then(function (res) {
                 vm.data = res;
-                var re = /{date}/g;
+                vm.replace_date = vm.data.appointment;
+                var re = /replace/g;
                 vm.data.appointment = vm.data.appointment.replace(re, vm.data.for_time);
 
             });
@@ -50,7 +51,9 @@
         }
 
         function editDate() {
-            vm.data.appointment = vm.data.for_time;
+            var rep = /replace/g;
+            vm.data.appointment = vm.replace_date.replace(rep, vm.data.for_time);
+            // vm.data.appointment = vm.data.for_time;
         }
 
         $scope.addInput = function () {

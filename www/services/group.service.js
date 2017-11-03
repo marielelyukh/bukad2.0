@@ -24,12 +24,44 @@
             getSecondGroupData    : getSecondGroupData,
             paySecondTax          : paySecondTax,
             firstTaxIncome        : firstTaxIncome,
-            secondTaxIncome       : secondTaxIncome
+            secondTaxIncome       : secondTaxIncome,
+            getThirdTaxData       : getThirdTaxData,
+            payEsv                : payEsv,
+            payArmy               : payArmy,
+            payIncome_tax         : payIncome_tax
         };
 
 
         function payFirstGroup(data) {
             return http.post(url.group.payFirstGroup, data)
+                .then(function (res) {
+                    return res;
+                });
+        }
+
+        function payArmy(data) {
+            return http.post(url.group.payArmy, data)
+                .then(function (res) {
+                    return res;
+                });
+        }
+
+        function payIncome_tax(data) {
+            return http.post(url.group.payIncome_tax, data)
+                .then(function (res) {
+                    return res;
+                });
+        }
+
+        function payEsv(data) {
+            return http.post(url.group.payEsv, data)
+                .then(function (res) {
+                    return res;
+                });
+        }
+
+        function getThirdTaxData(data) {
+            return http.post(url.group.getThirdTaxData, data)
                 .then(function (res) {
                     return res;
                 });

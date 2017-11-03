@@ -41,7 +41,7 @@
             /**
              * Check whether the user is authorized
              */
-            if ($sessionStorage.token) {
+            if ($localStorage.token) {
                 $state.go('app.main');
             } else {
                 $state.go('login');

@@ -146,6 +146,23 @@
                 }
                })
 
+            .state('app.list_of_staffTax', {
+                url: '/list-of-staff-tax',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/list_of_staffTax/list_of_staffTax.html',
+                        controller: 'ListOfStaffTax',
+                        controllerAs: 'vm'
+                    }
+                },
+                params: {
+                        staff_tax: null,
+                        values: null,
+                        data_salary: null,
+                        count_workers: null
+                }
+            })
+
             .state('app.pay_staff_tax', {
                     url: '/pay-staff_tax',
                     views: {
@@ -158,7 +175,10 @@
                     params: {
                         staff_tax: null,
                         values: null,
-                        data_salary: null
+                        data_salary: null,
+                        type: null,
+                        title: null,
+                        count_workers: null
                     }
                 })
 

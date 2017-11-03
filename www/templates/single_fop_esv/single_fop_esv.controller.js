@@ -11,16 +11,11 @@
 
         var vm = this;
         vm.getEsvSum = getEsvSum;
+        vm.editDate = editDate;
         vm.user_group = $sessionStorage.group;
         vm.data = {
-
         };
-        // vm.data.receipt = true;
-        // vm.data.template = false;
-        // vm.template_data = $stateParams.template_data;
         vm.group = $stateParams.group;
-        console.log($stateParams.group);
-        console.log(vm.template_data);
         vm.data.user = $sessionStorage.id;
 
         if(vm.template_data) {
@@ -42,10 +37,16 @@
         group.getSecondGroupData()
             .then(function (res) {
                 vm.data = res;
-                var re = /{date}/g;
+                vm.replace_date = vm.data.appointment;
+                var re = /replace/g;
                 vm.data.appointment = vm.data.appointment.replace(re, vm.data.for_time);
 
             });
+
+        function editDate() {
+            var rep = /replace/g;
+            vm.data.appointment = vm.replace_date.replace(rep, vm.data.for_time);
+        }
 
         $scope.addInput = function () {
             $scope.inputs.push({

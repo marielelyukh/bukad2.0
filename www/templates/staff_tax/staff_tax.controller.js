@@ -16,7 +16,6 @@
         vm.data.template = false;
         vm.data.user = $sessionStorage.id;
         vm.template_data = $stateParams.template_data;
-        // vm.data.values = vm.tmp;
         vm.salary = [];
         if(vm.template_data) {
             vm.data = vm.template_data;

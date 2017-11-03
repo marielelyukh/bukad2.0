@@ -133,7 +133,7 @@
                     <md-select style="border-bottom: 1px solid #333"
                                id="pfu_code" ng-model="vm.data.profile.dfs_code"
                                aria-label="sort">
-                        <md-option ng-value="dfs_code.code" ng-repeat="dfs_code in vm.dfs_code_code">{{dfs_code.name}}
+                        <md-option ng-value="dfs_code.code" ng-repeat="dfs_code in vm.dfs_code_code">{{dfs_code.code}}, {{dfs_code.name}}
                         </md-option>
                     </md-select>
                 </md-input-container>

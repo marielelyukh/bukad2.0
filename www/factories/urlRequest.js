@@ -8,7 +8,8 @@
         .factory('url', [
             function () {
 
-                var baseUrl = 'http://192.168.0.166:8000/api/v1/';
+                // var baseUrl = 'http://bukad.herokuapp.com/api/v1/';
+                var baseUrl = 'http://46.101.242.85/api/v1/';
                 return {
 
                     user: {
@@ -33,13 +34,17 @@
                         payFirstGroup                  :  baseUrl              + 'single/tax/payment',
                         viewTemplates                  :  baseUrl              + 'single/tax/templates',
                         getData                        :  baseUrl              + 'employee/tax',
-                        payThirdGroup                  :  baseUrl              + 'employee/tax/create',
-                        viewThirdTemplate              :  baseUrl              + 'employee/tax/templates',
+                        getThirdTaxData                :  baseUrl              + 'employee/tax/requisites',
+                        // payThirdGroup               :  baseUrl              + 'employee/tax/create',
+                        // viewThirdTemplate           :  baseUrl              + 'employee/tax/templates',
                         paySecondTax                   :  baseUrl              + 'single/social/tax/payment',
                         getFirstGroupData              :  baseUrl              + 'single/tax/requisites',
                         getSecondGroupData             :  baseUrl              + 'single/social/tax/requisites',
                         firstTaxIncome                 :  baseUrl              + 'single/tax',
-                        secondTaxIncome                :  baseUrl              + 'single/social/tax'
+                        secondTaxIncome                :  baseUrl              + 'single/social/tax',
+                        payArmy                        :  baseUrl              + 'army/tax/payment',
+                        payIncome_tax                  :  baseUrl              + 'income/tax/payment',
+                        payEsv                         :  baseUrl              + 'employee/tax/payment'
 
                     }
                 };

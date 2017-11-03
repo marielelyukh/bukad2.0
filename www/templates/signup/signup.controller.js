@@ -36,12 +36,12 @@
                 vm.regions = res;
             });
 
-            user.getSignUpData()
-            .then(function (res) {
-                // vm.regions = res;
-                vm.data.profile.dfs_code  = res.dfs_code;
-                // vm.pfu_code  = res.pfu_code;
-            });
+            // user.getSignUpData()
+            // .then(function (res) {
+            //     // vm.regions = res;
+            //     vm.data.profile.dfs_code  = res.dfs_code;
+            //     // vm.pfu_code  = res.pfu_code;
+            // });
 
 
         function getArea(region) {

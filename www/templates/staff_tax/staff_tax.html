@@ -3,13 +3,13 @@
         <form>
             <div layout="row" style="margin-top: 20px" layout-align="space-between center">
                 <h4>Кількість найманиx працівників: <br><span style="color: #666666; font-size: 1em">(до 10 чоловік)</span> </h4>
-               <span style="height: 25px; width: 25px; border: 1px solid #666666"><span style="margin-left: 5px">{{vm.data.count_workers}}</span></span>
+               <span style="height: 25px; width: 25px; border: 1px solid #666666"><span style="margin-left: 5px; color: #666666;">{{vm.data.count_workers}}</span></span>
             </div>
 
             <div layout="row" ng-repeat="input in inputs" layout-align="space-between center">
                 <h4>{{$index+1}}</h4>
                 <md-input-container class="md-block" flex>
-                <input style="margin-left: 20px; width: 80%;"  ng-model="vm.salary[$index]" type="number">
+                <input aria-label="123" style="margin-left: 20px; width: 80%;"  ng-model="vm.salary[$index]" type="number">
             </md-input-container>
             <h4>ЗП, грн</h4>
                 <i ng-show="inputs.length >= 2"
@@ -40,39 +40,39 @@
             <div>
                 <label style="color: #666666; font-size: 1em;">Фонд ЗП, грн</label>
                 <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px"  ng-model="vm.tmp.fond" type="text" >
+                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.tmp.fond" type="text" >
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">ЄСВ наймані працівникі, грн</label>
                 <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px"  ng-model="vm.tmp.workers_esv" type="text" >
+                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.tmp.esv_tax" type="text" >
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">Військовий збір, грн</label>
                 <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px"  ng-model="vm.tmp.workers_army" type="text" >
+                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.tmp.army_tax" type="text" >
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">Прибутковий податок, грн</label>
                 <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px"  ng-model="vm.tmp.prub" type="text" >
+                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.tmp.income_tax" type="text" >
                 </md-input-container>
             </div>
 
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">Загальная сума податку (ЄСВ, ВЗ, Приб., грн)</label>
                 <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px"  ng-model="vm.tmp.sum" type="text" >
+                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.tmp.sum" type="text" >
                 </md-input-container>
             </div>
 
         </form>
         <div layout="column" layout-align="center end" class="link" layout-margin>
             <div class="link">
-                <a  ui-sref="app.pay_staff_tax({staff_tax: vm.data, values: vm.tmp, data_salary: vm.salary})">>Продовжити</a>
+                <a  ui-sref="app.list_of_staffTax({staff_tax: vm.data, values: vm.tmp, data_salary: vm.salary, count_workers: vm.data.count_workers})">>Продовжити</a>
             </div>
         </div>
 

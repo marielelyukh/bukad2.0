@@ -4,13 +4,13 @@
         .module('factory.request', [])
         .factory('http', http);
 
-    http.$inject = ['$http', '$sessionStorage', '$ionicLoading', '$q', 'toastr', '$timeout'];
+    http.$inject = ['$http', '$sessionStorage', '$ionicLoading', '$q', 'toastr', '$timeout', '$localStorage'];
 
     /**
      * Wrapper over the standard http function
      */
 
-    function http($http, $sessionStorage, $ionicLoading, $q, toastr, $timeout) {
+    function http($http, $sessionStorage, $ionicLoading, $q, toastr, $timeout, $localStorage) {
         console.log('create request service');
 
         return {
@@ -62,9 +62,9 @@
                 config.data = data;
             }
 
-            if ($sessionStorage.token) {
+            if ($localStorage.token) {
                 config.url = url;
-                config.headers.Authorization = `Token ${$sessionStorage.token}`;
+                config.headers.Authorization = `Token ${$localStorage.token}`;
                 // config.headers.Authorization = 'Token ' + $sessionStorage.token;
 
             }

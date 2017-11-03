@@ -8,9 +8,9 @@
         .module('app')
         .controller('Login', Login);
 
-    Login.$inject = ['$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', 'toastr'];
+    Login.$inject = ['$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', 'toastr', '$localStorage'];
 
-    function Login($rootScope, $state, $ionicHistory, user, $sessionStorage, toastr) {
+    function Login($rootScope, $state, $ionicHistory, user, $sessionStorage, toastr, $localStorage) {
 
         $rootScope.page = {};
         var vm = this;
@@ -24,10 +24,15 @@
             }
             user.login(vm.data)
                 .then(function (res){
-                    $sessionStorage.token = res.token;
-                    $sessionStorage.group = res.group;
-                    $sessionStorage.id = res.user_id;
-                    $state.go('app.main');
+                    if(!res.token){
+                        toastr.error('Невірний логін або пароль')
+                    }
+                    if(res.token) {
+                        $localStorage.token = res.token;
+                        $sessionStorage.group = res.group;
+                        $sessionStorage.id = res.user_id;
+                        $state.go('app.main');
+                    }
                 })
         }
 
