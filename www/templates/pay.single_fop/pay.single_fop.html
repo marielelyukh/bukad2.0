@@ -15,17 +15,26 @@
                 <md-input-container style="margin-left: 10px" class="md-block">
                     <input style="width: 30px; height: 30px; font-size: 1.3em; border: 1px solid #666666; margin-top: -10px;"
                            ng-model="vm.data.month " type="number"
+                           ng-pattern="/^([1-9]|10)$/"
+                           max="2"
+                           min="2"
                            >
                 </md-input-container>
                 <md-input-container style="margin-left: 10px" class="md-block">
                     <input style="width: 30px; height: 30px; font-size: 1.3em; border: 1px solid #666666; margin-top: -10px;"
                            ng-model="vm.data.year" type="number"
+                           ng-pattern="/^([1-9]|10)$/"
+                           max="2"
+                           min="2"
                            >
                 </md-input-container>
                 <span style="font-size: 1.2em; color:  #666666; margin-left: 10px">CVV2/<br>CVC2:</span>
                 <md-input-container style="margin-left: 10px" class="md-block">
                     <input style="width: 50px; height: 30px; font-size: 1.3em; border: 1px solid #666666; margin-top: -10px;"
                            ng-model="vm.data.cvv_code" type="number"
+                           ng-pattern="/^([1-9]|10)$/"
+                           max="3"
+                           min="3"
                            >
                 </md-input-container>
             </div>
@@ -35,9 +44,6 @@
             <md-checkbox ng-model="vm.data.email_invoice" aria-label="Checkbox 1">
                <span style="color: black">Отримати квитанцію на пошту</span>
             </md-checkbox>
-            <!--<md-checkbox ng-model="vm.data.template" aria-label="Checkbox 2">-->
-                <!--<span style="color: black">Створити шаблон</span>-->
-            <!--</md-checkbox>-->
 
         </div>
         <div layout="column" style="margin-top: 25px" layout-align="center center" class="link">
