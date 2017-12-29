@@ -28,7 +28,8 @@
             getThirdTaxData       : getThirdTaxData,
             payEsv                : payEsv,
             payArmy               : payArmy,
-            payIncome_tax         : payIncome_tax
+            payIncome_tax         : payIncome_tax,
+            getAllTaxes           : getAllTaxes
         };
 
 
@@ -45,6 +46,13 @@
                     return res;
                 });
         }
+
+      function getAllTaxes(data) {
+        return http.get(url.group.getAllTaxes, data)
+          .then(function (res) {
+            return res;
+          });
+      }
 
         function payIncome_tax(data) {
             return http.post(url.group.payIncome_tax, data)

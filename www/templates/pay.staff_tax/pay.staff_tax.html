@@ -63,33 +63,6 @@
                     <input style="margin-top: -25px" aria-label="123" ng-model="vm.data.army.for_time" type="text" >
                 </md-input-container>
             </div>
-
-            <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Номер картки:</label>
-                <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px" aria-label="123" ng-model="vm.data.army.card_number" type="text" >
-                </md-input-container>
-            </div>
-
-            <div layout="row" style="margin-top: 25px" layout-align="space-between">
-                <span style="font-size: 1.2em; color:  #666666">Срок<br> дії:</span>
-                <md-input-container style="margin-left: 10px" class="md-block">
-                    <input style="width: 30px; height: 30px; font-size: 1.1em; border: 1px solid #666666; margin-top: -10px;" aria-label="123"
-                           ng-model="vm.data.army.month" type="number"
-                    >
-                </md-input-container>
-                <md-input-container style="margin-left: 10px" class="md-block">
-                    <input style="width: 30px; height: 30px; font-size: 1.1em; border: 1px solid #666666; margin-top: -10px;" aria-label="123"
-                           ng-model="vm.data.army.year" type="number"
-                    >
-                </md-input-container>
-                <span style="font-size: 1.2em; color:  #666666; margin-left: 10px">CVV2/<br>CVC2:</span>
-                <md-input-container style="margin-left: 10px" class="md-block">
-                    <input style="width: 50px; height: 30px; font-size: 1.3em; border: 1px solid #666666; margin-top: -10px;" aria-label="123"
-                           ng-model="vm.data.army.cvv_code" type="number"
-                    >
-                </md-input-container>
-            </div>
         </form>
 
         <form ng-if="vm.type == 2">
@@ -157,32 +130,6 @@
                 </md-input-container>
             </div>
 
-            <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Номер картки:</label>
-                <md-input-container class="md-block" flex>
-                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.data.income_tax.card_number" type="text" >
-                </md-input-container>
-            </div>
-
-            <div layout="row" style="margin-top: 25px" layout-align="space-between">
-                <span style="font-size: 1.2em; color:  #666666">Срок<br> дії:</span>
-                <md-input-container style="margin-left: 10px" class="md-block">
-                    <input aria-label="123" style="width: 30px; height: 30px; font-size: 1.1em; border: 1px solid #666666; margin-top: -10px;"
-                           ng-model="vm.data.income_tax.month" type="number"
-                    >
-                </md-input-container>
-                <md-input-container style="margin-left: 10px" class="md-block">
-                    <input aria-label="123" style="width: 30px; height: 30px; font-size: 1.1em; border: 1px solid #666666; margin-top: -10px;"
-                           ng-model="vm.data.income_tax.year" type="number"
-                    >
-                </md-input-container>
-                <span style="font-size: 1.2em; color:  #666666; margin-left: 10px">CVV2/<br>CVC2:</span>
-                <md-input-container style="margin-left: 10px" class="md-block">
-                    <input style="width: 50px; height: 30px; font-size: 1.3em; border: 1px solid #666666; margin-top: -10px;" aria-label="123"
-                           ng-model="vm.data.income_tax.cvv_code" type="number"
-                    >
-                </md-input-container>
-            </div>
         </form>
 
         <form ng-if="vm.type == 3">
@@ -250,36 +197,7 @@
                 </md-input-container>
             </div>
 
-            <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Номер картки:</label>
-                <md-input-container class="md-block" flex>
-                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.data.esv.card_number" type="text" >
-                </md-input-container>
-            </div>
-
-            <div layout="row" style="margin-top: 25px" layout-align="space-between">
-                <span style="font-size: 1.2em; color:  #666666">Срок<br> дії:</span>
-                <md-input-container style="margin-left: 10px" class="md-block">
-                    <input aria-label="123" style="width: 30px; height: 30px; font-size: 1.1em; border: 1px solid #666666; margin-top: -10px;"
-                           ng-model="vm.data.esv.month" type="number"
-                    >
-                </md-input-container>
-                <md-input-container style="margin-left: 10px" class="md-block">
-                    <input aria-label="123" style="width: 30px; height: 30px; font-size: 1.1em; border: 1px solid #666666; margin-top: -10px;"
-                           ng-model="vm.data.esv.year" type="number"
-                    >
-                </md-input-container>
-                <span style="font-size: 1.2em; color:  #666666; margin-left: 10px">CVV2/<br>CVC2:</span>
-                <md-input-container  style="margin-left: 10px" class="md-block">
-                    <input aria-label="123" style="width: 50px; height: 30px; font-size: 1.3em; border: 1px solid #666666; margin-top: -10px;"
-                           ng-model="vm.data.esv.cvv_code" type="number"
-                    >
-                </md-input-container>
-            </div>
         </form>
-
-
-
 
         <div layout="column" style="margin-top: 25px" layout-align="center center" class="link">
             <md-checkbox ng-model="vm.data.army.email_invoice" aria-label="Checkbox 1">
@@ -287,27 +205,46 @@
             </md-checkbox>
 
         </div>
-        <div layout="column" style="margin-top: 25px" layout-align="center center" class="link">
-            <md-button ng-if="vm.type == 1" class=" md-raised waves-effect waves-light BTN"
-                       ui-sref="app.list_of_staffTax({count_workers: vm.count_workers})"
-                       ng-click="vm.payArmy()"
-                       aria-label="true">
-                Oплатити
-            </md-button>
-            <md-button ng-if="vm.type == 2" class=" md-raised waves-effect waves-light BTN"
-                       ui-sref="app.list_of_staffTax({count_workers: vm.count_workers})"
-                       ng-click="vm.payIncome_tax()"
-                       aria-label="true">
-                Oплатити
-            </md-button>
-            <md-button ng-if="vm.type == 3" class=" md-raised waves-effect waves-light BTN"
-                       ui-sref="app.list_of_staffTax({count_workers: vm.count_workers})"
-                       ng-click="vm.payEsv()"
-                       aria-label="true">
-                Oплатити
-            </md-button>
 
+
+      <div layout-align="center end" ng-if="vm.type == 1">
+      <div layout="column" ng-if="!vm.pay_data.uapay.paymentPageUrl"  class="link" layout-margin>
+        <div class="link" ng-click="vm.payArmy()" style="color: #039BE5 !important;">
+          <a>>Продовжити</a>
         </div>
+      </div>
+        <div layout="column"  ng-if="vm.pay_data.uapay.paymentPageUrl" layout-align="center end" class="link" layout-margin>
+          <div class="link" style="color: #039BE5 !important;">
+            <a ng-href="{{vm.pay_data.uapay.paymentPageUrl}}">Пiдтвердити</a>
+          </div>
+        </div>
+      </div>
+
+      <div layout-align="center end" ng-if="vm.type == 2">
+        <div layout="column" ng-if="!vm.pay_data.uapay.paymentPageUrl"  class="link" layout-margin>
+          <div class="link" ng-click="vm.payIncome_tax()" style="color: #039BE5 !important;">
+            <a>>Продовжити</a>
+          </div>
+        </div>
+        <div layout="column" ng-if="vm.pay_data.uapay.paymentPageUrl" layout-align="center end" class="link" layout-margin>
+          <div class="link" style="color: #039BE5 !important;">
+            <a ng-href="{{vm.pay_data.uapay.paymentPageUrl}}">Пiдтвердити</a>
+          </div>
+        </div>
+      </div>
+
+      <div layout-align="center end" ng-if="vm.type == 3">
+        <div layout="column" ng-if="!vm.pay_data.uapay.paymentPageUrl"  class="link" layout-margin>
+          <div class="link" ng-click="vm.payEsv()" style="color: #039BE5 !important;">
+            <a>>Продовжити</a>
+          </div>
+        </div>
+        <div layout="column"  ng-if="vm.pay_data.uapay.paymentPageUrl" layout-align="center end" class="link" layout-margin>
+          <div class="link" style="color: #039BE5 !important;">
+            <a ng-href="{{vm.pay_data.uapay.paymentPageUrl}}">Пiдтвердити</a>
+          </div>
+        </div>
+      </div>
 
     </ion-content>
 </ion-view>

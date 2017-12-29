@@ -10,7 +10,7 @@
     function paySingleFopEsv($rootScope, $state, $ionicHistory, user, $stateParams, $sessionStorage, group) {
 
         var vm = this;
-        vm.paySecondGroup = paySecondGroup;
+
         vm.data = $stateParams.data;
         console.log($sessionStorage.id);
         console.log($stateParams.data);

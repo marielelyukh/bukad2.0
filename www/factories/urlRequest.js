@@ -8,8 +8,8 @@
         .factory('url', [
             function () {
 
-                // var baseUrl = 'http://bukad.herokuapp.com/api/v1/';
-                var baseUrl = 'http://46.101.242.85/api/v1/';
+                // var baseUrl = 'http://192.168.0.148:8000/api/v1/';
+                var baseUrl = 'http://46.101.195.13:8000/api/v1/';
                 return {
 
                     user: {
@@ -26,8 +26,8 @@
                         getClass                       :  baseUrl              + 'register/get_kved_class',
                         getPfu                         :  baseUrl              + 'register/pfu',
                         getDfs                         :  baseUrl              + 'register/dfs_names',
-                        getDfsCode                     :  baseUrl              + 'register/dfs'
-
+                        getDfsCode                     :  baseUrl              + 'register/dfs',
+                        check                          :  baseUrl              + 'auth/check'
                     },
 
                     group: {
@@ -35,8 +35,6 @@
                         viewTemplates                  :  baseUrl              + 'single/tax/templates',
                         getData                        :  baseUrl              + 'employee/tax',
                         getThirdTaxData                :  baseUrl              + 'employee/tax/requisites',
-                        // payThirdGroup               :  baseUrl              + 'employee/tax/create',
-                        // viewThirdTemplate           :  baseUrl              + 'employee/tax/templates',
                         paySecondTax                   :  baseUrl              + 'single/social/tax/payment',
                         getFirstGroupData              :  baseUrl              + 'single/tax/requisites',
                         getSecondGroupData             :  baseUrl              + 'single/social/tax/requisites',
@@ -44,8 +42,8 @@
                         secondTaxIncome                :  baseUrl              + 'single/social/tax',
                         payArmy                        :  baseUrl              + 'army/tax/payment',
                         payIncome_tax                  :  baseUrl              + 'income/tax/payment',
-                        payEsv                         :  baseUrl              + 'employee/tax/payment'
-
+                        payEsv                         :  baseUrl              + 'employee/tax/payment',
+                        getAllTaxes                    :  baseUrl              + 'taxes/statuses/'
                     }
                 };
             }

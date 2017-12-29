@@ -21,16 +21,13 @@
         vm.title = $stateParams.title;
         vm.data = $stateParams.staff_tax;
 
-
         group.getThirdTaxData()
             .then(function (res) {
                 vm.data = res;
-                var re = /{date}/g;
+                var re = 'replace';
                 vm.data.army.appointment = vm.data.army.appointment.replace(re, vm.data.army.for_time);
                 vm.data.income_tax.appointment = vm.data.income_tax.appointment.replace(re, vm.data.income_tax.for_time);
                 vm.data.esv.appointment = vm.data.esv.appointment.replace(re, vm.data.esv.for_time);
-
-
             });
 
         function payArmy() {
@@ -39,6 +36,7 @@
             vm.data.army.sum = vm.tmp.army_tax;
             group.payArmy(vm.data.army)
                 .then(function (res) {
+                  vm.pay_data = res;
                 })
         }
 
@@ -48,6 +46,7 @@
             vm.data.income_tax.sum = vm.tmp.income_tax;
             group.payIncome_tax(vm.data.income_tax)
                 .then(function (res) {
+                  vm.pay_data = res;
                 })
         }
 
@@ -57,6 +56,7 @@
             vm.data.esv.sum = vm.tmp.esv_tax;
             group.payEsv(vm.data.esv)
                 .then(function (res) {
+                  vm.pay_data = res;
                 })
         }
 

@@ -29,6 +29,7 @@
                     }
                     if(res.token) {
                         $localStorage.token = res.token;
+                        delete res.token;
                         $sessionStorage.group = res.group;
                         $sessionStorage.id = res.user_id;
                         $state.go('app.main');

@@ -59,11 +59,18 @@
             </div>
         </form>
 
-        <div layout="column" layout-align="center end" class="link" layout-margin>
-            <div class="link" style="color: #039BE5 !important;">
-                <a ui-sref="app.pay_single_fop_esv({data: vm.data})">>Продовжити</a>
-            </div>
+      <div layout="column" ng-if="!vm.pay_data.uapay.paymentPageUrl" ng-click="vm.paySecondGroup()" layout-align="center end" class="link" layout-margin>
+        <div class="link" style="color: #039BE5 !important;">
+          <a >>Продовжити</a>
         </div>
+      </div>
+
+      <div layout="column" ng-if="vm.pay_data.uapay.paymentPageUrl" layout-align="center end" class="link" layout-margin>
+        <div class="link" style="color: #039BE5 !important;">
+          <a ng-href="{{vm.pay_data.uapay.paymentPageUrl}}">Пiдтвердити</a>
+        </div>
+      </div>
+
 
     </ion-content>
 </ion-view>

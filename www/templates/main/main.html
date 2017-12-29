@@ -7,7 +7,9 @@
                 <p class="secondText">Єдиний</p>
             </div>
             <div class="item-icon-right">
-                <i style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>
+                <i ng-if="vm.taxes_data.single_tax.status == 2" style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>
+                <i ng-if="vm.taxes_data.single_tax.status == 1" style="color: yellow !important;" class="icon ion-android-checkbox"></i>
+                <i ng-if="vm.taxes_data.single_tax.status == 0" style="color: red !important;" class="icon ion-android-checkbox"></i>
             </div>
             </ion-item>
             <ion-item>
@@ -16,7 +18,9 @@
                     <p class="secondText">ЄCB</p>
                 </div>
                 <div class="item-icon-right">
-                    <i style="color: red !important;" class="icon ion-alert-circled"></i>
+                  <i ng-if="vm.taxes_data.single_social_tax.status == 2" style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>
+                  <i ng-if="vm.taxes_data.single_social_tax.status == 1" style="color: yellow !important;" class="icon ion-android-checkbox"></i>
+                  <i ng-if="vm.taxes_data.single_social_tax.status == 0" style="color: red !important;" class="icon ion-android-checkbox"></i>
                 </div>
             </ion-item>
             <ion-item ng-if="vm.user_group == 'group2' || vm.user_group == 'group3'">
@@ -25,7 +29,9 @@
                     <p class="secondText">ЄCB, ВЗ, <br> Прибутковий податок</p>
                 </div>
                 <div class="item-icon-right">
-                    <i style="color: red !important;" class="icon ion-alert-circled"></i>
+                  <i ng-if="vm.taxes_data.employee_tax.status == 2" style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>
+                  <i ng-if="vm.taxes_data.employee_tax.status == 1" style="color: yellow !important;" class="icon ion-android-checkbox"></i>
+                  <i ng-if="vm.taxes_data.employee_tax.status == 0" style="color: red !important;" class="icon ion-android-checkbox"></i>
                 </div>
             </ion-item>
             <ion-item>

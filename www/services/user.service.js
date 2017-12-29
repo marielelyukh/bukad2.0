@@ -27,7 +27,8 @@
             getClass      : getClass,
             getPfu        : getPfu,
             getDfs        : getDfs,
-            getDfsCode    : getDfsCode
+            getDfsCode    : getDfsCode,
+            check         : check
 
 
         };
@@ -42,6 +43,13 @@
                     return res;
                 });
         }
+
+      function check(data) {
+        return http.get(url.user.check, data)
+          .then(function (res) {
+            return res;
+          });
+      }
 
         function getDfsCode(data) {
             return http.post(url.user.getDfsCode, data)

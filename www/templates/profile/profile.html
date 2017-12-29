@@ -22,12 +22,52 @@
 
             <h4>Адреса:</h4>
 
-            <div>
-                <label style="color: #666666; font-size: 1em;">Місто та область</label>
-                <md-input-container class="md-block" flex>
-                    <input aria-label="123" style="margin-top: -25px" ng-model="vm.data.profile.city" type="text">
-                </md-input-container>
-            </div>
+            <!--<div>-->
+                <!--<label style="color: #666666; font-size: 1em;">Місто та область</label>-->
+                <!--<md-input-container class="md-block" flex>-->
+                    <!--<input aria-label="123" style="margin-top: -25px" ng-model="vm.data.profile.city" type="text">-->
+                <!--</md-input-container>-->
+            <!--</div>-->
+
+          <div>
+            <label style="color: #666666; font-size: 1em;">Область</label>
+            <md-input-container class="md-block" style="margin-top: -5px" flex>
+              <md-select style="border-bottom: 1px solid #333"
+                         ng-change="vm.getArea(vm.region)"
+                         id="region" ng-model="vm.region"
+                         aria-label="sort">
+                <md-option   ng-value="region" ng-repeat="region in vm.regions">{{region}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+
+          <div ng-if="vm.region">
+            <label style="color: #666666; font-size: 1em;">Район</label>
+            <md-input-container class="md-block"
+                                style="margin-top: -5px" flex>
+              <md-select ng-disabled="!vm.region"
+                         style="border-bottom: 1px solid #333"
+                         ng-change="vm.getCities(vm.area, vm.region)"
+                         id="area" ng-model="vm.area"
+                         aria-label="sort">
+                <md-option ng-value="area"
+                           ng-repeat="area in vm.areas">{{area}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+
+          <div ng-if="vm.area">
+            <label style="color: #666666; font-size: 1em;">Місто/село</label>
+            <md-input-container class="md-block" style="margin-top: -5px" flex>
+              <md-select  style="border-bottom: 1px solid #333"  id="city"  ng-model="vm.city"
+                          aria-label="sort">
+                <md-option ng-value="city" ng-repeat="city in vm.cities">{{city}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+          </div>
 
 
             <div style="margin-top: -25px">

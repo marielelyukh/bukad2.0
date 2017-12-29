@@ -44,15 +44,15 @@
                            type="text" >
                 </md-input-container>
             </div>
-            <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Номер картки</label>
-                <md-input-container class="md-block" flex>
-                    <input style="margin-top: -25px"
-                           ng-model="vm.data.profile.card_number"
-                           aria-label="card_number"
-                           type="text" >
-                </md-input-container>
-            </div>
+            <!--<div style="margin-top: -25px">-->
+                <!--<label style="color: #666666; font-size: 1em;">Номер картки</label>-->
+                <!--<md-input-container class="md-block" flex>-->
+                    <!--<input style="margin-top: -25px"-->
+                           <!--ng-model="vm.data.profile.card_number"-->
+                           <!--aria-label="card_number"-->
+                           <!--type="text" >-->
+                <!--</md-input-container>-->
+            <!--</div>-->
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">ПІП</label>
                 <md-input-container class="md-block" flex>
@@ -79,7 +79,7 @@
             <label style="color: #666666; font-size: 1em;">Область</label>
             <md-input-container class="md-block" style="margin-top: -5px" flex>
                 <md-select style="border-bottom: 1px solid #333"
-                           ng-change="vm.getCities(vm.region)"
+                           ng-change="vm.getArea(vm.region)"
                            id="region" ng-model="vm.region"
                            aria-label="sort">
                     <md-option   ng-value="region" ng-repeat="region in vm.regions">{{region}}
@@ -88,18 +88,23 @@
             </md-input-container>
                </div>
 
-            <!--<div>-->
-                <!--<label style="color: #666666; font-size: 1em;">Район</label>-->
-                <!--<md-input-container class="md-block" style="margin-top: -5px" flex>-->
-                    <!--<md-select ng-disabled="!vm.region" style="border-bottom: 1px solid #333" ng-change="vm.getCities(vm.area)" id="area" ng-model="vm.area"-->
-                               <!--aria-label="sort">-->
-                        <!--<md-option ng-value="area" ng-repeat="area in vm.areas">{{area.name}}-->
-                        <!--</md-option>-->
-                    <!--</md-select>-->
-                <!--</md-input-container>-->
-               <!--</div>-->
-
             <div ng-if="vm.region">
+                <label style="color: #666666; font-size: 1em;">Район</label>
+                <md-input-container class="md-block"
+                 style="margin-top: -5px" flex>
+                    <md-select ng-disabled="!vm.region"
+                     style="border-bottom: 1px solid #333"
+                     ng-change="vm.getCities(vm.area, vm.region)"
+                      id="area" ng-model="vm.area"
+                               aria-label="sort">
+                        <md-option ng-value="area"
+                         ng-repeat="area in vm.areas">{{area}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+               </div>
+
+            <div ng-if="vm.area">
                 <label style="color: #666666; font-size: 1em;">Місто/село</label>
                 <md-input-container class="md-block" style="margin-top: -5px" flex>
                     <md-select  style="border-bottom: 1px solid #333"  id="city"  ng-model="vm.city"
@@ -109,6 +114,27 @@
                     </md-select>
                 </md-input-container>
                </div>
+
+          <!--<md-autocomplete md-input-name="city_autocomplete"-->
+                           <!--md-no-cache="true"-->
+                           <!--class="w-65 align-left ml-16"-->
+                           <!--md-min-length="0"-->
+                           <!--md-search-text-change="vm.searchTextChange(vm.cities.city[$index].searchCity)"-->
+                           <!--md-selected-item-change="vm.selectedItemChange(item)"-->
+                           <!--md-selected-item="vm.cities.city"-->
+                           <!--ng-blur="vm.createGrosse(vm.cities.city[$index].searchCity, $index)"-->
+                           <!--md-search-text="vm.cities.city[$index].searchCity"-->
+                           <!--md-items="item in vm.citySearch(vm.cities.city[$index].searchCity)"-->
+                           <!--md-item-text="item.size"-->
+                           <!--md-require-match-->
+
+                           <!--md-floating-label="Мiсто">-->
+            <!--<md-item-template style="min-height:100px; height: 100px; max-height: 100px">-->
+                              <!--<span md-highlight-text="vm.cities.city[$index].searchCity"-->
+                                    <!--style="min-height:100px; height: 100px; max-height: 100px"-->
+                                    <!--md-highlight-flags="^i">{{item.city}}</span>-->
+            <!--</md-item-template>-->
+          <!--</md-autocomplete>-->
 
 
             <h4>Деталі:</h4>

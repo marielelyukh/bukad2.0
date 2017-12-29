@@ -42,10 +42,37 @@
              * Check whether the user is authorized
              */
             if ($localStorage.token) {
-                $state.go('app.main');
+              // user.check()
+              //   .then(function (res){
+              //     // // $rootScope.user = {
+              //     // //   id: res.id,
+              //     // //   group: res.group
+              //     // // }
+              //     //   $sessionStorage.group = res.group;
+              //     //   $sessionStorage.id = res.id;
+              //
+              //   })
+              $state.go('app.main');
             } else {
                 $state.go('login');
             }
+
+          if ($localStorage.token) {
+            user.check()
+              .then(function (res) {
+                // $rootScope.user = res;
+                $rootScope.id = res.id;
+                $sessionStorage.group = res.group;
+                $sessionStorage.id = res.id;
+
+                $state.go('app.main');
+              })
+              .catch(function () {
+                $state.go('login');
+              })
+          } else {
+            $state.go('login');
+          }
 
         });
 

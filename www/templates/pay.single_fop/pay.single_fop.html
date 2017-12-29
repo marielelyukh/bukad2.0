@@ -1,6 +1,6 @@
 <ion-view view-title="Сплата єдиного рахунку" class="pay_single_fop">
     <ion-content>
-        <form>
+        <form name="vm.form" novalidate>
 
             <h4 style="margin-top: 25px" >Сума до сплати:</h4>
             <div>
@@ -15,10 +15,16 @@
                 <md-input-container style="margin-left: 10px" class="md-block">
                     <input style="width: 30px; height: 30px; font-size: 1.3em; border: 1px solid #666666; margin-top: -10px;"
                            ng-model="vm.data.month " type="number"
-                           ng-pattern="/^([1-9]|10)$/"
                            max="2"
+                           aria-label="number"
+                           required
                            min="2"
                            >
+                  <div ng-messages="vm.form.name.$error">
+                  <div class="error-block" ng-message="required">
+                    required
+                  </div>
+                </div>
                 </md-input-container>
                 <md-input-container style="margin-left: 10px" class="md-block">
                     <input style="width: 30px; height: 30px; font-size: 1.3em; border: 1px solid #666666; margin-top: -10px;"
@@ -47,7 +53,7 @@
 
         </div>
         <div layout="column" style="margin-top: 25px" layout-align="center center" class="link">
-            <md-button class=" md-raised waves-effect waves-light BTN"
+            <md-button class=" md-raised BTN"
                        ng-click="vm.payFirstGroup()"
                        aria-label="true">
                 Oплатити

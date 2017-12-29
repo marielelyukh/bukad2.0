@@ -12,6 +12,7 @@
         var vm = this;
         vm.getSum = getSum;
         vm.editDate = editDate;
+        vm.payFirstGroup = payFirstGroup;
         vm.user_group = $sessionStorage.group;
         vm.tmp = {};
         vm.data = {
@@ -41,6 +42,19 @@
                 vm.data.appointment = vm.data.appointment.replace(re, vm.data.for_time);
 
             });
+
+      function payFirstGroup() {
+        // if (vm.form.$invalid) {
+        //   return;
+        // }
+        group.payFirstGroup(vm.data)
+          .then(function (res) {
+            vm.pay_data = res;
+            // $state.go('app.main');
+          })
+
+      }
+
 
         function getSum() {
             group.firstTaxIncome({income: vm.tmp.income})

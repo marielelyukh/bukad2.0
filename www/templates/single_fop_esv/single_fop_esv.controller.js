@@ -12,6 +12,7 @@
         var vm = this;
         vm.getEsvSum = getEsvSum;
         vm.editDate = editDate;
+        vm.paySecondGroup = paySecondGroup;
         vm.user_group = $sessionStorage.group;
         vm.data = {
         };
@@ -25,6 +26,14 @@
         $scope.inputs = [{
             value: null
         }];
+
+      function paySecondGroup() {
+        group.paySecondTax(vm.data)
+          .then(function (res) {
+            vm.pay_data = res;
+          })
+
+      }
 
         function getEsvSum() {
             group.secondTaxIncome({income: vm.tmp.income})

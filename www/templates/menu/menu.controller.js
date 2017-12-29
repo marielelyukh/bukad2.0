@@ -5,9 +5,9 @@
         .module('app')
         .controller('AppCtrl', AppCtrl);
 
-    AppCtrl.$inject = ['$state', '$sessionStorage', '$rootScope'];
+    AppCtrl.$inject = ['$state', '$sessionStorage', '$rootScope', '$localStorage'];
 
-    function AppCtrl($state, $sessionStorage, $rootScope) {
+    function AppCtrl($state, $sessionStorage, $rootScope, $localStorage) {
 
         var vm = this;
         vm.logout = logout;
@@ -20,7 +20,7 @@
 
         function logout() {
             $state.go('login');
-            delete $sessionStorage.token;
+            delete $localStorage.token;
             delete $sessionStorage.id;
         }
 
