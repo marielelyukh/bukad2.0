@@ -21,14 +21,40 @@
         vm.title = $stateParams.title;
         vm.data = $stateParams.staff_tax;
 
-        group.getThirdTaxData()
-            .then(function (res) {
-                vm.data = res;
-                var re = 'replace';
-                vm.data.army.appointment = vm.data.army.appointment.replace(re, vm.data.army.for_time);
-                vm.data.income_tax.appointment = vm.data.income_tax.appointment.replace(re, vm.data.income_tax.for_time);
-                vm.data.esv.appointment = vm.data.esv.appointment.replace(re, vm.data.esv.for_time);
-            });
+
+    if(vm.type == 1) {
+      group.getArmyData()
+        .then(function (res) {
+          vm.data = res;
+          var re = 'replace';
+          vm.data.appointment = vm.data.appointment.replace(re, vm.data.for_time);
+          // vm.data.income_tax.appointment = vm.data.income_tax.appointment.replace(re, vm.data.income_tax.for_time);
+          // vm.data.esv.appointment = vm.data.esv.appointment.replace(re, vm.data.esv.for_time);
+        });
+    }
+
+       if (vm.type == 2) {
+         group.getIncomeData()
+           .then(function (res) {
+             vm.data = res;
+             var re = 'replace';
+             // vm.data.appointment = vm.data.army.appointment.replace(re, vm.data.army.for_time);
+             vm.data.appointment = vm.data.appointment.replace(re, vm.data.for_time);
+             // vm.data.esv.appointment = vm.data.esv.appointment.replace(re, vm.data.esv.for_time);
+           });
+       }
+
+     if(vm.type == 3) {
+       group.getEmployeeData()
+         .then(function (res) {
+           vm.data = res;
+           var re = 'replace';
+           // vm.data.army.appointment = vm.data.army.appointment.replace(re, vm.data.army.for_time);
+           // vm.data.income_tax.appointment = vm.data.income_tax.appointment.replace(re, vm.data.income_tax.for_time);
+           vm.data.appointment = vm.data.appointment.replace(re, vm.data.for_time);
+         });
+     }
+
 
         function payArmy() {
             vm.data.army.count_workers = vm.count_workers;
