@@ -113,8 +113,7 @@
       vm.data.profile.pfu_name = vm.pfu_codes.pfu_name;
       user.update(vm.data)
         .then(function (res) {
-          toastr.success('Змiни збережено!')
-          // vm.data = res;
+          toastr.success('Змiни збережено!');
         });
     }
 

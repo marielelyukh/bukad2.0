@@ -8,9 +8,9 @@
         .module('app')
         .controller('Login', Login);
 
-    Login.$inject = ['$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', 'toastr', '$localStorage'];
+    Login.$inject = ['$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', 'toastr', '$localStorage', '$ionicPlatform'];
 
-    function Login($rootScope, $state, $ionicHistory, user, $sessionStorage, toastr, $localStorage) {
+    function Login($rootScope, $state, $ionicHistory, user, $sessionStorage, toastr, $localStorage, $ionicPlatform) {
 
         $rootScope.page = {};
         var vm = this;
@@ -33,6 +33,21 @@
                         $sessionStorage.group = res.group;
                         $sessionStorage.id = res.user_id;
                         $state.go('app.main');
+                        if($localStorage.my_notifications_id){
+                        $ionicPlatform.ready(function () {
+                          FCMPlugin.getToken(
+                            function (token) {
+                              $localStorage.my_notifications_id = token;
+                              alert('token=' + token);
+                              // userServices.tokenDevice({token: token});
+                              // console.log('Token: ' + token);
+                            },
+                            function (err) {
+                              alert('error retrieving token: ' + token);
+                            }
+                          );
+                        });
+                      }
                     }
                 })
         }

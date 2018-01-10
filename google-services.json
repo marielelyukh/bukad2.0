@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "883555529292",
+    "firebase_url": "https://bukad-grassbusineabs.firebaseio.com",
+    "project_id": "bukad-grassbusineabs",
+    "storage_bucket": "bukad-grassbusineabs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883555529292:android:b1036a0c65cfe42d",
+        "android_client_info": {
+          "package_name": "grassbusinelabs.bukad.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883555529292-chp89u631gpvr9a1f631kk65u9mildpe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB6yAm0YnfqSNChJ9duV7TgcF5UOC_UZM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

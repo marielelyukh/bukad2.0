@@ -28,7 +28,8 @@
             getPfu        : getPfu,
             getDfs        : getDfs,
             getDfsCode    : getDfsCode,
-            check         : check
+            check         : check,
+            device        : device
 
 
         };
@@ -43,6 +44,13 @@
                     return res;
                 });
         }
+
+      function device(data) {
+        return http.post(url.user.device, data)
+          .then(function (res) {
+            return res;
+          });
+      }
 
       function check(data) {
         return http.get(url.user.check, data)
