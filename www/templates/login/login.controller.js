@@ -17,6 +17,11 @@
         vm.login = login;
         vm.signup = signup;
 
+        if($localStorage.token) {
+          delete $localStorage.token;
+        }
+
+
         function login() {
             if(!vm.data){
                 toastr.warning('Будь ласка, введіть логін та пароль!');
@@ -32,24 +37,25 @@
                         delete res.token;
                         $sessionStorage.group = res.group;
                         $sessionStorage.id = res.user_id;
-                        $state.go('app.main');
-                        if($localStorage.my_notifications_id){
                         $ionicPlatform.ready(function () {
-                          FCMPlugin.getToken(
-                            function (token) {
-                              $localStorage.my_notifications_id = token;
-                              alert('token=' + token);
-                              // userServices.tokenDevice({token: token});
-                              // console.log('Token: ' + token);
-                            },
-                            function (err) {
-                              alert('error retrieving token: ' + token);
-                            }
-                          );
-                        });
-                      }
+                        FCMPlugin.getToken(
+                          function (token) {
+                            $localStorage.my_notifications_id = token;
+                            user.device({token: token});
+
+                            console.log('Token: ' + token);
+                          },
+                          function (err) {
+                            alert('error retrieving token: ' + token);
+                            console.log('error retrieving token: ' + err);
+                          }
+                        );
+                      });
+                        $state.go('app.main');
+
+
                     }
-                })
+                });
         }
 
         function signup(){

@@ -83,7 +83,7 @@
           vm.cities = res;
         });
 
-      user.getPfu({area: area})
+      user.getPfu({region: region})
         .then(function (res) {
           // vm.pfu_code = res;
           vm.pfu_code = res;

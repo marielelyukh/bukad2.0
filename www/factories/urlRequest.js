@@ -8,8 +8,8 @@
     .factory('url', [
       function () {
 
-        // var baseUrl = 'http://192.168.0.122:8000/api/v1/';
-        var baseUrl = 'http://46.101.195.13/bukad/api/v1/';
+        var baseUrl = 'http://192.168.0.107:8000/api/v1/';
+        // var baseUrl = 'http://46.101.195.13/bukad/api/v1/';
         return {
 
           user: {
@@ -28,7 +28,7 @@
             getDfs: baseUrl + 'register/dfs_names',
             getDfsCode: baseUrl + 'register/dfs',
             check: baseUrl + 'auth/check',
-            device: 'auth/device'
+            device: baseUrl + 'auth/device'
           },
 
           group: {

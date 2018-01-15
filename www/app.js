@@ -19,6 +19,21 @@
         /**
          * Function that runs when platform ready
          */
+
+        var config = {
+          apiKey: "AIzaSyCTw5jj58Md8YwrmAyqWzqFBZyVFZH_uO4",
+          authDomain: "bukad-grassbusineabs.firebaseapp.com",
+          databaseURL: "https://bukad-grassbusineabs.firebaseio.com",
+          projectId: "bukad-grassbusineabs",
+          storageBucket: "bukad-grassbusineabs.appspot.com",
+          messagingSenderId: "883555529292"
+        };
+
+       var defaultApp = firebase.initializeApp(config);
+      firebase.auth(defaultApp).signInAnonymously().catch(function (error) {
+      });
+
+
         $ionicPlatform.ready(function () {
             if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
                 cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);

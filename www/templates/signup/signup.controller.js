@@ -131,7 +131,7 @@
           vm.cities = res;
         });
 
-      user.getPfu({area: area})
+      user.getPfu({region: region})
         .then(function (res) {
           // vm.pfu_code = res;
           vm.pfu_code = res;
@@ -147,7 +147,7 @@
         .then(function (res) {
           // vm.pfu_code = res;
           vm.dfs_code_code = res[0];
-        })
+        });
     }
 
     function signup() {
