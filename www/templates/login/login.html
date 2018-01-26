@@ -1,50 +1,60 @@
-<ion-view class="login" >
-    <ion-content>
-        <p class="title">
-            Авторизація
-        </p>
-        <form>
-            <md-input-container class="md-block" flex>
-                <label for="email">Електронна пошта</label>
-                <input ng-model="vm.data.email"
-                       type="email"
-                       name="email"
-                       id="email"
-                       autocomplete="off"
-                       required>
-                <div ng-messages="vm.form.email.$error">
-                    <div class="error-block" ng-message="required">
-                        {{"ERROR_REQUIRED"|translate}}
-                    </div>
-                </div>
-            </md-input-container>
-            <md-input-container class="md-block" flex>
-                <label for="password">Пароль</label>
-                <input ng-model="vm.data.password"
-                       type="password"
-                       name="password"
-                       id="password"
-                       required>
-                <div ng-messages="vm.form.password.$error">
-                    <div class="error-block" ng-message="required">
-                        {{"ERROR_REQUIRED"|translate}}
-                    </div>
-                </div>
-            </md-input-container>
-        </form>
-        <div layout="column" layout-margin>
-            <md-button class=" md-raised waves-effect waves-light"
-                       style="background-color: grey; color: white"
-                       ng-click="vm.login()"
-                       aria-label="true">
-                Увійти
-            </md-button>
+<ion-view class="login">
+  <ion-content>
+    <p class="title">
+      Авторизація
+    </p>
+    <form name="vm.form" novalidate>
+      <md-input-container class="md-block" flex>
+        <label for="email">Електронна пошта</label>
+        <input required
+               name="email"
+               autocomplete="off"
+               maxlength="255"
+               id="email"
+               ng-pattern="vm.emailRegExp"
+               ng-model="vm.data.email"
+               aria-label="email"/>
+        <div class="error-block" ng-messages="vm.form.email.$error">
+          <div class="error-block" ng-message="required">
+            Це поле обов`язкове!
+          </div>
+          <div class="error-block" ng-message-exp="['maxlength', 'pattern']">
+            <span class="error">Ваш емейл повинен виглядати як емейл і бути від 5-30 символів.</span>
+          </div>
         </div>
-        <!--<div class="link">-->
-            <!--<a  ng-click="vm.reset()">Відновити пароль</a>-->
-        <!--</div>-->
-        <div class="link">
-            <a ng-click="vm.signup()">Ви ще не зареєстровані?</a>
+      </md-input-container>
+      <md-input-container class="md-block" flex>
+        <label for="password">Пароль</label>
+        <input required
+               name="password"
+               id="password"
+               ng-model="vm.data.password"
+               aria-label="password"
+               type="password"/>
+        <div class="error-block" ng-messages="vm.form.password.$error">
+          <div class="error-block" ng-message="required">
+            Це поле обов`язкове!
+          </div>
         </div>
-    </ion-content>
+      </md-input-container>
+    </form>
+    <div layout="column" layout-margin>
+      <md-button class=" md-raised waves-effect waves-light"
+                 style="background-color: grey; color: white"
+                 ng-click="vm.login()"
+                 aria-label="true">
+        Увійти
+      </md-button>
+    </div>
+    <!--<div class="link">-->
+    <!--<a  ng-click="vm.reset()">Відновити пароль</a>-->
+    <!--</div>-->
+    <div class="link">
+      <a ng-click="vm.signup()">Ви ще не зареєстровані?</a>
+    </div>
+    <div class="link" style="margin-top: 10px">
+        <span>Якщо у вас виникли запитання чи необхідна допомога - зателефонуйте нам
+           </span><a style="text-decoration: none !important;" href="tel:{{'+380662279755'}}">+380662279755</a>
+    </div>
+  </ion-content>
 </ion-view>

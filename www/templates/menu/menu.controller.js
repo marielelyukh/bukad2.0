@@ -1,5 +1,5 @@
 (function () {
-    "use strict";
+  'use strict';
 
     angular
         .module('app')
@@ -12,6 +12,7 @@
         var vm = this;
         vm.logout = logout;
         vm.profile = profile;
+        vm.notificationGo = notificationGo;
 
         $rootScope.$on('$stateChangeStart',
             function(event, toState, toParams, fromState, fromParams){
@@ -23,6 +24,10 @@
             delete $localStorage.token;
             delete $sessionStorage.id;
         }
+
+      function notificationGo() {
+        $state.go('app.notification');
+      }
 
 
         function profile() {

@@ -1,100 +1,197 @@
 <ion-view view-title="Єдиний податок ФОП" class="single_fop">
-    <ion-content>
-        <form  style="padding: 20px">
-
-            <div>
-            <label for="data_payer" style="color: #666666; font-size: 1em;">Платник</label>
+  <ion-content>
+    <form style="padding: 20px" name="vm.form" novalidate>
+      <div>
+        <label for="data_payer" style="color: #666666; font-size: 1em;">Платник</label>
         <md-input-container class="md-block" flex>
-            <input aria-label="123" style="margin-top: -25px" name="data_payer" id="data_payer" ng-model="vm.data.payer" type="text" maxlength="11" >
-        </md-input-container>
+          <input aria-label="123"
+                 required
+                 name="data_payer"
+                 id="data_payer"
+                 ng-model="vm.data.payer"
+                 type="text" maxlength="11">
+          <div class="error-block" ng-messages="vm.form.data_payer.$error">
+            <div class="error-block" ng-message="required">
+              Це поле обов`язкове!
             </div>
+          </div>
+        </md-input-container>
+      </div>
 
-            <div style="margin-top: -25px">
-            <label style="color: #666666; font-size: 1em;">Отримувач</label>
+      <div style="margin-top: -25px">
+        <label style="color: #666666; font-size: 1em;">Отримувач</label>
         <md-input-container class="md-block" flex>
-            <input aria-label="123" style="margin-top: -25px"  ng-model="vm.data.getter" type="text" maxlength="11" >
-        </md-input-container>
+          <input aria-label="123"
+                 required
+                 id="getter"
+                 name="getter"
+                 ng-model="vm.data.getter"
+                 type="text"
+                 maxlength="11">
+          <div class="error-block" ng-messages="vm.form.getter.$error">
+            <div class="error-block" ng-message="required">
+              Це поле обов`язкове!
             </div>
+          </div>
+        </md-input-container>
+      </div>
 
-            <div style="margin-top: -25px">
-            <label style="color: #666666; font-size: 1em;">Код отримувача</label>
+      <div style="margin-top: -25px">
+        <label style="color: #666666; font-size: 1em;">Код отримувача</label>
         <md-input-container class="md-block" flex>
-            <input aria-label="123" style="margin-top: -25px"  ng-model="vm.data.getter_code" type="text" >
-        </md-input-container>
+          <input aria-label="123"
+                 required
+                 id="getter_code"
+                 name="getter_code"
+                 ng-model="vm.data.getter_code"
+                 type="text">
+          <div class="error-block" ng-messages="vm.form.getter_code.$error">
+            <div class="error-block" ng-message="required">
+              Це поле обов`язкове!
             </div>
+          </div>
+        </md-input-container>
+      </div>
 
-            <div style="margin-top: -25px">
-            <label style="color: #666666; font-size: 1em;">Банк отримувача</label>
+      <div style="margin-top: -25px">
+        <label style="color: #666666; font-size: 1em;">Банк отримувача</label>
         <md-input-container class="md-block" flex>
-            <input aria-label="123" style="margin-top: -25px"  ng-model="vm.data.getter_bank" type="text" >
+          <input aria-label="123"
+                 required
+                 id="getter_bank"
+                 name="getter_bank"
+                 ng-model="vm.data.getter_bank"
+                 type="text">
+          <div class="error-block" ng-messages="vm.form.getter_bank.$error">
+            <div class="error-block" ng-message="required">
+              Це поле обов`язкове!
+            </div>
+          </div>
         </md-input-container>
-            </div>
+      </div>
 
-            <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Розрахунковий рахунок</label>
-                <md-input-container class="md-block" flex>
-                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.data.account_number" type="text" >
-                </md-input-container>
-            </div>
-
-            <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Код банку</label>
-                <md-input-container class="md-block" flex>
-                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.data.bank_code" type="text" >
-                </md-input-container>
-            </div>
-
-            <div style="margin-top: -25px" ng-if="vm.user_group == 'group3'">
-                <label style="color: #666666; font-size: 1em;">Обіг, грн</label>
-                <md-input-container class="md-block" flex>
-                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.tmp.income" ng-pattern="/^[+-]?([0-9]*[.])?[0-9]+$/" type="number" >
-                </md-input-container>
-            </div>
-
-            <div layout="column" layout-align="center center" class="link" layout-margin ng-if="vm.user_group == 'group3'">
-                <md-button class=" md-raised waves-effect waves-light"
-                           style="background-color: grey; color: white"
-                           aria-label="true"
-                           ng-click="vm.getSum()">
-                    Розрахувати суму
-                </md-button>
-            </div>
-
-            <div style="margin-top: 25px">
-            <label style="color: #666666; font-size: 1em;">Сума податку,грн</label>
+      <div style="margin-top: -25px">
+        <label style="color: #666666; font-size: 1em;">Розрахунковий рахунок</label>
         <md-input-container class="md-block" flex>
-            <input aria-label="123" style="margin-top: -25px"  ng-model="vm.data.sum" ng-pattern="/^[+-]?([0-9]*[.])?[0-9]+$/" type="number" >
-        </md-input-container>
+          <input aria-label="123"
+                 required
+                 id="account_number"
+                 name="account_number"
+                 ng-model="vm.data.account_number"
+                 type="text">
+          <div class="error-block" ng-messages="vm.form.account_number.$error">
+            <div class="error-block" ng-message="required">
+              Це поле обов`язкове!
             </div>
+          </div>
+        </md-input-container>
+      </div>
 
-
-            <div style="margin-top: -25px">
-            <label style="color: #666666; font-size: 1em;">Призначення</label>
+      <div style="margin-top: -25px">
+        <label style="color: #666666; font-size: 1em;">Код банку</label>
         <md-input-container class="md-block" flex>
-            <textarea aria-label="123" disabled style="margin-top: -20px" rows="2" ng-model="vm.data.appointment"></textarea>
+          <input aria-label="123"
+                 required
+                 id="bank_code"
+                 name="bank_code"
+                 ng-model="vm.data.bank_code"
+                 type="text">
+          <div class="error-block" ng-messages="vm.form.bank_code.$error">
+            <div class="error-block" ng-message="required">
+              Це поле обов`язкове!
+            </div>
+          </div>
         </md-input-container>
+      </div>
+
+      <div style="margin-top: -25px" ng-if="vm.user_group == 'group3'">
+        <label style="color: #666666; font-size: 1em;">Обіг, грн</label>
+        <md-input-container class="md-block" flex>
+          <input aria-label="123"
+                 required
+                 id="income"
+                 name="income"
+                 ng-model="vm.tmp.income"
+                 type="number">
+          <div class="error-block" ng-messages="vm.form.income.$error">
+            <div class="error-block" ng-message="required">
+              Це поле обов`язкове!
             </div>
+          </div>
+        </md-input-container>
+      </div>
 
-            <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Єдиний податок ФОП за</label>
-                <md-input-container class="md-block" flex>
-                    <input aria-label="123" ng-change="vm.editDate()" style="margin-top: -25px" ng-model="vm.data.for_time" type="text" >
-                </md-input-container>
+      <div layout="column" layout-align="center center" class="link" layout-margin ng-if="vm.user_group == 'group3'">
+        <md-button class=" md-raised waves-effect waves-light"
+                   style="background-color: grey; color: white"
+                   aria-label="true"
+                   ng-click="vm.getSum()">
+          Розрахувати суму
+        </md-button>
+      </div>
+
+      <div style="margin-top: 25px">
+        <label style="color: #666666; font-size: 1em;">Сума податку,грн</label>
+        <md-input-container class="md-block" flex>
+          <input aria-label="123"
+                 required
+                 id="sum"
+                 name="sum"
+                 ng-model="vm.data.sum"
+                 disabled
+                 type="number">
+          <div class="error-block" ng-messages="vm.form.sum.$error">
+            <div class="error-block" ng-message="required">
+              Це поле обов`язкове!
             </div>
+          </div>
+        </md-input-container>
+      </div>
 
-    </form>
 
-      <div layout="column" ng-if="!vm.pay_data.uapay.paymentPageUrl" layout-align="center end" class="link" layout-margin>
-        <div class="link" ng-click="vm.payFirstGroup()" style="color: #039BE5 !important;">
-          <a>>Продовжити</a>
+      <div style="margin-top: -25px">
+        <label style="color: #666666; font-size: 1em;">Призначення</label>
+        <md-input-container class="md-block" flex>
+          <textarea aria-label="123"
+                    disabled
+                    rows="2"
+                    required
+                    id="appointment"
+                    name="appointment"
+                    ng-model="vm.data.appointment"></textarea>
+        </md-input-container>
+        <div class="error-block" ng-messages="vm.form.appointment.$error">
+          <div class="error-block" ng-message="required">
+            Це поле обов`язкове!
+          </div>
         </div>
       </div>
 
-        <div layout="column"  ng-if="vm.pay_data.uapay.paymentPageUrl" layout-align="center end" class="link" layout-margin>
-            <div class="link" style="color: #039BE5 !important;">
-                <a ng-href="{{vm.pay_data.uapay.paymentPageUrl}}">Пiдтвердити</a>
+      <div style="margin-top: -25px">
+        <label style="color: #666666; font-size: 1em;">Єдиний податок ФОП за</label>
+        <md-input-container class="md-block" flex>
+          <input aria-label="123"
+                 required
+                 id="for_time"
+                 name="for_time"
+                 ng-change="vm.editDate()"
+                 ng-model="vm.data.for_time"
+                 type="text">
+          <div class="error-block" ng-messages="vm.form.for_time.$error">
+            <div class="error-block" ng-message="required">
+              Це поле обов`язкове!
             </div>
-        </div>
+          </div>
+        </md-input-container>
+      </div>
 
-    </ion-content>
+    </form>
+
+    <div layout="column" layout-align="center end" class="link" layout-margin>
+      <div class="link" ng-click="vm.payFirstGroup()" style="color: #039BE5 !important;">
+        <a>>Продовжити</a>
+      </div>
+    </div>
+
+  </ion-content>
 </ion-view>

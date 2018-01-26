@@ -1,4 +1,5 @@
 ;(function () {
+  'use strict';
     angular.module('directive.textOverflow', [])
         .directive('textOverflow', function () {
             return {

@@ -8,6 +8,6 @@
             'factory.urlRequest',
             'factory.request',
             'factory.util'
-        ])
+        ]);
 })();
 

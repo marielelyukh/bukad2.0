@@ -6,7 +6,8 @@
   angular
     .module('services.module', [
       'model.user',
-      'model.group'
-    ])
+      'model.group',
+      'model.exit'
+    ]);
 })();
 

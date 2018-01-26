@@ -1,18 +1,19 @@
 (function () {
-    "use strict";
+  'use strict';
 
     angular
         .module('app')
         .controller('SingleFopE', SingleFopE);
 
-    SingleFopE.$inject = ['$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group'];
+    SingleFopE.$inject = ['$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group', '$timeout', '$window'];
 
-    function SingleFopE($rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams,  $scope, group) {
+    function SingleFopE($ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams,  $scope, group, $timeout, $window) {
 
         var vm = this;
         vm.getEsvSum = getEsvSum;
         vm.editDate = editDate;
         vm.paySecondGroup = paySecondGroup;
+        vm.changeUrl = changeUrl;
         vm.user_group = $sessionStorage.group;
         vm.data = {
         };
@@ -27,19 +28,44 @@
             value: null
         }];
 
+
       function paySecondGroup() {
+        // if (vm.form.$invalid) {
+        //   return;
+        // }
         group.paySecondTax(vm.data)
           .then(function (res) {
             vm.pay_data = res;
-          })
+            vm.resUrl = vm.pay_data.uapay.paymentPageUrl;
+            if (vm.resUrl) {
+              var confirmPopup = $ionicPopup.confirm({
+                title: 'Перейти до сторiнки оплати UaPay?',
+                // template: 'Перейти до сторiнки оплати?',
+                cancelText: 'Нi',
+                okText: 'Так'
+              });
+              confirmPopup.then(function (res) {
+                if (res) {
+                  $window.location.href = vm.resUrl;
+                  $state.go('app.main');
+                }
+              });
+            }
+          });
 
+
+      }
+
+      function changeUrl(){
+        $window.location.href = vm.resUrl;
+        $state.go('app.main');
       }
 
         function getEsvSum() {
             group.secondTaxIncome({income: vm.tmp.income})
                 .then(function (res) {
-                    vm.data.sum = res.value
-                })
+                    vm.data.sum = res.value;
+                });
 
         }
 

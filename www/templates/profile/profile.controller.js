@@ -2,15 +2,15 @@
  * Controller for signup page
  */
 (function () {
-  "use strict";
+  'use strict';
 
   angular
     .module('app')
     .controller('Profile', Profile);
 
-  Profile.$inject = ['$state', '$ionicHistory', '$sessionStorage', 'user', 'profileData'];
+  Profile.$inject = ['$state', '$ionicHistory', '$sessionStorage', 'user', 'profileData', '$localStorage', 'toastr'];
 
-  function Profile($state, $ionicHistory, $sessionStorage, user, profileData) {
+  function Profile($state, $ionicHistory, $sessionStorage, user, profileData, $localStorage, toastr) {
 
     var vm = this;
     vm.update = update;
@@ -18,8 +18,9 @@
     vm.getCities = getCities;
     vm.getClass = getClasses;
     vm.getGroups = getGroups;
-    vm.user_id = $sessionStorage.id;
+    vm.user_id = $localStorage.id;
     vm.data = profileData;
+    debugger
     vm.pfu_codes = vm.data.profile.pfu_name;
     vm.getFirstArea = getFirstArea;
 
@@ -48,7 +49,7 @@
       user.getGroup({topic: topic})
         .then(function (res) {
           vm.groups = res;
-        })
+        });
     }
 
     function getArea(region) {
@@ -64,11 +65,11 @@
       user.getClass({group: group})
         .then(function (res) {
           vm.class = res;
-        })
+        });
     }
 
     function getFirstArea() {
-      console.log(vm.data.profile)
+      console.log(vm.data.profile);
       // user.getAreas({region: vm.data.profile.region})
       //   .then(function(res){
       //     vm.areas = res;
@@ -93,27 +94,33 @@
       user.getDfs({region: region})
         .then(function (res) {
           // vm.pfu_code = res;
+
           vm.dfs_code = res;
         })
 
       user.getDfsCode({region: region})
         .then(function (res) {
+          debugger
           // vm.pfu_code = res;
           vm.dfs_code_code = res[0];
-        })
+        });
     }
 
 
     function update() {
-      if (vm.data.password !== vm.password) {
-        toastr.warning('Паролі не співпадають!');
+      if (vm.form.$invalid) {
         return;
       }
-      vm.data.profile.pfu_code = vm.pfu_codes.code;
-      vm.data.profile.pfu_name = vm.pfu_codes.pfu_name;
+      // if (vm.data.password !== vm.password) {
+      //   toastr.warning('Паролі не співпадають!');
+      //   return;
+      // }
+      // vm.data.profile.pfu_code = vm.pfu_codes.code;
+      // vm.data.profile.pfu_name = vm.pfu_codes.pfu_name;
       user.update(vm.data)
         .then(function (res) {
           toastr.success('Змiни збережено!');
+          $localStorage.group = res.profile.group;
         });
     }
 

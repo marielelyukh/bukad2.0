@@ -64,8 +64,8 @@
 
             if ($localStorage.token) {
                 config.url = url;
-                config.headers.Authorization = `Token ${$localStorage.token}`;
-                // config.headers.Authorization = 'Token ' + $sessionStorage.token;
+                // config.headers.Authorization = `Token ${$localStorage.token}`;
+                config.headers.Authorization = 'Token ' + $localStorage.token;
 
             }
             else {

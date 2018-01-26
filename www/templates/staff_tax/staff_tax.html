@@ -3,7 +3,7 @@
         <form>
             <div layout="row" style="margin-top: 20px" layout-align="space-between center">
                 <h4>Кількість найманиx працівників: <br><span style="color: #666666; font-size: 1em">(до 10 чоловік)</span> </h4>
-               <span style="height: 25px; width: 25px; border: 1px solid #666666"><span style="margin-left: 5px; color: #666666;">{{vm.data.count_workers}}</span></span>
+              <span style="height: 25px; width: 25px;"><span style="margin-left: 5px; color: #666666;"><b>{{vm.data.count_workers}}</b></span></span>
             </div>
 
             <div layout="row" ng-repeat="input in inputs" layout-align="space-between center">
@@ -16,10 +16,16 @@
                    ng-click="removeInput($index)"
                    style="margin-left: 15px;  color: grey" class="icon fa fa-close " aria-hidden="true"></i>
               </div>
-            <div layout="row" style="margin-top: 20px;" layout-align="end end">
+            <div layout="row" style="margin-top: 10px;" layout-align="space-between center">
 
-                <md-button class=" md-icon-button md-fab waves-effect waves-light"
-                           md-colors="{background: 'red-300'}"
+              <md-button class=" md-raised waves-effect waves-light"
+                         style="background-color: grey; color: white"
+                         aria-label="true"
+                         ng-click="vm.getTaxData()">
+                Розрахувати дані
+              </md-button>
+
+                <md-button class="md-icon-button"
                            aria-label="true"
                            ng-click="addInput()"
                            ng-show="inputs.length < 10">
@@ -28,50 +34,42 @@
                 </md-button>
             </div>
 
-            <div layout="column" layout-align="center center" class="link" layout-margin>
-                <md-button class=" md-raised waves-effect waves-light"
-                           style="background-color: grey; color: white"
-                           aria-label="true"
-                           ng-click="vm.getTaxData()">
-                    Розрахувати дані
-                </md-button>
-            </div>
             <div>
                 <label style="color: #666666; font-size: 1em;">Фонд ЗП, грн</label>
                 <md-input-container class="md-block" flex>
-                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.tmp.fond" type="text" >
+                    <input aria-label="123" disabled ng-model="vm.tmp.fond" type="text" >
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">ЄСВ наймані працівникі, грн</label>
                 <md-input-container class="md-block" flex>
-                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.tmp.esv_tax" type="text" >
+                    <input aria-label="123" disabled ng-model="vm.tmp.esv_tax" type="text" >
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">Військовий збір, грн</label>
                 <md-input-container class="md-block" flex>
-                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.tmp.army_tax" type="text" >
+                    <input aria-label="123" disabled ng-model="vm.tmp.army_tax" type="text" >
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">Прибутковий податок, грн</label>
                 <md-input-container class="md-block" flex>
-                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.tmp.income_tax" type="text" >
+                    <input aria-label="123" disabled ng-model="vm.tmp.income_tax" type="text" >
                 </md-input-container>
             </div>
 
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">Загальная сума податку (ЄСВ, ВЗ, Приб., грн)</label>
                 <md-input-container class="md-block" flex>
-                    <input aria-label="123" style="margin-top: -25px"  ng-model="vm.tmp.sum" type="text" >
+                    <input aria-label="123" disabled ng-model="vm.tmp.sum" type="text" >
                 </md-input-container>
             </div>
 
         </form>
         <div layout="column" layout-align="center end" class="link" layout-margin>
             <div class="link">
-                <a  ui-sref="app.list_of_staffTax({staff_tax: vm.data, values: vm.tmp, data_salary: vm.salary, count_workers: vm.data.count_workers})">>Продовжити</a>
+                <a style="text-decoration: none"  ui-sref="app.list_of_staffTax({staff_tax: vm.data, values: vm.tmp, data_salary: vm.salary, count_workers: vm.data.count_workers})">>Продовжити</a>
             </div>
         </div>
 

@@ -8,15 +8,15 @@
     .factory('url', [
       function () {
 
-        var baseUrl = 'http://192.168.0.107:8000/api/v1/';
-        // var baseUrl = 'http://46.101.195.13/bukad/api/v1/';
+        // var baseUrl = 'http://192.168.0.161:8000/api/v1/';
+        var baseUrl = 'http://46.101.195.13/bukad/api/v1/';
         return {
 
           user: {
             signup: baseUrl + 'register',
             login: baseUrl + 'auth',
             one: baseUrl + 'profile',
-            update: baseUrl + 'profile',
+            update: baseUrl + 'update/profile/',
             getSignUpData: baseUrl + 'register/data',
             getRegions: baseUrl + 'register/regions',
             getAreas: baseUrl + 'register/areas',

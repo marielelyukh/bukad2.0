@@ -1,19 +1,20 @@
 (function () {
-    "use strict";
+  'use strict';
 
     angular
         .module('app')
         .controller('SingleFop', SingleFop);
 
-    SingleFop.$inject = ['$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group'];
+    SingleFop.$inject = ['$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group', '$localStorage', '$timeout', '$window'];
 
-    function SingleFop($rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams,  $scope, group) {
+    function SingleFop($ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams,  $scope, group, $localStorage, $timeout, $window) {
 
         var vm = this;
         vm.getSum = getSum;
         vm.editDate = editDate;
         vm.payFirstGroup = payFirstGroup;
-        vm.user_group = $sessionStorage.group;
+        vm.changeUrl = changeUrl;
+        vm.user_group = $localStorage.group;
         vm.tmp = {};
         vm.data = {
 
@@ -50,17 +51,35 @@
         group.payFirstGroup(vm.data)
           .then(function (res) {
             vm.pay_data = res;
-            // $state.go('app.main');
-          })
+            vm.resUrl = vm.pay_data.uapay.paymentPageUrl;
+            if (vm.resUrl) {
+              var confirmPopup = $ionicPopup.confirm({
+                title: 'Перейти до сторiнки оплати UaPay?',
+                cancelText: 'Нi',
+                okText: 'Так'
+              });
+              confirmPopup.then(function (res) {
+                if (res) {
+                  $window.location.href = vm.resUrl;
+                  $state.go('app.main');
+                }
+              });
+            }
+          });
 
+      }
+
+      function changeUrl(){
+        $window.location.href = vm.resUrl;
+        $state.go('app.main');
       }
 
 
         function getSum() {
             group.firstTaxIncome({income: vm.tmp.income})
                 .then(function (res) {
-                 vm.data.sum = res.value
-                })
+                 vm.data.sum = res.value;
+                });
 
         }
 

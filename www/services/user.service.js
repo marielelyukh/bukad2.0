@@ -139,7 +139,7 @@
         }
 
         function update(data) {
-            return http.patch(url.user.update + '/'  + $sessionStorage.id + '/', data)
+            return http.post(url.user.update, data)
                 .then(function (res) {
                     return res;
                 });

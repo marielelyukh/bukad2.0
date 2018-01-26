@@ -57,6 +57,17 @@
         },
         cache: false
       })
+      .state('app.notification', {
+        url: '/notification',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/notification/notification.html',
+            controller: 'Notification',
+            controllerAs: 'vm'
+          }
+        },
+        cache: false
+      })
       .state('app.single_fop', {
         url: '/single_fop',
         views: {
@@ -204,9 +215,9 @@
           }
         },
         resolve: {
-          profileData: function (user, $sessionStorage) {
+          profileData: function (user, $localStorage) {
             return user.one({
-              user_id: $sessionStorage.id
+              user_id: $localStorage.id
             })
               .then(function (res) {
                 return res;

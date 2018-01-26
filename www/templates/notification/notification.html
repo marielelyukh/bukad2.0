@@ -1,0 +1,18 @@
+<ion-view view-title="Сповiщення" class="main">
+  <ion-content>
+    <ion-list class="item">
+      <ion-item>
+        <div class="item-icon-left" ui-sref="app.single_fop({group: 'group1'})">
+          <h2>1230</h2>
+          <p class="secondText">0321</p>
+        </div>
+        <div class="item-icon-right">
+          <i ng-if="vm.taxes_data.single_tax.status == 2" style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>
+          <i ng-if="vm.taxes_data.single_tax.status == 1" style="color: yellow !important;" class="icon ion-android-checkbox"></i>
+          <i ng-if="vm.taxes_data.single_tax.status == 0" style="color: red !important;" class="icon ion-android-checkbox"></i>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
