@@ -65,6 +65,9 @@
 
 
     function payArmy() {
+      if (vm.form.$invalid) {
+        return;
+      }
 
       // vm.data.army = vm.data;
       vm.data.count_workers = vm.count_workers;
@@ -95,6 +98,9 @@
     }
 
     function payIncome_tax() {
+      if (vm.form.$invalid) {
+        return;
+      }
 
       vm.data.count_workers = vm.count_workers;
       vm.data.salary = vm.salary;
@@ -121,6 +127,9 @@
     }
 
     function payEsv() {
+      if (vm.form.$invalid) {
+        return;
+      }
 
       vm.data.count_workers = vm.count_workers;
       vm.data.salary = vm.salary;

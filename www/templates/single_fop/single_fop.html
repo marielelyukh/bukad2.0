@@ -9,7 +9,7 @@
                  name="data_payer"
                  id="data_payer"
                  ng-model="vm.data.payer"
-                 type="text" maxlength="11">
+                 type="text">
           <div class="error-block" ng-messages="vm.form.data_payer.$error">
             <div class="error-block" ng-message="required">
               Це поле обов`язкове!
@@ -27,7 +27,7 @@
                  name="getter"
                  ng-model="vm.data.getter"
                  type="text"
-                 maxlength="11">
+          >
           <div class="error-block" ng-messages="vm.form.getter.$error">
             <div class="error-block" ng-message="required">
               Це поле обов`язкове!
@@ -108,7 +108,6 @@
         <label style="color: #666666; font-size: 1em;">Обіг, грн</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
-                 required
                  id="income"
                  name="income"
                  ng-model="vm.tmp.income"

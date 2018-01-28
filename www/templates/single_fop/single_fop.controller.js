@@ -45,9 +45,9 @@
             });
 
       function payFirstGroup() {
-        // if (vm.form.$invalid) {
-        //   return;
-        // }
+        if (vm.form.$invalid) {
+          return;
+        }
         group.payFirstGroup(vm.data)
           .then(function (res) {
             vm.pay_data = res;

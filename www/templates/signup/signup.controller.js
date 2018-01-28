@@ -24,8 +24,7 @@
     vm.emailRegExp = /^((([a-zA-Z\-0-9_.])+[a-zA-Z0-9_.]{2,})|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     vm.data = {};
     vm.data.profile = {};
-    vm.tempCities = '';
-    vm.test=[1,2];
+    vm.test = [1, 2];
 
     user.getTopic()
       .then(function (res) {
@@ -68,62 +67,74 @@
       user.getCities({region: region, area: area})
         .then(function (res) {
           vm.cities = res;
-          debugger
+          console.log(vm.cities);
+          // debugger
         });
 
       user.getPfu({region: region})
         .then(function (res) {
-          // vm.pfu_code = res;
           vm.pfu_code = res;
         });
 
       user.getDfs({region: region})
         .then(function (res) {
-          // vm.pfu_code = res;
           vm.dfs_code = res;
         });
 
       user.getDfsCode({region: region})
         .then(function (res) {
-          // vm.pfu_code = res;
           vm.dfs_code_code = res;
         });
     }
 
-    // AUTOCOMPLETE STARTS
+    // AUTOCOMPLETE for city STARTS
 
     vm.selectedItem = null;
-    vm.searchGrosse = [];
-    vm.grosseSearch = grosseSearch;
+    vm.searchCity = [];
+    vm.citySearch = citySearch;
     vm.searchTextChange = searchTextChange;
     vm.selectedItemChange = selectedItemChange;
     vm.simulateQuery = false;
-    vm.grosseArr = [];
-    vm.grosseArr = LoadAllGrosse();
+    vm.cityArr = [];
+    vm.tempCity = '';
+    vm.cityArr = LoadAllCity();
 
-    function grosseSearch(query) {
-      vm.tempGrosse = '';
-      var results = query ? vm.grosseArr.filter(createFilterForGrosse(query)) : vm.grosseArr;
-
-      if(results.length === 1) {
-        vm.tempGrosse = results[0];
+    function citySearch(query) {
+      var results = query ? vm.cityArr.filter(createFilterForCity(query)) : vm.cityArr,
+        deferred;
+      if (vm.simulateQuery) {
+        deferred = $q.defer();
+        $timeout(function () {
+          deferred.resolve(results);
+        }, Math.random() * 1000, false);
+        return deferred.promise;
+      } else {
+        return results;
       }
-
-      if(results.length > 1) {
-        for(var i = 0; i < results.length; i++) {
-          if(angular.lowercase(query) === angular.lowercase(results[i].size)) {
-            vm.tempGrosse = results[i];
-          }
-        }
-      }
-
-      var deferred = $q.defer();
-
-      $timeout(function () {
-        deferred.resolve(results);
-      }, Math.random() * 1000, false);
-      return deferred.promise;
     }
+
+    // function citySearch(query) {
+    //   vm.tempCity = '';
+    //   var results = query ? vm.cityArr.filter(createFilterForCity(query)) : vm.cityArr;
+    //
+    //   if (results.length === 1) {
+    //     vm.tempCity = results[0];
+    //   }
+    //
+    //   if (results.length > 1) {
+    //     for (var i = 0; i < results.length; i++) {
+    //       if (angular.lowercase(query) === angular.lowercase(results[i].size)) {
+    //         vm.tempCity = results[i];
+    //       }
+    //     }
+    //   }
+    //
+    //   var deferred = $q.defer();
+    //   $timeout(function () {
+    //     deferred.resolve(results);
+    //   }, Math.random() * 1000, false);
+    //   return deferred.promise;
+    // }
 
     function searchTextChange(text) {
       // $log.info('Text changed to ' + text);
@@ -134,28 +145,23 @@
       $log.info('Item changed to ' + JSON.stringify(item));
     }
 
-    /**
-     * Build `states` list of key/value pairs
-     */
-
-
-    function LoadAllGrosse() {
-      for (var i in vm.cities) {
-        vm.grosseArr[i] = {
-          city: vm.cities[i].city
+    function LoadAllCity() {
+      for (var i in vm.regions) {
+        vm.cityArr[i] = {
+          region: vm.regions[i].region
+          // id: vm.grosse[i].id
         };
       }
-      return vm.grosseArr.map(function (item) {
+      return vm.cityArr.map(function (item) {
         return {
-          city: item.city,
+          region: item.region
+          // id: item.id
         };
       });
     }
 
-    /**
-     * Create filter function for a query string
-     */
-    function createFilterForGrosse(query) {
+
+    function createFilterForCity(query) {
       console.log('query: ' + query)
       var Query = query;
 
@@ -167,9 +173,7 @@
       };
     }
 
-
-
-    // AUTOCOMPLETE ENDS
+    // AUTOCOMPLETE for city ENDS
 
 
     function signup() {

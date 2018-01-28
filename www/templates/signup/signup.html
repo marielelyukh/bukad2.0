@@ -186,33 +186,19 @@
         </md-input-container>
       </div>
 
-      <!--<div ng-if="vm.area">-->
-        <!--<label style="color: #666666; font-size: 1em;">Мiсто</label>-->
-        <!--&lt;!&ndash;<md-autocomplete md-no-cache="true" md-selected-item="selectedItem" md-items="item in vm.test"&ndash;&gt;-->
-                         <!--&lt;!&ndash;md-search-text="searchText" md-item-text="selectedItem" ng-change="">&ndash;&gt;-->
-          <!--&lt;!&ndash;<span>{{item}}</span>&ndash;&gt;-->
-        <!--&lt;!&ndash;</md-autocomplete>&ndash;&gt;-->
-
-        <!--<md-autocomplete md-input-name="grosse_autocomplete"-->
-                         <!--md-no-cache="true"-->
-                         <!--class="w-65 align-left ml-16"-->
-                         <!--md-min-length="0"-->
-                         <!--md-search-text-change="vm.searchTextChange(item.searchGrosse)"-->
-                         <!--md-selected-item-change="vm.selectedItemChange(item)"-->
-                         <!--md-selected-item="item.profile.city"-->
-                         <!--md-search-text="item.searchGrosse"-->
-                         <!--md-items="item in vm.cities(item.searchGrosse)"-->
-                         <!--md-item-text="item.city"-->
-                         <!--md-require-match-->
-
-                         <!--md-floating-label="{{'123'}}">-->
-          <!--<md-item-template style="min-height:100px; height: 100px; max-height: 100px">-->
-                              <!--<span md-highlight-text="item.searchGrosse"-->
-                                    <!--style="min-height:100px; height: 100px; max-height: 100px"-->
-                                    <!--md-highlight-flags="^i">{{item.city}}</span>-->
-          <!--</md-item-template>-->
-        <!--</md-autocomplete>-->
-      <!--</div>-->
+      <md-autocomplete md-search-text-change="vm.searchTextChange(item.searchCity)"
+                       md-selected-item-change="vm.selectedItemChange(item)"
+                       md-selected-item="vm.data.profile.city"
+                       md-search-text="item.searchCity"
+                       md-items="item in vm.citySearch(item.searchCity)"
+                       md-item-text="item.region"
+                       md-require-match
+                       md-floating-label="{{'help me please to do this shit'}}">
+        <md-item-template>
+                              <span md-highlight-text="item.searchCity"
+                                    md-highlight-flags="^i">{{item.region}}</span>
+        </md-item-template>
+      </md-autocomplete>
 
       <div ng-if="vm.area">
         <label style="color: #666666; font-size: 1em;">Місто/село</label>

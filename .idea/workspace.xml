@@ -1,68 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4419572-a489-41ef-812e-c4ae95ec5901" name="Default" comment="validation for sign up, fix bugs, push">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/services/exit.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/notification/notification.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/notification/notification.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xhdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xhdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xxhdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xxhdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xxxhdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xxxhdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/icon.png" afterPath="$PROJECT_DIR$/resources/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/icon.png.md5" afterPath="$PROJECT_DIR$/resources/icon.png.md5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/splash.png" afterPath="$PROJECT_DIR$/resources/splash.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/splash.png.md5" afterPath="$PROJECT_DIR$/resources/splash.png.md5" />
+    <list default="true" id="a4419572-a489-41ef-812e-c4ae95ec5901" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/core/blocks/factories/factories.module.js" afterPath="$PROJECT_DIR$/www/core/blocks/factories/factories.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/core/blocks/services/services.module.js" afterPath="$PROJECT_DIR$/www/core/blocks/services/services.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/core/config.js" afterPath="$PROJECT_DIR$/www/core/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/core/theme.js" afterPath="$PROJECT_DIR$/www/core/theme.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/directive/text-overflow/text-overflow.directive.js" afterPath="$PROJECT_DIR$/www/directive/text-overflow/text-overflow.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/directive/truncText.directive.js" afterPath="$PROJECT_DIR$/www/directive/truncText.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/factories/request.js" afterPath="$PROJECT_DIR$/www/factories/request.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/factories/urlRequest.js" afterPath="$PROJECT_DIR$/www/factories/urlRequest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/services/user.service.js" afterPath="$PROJECT_DIR$/www/services/user.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.controller.js" afterPath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.html" afterPath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/login/login.controller.js" afterPath="$PROJECT_DIR$/www/templates/login/login.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/login/login.html" afterPath="$PROJECT_DIR$/www/templates/login/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/main/main.controller.js" afterPath="$PROJECT_DIR$/www/templates/main/main.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu/menu.controller.js" afterPath="$PROJECT_DIR$/www/templates/menu/menu.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu/menu.html" afterPath="$PROJECT_DIR$/www/templates/menu/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.single_fop/pay.single_fop.controller.js" afterPath="$PROJECT_DIR$/www/templates/pay.single_fop/pay.single_fop.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.single_fop_esv/pay.single_fop_esv.controller.js" afterPath="$PROJECT_DIR$/www/templates/pay.single_fop_esv/pay.single_fop_esv.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.controller.js" afterPath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html" afterPath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.controller.js" afterPath="$PROJECT_DIR$/www/templates/profile/profile.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.html" afterPath="$PROJECT_DIR$/www/templates/profile/profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/signup/signup.controller.js" afterPath="$PROJECT_DIR$/www/templates/signup/signup.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/signup/signup.html" afterPath="$PROJECT_DIR$/www/templates/signup/signup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" afterPath="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" afterPath="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.controller.js" afterPath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html" afterPath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tax_templates/tax_templates.controller.js" afterPath="$PROJECT_DIR$/www/templates/tax_templates/tax_templates.controller.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,78 +37,58 @@
     <favorites_list name="bukad" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="signup.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="94" column="27" lean-forward="false" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/main/main.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="56" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="notification.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/notification/notification.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/menu/menu.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/templates/menu/menu.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="notification.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/notification/notification.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/main/main.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="single_fop.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pay.staff_tax.controller.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="126" column="5" lean-forward="true" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="single_fop.controller.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="296">
+                  <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="49" selection-end-column="9" />
+                  <folding>
+                    <marker date="1517175749831" expanded="true" signature="1555:1608" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="pay.staff_tax.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-676">
+                  <caret line="319" column="0" lean-forward="false" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -422,7 +349,6 @@
         <option value="$PROJECT_DIR$/www/services/exit.service.js" />
         <option value="$PROJECT_DIR$/www/core/theme.js" />
         <option value="$PROJECT_DIR$/resources/icon.png.md5" />
-        <option value="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html" />
         <option value="$PROJECT_DIR$/www/directive/text-overflow/text-overflow.directive.js" />
         <option value="$PROJECT_DIR$/www/directive/truncText.directive.js" />
         <option value="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.controller.js" />
@@ -438,18 +364,19 @@
         <option value="$PROJECT_DIR$/www/factories/request.js" />
         <option value="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.controller.js" />
         <option value="$PROJECT_DIR$/www/templates/login/login.controller.js" />
-        <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" />
-        <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" />
-        <option value="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.controller.js" />
-        <option value="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html" />
-        <option value="$PROJECT_DIR$/www/templates/signup/signup.controller.js" />
-        <option value="$PROJECT_DIR$/www/templates/signup/signup.html" />
         <option value="$PROJECT_DIR$/www/core/config.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/templates/notification/notification.controller.js" />
         <option value="$PROJECT_DIR$/www/templates/menu/menu.controller.js" />
         <option value="$PROJECT_DIR$/www/templates/notification/notification.html" />
         <option value="$PROJECT_DIR$/www/templates/menu/menu.html" />
+        <option value="$PROJECT_DIR$/www/templates/signup/signup.html" />
+        <option value="$PROJECT_DIR$/www/templates/signup/signup.controller.js" />
+        <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" />
+        <option value="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html" />
+        <option value="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html" />
+        <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" />
+        <option value="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.controller.js" />
       </list>
     </option>
   </component>
@@ -491,10 +418,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="54" />
-    <option name="y" value="-8" />
-    <option name="width" value="1320" />
-    <option name="height" value="784" />
+    <option name="x" value="-8" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -515,7 +441,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -532,54 +457,7 @@
               <item name="bukad" type="b2602c69:ProjectViewProjectNode" />
               <item name="bukad" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukad" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="factories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukad" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukad" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukad" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukad" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukad" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="notification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukad" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="pay.single_fop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bukad" type="b2602c69:ProjectViewProjectNode" />
@@ -587,20 +465,6 @@
               <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="pay.staff_tax" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukad" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="profile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukad" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="signup" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bukad" type="b2602c69:ProjectViewProjectNode" />
@@ -620,6 +484,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
@@ -638,7 +503,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../new-wedding/new-wedding" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -953,7 +818,10 @@
       <workItem from="1516871424269" duration="4764000" />
       <workItem from="1516883034281" duration="11123000" />
       <workItem from="1516916999158" duration="679000" />
-      <workItem from="1516964117597" duration="18819000" />
+      <workItem from="1516964117597" duration="19065000" />
+      <workItem from="1517159946614" duration="40000" />
+      <workItem from="1517161637462" duration="7196000" />
+      <workItem from="1517175407339" duration="1929000" />
     </task>
     <task id="LOCAL-00001" summary="push notification">
       <created>1515582125800</created>
@@ -969,11 +837,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516036074578</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="validation for sign up, fix bugs, push">
+      <created>1516988259835</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1516988259835</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133227000" />
+    <option name="totallyTimeSpent" value="142638000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -989,13 +864,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19122024" sideWeight="0.50980395" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17708333" sideWeight="0.49019608" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22023809" sideWeight="0.49019608" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49702382" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39144737" sideWeight="0.5297619" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49702382" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25822368" sideWeight="0.4702381" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.019736841" sideWeight="0.4702381" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19122024" sideWeight="0.50980395" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1028,7 +903,8 @@
     <MESSAGE value="push notification 2.0" />
     <MESSAGE value="validation for sign up, fix bugs" />
     <MESSAGE value="validation for sign up, fix bugs, push" />
-    <option name="LAST_COMMIT_MESSAGE" value="validation for sign up, fix bugs, push" />
+    <MESSAGE value="validation for taxes, autocomplete 50%" />
+    <option name="LAST_COMMIT_MESSAGE" value="validation for taxes, autocomplete 50%" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1078,13 +954,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/icon.png.md5" />
-    <entry file="file://$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="131" column="24" lean-forward="false" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/core/blocks/directives/directives.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1239,13 +1108,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/pay.single_fop_esv/pay.single_fop_esv.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1254,13 +1116,6 @@
             <element signature="n#platform#0;n#widget#0;n#!!top" expanded="false" />
             <element signature="n#platform#1;n#widget#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="41" column="59" lean-forward="false" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -1275,7 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,39 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-238">
           <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="176" column="42" lean-forward="true" selection-start-line="176" selection-start-column="17" selection-end-line="176" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="66" column="27" lean-forward="false" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1323,27 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="181" column="39" lean-forward="false" selection-start-line="181" selection-start-column="39" selection-end-line="181" selection-end-column="39" />
-          <folding>
-            <marker date="1516979565745" expanded="false" signature="6651:6682" ph="..." />
-            <marker date="1516979565745" expanded="false" signature="7916:7966" ph="..." />
-            <marker date="1516979565745" expanded="false" signature="8100:8150" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="94" column="27" lean-forward="false" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1351,15 +1151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/main/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="56" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1367,7 +1158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1375,23 +1165,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/menu/menu.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/notification/notification.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1399,14 +1172,107 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/menu/menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        <state relative-caret-position="369">
+          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/menu/menu.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/notification/notification.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/main/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="165" column="24" lean-forward="true" selection-start-line="165" selection-start-column="24" selection-end-line="165" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="186" column="12" lean-forward="false" selection-start-line="186" selection-start-column="12" selection-end-line="186" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/pay.single_fop_esv/pay.single_fop_esv.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-850">
+          <caret line="22" column="55" lean-forward="false" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="41" column="59" lean-forward="false" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-676">
+          <caret line="319" column="0" lean-forward="false" selection-start-line="319" selection-start-column="0" selection-end-line="319" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="49" selection-end-column="9" />
+          <folding>
+            <marker date="1517175749831" expanded="true" signature="1555:1608" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="126" column="5" lean-forward="true" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
           <folding />
         </state>
       </provider>
