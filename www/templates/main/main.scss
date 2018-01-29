@@ -19,5 +19,15 @@
             color: black;
             white-space: normal;
         }
+      .link {
+        text-align: center;
+        color: #039BE5;
+        font-size: 1.2em;
+        a {
+          padding: 0 5px;
+          color: #039BE5;
+        }
+      }
     }
+
 }

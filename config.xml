@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="grassbusinelabs.bukad.com" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Bukad</name>
+    <name>1A Букад</name>
     <description>An easy way to pay taxes.</description>
     <author email="marie.lelyukh@gmail.com" href="http://ionicframework.com/">Marie Lelyukh</author>
     <content src="index.html" />

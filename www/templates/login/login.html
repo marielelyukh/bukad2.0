@@ -56,5 +56,15 @@
         <span>Якщо у вас виникли запитання чи необхідна допомога - зателефонуйте нам
            </span><a style="text-decoration: none !important;" href="tel:{{'+380662279755'}}">+380662279755</a>
     </div>
+    <md-input-container layout="row" layout-align="center center">
+      <md-select ng-change="vm.selectLanguage()" id="language" name="language" ng-model="vm.language" aria-label="sort">
+        <md-option ng-value="'ua-UA'">
+          <img class="flag pr-5 pt-10" ng-src="img/ua.jpg">
+          <span class="language">UA</span></md-option>
+        <md-option ng-value="'ru-RU'">
+          <img class="flag pr-5 pt-10" ng-src="img/ru.png">
+          <span class="language">RU</span></md-option>
+      </md-select>
+    </md-input-container>
   </ion-content>
 </ion-view>

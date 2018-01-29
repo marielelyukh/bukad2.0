@@ -80,7 +80,7 @@
           <md-select style="border-bottom: 1px solid #333"
                      id="pfu" ng-model="vm.data.profile.dfs_name"
                      aria-label="sort">
-            <md-option ng-value="dfs_code" ng-repeat="dfs_code in vm.dfs_code">{{dfs_code}}
+            <md-option ng-value="dfs_code" ng-repeat="dfs_code in vm.dfs_organization">{{dfs_code}}
             </md-option>
           </md-select>
         </md-input-container>
@@ -90,9 +90,9 @@
         <label style="color: #666666; font-size: 1em;">Код ДФС</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333"
-                     id="pfu_code" ng-model="vm.data.profile.dfs_code"
+                     id="dfs_code" ng-model="vm.data.profile.profile_dfs_code"
                      aria-label="sort">
-            <md-option ng-value="dfs_code.code" ng-repeat="dfs_code in vm.dfs_code_code">{{dfs_code.code}},
+            <md-option ng-value="dfs_code.code" ng-repeat="dfs_code in vm.dfs_code">{{dfs_code.code}},
               {{dfs_code.name}}
             </md-option>
           </md-select>
@@ -143,8 +143,8 @@
           <md-select style="border-bottom: 1px solid #333"
                      id="pfu_code" ng-model="vm.data.profile.pfu_name"
                      aria-label="sort">
-            <md-option ng-value="dfs_code.pfu_name" ng-repeat="dfs_code in vm.pfu_code">{{dfs_code.code}},
-              {{dfs_code.pfu_name}}
+            <md-option ng-value="pfu_code.pfu_name" ng-repeat="pfu_code in vm.pfu_code">{{pfu_code.code}},
+              {{pfu_code.pfu_name}}
             </md-option>
           </md-select>
         </md-input-container>
@@ -220,7 +220,7 @@
     </form>
     <div layout="column" layout-margin>
       <md-button class=" md-raised waves-effect waves-light"
-                 style="background-color: #039BE5; color: white"
+                 style="background-color: grey; color: white"
                  ng-click="vm.update()"
                  aria-label="true">
         Зберегти

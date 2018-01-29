@@ -83,7 +83,8 @@
 
       user.getDfsCode({region: region})
         .then(function (res) {
-          vm.dfs_code_code = res;
+          console.log(res)
+          vm.dfs_code_code = res[0];
         });
     }
 

@@ -20,15 +20,9 @@
     vm.getGroups = getGroups;
     vm.user_id = $localStorage.id;
     vm.data = profileData;
-    debugger
     vm.pfu_codes = vm.data.profile.pfu_name;
     vm.getFirstArea = getFirstArea;
 
-    console.log('masha', vm.data);
-    // user.one({user_id: vm.user_id})
-    // .then(function (res) {
-    //   vm.data = res;
-    // });
     user.getRegions()
       .then(function (res) {
         vm.regions = res;
@@ -39,13 +33,7 @@
         vm.topic = res;
       });
 
-    //   active();
-    //    function active() {
-    //    getFirstArea();
-    // }
-
     function getGroups(topic) {
-      // console.log(topic);
       user.getGroup({topic: topic})
         .then(function (res) {
           vm.groups = res;
@@ -61,7 +49,6 @@
     }
 
     function getClasses(group) {
-      // console.log(topic);
       user.getClass({group: group})
         .then(function (res) {
           vm.class = res;
@@ -70,15 +57,9 @@
 
     function getFirstArea() {
       console.log(vm.data.profile);
-      // user.getAreas({region: vm.data.profile.region})
-      //   .then(function(res){
-      //     vm.areas = res;
-      //   });
-
     }
 
     function getCities(area, region) {
-      // console.log(area);
       user.getCities({region: region, area: area})
         .then(function (res) {
           vm.cities = res;
@@ -93,16 +74,12 @@
 
       user.getDfs({region: region})
         .then(function (res) {
-          // vm.pfu_code = res;
-
-          vm.dfs_code = res;
+          vm.dfs_organization = res;
         })
 
       user.getDfsCode({region: region})
         .then(function (res) {
-          debugger
-          // vm.pfu_code = res;
-          vm.dfs_code_code = res[0];
+          vm.dfs_code= res[0];
         });
     }
 
