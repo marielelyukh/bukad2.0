@@ -3,28 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a4419572-a489-41ef-812e-c4ae95ec5901" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app.js" afterPath="$PROJECT_DIR$/www/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/core/config.js" afterPath="$PROJECT_DIR$/www/core/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/core/core.module.js" afterPath="$PROJECT_DIR$/www/core/core.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/data/ru.json" afterPath="$PROJECT_DIR$/www/data/ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/data/ua.json" afterPath="$PROJECT_DIR$/www/data/ua.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/factories/request.js" afterPath="$PROJECT_DIR$/www/factories/request.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.controller.js" afterPath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.html" afterPath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/login/login.controller.js" afterPath="$PROJECT_DIR$/www/templates/login/login.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/login/login.html" afterPath="$PROJECT_DIR$/www/templates/login/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/main/main.controller.js" afterPath="$PROJECT_DIR$/www/templates/main/main.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/main/main.html" afterPath="$PROJECT_DIR$/www/templates/main/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu/menu.html" afterPath="$PROJECT_DIR$/www/templates/menu/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html" afterPath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.html" afterPath="$PROJECT_DIR$/www/templates/profile/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/signup/signup.controller.js" afterPath="$PROJECT_DIR$/www/templates/signup/signup.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/signup/signup.html" afterPath="$PROJECT_DIR$/www/templates/signup/signup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" afterPath="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html" afterPath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -70,8 +48,8 @@
       <file leaf-file-name="signup.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="363" column="43" lean-forward="true" selection-start-line="363" selection-start-column="43" selection-end-line="363" selection-end-column="43" />
+            <state relative-caret-position="185">
+              <caret line="361" column="55" lean-forward="true" selection-start-line="361" selection-start-column="55" selection-end-line="361" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -907,7 +885,7 @@
       <workItem from="1517161637462" duration="7196000" />
       <workItem from="1517175407339" duration="1967000" />
       <workItem from="1517223310257" duration="25402000" />
-      <workItem from="1517303826162" duration="24199000" />
+      <workItem from="1517303826162" duration="24359000" />
     </task>
     <task id="LOCAL-00001" summary="push notification">
       <created>1515582125800</created>
@@ -944,11 +922,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517238524284</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="locale">
+      <created>1517347280136</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1517347280136</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192277000" />
+    <option name="totallyTimeSpent" value="192437000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1005,7 +990,8 @@
     <MESSAGE value="validation for sign up, fix bugs, push" />
     <MESSAGE value="validation for taxes, autocomplete 50%" />
     <MESSAGE value=" autocomplete 50%" />
-    <option name="LAST_COMMIT_MESSAGE" value=" autocomplete 50%" />
+    <MESSAGE value="locale" />
+    <option name="LAST_COMMIT_MESSAGE" value="locale" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1163,6 +1149,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1177,6 +1164,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="216" column="18" lean-forward="true" selection-start-line="216" selection-start-column="18" selection-end-line="216" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1192,6 +1180,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-567">
           <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1451,8 +1440,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="363" column="43" lean-forward="true" selection-start-line="363" selection-start-column="43" selection-end-line="363" selection-end-column="43" />
+        <state relative-caret-position="185">
+          <caret line="361" column="55" lean-forward="true" selection-start-line="361" selection-start-column="55" selection-end-line="361" selection-end-column="55" />
           <folding />
         </state>
       </provider>
