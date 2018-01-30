@@ -84,7 +84,7 @@
               })
               .catch(function () {
                 $state.go('login');
-              })
+              });
           } else {
             $state.go('login');
           }

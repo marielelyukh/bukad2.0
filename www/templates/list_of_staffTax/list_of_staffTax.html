@@ -1,4 +1,4 @@
-<ion-view view-title="Сплата податків" class="main">
+<ion-view view-title="{{'Taxes.title_splata'|translate}}" class="main">
   <ion-content>
     <ion-list class="item">
       <ion-item>
@@ -6,7 +6,7 @@
           <i   style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>
         </div>
         <div class="item-icon-left" ui-sref="app.pay_staff_tax({staff_tax: vm.data, values: vm.tmp, type: 1, title: 'Військовий збір', data_salary: vm.salary, count_workers: vm.count_workers})">
-          <h2 style="color: #333 !important;">Військовий збір</h2>
+          <h2 style="color: #333 !important;">{{'Taxes.army_tax'|translate}}</h2>
         </div>
         <div class="item-icon-right">
           <i  class="icon ion-chevron-right"></i>
@@ -17,7 +17,7 @@
           <i   style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>
         </div>
         <div class="item-icon-left"  ui-sref="app.pay_staff_tax({staff_tax: vm.data, values: vm.tmp, type: 2, title: 'Прибутковий податок', data_salary: vm.salary, count_workers: vm.count_workers})">
-          <h2 style="color: #333 !important;">Прибутковий податок</h2>
+          <h2 style="color: #333 !important;">{{'Taxes.money_tax'|translate}}</h2>
         </div>
         <div class="item-icon-right">
           <i  class="icon ion-chevron-right"></i>
@@ -28,7 +28,9 @@
           <i style="color: red !important;" class="icon ion-alert-circled"></i>
         </div>
         <div class="item-icon-left" ui-sref="app.pay_staff_tax({staff_tax: vm.data, values: vm.tmp, type: 3, title: 'ЄСВ на найманих працiвникiв', data_salary: vm.salary, count_workers: vm.count_workers})">
-          <h2 style="color: #333 !important;">ЄСВ на найманих<br> працівників</h2>
+          <!--<h2 style="color: #333 !important;">ЄСВ на найманих<br> працівників</h2>-->
+          <h2 style="color: #333 !important;" ng-if="vm.mainLanguage === 'ua-UA'">ЄСВ на найманих <br> працівників</h2>
+          <h2 style="color: #333 !important;" ng-if="vm.mainLanguage === 'ru-RU'">ЕСВ с наемных <br> сотрудников</h2>
         </div>
         <div class="item-icon-right">
           <i  class="icon ion-chevron-right"></i>

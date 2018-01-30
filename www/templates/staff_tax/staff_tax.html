@@ -1,8 +1,10 @@
-<ion-view view-title="Податок з найманих працівників" class="staff_tax">
+<ion-view view-title="{{'Taxes.title_workers'|translate}}" class="staff_tax">
     <ion-content>
         <form>
             <div layout="row" style="margin-top: 20px" layout-align="space-between center">
-                <h4>Кількість найманиx працівників: <br><span style="color: #666666; font-size: 1em">(до 10 чоловік)</span> </h4>
+                <h4 ng-if="vm.mainLanguage === 'ua-UA'">Кількість найманиx працівників: <br><span style="color: #666666; font-size: 1em">(до 10 чоловік)</span> </h4>
+                <h4 ng-if="vm.mainLanguage === 'ru-RU'">Количество наемных сотрудников: <br><span style="color: #666666; font-size: 1em">(до 10 человек)</span> </h4>
+
               <span style="height: 25px; width: 25px;"><span style="margin-left: 5px; color: #666666;"><b>{{vm.data.count_workers}}</b></span></span>
             </div>
 
@@ -22,7 +24,7 @@
                          style="background-color: grey; color: white"
                          aria-label="true"
                          ng-click="vm.getTaxData()">
-                Розрахувати дані
+                {{'Taxes.calculate_data'|translate}}
               </md-button>
 
                 <md-button class="md-icon-button"
@@ -41,26 +43,26 @@
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">ЄСВ наймані працівникі, грн</label>
+                <label style="color: #666666; font-size: 1em;">{{'Taxes.esv_workers'|translate}}</label>
                 <md-input-container class="md-block" flex>
                     <input aria-label="123" disabled ng-model="vm.tmp.esv_tax" type="text" >
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Військовий збір, грн</label>
+                <label style="color: #666666; font-size: 1em;">{{'Taxes.army_sum'|translate}}</label>
                 <md-input-container class="md-block" flex>
                     <input aria-label="123" disabled ng-model="vm.tmp.army_tax" type="text" >
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Прибутковий податок, грн</label>
+                <label style="color: #666666; font-size: 1em;">{{'Taxes.income_tax'|translate}}</label>
                 <md-input-container class="md-block" flex>
                     <input aria-label="123" disabled ng-model="vm.tmp.income_tax" type="text" >
                 </md-input-container>
             </div>
 
             <div style="margin-top: -25px">
-                <label style="color: #666666; font-size: 1em;">Загальная сума податку (ЄСВ, ВЗ, Приб., грн)</label>
+                <label style="color: #666666; font-size: 1em;">{{'Taxes.sum_for_all'|translate}}</label>
                 <md-input-container class="md-block" flex>
                     <input aria-label="123" disabled ng-model="vm.tmp.sum" type="text" >
                 </md-input-container>
@@ -69,7 +71,7 @@
         </form>
         <div layout="column" layout-align="center end" class="link" layout-margin>
             <div class="link">
-                <a style="text-decoration: none"  ui-sref="app.list_of_staffTax({staff_tax: vm.data, values: vm.tmp, data_salary: vm.salary, count_workers: vm.data.count_workers})"> >Продовжити</a>
+                <a style="text-decoration: none"  ui-sref="app.list_of_staffTax({staff_tax: vm.data, values: vm.tmp, data_salary: vm.salary, count_workers: vm.data.count_workers})">{{'SignUp.continue'|translate}}</a>
             </div>
         </div>
 

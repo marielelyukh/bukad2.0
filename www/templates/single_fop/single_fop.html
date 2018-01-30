@@ -1,8 +1,8 @@
-<ion-view view-title="Єдиний податок ФОП" class="single_fop">
+<ion-view view-title="{{'Taxes.title_singular'|translate}}" class="single_fop">
   <ion-content>
     <form style="padding: 20px" name="vm.form" novalidate>
       <div>
-        <label for="data_payer" style="color: #666666; font-size: 1em;">Платник</label>
+        <label for="data_payer" style="color: #666666; font-size: 1em;">{{'Taxes.data_payer'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
                  required
@@ -12,14 +12,14 @@
                  type="text">
           <div class="error-block" ng-messages="vm.form.data_payer.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Отримувач</label>
+        <label style="color: #666666; font-size: 1em;">{{'Taxes.getter'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
                  required
@@ -30,14 +30,14 @@
           >
           <div class="error-block" ng-messages="vm.form.getter.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Код отримувача</label>
+        <label style="color: #666666; font-size: 1em;">{{'Taxes.getter_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
                  required
@@ -47,14 +47,14 @@
                  type="text">
           <div class="error-block" ng-messages="vm.form.getter_code.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Банк отримувача</label>
+        <label style="color: #666666; font-size: 1em;">{{'Taxes.getter_bank'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
                  required
@@ -64,14 +64,14 @@
                  type="text">
           <div class="error-block" ng-messages="vm.form.getter_bank.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Розрахунковий рахунок</label>
+        <label style="color: #666666; font-size: 1em;">{{'Taxes.account_number'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
                  required
@@ -81,14 +81,14 @@
                  type="text">
           <div class="error-block" ng-messages="vm.form.account_number.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Код банку</label>
+        <label style="color: #666666; font-size: 1em;">{{'Taxes.bank_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
                  required
@@ -98,14 +98,14 @@
                  type="text">
           <div class="error-block" ng-messages="vm.form.bank_code.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div style="margin-top: -25px" ng-if="vm.user_group == 'group3'">
-        <label style="color: #666666; font-size: 1em;">Обіг, грн</label>
+        <label style="color: #666666; font-size: 1em;">{{'Taxes.income'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
                  id="income"
@@ -114,7 +114,7 @@
                  type="number">
           <div class="error-block" ng-messages="vm.form.income.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
@@ -125,23 +125,22 @@
                    style="background-color: grey; color: white"
                    aria-label="true"
                    ng-click="vm.getSum()">
-          Розрахувати суму
+          {{'Taxes.calculate_sum'|translate}}
         </md-button>
       </div>
 
       <div style="margin-top: 25px">
-        <label style="color: #666666; font-size: 1em;">Сума податку,грн</label>
+        <label style="color: #666666; font-size: 1em;">{{'Taxes.sum'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
                  required
                  id="sum"
                  name="sum"
                  ng-model="vm.data.sum"
-                 disabled
                  type="number">
           <div class="error-block" ng-messages="vm.form.sum.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
@@ -149,7 +148,7 @@
 
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Призначення</label>
+        <label style="color: #666666; font-size: 1em;">{{'Taxes.appointment'|translate}}</label>
         <md-input-container class="md-block" flex>
           <textarea aria-label="123"
                     disabled
@@ -161,13 +160,13 @@
         </md-input-container>
         <div class="error-block" ng-messages="vm.form.appointment.$error">
           <div class="error-block" ng-message="required">
-            Це поле обов`язкове!
+            {{'SignUp.fieldRequired'|translate}}
           </div>
         </div>
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Єдиний податок ФОП за</label>
+        <label style="color: #666666; font-size: 1em;">{{'Taxes.for_time'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
                  required
@@ -178,7 +177,7 @@
                  type="text">
           <div class="error-block" ng-messages="vm.form.for_time.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
@@ -188,7 +187,7 @@
 
     <div layout="column" layout-align="center end" class="link" layout-margin>
       <div class="link" ng-click="vm.payFirstGroup()" style="color: #039BE5 !important;">
-        <a>> Продовжити</a>
+        <a>{{'SignUp.continue'|translate}}</a>
       </div>
     </div>
 

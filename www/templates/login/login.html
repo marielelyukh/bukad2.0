@@ -1,11 +1,11 @@
 <ion-view class="login">
   <ion-content>
     <p class="title">
-      Авторизація
+      {{'Login.Auth'|translate}}
     </p>
     <form name="vm.form" novalidate>
       <md-input-container class="md-block" flex>
-        <label for="email">Електронна пошта</label>
+        <label for="email">{{'Login.Email'|translate}}</label>
         <input required
                name="email"
                autocomplete="off"
@@ -16,7 +16,7 @@
                aria-label="email"/>
         <div class="error-block" ng-messages="vm.form.email.$error">
           <div class="error-block" ng-message="required">
-            Це поле обов`язкове!
+            {{'SignUp.fieldRequired'|translate}}
           </div>
           <div class="error-block" ng-message-exp="['maxlength', 'pattern']">
             <span class="error">Ваш емейл повинен виглядати як емейл і бути від 5-30 символів.</span>
@@ -24,7 +24,7 @@
         </div>
       </md-input-container>
       <md-input-container class="md-block" flex>
-        <label for="password">Пароль</label>
+        <label for="password">{{'Login.Password'|translate}}</label>
         <input required
                name="password"
                id="password"
@@ -33,7 +33,7 @@
                type="password"/>
         <div class="error-block" ng-messages="vm.form.password.$error">
           <div class="error-block" ng-message="required">
-            Це поле обов`язкове!
+            {{'SignUp.fieldRequired'|translate}}
           </div>
         </div>
       </md-input-container>
@@ -43,28 +43,36 @@
                  style="background-color: grey; color: white"
                  ng-click="vm.login()"
                  aria-label="true">
-        Увійти
+        {{'Login.SignIn'|translate}}
       </md-button>
     </div>
     <!--<div class="link">-->
     <!--<a  ng-click="vm.reset()">Відновити пароль</a>-->
     <!--</div>-->
     <div class="link">
-      <a ng-click="vm.signup()">Ви ще не зареєстровані?</a>
+      <a ng-click="vm.signup()">{{'Login.SignUp'|translate}}</a>
     </div>
     <div class="link" style="margin-top: 10px">
-        <span>Якщо у вас виникли запитання чи необхідна допомога - зателефонуйте нам
+        <span>{{'Login.DontHaveQuestion'|translate}}
            </span><a style="text-decoration: none !important;" href="tel:{{'+380662279755'}}">+380662279755</a>
     </div>
+
     <md-input-container layout="row" layout-align="center center">
-      <md-select ng-change="vm.selectLanguage()" id="language" name="language" ng-model="vm.language" aria-label="sort">
-        <md-option ng-value="'ua-UA'">
-          <img class="flag pr-5 pt-10" ng-src="img/ua.jpg">
-          <span class="language">UA</span></md-option>
-        <md-option ng-value="'ru-RU'">
-          <img class="flag pr-5 pt-10" ng-src="img/ru.png">
-          <span class="language">RU</span></md-option>
+      <md-select ng-change="vm.selectLanguage()"
+                 id="language"
+                 name="language"
+                 ng-model="vm.language"
+                 aria-label="sort">
+
+        <md-option ng-value="'ua-UA'"><img class="flag pr-5 pt-10" ng-src="img/ua.jpg">
+          <span class="language">UA</span>
+        </md-option>
+
+        <md-option ng-value="'ru-RU'"><img class="flag pr-5 pt-10" ng-src="img/ru.png">
+          <span class="language">RU</span>
+        </md-option>
       </md-select>
     </md-input-container>
+
   </ion-content>
 </ion-view>

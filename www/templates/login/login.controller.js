@@ -8,9 +8,9 @@
     .module('app')
     .controller('Login', Login);
 
-  Login.$inject = ['$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', 'toastr', '$localStorage', '$ionicPlatform', 'exit'];
+  Login.$inject = ['$translate', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', 'toastr', '$localStorage', '$ionicPlatform', 'exit'];
 
-  function Login($rootScope, $state, $ionicHistory, user, $sessionStorage, toastr, $localStorage, $ionicPlatform, exit) {
+  function Login($translate, $rootScope, $state, $ionicHistory, user, $sessionStorage, toastr, $localStorage, $ionicPlatform, exit) {
 
     $rootScope.page = {};
     var vm = this;
@@ -40,18 +40,24 @@
       delete $localStorage.group;
     }
 
+    activate();
+    function activate() {
+      selectLanguage();
+    }
 
     function selectLanguage () {
-      // if(vm.language){
-      //   $localStorage.locale = vm.language;
-      //   if(vm.language === 'ua-UA') {
-      //     $translate.use('ua');
-      //
-      //   }
-      //   if(vm.language === 'ru-RU') {
-      //     $translate.use('ru');
-      //   }
-      // }
+      // $translate.use('ru');
+      // $localStorage.locale = 'ru-RU';
+      if(vm.language){
+        $localStorage.locale = vm.language;
+        if(vm.language === 'ua-UA') {
+          $translate.use('ua');
+
+        }
+        if(vm.language === 'ru-RU') {
+          $translate.use('ru');
+        }
+      }
     }
 
     function login() {

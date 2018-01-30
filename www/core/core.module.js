@@ -15,6 +15,7 @@
             'ngCordova',
             'ui.mask',
             'toastr',
+            'pascalprecht.translate',
 
             /*
              * Our reusable cross app code modules
@@ -25,5 +26,5 @@
              */
             'ionic.closePopup',
             'ionic'
-        ])
+        ]);
 })();

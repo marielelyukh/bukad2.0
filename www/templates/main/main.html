@@ -1,10 +1,10 @@
-<ion-view view-title="Головна" class="main">
+<ion-view view-title="{{'Taxes.title_main'|translate}}" class="main">
     <ion-content>
         <ion-list class="item">
             <ion-item>
             <div class="item-icon-left" ui-sref="app.single_fop({group: 'group1'})">
-                <h2>Податок ФОП</h2>
-                <p class="secondText">Єдиний</p>
+                <h2>{{'Taxes.fop_tax'|translate}}</h2>
+                <p class="secondText">{{'Taxes.singular_tax'|translate}}</p>
             </div>
             <div class="item-icon-right">
                 <i ng-if="vm.taxes_data.single_tax.status == 2" style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>
@@ -14,8 +14,8 @@
             </ion-item>
             <ion-item>
                 <div class="item-icon-left"  ui-sref="app.single_fop_esv({group: 'group1'})">
-                    <h2>Податок ФОП</h2>
-                    <p class="secondText">ЄCB</p>
+                    <h2>{{'Taxes.fop_tax'|translate}}</h2>
+                    <p class="secondText">{{'Taxes.esv'|translate}}</p>
                 </div>
                 <div class="item-icon-right">
                   <i ng-if="vm.taxes_data.single_social_tax.status == 2" style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>
@@ -25,8 +25,10 @@
             </ion-item>
             <ion-item ng-if="vm.user_group == 'group2' || vm.user_group == 'group3'">
                 <div class="item-icon-left" ui-sref="app.staff_tax">
-                    <h2>Податок з найманих <br> працівників</h2>
-                    <p class="secondText">ЄCB, ВЗ, <br> Прибутковий податок</p>
+                    <h2 ng-if="vm.mainLanguage === 'ua-UA'">Податок з найманих <br> працівників</h2>
+                    <h2 ng-if="vm.mainLanguage === 'ru-RU'">Налог с наемных <br> сотрудников</h2>
+                    <p ng-if="vm.mainLanguage === 'ua-UA'" class="secondText">ЄCB, ВЗ, <br> Прибутковий податок</p>
+                    <p ng-if="vm.mainLanguage === 'ru-RU'" class="secondText">ЕСВ, ВС, <br> Подоходный налог</p>
                 </div>
                 <div class="item-icon-right">
                   <i ng-if="vm.taxes_data.employee_tax.status == 2" style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>
@@ -63,8 +65,8 @@
             <!--</ion-item>-->
         </ion-list>
       <div class="link" style="margin-top: 10px; text-align: center; font-size: 1.0em;">
-        <span>Якщо у вас виникли запитання чи необхідна допомога - зателефонуйте нам
-           </span><a style="text-decoration: none !important; padding: 0 5px; color: #039BE5;" href="tel:{{'+380662279755'}}">+380662279755</a>
+        <span>{{'Login.DontHaveQuestion'|translate}}
+           </span><a style="text-decoration: none !important; padding: 0 5px; color: #039BE5;font-size: 1.2em;" href="tel:{{'+380662279755'}}">+380662279755</a>
       </div>
     </ion-content>
 </ion-view>

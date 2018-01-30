@@ -4,12 +4,12 @@
     .module('app')
     .config(mainConfig);
 
-  mainConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$ionicLoadingConfig', '$ionicConfigProvider', '$mdGestureProvider'];
+  mainConfig.$inject = ['$translateProvider', '$stateProvider', '$urlRouterProvider', '$ionicLoadingConfig', '$ionicConfigProvider', '$mdGestureProvider'];
 
   /**
    * Function for configurate angular app
    */
-  function mainConfig($stateProvider, $urlRouterProvider, $ionicLoadingConfig, $ionicConfigProvider, $mdGestureProvider) {
+  function mainConfig($translateProvider, $stateProvider, $urlRouterProvider, $ionicLoadingConfig, $ionicConfigProvider, $mdGestureProvider) {
 
     // $ionicConfigProvider.views.maxCache(0);
     $ionicConfigProvider.backButton.text('');
@@ -228,6 +228,20 @@
           staff_tax: null
         }
       });
+
+    $translateProvider.registerAvailableLanguageKeys(['en', 'ru', 'ua'], {
+      'en-*': 'en',
+      'ru-*': 'ru',
+      'ua-*': 'ua'
+    });
+
+    $translateProvider.useStaticFilesLoader({
+      prefix: 'data/',
+      suffix: '.json'
+    });
+
+    $translateProvider.preferredLanguage('ua');
+    $translateProvider.useSanitizeValueStrategy(null);
 
 
     $urlRouterProvider.otherwise('/main');

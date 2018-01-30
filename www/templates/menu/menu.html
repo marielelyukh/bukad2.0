@@ -27,23 +27,23 @@
         <ion-item ui-sref="app.main" menu-close
                   class="item-icon-left">
           <i class="icon ion-android-home"></i>
-          Головна
+          {{'Taxes.title_main'|translate}}
         </ion-item>
         <ion-item menu-close ng-click="vm.profile()"
                   class="item-icon-left">
           <i class="icon ion-android-person"></i>
-          Профіль
+          {{'Taxes.title_profile'|translate}}
         </ion-item>
-        <ion-item menu-close ng-click="vm.notificationGo()"
-                  class="item-icon-left">
-          <i class="icon ion-android-notifications"></i>
-          Сповiщення
-        </ion-item>
+        <!--<ion-item menu-close ng-click="vm.notificationGo()"-->
+                  <!--class="item-icon-left">-->
+          <!--<i class="icon ion-android-notifications"></i>-->
+          <!--Сповiщення-->
+        <!--</ion-item>-->
         <ion-item ng-click="vm.logout()"
                   menu-close
                   class="item-icon-left">
           <i class="icon ion-android-exit"></i>
-          Вийти
+          {{'LogOut'|translate}}
         </ion-item>
       </ion-list>
     </ion-content>

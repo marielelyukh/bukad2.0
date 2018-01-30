@@ -21,10 +21,14 @@
     vm.getCities = getCities;
     vm.getGroups = getGroups;
     vm.getClass = getClass;
+    vm.filterCity = filterCity;
+    vm.filterRegion = filterRegion;
+    vm.filterArea = filterArea;
     vm.emailRegExp = /^((([a-zA-Z\-0-9_.])+[a-zA-Z0-9_.]{2,})|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     vm.data = {};
     vm.data.profile = {};
     vm.test = [1, 2];
+    vm.searchText = '';
 
     user.getTopic()
       .then(function (res) {
@@ -64,29 +68,176 @@
 
     function getCities(area, region) {
       // console.log(area);
-      user.getCities({region: region, area: area})
+      user.getCities({region: region.region, area: area})
         .then(function (res) {
           vm.cities = res;
           console.log(vm.cities);
           // debugger
         });
 
-      user.getPfu({region: region})
+      user.getPfu({region: region.region})
         .then(function (res) {
           vm.pfu_code = res;
         });
 
-      user.getDfs({region: region})
+      user.getDfs({region: region.region})
         .then(function (res) {
           vm.dfs_code = res;
         });
 
-      user.getDfsCode({region: region})
+      user.getDfsCode({region: region.region})
         .then(function (res) {
           console.log(res)
           vm.dfs_code_code = res[0];
         });
     }
+
+
+    // AUTOCOMPLETE for region STARTS
+
+
+    vm.selectedItem = null;
+    vm.searchRegion = [];
+    vm.regionSearch = regionSearch;
+    vm.searchTextChange = searchTextChange;
+    vm.selectedRegionChange = selectedRegionChange;
+    vm.simulateQuery = false;
+    vm.regionArr = [];
+    vm.tempRegion = '';
+
+
+    function regionSearch(query) {
+      var results = query ? vm.regionArr.filter(createFilterForRegion(query)) : vm.regionArr,
+        deferred;
+      if (vm.simulateQuery) {
+        deferred = $q.defer();
+        $timeout(function () {
+          deferred.resolve(results);
+        }, Math.random() * 1000, false);
+        return deferred.promise;
+      } else {
+        return results;
+      }
+    }
+
+    function filterRegion() {
+      return vm.regions.filter(createFilterRegion);
+    }
+
+    function createFilterForRegion(query) {
+      console.log('query: ' + query)
+      var Query = query;
+
+      return function filterFn(item) {
+        var lowercaseQuery = angular.lowercase(query);
+
+        return (item.size.indexOf(query) === 0);
+
+      };
+    }
+
+    function createFilterRegion(value) {
+
+      var reg = new RegExp(angular.lowercase(vm.searchText), 'g');
+
+      if (angular.lowercase(value.region).match(reg)) {
+        return true;
+      }
+
+      return false;
+    }
+
+    function selectedRegionChange(item) {
+      user.getAreas({region: item.region})
+        .then(function (res) {
+          vm.areas = res;
+          // vm.freeCustomersArr = vm.areas;
+        });
+      // console.log(item);
+    }
+
+    // AUTOCOMPLETE for region ENDS
+
+    // AUTOCOMPLETE for area STARTS
+
+    vm.selectedItem = null;
+    vm.searchArea = [];
+    vm.areaSearch = areaSearch;
+    vm.searchTextChange = searchTextChange;
+    vm.selectedAreaChange = selectedAreaChange;
+    vm.simulateQuery = false;
+    vm.areaArr = [];
+    vm.tempArea = '';
+
+    function areaSearch(query) {
+      var results = query ? vm.areaArr.filter(createFilterForArea(query)) : vm.areaArr,
+        deferred;
+      if (vm.simulateQuery) {
+        deferred = $q.defer();
+        $timeout(function () {
+          deferred.resolve(results);
+        }, Math.random() * 1000, false);
+        return deferred.promise;
+      } else {
+        return results;
+      }
+    }
+
+    function selectedAreaChange(item) {
+      // console.log(vm.region);
+      user.getCities({region: vm.region.region, area: item.area})
+        .then(function (res) {
+          vm.cities = res;
+          console.log(vm.cities);
+          // debugger
+        });
+
+      user.getPfu({region:  vm.region.region})
+        .then(function (res) {
+          vm.pfu_code = res;
+        });
+
+      user.getDfs({region:  vm.region.region})
+        .then(function (res) {
+          vm.dfs_code = res;
+        });
+
+      user.getDfsCode({region:  vm.region.region})
+        .then(function (res) {
+          console.log(res)
+          vm.dfs_code_code = res[0];
+        });
+    }
+
+    function filterArea() {
+      return vm.areas.filter(createFilterArea);
+    }
+
+    function createFilterForArea(query) {
+      console.log('query: ' + query)
+      var Query = query;
+
+      return function filterFn(item) {
+        var lowercaseQuery = angular.lowercase(query);
+
+        return (item.size.indexOf(query) === 0);
+
+      };
+    }
+
+    function createFilterArea(value) {
+
+      var reg = new RegExp(angular.lowercase(vm.searchText), 'g');
+
+      if (angular.lowercase(value.area).match(reg)) {
+        return true;
+      }
+
+      return false;
+    }
+
+
+    // AUTOCOMPLETE for area ENDS
 
     // AUTOCOMPLETE for city STARTS
 
@@ -137,13 +288,32 @@
     //   return deferred.promise;
     // }
 
+
+    // функция которая вызываеться при изменении инпута и присваивает новый текст в переменную
     function searchTextChange(text) {
-      // $log.info('Text changed to ' + text);
+      vm.searchText = text;
     }
 
+    // если мы выбираем значение в предложке то функция вызываеться (но вроде и так всё работает потому что есть md-selected-item="vm.data.profile.city")
     function selectedItemChange(item) {
-      // vm.gender = item.gender;
-      $log.info('Item changed to ' + JSON.stringify(item));
+      console.log(item);
+    }
+
+    // функция которая вызываеться что бы отфильтровать массив
+    function filterCity() {
+      return vm.cities.filter(createFilterFor);
+    }
+
+    // функция которая фильтрует массив (тут надо изменить value.city на нужное значение)
+    function createFilterFor(value) {
+
+      var reg = new RegExp(angular.lowercase(vm.searchText), 'g');
+
+      if (angular.lowercase(value.city).match(reg)) {
+        return true;
+      }
+
+      return false;
     }
 
     function LoadAllCity() {
@@ -185,9 +355,9 @@
         toastr.warning('Паролі не співпадають!');
         return;
       }
-      vm.data.profile.city = vm.city;
-      vm.data.profile.area = vm.area;
-      vm.data.profile.region = vm.region;
+      vm.data.profile.city = vm.city.city;
+      vm.data.profile.area = vm.area.area;
+      vm.data.profile.region = vm.region.region;
       vm.data.profile.pfu_code = vm.pfu_codes.code;
       vm.data.profile.pfu_name = vm.pfu_codes.pfu_name;
       // vm.data.profile.city_id = vm.city.id;

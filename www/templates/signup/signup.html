@@ -1,16 +1,16 @@
 <ion-view class="signup">
   <ion-content>
     <p class="md-whiteframe-3dp title">
-      Реєстрація
+      {{'SignUp.signUp'|translate}}
     </p>
     <form novalidate style="margin-top: 25px"
           ng-submit="vm.signup()"
           name="vm.form">
-      <h4>Дані акаунту:</h4>
+      <h4>{{'SignUp.data'|translate}}</h4>
 
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Електронна пошта</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.email'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
             required
@@ -24,17 +24,17 @@
           />
           <div class="error-block" ng-messages="vm.form.email.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
             <div class="error-block" ng-message-exp="['maxlength', 'pattern']">
-              <span class="error">Ваш емейл повинен виглядати як емейл і бути від 5-30 символів.</span>
+              <span class="error">{{'SignUp.emailValid'|translate}}</span>
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Пароль</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.password'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
             required
@@ -45,14 +45,14 @@
             type="password"/>
           <div class="error-block" ng-messages="vm.form.password.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Пiдтвердити пароль</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.tpassword'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
             required
@@ -64,17 +64,17 @@
             type="password"/>
           <div class="error-block" ng-messages="vm.form.tpassword.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
             <div class="error-block" ng-message-exp="['pattern']">
-              <span class="error">Паролi не спiвпадають!</span>
+              <span class="error">{{'SignUp.passValid'|translate}}</span>
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Ідентифікаційний код</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.ident_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
             required
@@ -84,13 +84,13 @@
             type="number"/>
           <div class="error-block" ng-messages="vm.form.code.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Номер страхувальника</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.insurance'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
             required
@@ -100,14 +100,14 @@
             type="number"/>
           <div class="error-block" ng-messages="vm.form.number_insurance.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">ПІП</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.initials'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
             required
@@ -117,16 +117,16 @@
             type="text"/>
           <div class="error-block" ng-messages="vm.form.initials.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
-      <h4>Адреса:</h4>
+      <h4>{{'SignUp.address'|translate}}:</h4>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Індекс</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.postcode'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
             required
@@ -136,93 +136,126 @@
             type="number"/>
           <div class="error-block" ng-messages="vm.form.postcode.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Область</label>
-        <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333"
-                     required
-                     name="region"
-                     ng-change="vm.getArea(vm.region)"
-                     id="region" ng-model="vm.region"
-                     aria-label="sort">
-            <md-option ng-value="region.region" ng-repeat="region in vm.regions">{{region.region}}
-            </md-option>
-          </md-select>
-          <div class="error-block" ng-messages="vm.form.region.$error">
-            <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
-            </div>
-          </div>
-        </md-input-container>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.region'|translate}}</label>
+        <!--<md-input-container class="md-block" flex>-->
+          <!--<md-select style="border-bottom: 1px solid #333"-->
+                     <!--required-->
+                     <!--name="region"-->
+                     <!--ng-change="vm.getArea(vm.region)"-->
+                     <!--id="region" ng-model="vm.region"-->
+                     <!--aria-label="sort">-->
+            <!--<md-option ng-value="region.region" ng-repeat="region in vm.regions">{{region.region}}-->
+            <!--</md-option>-->
+          <!--</md-select>-->
+          <!--<div class="error-block" ng-messages="vm.form.region.$error">-->
+            <!--<div class="error-block" ng-message="required">-->
+              <!--{{'SignUp.fieldRequired'|translate}}-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</md-input-container>-->
+
+        <md-autocomplete md-search-text-change="vm.searchTextChange(item.searchRegion)"
+                         md-selected-item-change="vm.selectedRegionChange(item)"
+                         md-selected-item="vm.region"
+                         md-search-text="item.searchRegion"
+                         md-items="item in vm.filterRegion()"
+                         md-item-text="item.region"
+                         md-require-match
+                         md-min-length="0"
+                         md-no-cache="true"
+                         md-floating-label="Область">
+          <md-item-template>
+                              <span md-highlight-text="item.searchRegion"
+                                    md-highlight-flags="^i">{{item.region}}</span>
+          </md-item-template>
+        </md-autocomplete>
       </div>
 
 
       <div ng-if="vm.region">
-        <label style="color: #666666; font-size: 1em;">Район</label>
-        <md-input-container class="md-block"
-                            flex>
-          <md-select ng-disabled="!vm.region"
-                     required
-                     name="area"
-                     style="border-bottom: 1px solid #333"
-                     ng-change="vm.getCities(vm.area, vm.region)"
-                     id="area" ng-model="vm.area"
-                     aria-label="sort">
-            <md-option ng-value="area.area"
-                       ng-repeat="area in vm.areas">{{area.area}}
-            </md-option>
-          </md-select>
-          <div class="error-block" ng-messages="vm.form.area.$error">
-            <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
-            </div>
-          </div>
-        </md-input-container>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.area'|translate}}</label>
+        <!--<md-input-container class="md-block"-->
+                            <!--flex>-->
+          <!--<md-select ng-disabled="!vm.region"-->
+                     <!--required-->
+                     <!--name="area"-->
+                     <!--style="border-bottom: 1px solid #333"-->
+                     <!--ng-change="vm.getCities(vm.area, vm.region)"-->
+                     <!--id="area" ng-model="vm.area"-->
+                     <!--aria-label="sort">-->
+            <!--<md-option ng-value="area.area"-->
+                       <!--ng-repeat="area in vm.areas">{{area.area}}-->
+            <!--</md-option>-->
+          <!--</md-select>-->
+          <!--<div class="error-block" ng-messages="vm.form.area.$error">-->
+            <!--<div class="error-block" ng-message="required">-->
+              <!--{{'SignUp.fieldRequired'|translate}}-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</md-input-container>-->
+        <md-autocomplete md-search-text-change="vm.searchTextChange(item.searchArea)"
+                         md-selected-item-change="vm.selectedAreaChange(item)"
+                         md-selected-item="vm.area"
+                         md-search-text="item.searchArea"
+                         md-items="item in vm.filterArea()"
+                         md-item-text="item.area"
+                         md-require-match
+                         md-min-length="0"
+                         md-no-cache="true"
+                         md-floating-label="Район">
+          <md-item-template>
+                              <span md-highlight-text="item.searchArea"
+                                    md-highlight-flags="^i">{{item.area}}</span>
+          </md-item-template>
+        </md-autocomplete>
       </div>
 
-      <md-autocomplete md-search-text-change="vm.searchTextChange(item.searchCity)"
-                       md-selected-item-change="vm.selectedItemChange(item)"
-                       md-selected-item="vm.data.profile.city"
-                       md-search-text="item.searchCity"
-                       md-items="item in vm.citySearch(item.searchCity)"
-                       md-item-text="item.region"
-                       md-require-match
-                       md-floating-label="{{'help me please to do this shit'}}">
-        <md-item-template>
-                              <span md-highlight-text="item.searchCity"
-                                    md-highlight-flags="^i">{{item.region}}</span>
-        </md-item-template>
-      </md-autocomplete>
 
       <div ng-if="vm.area">
-        <label style="color: #666666; font-size: 1em;">Місто/село</label>
-        <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333" id="city" ng-model="vm.city"
-                     aria-label="sort" required name="city"
-          >
-            <md-option ng-value="city.city" ng-repeat="city in vm.cities">{{city.city}}
-            </md-option>
-          </md-select>
-          <div class="error-block" ng-messages="vm.form.city.$error">
-            <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
-            </div>
-          </div>
-        </md-input-container>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.city'|translate}}</label>
+        <!--<md-input-container class="md-block" flex>-->
+          <!--<md-select style="border-bottom: 1px solid #333" id="city" ng-model="vm.city"-->
+                     <!--aria-label="sort" required name="city"-->
+          <!--&gt;-->
+            <!--<md-option ng-value="city.city" ng-repeat="city in vm.cities">{{city.city}}-->
+            <!--</md-option>-->
+          <!--</md-select>-->
+          <!--<div class="error-block" ng-messages="vm.form.city.$error">-->
+            <!--<div class="error-block" ng-message="required">-->
+              <!--{{'SignUp.fieldRequired'|translate}}-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</md-input-container>-->
+        <md-autocomplete md-search-text-change="vm.searchTextChange(item.searchCity)"
+                         md-selected-item-change="vm.selectedItemChange(item)"
+                         md-selected-item="vm.city"
+                         md-search-text="item.searchCity"
+                         md-items="item in vm.filterCity()"
+                         md-item-text="item.city"
+                         md-require-match
+                         md-min-length="0"
+                         md-no-cache="true"
+                         md-floating-label="Місто/село">
+          <md-item-template>
+                              <span md-highlight-text="item.searchCity"
+                                    md-highlight-flags="^i">{{item.city}}</span>
+          </md-item-template>
+        </md-autocomplete>
 
       </div>
 
-      <h4>Деталі:</h4>
+      <h4>{{'SignUp.details'|translate}}</h4>
 
 
       <div ng-if="vm.region">
-        <label style="color: #666666; font-size: 1em;">Назва органу ДФС</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_name'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333" required
                      id="pfu" ng-model="vm.data.profile.dfs_name" name="dfc_code"
@@ -232,7 +265,7 @@
           </md-select>
           <div class="error-block" ng-messages="vm.form.dfc_code.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
@@ -240,7 +273,7 @@
 
 
       <div ng-if="vm.region">
-        <label style="color: #666666; font-size: 1em;">Код ДФС</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333" required
                      id="pfu_code" ng-model="vm.data.profile.dfs_code"
@@ -251,14 +284,14 @@
           </md-select>
           <div class="error-block" ng-messages="vm.form.dfs_code_code.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Розділ КВЄД</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_topic'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select required style="border-bottom: 1px solid #333" ng-change="vm.getGroups(vm.kved_topic)" id="topic"
                      ng-model="vm.kved_topic"
@@ -268,7 +301,7 @@
           </md-select>
           <div class="error-block" ng-messages="vm.form.dfs_code_code.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
@@ -276,7 +309,7 @@
 
 
       <div ng-if="vm.kved_topic">
-        <label style="color: #666666; font-size: 1em;">Група КВЄД</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_group'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select required style="border-bottom: 1px solid #333" ng-change="vm.getClass(vm.kved_group)"
                      id="kved_group"
@@ -287,14 +320,14 @@
           </md-select>
           <div class="error-block" ng-messages="vm.form.kved_group.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div ng-if="vm.kved_group">
-        <label style="color: #666666; font-size: 1em;">Клас КВЄД</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333" id="kved_code" ng-model="vm.data.profile.kved_code"
                      aria-label="sort" required name="kved_code">
@@ -303,14 +336,14 @@
           </md-select>
           <div class="error-block" ng-messages="vm.form.kved_code.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div ng-if="vm.city">
-        <label style="color: #666666; font-size: 1em;">Код ПФУ</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.pfu_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333" id="pfu_code" ng-model="vm.pfu_codes"
                      aria-label="sort" required name="pfu_code">
@@ -319,14 +352,14 @@
           </md-select>
           <div class="error-block" ng-messages="vm.form.pfu_code.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
       </div>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Група єдиного податку:</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.group'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select id="group_esv" required ng-model="vm.data.profile.group"
                      name="group"
@@ -337,7 +370,7 @@
           </md-select>
           <div class="error-block" ng-messages="vm.form.group.$error">
             <div class="error-block" ng-message="required">
-              Це поле обов`язкове!
+              {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
@@ -345,13 +378,13 @@
 
 
       <div layout="row" layout-align="space-between center">
-            <span style="color: #666666; font-size: 1.1em">Особливий статус ФОП: <br>
-                <span class="secondText">(пенсіонер/інвалід)</span></span>
+            <span style="color: #666666; font-size: 1.1em">{{'SignUp.status'|translate}}<br>
+                <span class="secondText">{{'SignUp.status_status'|translate}}</span></span>
         <div style="margin-top: 15px" layout="row" layout-align="space-around">
           <md-checkbox id="first_group_special"
                        ng-model="vm.data.profile.status"
                        aria-label="first_group">
-            <span style="color: black">Так</span>
+            <span style="color: black">{{'SignUp.yes'|translate}}</span>
           </md-checkbox>
         </div>
       </div>
@@ -359,14 +392,14 @@
     </form>
     <div layout="column" class="link" layout-margin>
       <div class="link">
-        <a style="text-decoration: none" ng-click="vm.signup()">> Продовжити</a>
+        <a style="text-decoration: none" ng-click="vm.signup()">{{'SignUp.continue'|translate}}</a>
       </div>
       <div class="link">
-        <span style="color: #333">У Вас вже є акаунт?</span>
-        <a style="text-decoration: none" href="#/login">Увійти</a>
+        <span style="color: #333">{{'SignUp.dontHaveAccount'|translate}}</span>
+        <a style="text-decoration: none" href="#/login">{{'Login.SignIn'|translate}}</a>
       </div>
       <div style="margin-top: 10px">
-        <span style="color: #333">Якщо у вас виникли запитання чи необхідна допомога - зателефонуйте нам
+        <span style="color: #333">{{'Login.DontHaveQuestion'|translate}}
            </span><a style="text-decoration: none !important;" href="tel:{{'+380662279755'}}">+380662279755</a>
       </div>
     </div>

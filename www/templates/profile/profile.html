@@ -1,37 +1,37 @@
-<ion-view class="profile" view-title="Налаштування профілю">
+<ion-view class="profile" view-title="{{'Taxes.title_profile'|translate}}">
   <ion-content>
     <form style="margin-top: 25px" name="vm.form" novalidate>
       <div>
-        <label style="color: #666666; font-size: 1em;">Ідентифікаційний код</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.ident_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input style="border-bottom: 1px solid #333" aria-label="123" ng-model="vm.data.profile.ident_code"
                  type="text">
         </md-input-container>
       </div>
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Номер страхувальника</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.insurance'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input style="border-bottom: 1px solid #333" aria-label="123" ng-model="vm.data.profile.insurance"
                  type="text">
         </md-input-container>
       </div>
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">ПІП</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.initials'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input style="border-bottom: 1px solid #333" aria-label="123" ng-model="vm.data.profile.initials" type="text">
         </md-input-container>
       </div>
 
-      <h4>Адреса:</h4>
+      <h4>{{'SignUp.address'|translate}}:</h4>
       <div>
-        <label style="color: #666666; font-size: 1em;">Індекс</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.postcode'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input style="border-bottom: 1px solid #333" aria-label="123" ng-model="vm.data.profile.postcode" type="text">
         </md-input-container>
       </div>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Область</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.region'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333"
                      ng-change="vm.getArea(vm.data.profile.region)"
@@ -45,7 +45,7 @@
       </div>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Район</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.area'|translate}}</label>
         <md-input-container class="md-block"
                             flex>
           <md-select style="border-bottom: 1px solid #333"
@@ -60,7 +60,7 @@
       </div>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Місто/село</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.city'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333" id="city" ng-model="vm.data.profile.city"
                      aria-label="sort">
@@ -71,11 +71,11 @@
       </div>
 
 
-      <h4>Деталі:</h4>
+      <h4>{{'SignUp.details'|translate}}</h4>
 
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Назва органу ДФС</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_name'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333"
                      id="pfu" ng-model="vm.data.profile.dfs_name"
@@ -87,12 +87,12 @@
       </div>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Код ДФС</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333"
-                     id="dfs_code" ng-model="vm.data.profile.profile_dfs_code"
+                     id="dfs_code" ng-model="vm.data.profile.dfs_code"
                      aria-label="sort">
-            <md-option ng-value="dfs_code.code" ng-repeat="dfs_code in vm.dfs_code">{{dfs_code.code}},
+            <md-option ng-value="{{dfs_code.code}}" ng-repeat="dfs_code in vm.dfs_code">{{dfs_code.code}},
               {{dfs_code.name}}
             </md-option>
           </md-select>
@@ -100,7 +100,7 @@
       </div>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Розділ КВЄД</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_topic'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select ng-change="vm.getGroups(vm.data.profile.kved_topic)"
                      ng-init="vm.getGroups(vm.data.profile.kved_topic)"
@@ -115,7 +115,7 @@
       </div>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Група КВЄД</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_group'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333" ng-change="vm.getClass(vm.data.profile.kved_group)"
                      ng-init="vm.getClass(vm.data.profile.kved_group)" id="group" ng-model="vm.data.profile.kved_group"
@@ -127,7 +127,7 @@
       </div>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Клас КВЄД</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333" id="class" ng-model="vm.data.profile.kved_class"
                      aria-label="sort">
@@ -138,12 +138,12 @@
       </div>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Код ПФУ</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.pfu_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333"
                      id="pfu_code" ng-model="vm.data.profile.pfu_name"
                      aria-label="sort">
-            <md-option ng-value="pfu_code.pfu_name" ng-repeat="pfu_code in vm.pfu_code">{{pfu_code.code}},
+            <md-option ng-value="pfu_code.pfu_name" ng-selected="$index === 0" ng-repeat="pfu_code in vm.pfu_code track by $index">{{pfu_code.code}},
               {{pfu_code.pfu_name}}
             </md-option>
           </md-select>
@@ -152,7 +152,7 @@
 
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Група єдиного податку:</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.group'|translate}}</label>
         <md-input-container class="md-block" flex>
           <md-select style="border-bottom: 1px solid #333" id="group" ng-model="vm.data.profile.group"
                      name="group"
@@ -166,8 +166,8 @@
 
 
       <div layout="row" layout-align="space-between center">
-            <span style="color: #666666; font-size: 1.1em">Особливий статус ФОП: <br>
-                <span class="secondText">(пенсіонер/інвалід)</span></span>
+            <span style="color: #666666; font-size: 1.1em">{{'SignUp.status'|translate}} <br>
+                <span class="secondText">{{'SignUp.status_status'|translate}}</span></span>
         <div style="margin-top: 15px" layout="row" layout-align="space-around">
           <md-checkbox id="first_group_special"
                        ng-model="vm.data.profile.status"
@@ -177,17 +177,17 @@
         </div>
       </div>
 
-      <h4>Дані аккаунту:</h4>
+      <h4>{{'SignUp.data'|translate}}</h4>
 
       <div>
-        <label style="color: #666666; font-size: 1em;">Електронна пошта</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.email'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123" style="border-bottom: 1px solid #333" ng-model="vm.data.email" type="text">
         </md-input-container>
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Пароль</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.password'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
             name="password"
@@ -199,7 +199,7 @@
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">Пiдтвердити пароль</label>
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.tpassword'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
             name="tpassword"
@@ -210,7 +210,7 @@
             type="password"/>
           <div class="error-block" ng-messages="vm.form.tpassword.$error">
             <div class="error-block" ng-message-exp="['pattern']">
-              <span class="error">Паролi не спiвпадають!</span>
+              <span class="error">{{'SignUp.passValid'|translate}}</span>
             </div>
           </div>
         </md-input-container>
@@ -223,7 +223,7 @@
                  style="background-color: grey; color: white"
                  ng-click="vm.update()"
                  aria-label="true">
-        Зберегти
+        {{'Taxes.save_data'|translate}}
       </md-button>
     </div>
 
