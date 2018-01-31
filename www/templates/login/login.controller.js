@@ -17,17 +17,20 @@
     vm.login = login;
     vm.signup = signup;
     vm.selectLanguage = selectLanguage;
-    vm.language = 'ua-UA';
+    vm.language = 'ua';
     vm.emailRegExp = /^((([a-zA-Z\-0-9_.])+[a-zA-Z0-9_.]{2,})|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    vm.onSubmit = onSubmit;
+
     exit.buttonExit($state.current.url);
+    console.log($state.current.url)
 
 
     if ($localStorage.locale) {
       vm.language = $localStorage.locale;
 
     } else {
-      vm.language = "ua-UA";
-      $localStorage.locale = "ua-UA";
+      vm.language = "ua";
+      $localStorage.locale = "ua";
     }
 
     if ($localStorage.token) {
@@ -45,16 +48,20 @@
       selectLanguage();
     }
 
+    function onSubmit() {
+      console.log('sdfsdf');
+    }
+
     function selectLanguage () {
       // $translate.use('ru');
       // $localStorage.locale = 'ru-RU';
       if(vm.language){
         $localStorage.locale = vm.language;
-        if(vm.language === 'ua-UA') {
+        if(vm.language === 'ua') {
           $translate.use('ua');
 
         }
-        if(vm.language === 'ru-RU') {
+        if(vm.language === 'ru') {
           $translate.use('ru');
         }
       }
@@ -64,10 +71,17 @@
       if (vm.form.$invalid) {
         return;
       }
+      // if(!vm.data.email || !vm.data.password) {
+      //
+      // }
       user.login(vm.data)
         .then(function (res) {
+          if(res.status === 'email'){
+            $state.go('confirmEmail');
+            return;
+          }
           if (!res.token) {
-            toastr.error('Невірний логін або пароль');
+            toastr.error($translate.instant('InvalidLogin'));
           }
           if (res.token) {
             $localStorage.token = res.token;

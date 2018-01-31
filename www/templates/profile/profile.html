@@ -32,42 +32,66 @@
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.region'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333"
-                     ng-change="vm.getArea(vm.data.profile.region)"
-                     ng-init="vm.getArea(vm.data.profile.region)"
-                     id="region" ng-model="vm.data.profile.region"
-                     aria-label="sort">
-            <md-option ng-value="region.region" ng-repeat="region in vm.regions">{{region.region}}
-            </md-option>
-          </md-select>
-        </md-input-container>
+        <md-autocomplete md-search-text-change="vm.searchTextRegionChange(item.searchRegion)"
+                         md-selected-item-change="vm.selectedRegionChange(item.region)"
+                         md-selected-item="vm.region"
+                         md-search-text="item.searchRegion"
+                         md-items="item in vm.filterRegion()"
+                         md-item-text="item.region"
+                         md-require-match
+                         md-min-length="0"
+                         md-no-cache="true"
+                         md-floating-label="Область">
+          <md-item-template>
+                              <span md-highlight-text="item.searchRegion"
+                                    md-highlight-flags="^i">{{item.region}}</span>
+          </md-item-template>
+        </md-autocomplete>
       </div>
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.area'|translate}}</label>
-        <md-input-container class="md-block"
-                            flex>
-          <md-select style="border-bottom: 1px solid #333"
-                     ng-change="vm.getCities(vm.data.profile.area, vm.data.profile.region)"
-                     ng-init="vm.getCities(vm.data.profile.area, vm.data.profile.region)"
-                     id="area" ng-model="vm.data.profile.area"
-                     aria-label="sort">
-            <md-option ng-value="area.area" ng-repeat="area in vm.areas">{{area.area}}
-            </md-option>
-          </md-select>
-        </md-input-container>
+        <md-autocomplete md-search-text-change="vm.searchTextAreaChange(item.searchArea)"
+                         md-selected-item-change="vm.selectedAreaChange(item.area)"
+                         md-selected-item="vm.data.profile.area"
+                         md-search-text="item.searchArea"
+                         md-items="item in vm.filterArea()"
+                         md-item-text="item.area"
+                         md-require-match
+                         md-min-length="0"
+                         md-no-cache="true"
+                         md-floating-label="Район">
+          <md-item-template>
+                              <span md-highlight-text="item.searchArea"
+                                    md-highlight-flags="^i">{{item.area}}</span>
+          </md-item-template>
+        </md-autocomplete>
       </div>
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.city'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333" id="city" ng-model="vm.data.profile.city"
-                     aria-label="sort">
-            <md-option ng-value="city.city" ng-repeat="city in vm.cities">{{city.city}}
-            </md-option>
-          </md-select>
-        </md-input-container>
+        <!--<md-input-container class="md-block" flex>-->
+          <!--<md-select style="border-bottom: 1px solid #333" id="city" ng-model="vm.data.profile.city"-->
+                     <!--aria-label="sort">-->
+            <!--<md-option ng-value="city.city" ng-repeat="city in vm.cities">{{city.city}}-->
+            <!--</md-option>-->
+          <!--</md-select>-->
+        <!--</md-input-container>-->
+        <md-autocomplete md-search-text-change="vm.searchTextChange(item.searchCity)"
+                         md-selected-item-change="vm.selectedItemChange(item.city)"
+                         md-selected-item="vm.data.profile.city"
+                         md-search-text="item.searchCity"
+                         md-items="item in vm.filterCity()"
+                         md-item-text="item.city"
+                         md-require-match
+                         md-min-length="0"
+                         md-no-cache="true"
+                         md-floating-label="Місто/село">
+          <md-item-template>
+                              <span md-highlight-text="item.searchCity"
+                                    md-highlight-flags="^i">{{item.city}}</span>
+          </md-item-template>
+        </md-autocomplete>
       </div>
 
 
@@ -76,27 +100,59 @@
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_name'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333"
-                     id="pfu" ng-model="vm.data.profile.dfs_name"
-                     aria-label="sort">
-            <md-option ng-value="dfs_code" ng-repeat="dfs_code in vm.dfs_organization">{{dfs_code}}
-            </md-option>
-          </md-select>
-        </md-input-container>
+        <!--<md-input-container class="md-block" flex>-->
+          <!--<md-select style="border-bottom: 1px solid #333"-->
+                     <!--id="pfu" ng-model="vm.data.profile.dfs_name"-->
+                     <!--aria-label="sort">-->
+            <!--<md-option ng-value="dfs_code" ng-repeat="dfs_code in vm.dfs_organization">{{dfs_code}}-->
+            <!--</md-option>-->
+          <!--</md-select>-->
+        <!--</md-input-container>-->
+        <md-autocomplete md-search-text-change="vm.searchTextDfsChange(item.searchDfs)"
+                         md-selected-item-change="vm.selectedDfsChange(item)"
+                         md-selected-item="vm.data.profile.dfs_name"
+                         md-search-text="item.searchDfs"
+                         md-items="item in vm.filterDfs()"
+                         md-item-text="item"
+                         md-require-match
+                         md-min-length="0"
+                         md-no-cache="true"
+                         md-floating-label="{{'SignUp.dfs_name'|translate}}">
+          <md-item-template>
+                              <span md-highlight-text="item.searchDfs"
+                                    md-highlight-flags="^i">{{item}}</span>
+          </md-item-template>
+        </md-autocomplete>
       </div>
+
+
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_code'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333"
-                     id="dfs_code" ng-model="vm.data.profile.dfs_code"
-                     aria-label="sort">
-            <md-option ng-value="{{dfs_code.code}}" ng-repeat="dfs_code in vm.dfs_code">{{dfs_code.code}},
-              {{dfs_code.name}}
-            </md-option>
-          </md-select>
-        </md-input-container>
+        <!--<md-input-container class="md-block" flex>-->
+          <!--<md-select style="border-bottom: 1px solid #333"-->
+                     <!--id="dfs_code" ng-model="vm.data.profile.dfs_code"-->
+                     <!--aria-label="sort">-->
+            <!--<md-option ng-value="{{dfs_code.code}}" ng-repeat="dfs_code in vm.dfs_code">{{dfs_code.code}},-->
+              <!--{{dfs_code.name}}-->
+            <!--</md-option>-->
+          <!--</md-select>-->
+        <!--</md-input-container>-->
+        <md-autocomplete md-search-text-change="vm.searchTextDfs_codeChange(item.searchDfs_code)"
+                         md-selected-item-change="vm.selectedDfs_codeChange(item)"
+                         md-selected-item="vm.data.profile.dfs_code"
+                         md-search-text="item.searchDfs_code"
+                         md-items="item in vm.filterDfs_code()"
+                         md-item-text="item"
+                         md-require-match
+                         md-min-length="0"
+                         md-no-cache="true"
+                         md-floating-label="{{'SignUp.dfs_code'|translate}}">
+          <md-item-template>
+                              <span md-highlight-text="item.searchDfs_code"
+                                    md-highlight-flags="^i">{{item}}</span>
+          </md-item-template>
+        </md-autocomplete>
       </div>
 
       <div>
@@ -139,15 +195,30 @@
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.pfu_code'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333"
-                     id="pfu_code" ng-model="vm.data.profile.pfu_name"
-                     aria-label="sort">
-            <md-option ng-value="pfu_code.pfu_name" ng-selected="$index === 0" ng-repeat="pfu_code in vm.pfu_code track by $index">{{pfu_code.code}},
-              {{pfu_code.pfu_name}}
-            </md-option>
-          </md-select>
-        </md-input-container>
+        <!--<md-input-container class="md-block" flex>-->
+          <!--<md-select style="border-bottom: 1px solid #333"-->
+                     <!--id="pfu_code" ng-model="vm.data.profile.pfu_name"-->
+                     <!--aria-label="sort">-->
+            <!--<md-option ng-value="pfu_code.pfu_name" ng-selected="$index === 0" ng-repeat="pfu_code in vm.pfu_code track by $index">{{pfu_code.code}},-->
+              <!--{{pfu_code.pfu_name}}-->
+            <!--</md-option>-->
+          <!--</md-select>-->
+        <!--</md-input-container>-->
+        <md-autocomplete md-search-text-change="vm.searchTextPfuChange(item.searchPfu)"
+                         md-selected-item-change="vm.selectedPfuChange(item)"
+                         md-selected-item="vm.data.profile.pfu"
+                         md-search-text="item.searchPfu"
+                         md-items="item in vm.filterPfu()"
+                         md-item-text="item"
+                         md-require-match
+                         md-min-length="0"
+                         md-no-cache="true"
+                         md-floating-label="{{'SignUp.pfu_code'|translate}}">
+          <md-item-template>
+                              <span md-highlight-text="item.searchPfu"
+                                    md-highlight-flags="^i">{{item}}</span>
+          </md-item-template>
+        </md-autocomplete>
       </div>
 
 
@@ -218,29 +289,32 @@
 
 
     </form>
-    <!--<md-input-container layout="row" layout-align="center center">-->
-      <!--<md-select ng-change="vm.selectLanguage()"-->
-                 <!--id="language"-->
-                 <!--ng-model="vm.language"-->
-                 <!--aria-label="sort">-->
-
-        <!--<md-option ng-value="'ua'"><img class="flag pr-5 pt-10" ng-src="img/ua.jpg">-->
-          <!--<span class="language">UA</span>-->
-        <!--</md-option>-->
-
-        <!--<md-option ng-value="'ru'"><img class="flag pr-5 pt-10" ng-src="img/ru.png">-->
-          <!--<span class="language">RU</span>-->
-        <!--</md-option>-->
-      <!--</md-select>-->
-    <!--</md-input-container>-->
-    <div layout="column" layout-margin>
-      <md-button class=" md-raised waves-effect waves-light"
+    <div layout="row" layout-align="space-around center" layout-margin>
+      <md-button flex="70" class=" md-raised waves-effect waves-light"
                  style="background-color: grey; color: white"
                  ng-click="vm.update()"
                  aria-label="true">
         {{'Taxes.save_data'|translate}}
       </md-button>
+      <md-input-container flex="25" layout="row" layout-align="center center">
+        <md-select ng-change="vm.selectLanguage()"
+                   id="language"
+                   name="language"
+                   ng-model="vm.mainLanguage"
+                   aria-label="sort">
+
+          <md-option ng-value="'ua'"><img class="flag pr-5 pt-10" ng-src="img/ua.jpg">
+            <span class="language">UA</span>
+          </md-option>
+
+          <md-option ng-value="'ru'"><img class="flag pr-5 pt-10" ng-src="img/ru.png">
+            <span class="language">RU</span>
+          </md-option>
+        </md-select>
+      </md-input-container>
     </div>
+
+
 
   </ion-content>
 </ion-view>

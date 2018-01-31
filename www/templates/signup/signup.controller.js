@@ -534,47 +534,37 @@
 
 
     function signup() {
-
-      // if (vm.form.$invalid) {
-      //   return;
-      // }
-      // if (vm.data.password !== vm.password) {
-      //   toastr.warning('Паролі не співпадають!');
-      //   return;
-      // }
-
+      if (vm.form.$invalid) {
+        return;
+      }
       vm.data.profile.city = vm.city.city;
       vm.data.profile.area = vm.area.area;
       vm.data.profile.region = vm.region.region;
-      // vm.data.profile.pfu_code = vm.pfu_codes.code;
-      // vm.data.profile.pfu_name = vm.pfu_codes.pfu_name;
-      // console.log(vm.data);
-      // return;
-      // vm.data.profile.city_id = vm.city.id;
-      // console.log(vm.data.profile.city);
       user.signup(vm.data)
         .then(function (res) {
+          $state.go('confirmEmail');
           toastr.success('Ви успішно зареєстровані!');
-          $localStorage.token = res.token;
-          delete res.token;
-          $localStorage.group = res.group;
-          $localStorage.id = res.user_id;
-          $ionicPlatform.ready(function () {
-            FCMPlugin.getToken(
-              function (token) {
-                $localStorage.my_notifications_id = token;
-                user.device({token: token});
 
-                console.log('Token: ' + token);
-              },
-              function (err) {
-                alert('error retrieving token: ' + token);
-                console.log('error retrieving token: ' + err);
-              }
-            );
-          });
-          $state.go('app.main');
-          vm.data = {};
+          // $localStorage.token = res.token;
+          // delete res.token;
+          // $localStorage.group = res.group;
+          // $localStorage.id = res.user_id;
+          // $ionicPlatform.ready(function () {
+          //   FCMPlugin.getToken(
+          //     function (token) {
+          //       $localStorage.my_notifications_id = token;
+          //       user.device({token: token});
+          //
+          //       console.log('Token: ' + token);
+          //     },
+          //     function (err) {
+          //       alert('error retrieving token: ' + token);
+          //       console.log('error retrieving token: ' + err);
+          //     }
+          //   );
+          // });
+          // $state.go('app.main');
+          // vm.data = {};
         });
 
     }

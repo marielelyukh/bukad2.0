@@ -1,9 +1,23 @@
 <ion-view class="login">
   <ion-content>
     <p class="title">
-      {{'Login.Auth'|translate}}
+      {{'ConfirmEmail'|translate}}
     </p>
-    <form name="vm.form" novalidate ng-submit="vm.login()">
+    <form name="vm.form" ng-submit="vm.confirmEmail()" novalidate>
+      <md-input-container class="md-block" flex>
+        <label for="email">{{'Confirm_EMAIL'|translate}}</label>
+        <input required
+               name="email_code"
+               autocomplete="off"
+               id="email_code"
+               ng-model="vm.data.email_code"
+               aria-label="email"/>
+        <div class="error-block" ng-messages="vm.form.email_code.$error">
+          <div class="error-block" ng-message="required">
+            {{'SignUp.fieldRequired'|translate}}
+          </div>
+        </div>
+      </md-input-container>
       <md-input-container class="md-block" flex>
         <label for="email">{{'Login.Email'|translate}}</label>
         <input required
@@ -39,41 +53,13 @@
       </md-input-container>
       <div layout="column" layout-margin>
         <md-button class=" md-raised waves-effect waves-light"
-                   type="submit"
                    style="background-color: grey; color: white"
+                   type="submit"
                    aria-label="true">
-          {{'Login.SignIn'|translate}}
+          {{'Confirm'|translate}}
         </md-button>
       </div>
     </form>
-
-    <!--<div class="link">-->
-    <!--<a  ng-click="vm.reset()">Відновити пароль</a>-->
-    <!--</div>-->
-    <div class="link">
-      <a ng-click="vm.signup()">{{'Login.SignUp'|translate}}</a>
-    </div>
-    <div class="link" style="margin-top: 10px">
-        <span>{{'Login.DontHaveQuestion'|translate}}
-           </span><a style="text-decoration: none !important;" href="tel:{{'+380662279755'}}">+380662279755</a>
-    </div>
-
-    <md-input-container layout="row" layout-align="center center">
-      <md-select ng-change="vm.selectLanguage()"
-                 id="language"
-                 name="language"
-                 ng-model="vm.language"
-                 aria-label="sort">
-
-        <md-option ng-value="'ua'"><img class="flag pr-5 pt-10" ng-src="img/ua.jpg">
-          <span class="language">UA</span>
-        </md-option>
-
-        <md-option ng-value="'ru'"><img class="flag pr-5 pt-10" ng-src="img/ru.png">
-          <span class="language">RU</span>
-        </md-option>
-      </md-select>
-    </md-input-container>
-
   </ion-content>
 </ion-view>
+

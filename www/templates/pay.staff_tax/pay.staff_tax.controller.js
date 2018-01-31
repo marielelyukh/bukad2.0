@@ -5,9 +5,9 @@
     .module('app')
     .controller('payStaffTax', payStaffTax);
 
-  payStaffTax.$inject = ['$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', 'group', '$stateParams', '$sessionStorage', '$timeout', '$window'];
+  payStaffTax.$inject = ['$translate', '$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', 'group', '$stateParams', '$sessionStorage', '$timeout', '$window'];
 
-  function payStaffTax($ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, group, $stateParams, $sessionStorage, $timeout, $window) {
+  function payStaffTax($translate, $ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, group, $stateParams, $sessionStorage, $timeout, $window) {
 
     var vm = this;
     vm.back = back;
@@ -81,10 +81,9 @@
           vm.resUrl = vm.pay_data.uapay.paymentPageUrl;
           if (vm.resUrl) {
             var confirmPopup = $ionicPopup.confirm({
-              title: 'Перейти до сторiнки оплати UaPay?',
-              // template: 'Перейти до сторiнки оплати?',
-              cancelText: 'Нi',
-              okText: 'Так'
+              title: $translate.instant('GotoUaPay'),
+              cancelText: $translate.instant('No'),
+              okText:  $translate.instant('Yes'),
             });
             confirmPopup.then(function (res) {
               if (res) {
@@ -111,10 +110,9 @@
           vm.resUrl = vm.pay_data.uapay.paymentPageUrl;
           if (vm.resUrl) {
             var confirmPopup = $ionicPopup.confirm({
-              title: 'Перейти до сторiнки оплати UaPay?',
-              // template: 'Перейти до сторiнки оплати?',
-              cancelText: 'Нi',
-              okText: 'Так'
+              title: $translate.instant('GotoUaPay'),
+              cancelText: $translate.instant('No'),
+              okText:  $translate.instant('Yes'),
             });
             confirmPopup.then(function (res) {
               if (res) {
@@ -140,10 +138,9 @@
           vm.resUrl = vm.pay_data.uapay.paymentPageUrl;
           if (vm.resUrl) {
             var confirmPopup = $ionicPopup.confirm({
-              title: 'Перейти до сторiнки оплати UaPay?',
-              // template: 'Перейти до сторiнки оплати?',
-              cancelText: 'Нi',
-              okText: 'Так'
+              title: $translate.instant('GotoUaPay'),
+              cancelText: $translate.instant('No'),
+              okText:  $translate.instant('Yes'),
             });
             confirmPopup.then(function (res) {
               if (res) {

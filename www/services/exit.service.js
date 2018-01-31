@@ -5,9 +5,9 @@
     .module('model.exit', [])
     .service('exit', exit);
 
-  exit.$ingect = ['$ionicPlatform', '$ionicPopup', '$state'];
+  exit.$ingect = ['$translate', '$ionicPlatform', '$ionicPopup', '$state'];
 
-  function exit($ionicPlatform, $ionicPopup, $state) {
+  function exit($translate, $ionicPlatform, $ionicPopup, $state) {
     return {
       buttonExit: buttonExit
     };
@@ -16,10 +16,10 @@
       $ionicPlatform.registerBackButtonAction(function () {
         if ($state.current.url === location) {
           var confirmPopup = $ionicPopup.confirm({
-            title: 'Вийти',
-            template: 'Ви дiйсно бажаєте вийти?',
-            cancelText: 'Нi',
-            okText: 'Так'
+            title:  $translate.instant('LogOut'),
+            template:  $translate.instant('ReallyLogOut'),
+            cancelText:  $translate.instant('No'),
+            okText: $translate.instant('Yes')
           });
           confirmPopup.then(function (res) {
             if (res) {

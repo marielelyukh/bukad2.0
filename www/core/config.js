@@ -46,6 +46,13 @@
         controller: 'AppCtrl',
         controllerAs: 'vm'
       })
+      .state('confirmEmail', {
+        url: '/confirm_email',
+        templateUrl: 'templates/confirm_email/confirm_email.html',
+        controller: 'confirmEmail',
+        controllerAs: 'vm'
+
+      })
       .state('app.main', {
         url: '/main',
         views: {
@@ -205,6 +212,7 @@
         },
         cache: false
       })
+
       .state('app.profile', {
         url: '/user-profile',
         views: {

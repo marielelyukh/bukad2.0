@@ -12,10 +12,14 @@
         var vm = this;
         vm.selectLanguage = selectLanguage;
         vm.user_group = $localStorage.group;
-        exit.buttonExit($state.current.url);
+
         vm.mainLanguage = $localStorage.locale;
         console.log(vm.mainLanguage);
         console.log(vm.user_group);
+
+
+        exit.buttonExit($state.current.url);
+
 
         group.getAllTaxes()
           .then(function (res) {
@@ -30,10 +34,10 @@
       function selectLanguage () {
         // $translate.use('ru');
         // $localStorage.locale = 'ru-RU';
-          if(vm.mainLanguage === 'ua-UA') {
+          if(vm.mainLanguage === 'ua') {
             $translate.use('ua');
           }
-          if(vm.mainLanguage === 'ru-RU') {
+          if(vm.mainLanguage === 'ru') {
             $translate.use('ru');
           }
 

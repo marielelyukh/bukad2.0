@@ -25,10 +25,10 @@
             </ion-item>
             <ion-item ng-if="vm.user_group == 'group2' || vm.user_group == 'group3'">
                 <div class="item-icon-left" ui-sref="app.staff_tax">
-                    <h2 ng-if="vm.mainLanguage === 'ua-UA'">Податок з найманих <br> працівників</h2>
-                    <h2 ng-if="vm.mainLanguage === 'ru-RU'">Налог с наемных <br> сотрудников</h2>
-                    <p ng-if="vm.mainLanguage === 'ua-UA'" class="secondText">ЄCB, ВЗ, <br> Прибутковий податок</p>
-                    <p ng-if="vm.mainLanguage === 'ru-RU'" class="secondText">ЕСВ, ВС, <br> Подоходный налог</p>
+                    <h2 ng-if="vm.mainLanguage === 'ua'">Податок з найманих <br> працівників</h2>
+                    <h2 ng-if="vm.mainLanguage === 'ru'">Налог с наемных <br> сотрудников</h2>
+                    <p ng-if="vm.mainLanguage === 'ua'" class="secondText">ЄCB, ВЗ, <br> Прибутковий податок</p>
+                    <p ng-if="vm.mainLanguage === 'ru'" class="secondText">ЕСВ, ВС, <br> Подоходный налог</p>
                 </div>
                 <div class="item-icon-right">
                   <i ng-if="vm.taxes_data.employee_tax.status == 2" style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>

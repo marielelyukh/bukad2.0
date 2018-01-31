@@ -5,9 +5,9 @@
         .module('app')
         .controller('SingleFop', SingleFop);
 
-    SingleFop.$inject = ['$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group', '$localStorage', '$timeout', '$window'];
+    SingleFop.$inject = ['$translate','$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group', '$localStorage', '$timeout', '$window'];
 
-    function SingleFop($ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams,  $scope, group, $localStorage, $timeout, $window) {
+    function SingleFop($translate, $ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams,  $scope, group, $localStorage, $timeout, $window) {
 
         var vm = this;
         vm.getSum = getSum;
@@ -54,9 +54,9 @@
             vm.resUrl = vm.pay_data.uapay.paymentPageUrl;
             if (vm.resUrl) {
               var confirmPopup = $ionicPopup.confirm({
-                title: 'Перейти до сторiнки оплати UaPay?',
-                cancelText: 'Нi',
-                okText: 'Так'
+                title: $translate.instant('GotoUaPay'),
+                cancelText: $translate.instant('No'),
+                okText:  $translate.instant('Yes'),
               });
               confirmPopup.then(function (res) {
                 if (res) {
