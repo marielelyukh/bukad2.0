@@ -144,24 +144,7 @@
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.region'|translate}}</label>
-        <!--<md-input-container class="md-block" flex>-->
-          <!--<md-select style="border-bottom: 1px solid #333"-->
-                     <!--required-->
-                     <!--name="region"-->
-                     <!--ng-change="vm.getArea(vm.region)"-->
-                     <!--id="region" ng-model="vm.region"-->
-                     <!--aria-label="sort">-->
-            <!--<md-option ng-value="region.region" ng-repeat="region in vm.regions">{{region.region}}-->
-            <!--</md-option>-->
-          <!--</md-select>-->
-          <!--<div class="error-block" ng-messages="vm.form.region.$error">-->
-            <!--<div class="error-block" ng-message="required">-->
-              <!--{{'SignUp.fieldRequired'|translate}}-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</md-input-container>-->
-
-        <md-autocomplete md-search-text-change="vm.searchTextChange(item.searchRegion)"
+        <md-autocomplete md-search-text-change="vm.searchTextRegionChange(item.searchRegion)"
                          md-selected-item-change="vm.selectedRegionChange(item)"
                          md-selected-item="vm.region"
                          md-search-text="item.searchRegion"
@@ -181,26 +164,7 @@
 
       <div ng-if="vm.region">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.area'|translate}}</label>
-        <!--<md-input-container class="md-block"-->
-                            <!--flex>-->
-          <!--<md-select ng-disabled="!vm.region"-->
-                     <!--required-->
-                     <!--name="area"-->
-                     <!--style="border-bottom: 1px solid #333"-->
-                     <!--ng-change="vm.getCities(vm.area, vm.region)"-->
-                     <!--id="area" ng-model="vm.area"-->
-                     <!--aria-label="sort">-->
-            <!--<md-option ng-value="area.area"-->
-                       <!--ng-repeat="area in vm.areas">{{area.area}}-->
-            <!--</md-option>-->
-          <!--</md-select>-->
-          <!--<div class="error-block" ng-messages="vm.form.area.$error">-->
-            <!--<div class="error-block" ng-message="required">-->
-              <!--{{'SignUp.fieldRequired'|translate}}-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</md-input-container>-->
-        <md-autocomplete md-search-text-change="vm.searchTextChange(item.searchArea)"
+        <md-autocomplete md-search-text-change="vm.searchTextAreaChange(item.searchArea)"
                          md-selected-item-change="vm.selectedAreaChange(item)"
                          md-selected-item="vm.area"
                          md-search-text="item.searchArea"
@@ -220,19 +184,6 @@
 
       <div ng-if="vm.area">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.city'|translate}}</label>
-        <!--<md-input-container class="md-block" flex>-->
-          <!--<md-select style="border-bottom: 1px solid #333" id="city" ng-model="vm.city"-->
-                     <!--aria-label="sort" required name="city"-->
-          <!--&gt;-->
-            <!--<md-option ng-value="city.city" ng-repeat="city in vm.cities">{{city.city}}-->
-            <!--</md-option>-->
-          <!--</md-select>-->
-          <!--<div class="error-block" ng-messages="vm.form.city.$error">-->
-            <!--<div class="error-block" ng-message="required">-->
-              <!--{{'SignUp.fieldRequired'|translate}}-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</md-input-container>-->
         <md-autocomplete md-search-text-change="vm.searchTextChange(item.searchCity)"
                          md-selected-item-change="vm.selectedItemChange(item)"
                          md-selected-item="vm.city"
@@ -256,38 +207,41 @@
 
       <div ng-if="vm.region">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_name'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333" required
-                     id="pfu" ng-model="vm.data.profile.dfs_name" name="dfc_code"
-                     aria-label="sort">
-            <md-option ng-value="dfs_code" ng-repeat="dfs_code in vm.dfs_code">{{dfs_code}}
-            </md-option>
-          </md-select>
-          <div class="error-block" ng-messages="vm.form.dfc_code.$error">
-            <div class="error-block" ng-message="required">
-              {{'SignUp.fieldRequired'|translate}}
-            </div>
-          </div>
-        </md-input-container>
+        <md-autocomplete md-search-text-change="vm.searchTextDfsChange(item.searchDfs)"
+                         md-selected-item-change="vm.selectedDfsChange(item)"
+                         md-selected-item="vm.data.profile.dfs_name"
+                         md-search-text="item.searchDfs"
+                         md-items="item in vm.filterDfs()"
+                         md-item-text="item"
+                         md-require-match
+                         md-min-length="0"
+                         md-no-cache="true"
+                         md-floating-label="{{'SignUp.dfs_name'|translate}}">
+          <md-item-template>
+                              <span md-highlight-text="item.searchDfs"
+                                    md-highlight-flags="^i">{{item}}</span>
+          </md-item-template>
+        </md-autocomplete>
       </div>
 
 
       <div ng-if="vm.region">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_code'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333" required
-                     id="pfu_code" ng-model="vm.data.profile.dfs_code"
-                     aria-label="sort" name="dfs_code_code">
-            <md-option ng-value="dfs_code.code" ng-repeat="dfs_code in vm.dfs_code_code">{{dfs_code.code}},
-              {{dfs_code.name}}
-            </md-option>
-          </md-select>
-          <div class="error-block" ng-messages="vm.form.dfs_code_code.$error">
-            <div class="error-block" ng-message="required">
-              {{'SignUp.fieldRequired'|translate}}
-            </div>
-          </div>
-        </md-input-container>
+        <md-autocomplete md-search-text-change="vm.searchTextDfs_codeChange(item.searchDfs_code)"
+                         md-selected-item-change="vm.selectedDfs_codeChange(item)"
+                         md-selected-item="vm.data.profile.dfs_code"
+                         md-search-text="item.searchDfs_code"
+                         md-items="item in vm.filterDfs_code()"
+                         md-item-text="item"
+                         md-require-match
+                         md-min-length="0"
+                         md-no-cache="true"
+                         md-floating-label="{{'SignUp.dfs_code'|translate}}">
+          <md-item-template>
+                              <span md-highlight-text="item.searchDfs_code"
+                                    md-highlight-flags="^i">{{item}}</span>
+          </md-item-template>
+        </md-autocomplete>
       </div>
 
       <div>
@@ -344,18 +298,34 @@
 
       <div ng-if="vm.city">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.pfu_code'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333" id="pfu_code" ng-model="vm.pfu_codes"
-                     aria-label="sort" required name="pfu_code">
-            <md-option ng-value="pfu" ng-repeat="pfu in vm.pfu_code">{{pfu.code}}, {{pfu.pfu_name}}
-            </md-option>
-          </md-select>
-          <div class="error-block" ng-messages="vm.form.pfu_code.$error">
-            <div class="error-block" ng-message="required">
-              {{'SignUp.fieldRequired'|translate}}
-            </div>
-          </div>
-        </md-input-container>
+        <!--<md-input-container class="md-block" flex>-->
+          <!--<md-select style="border-bottom: 1px solid #333" id="pfu_code" ng-model="vm.pfu_codes"-->
+                     <!--aria-label="sort" required name="pfu_code">-->
+            <!--<md-option ng-value="pfu" ng-repeat="pfu in vm.pfu_code">{{pfu.code}}, {{pfu.pfu_name}}-->
+            <!--</md-option>-->
+          <!--</md-select>-->
+          <!--<div class="error-block" ng-messages="vm.form.pfu_code.$error">-->
+            <!--<div class="error-block" ng-message="required">-->
+              <!--{{'SignUp.fieldRequired'|translate}}-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</md-input-container>-->
+
+        <md-autocomplete md-search-text-change="vm.searchTextPfuChange(item.searchPfu)"
+                         md-selected-item-change="vm.selectedPfuChange(item)"
+                         md-selected-item="vm.data.profile.pfu"
+                         md-search-text="item.searchPfu"
+                         md-items="item in vm.filterPfu()"
+                         md-item-text="item"
+                         md-require-match
+                         md-min-length="0"
+                         md-no-cache="true"
+                         md-floating-label="{{'SignUp.pfu_code'|translate}}">
+          <md-item-template>
+                              <span md-highlight-text="item.searchPfu"
+                                    md-highlight-flags="^i">{{item}}</span>
+          </md-item-template>
+        </md-autocomplete>
       </div>
 
       <div>

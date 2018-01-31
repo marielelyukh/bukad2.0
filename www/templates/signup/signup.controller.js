@@ -24,11 +24,20 @@
     vm.filterCity = filterCity;
     vm.filterRegion = filterRegion;
     vm.filterArea = filterArea;
+    vm.filterDfs = filterDfs;
+    vm.filterDfs_code = filterDfs_code;
+    vm.filterPfu = filterPfu;
     vm.emailRegExp = /^((([a-zA-Z\-0-9_.])+[a-zA-Z0-9_.]{2,})|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     vm.data = {};
     vm.data.profile = {};
     vm.test = [1, 2];
     vm.searchText = '';
+    vm.searchTextRegion = '';
+    vm.searchTextArea = '';
+    vm.searchTextDfs = '';
+    vm.searchTextDfs_code = '';
+    vm.searchTextPfu = '';
+
 
     user.getTopic()
       .then(function (res) {
@@ -99,7 +108,7 @@
     vm.selectedItem = null;
     vm.searchRegion = [];
     vm.regionSearch = regionSearch;
-    vm.searchTextChange = searchTextChange;
+    vm.searchTextRegionChange = searchTextRegionChange;
     vm.selectedRegionChange = selectedRegionChange;
     vm.simulateQuery = false;
     vm.regionArr = [];
@@ -138,13 +147,17 @@
 
     function createFilterRegion(value) {
 
-      var reg = new RegExp(angular.lowercase(vm.searchText), 'g');
+      var reg = new RegExp(angular.lowercase(vm.searchTextRegion), 'g');
 
       if (angular.lowercase(value.region).match(reg)) {
         return true;
       }
 
       return false;
+    }
+
+    function searchTextRegionChange(text) {
+      vm.searchTextRegion = text;
     }
 
     function selectedRegionChange(item) {
@@ -163,7 +176,7 @@
     vm.selectedItem = null;
     vm.searchArea = [];
     vm.areaSearch = areaSearch;
-    vm.searchTextChange = searchTextChange;
+    vm.searchTextAreaChange = searchTextAreaChange;
     vm.selectedAreaChange = selectedAreaChange;
     vm.simulateQuery = false;
     vm.areaArr = [];
@@ -199,13 +212,13 @@
 
       user.getDfs({region:  vm.region.region})
         .then(function (res) {
-          vm.dfs_code = res;
+          vm.dfs_codes = res;
         });
 
       user.getDfsCode({region:  vm.region.region})
         .then(function (res) {
-          console.log(res)
-          vm.dfs_code_code = res[0];
+          // console.log(res)
+          vm.dfs = res;
         });
     }
 
@@ -227,13 +240,17 @@
 
     function createFilterArea(value) {
 
-      var reg = new RegExp(angular.lowercase(vm.searchText), 'g');
+      var reg = new RegExp(angular.lowercase(vm.searchTextArea), 'g');
 
       if (angular.lowercase(value.area).match(reg)) {
         return true;
       }
 
       return false;
+    }
+
+    function searchTextAreaChange(text) {
+      vm.searchTextArea = text;
     }
 
 
@@ -264,29 +281,6 @@
         return results;
       }
     }
-
-    // function citySearch(query) {
-    //   vm.tempCity = '';
-    //   var results = query ? vm.cityArr.filter(createFilterForCity(query)) : vm.cityArr;
-    //
-    //   if (results.length === 1) {
-    //     vm.tempCity = results[0];
-    //   }
-    //
-    //   if (results.length > 1) {
-    //     for (var i = 0; i < results.length; i++) {
-    //       if (angular.lowercase(query) === angular.lowercase(results[i].size)) {
-    //         vm.tempCity = results[i];
-    //       }
-    //     }
-    //   }
-    //
-    //   var deferred = $q.defer();
-    //   $timeout(function () {
-    //     deferred.resolve(results);
-    //   }, Math.random() * 1000, false);
-    //   return deferred.promise;
-    // }
 
 
     // функция которая вызываеться при изменении инпута и присваивает новый текст в переменную
@@ -343,23 +337,219 @@
 
       };
     }
-
     // AUTOCOMPLETE for city ENDS
 
 
+
+
+
+    // AUTOCOMPLETE for dfs STARTS
+
+    vm.selectedItem = null;
+    vm.searchDfs = [];
+    vm.dfsSearch = dfsSearch;
+    vm.searchTextDfsChange = searchTextDfsChange;
+    vm.selectedDfsChange = selectedDfsChange;
+    vm.simulateQuery = false;
+    vm.dfsArr = [];
+    vm.tempDfs = '';
+
+    function dfsSearch(query) {
+      var results = query ? vm.dfsArr.filter(createFilterForDfs(query)) : vm.dfsArr,
+        deferred;
+      if (vm.simulateQuery) {
+        deferred = $q.defer();
+        $timeout(function () {
+          deferred.resolve(results);
+        }, Math.random() * 1000, false);
+        return deferred.promise;
+      } else {
+        return results;
+      }
+    }
+
+    function filterDfs() {
+      return vm.dfs_codes.filter(createFilterDfs);
+    }
+
+    function searchTextDfsChange(text) {
+      vm.searchTextDfs = text;
+    }
+
+    function createFilterDfs(value) {
+
+      var reg = new RegExp(angular.lowercase(vm.searchTextDfs), 'g');
+
+      if (angular.lowercase(value).match(reg)) {
+        return true;
+      }
+
+      return false;
+    }
+
+    function createFilterForDfs(query) {
+      console.log('query: ' + query)
+      var Query = query;
+
+      return function filterFn(item) {
+        var lowercaseQuery = angular.lowercase(query);
+
+        return (item.size.indexOf(query) === 0);
+
+      };
+    }
+
+    function selectedDfsChange(item) {
+      console.log(item);
+    }
+    // AUTOCOMPLETE for dfs ENDS
+
+
+
+    // AUTOCOMPLETE for dfs_code STARTS
+    vm.selectedItem = null;
+    vm.searchDfs_code = [];
+    vm.dfs_codeSearch = dfs_codeSearch;
+    vm.searchTextDfs_codeChange = searchTextDfs_codeChange;
+    vm.selectedDfs_codeChange = selectedDfs_codeChange;
+    vm.simulateQuery = false;
+    vm.dfs_codeArr = [];
+    vm.tempDfs_code = '';
+
+    function dfs_codeSearch(query) {
+      var results = query ? vm.dfs_codeArr.filter(createFilterForDfs_code(query)) : vm.dfs_codeArr,
+        deferred;
+      if (vm.simulateQuery) {
+        deferred = $q.defer();
+        $timeout(function () {
+          deferred.resolve(results);
+        }, Math.random() * 1000, false);
+        return deferred.promise;
+      } else {
+        return results;
+      }
+    }
+
+    function filterDfs_code() {
+      return vm.dfs.filter(createFilterDfs_code);
+    }
+
+    function createFilterDfs_code(value) {
+
+      var reg = new RegExp(angular.lowercase(vm.searchTextDfs_code), 'g');
+
+      if (angular.lowercase(value).match(reg)) {
+        return true;
+      }
+
+      return false;
+    }
+
+    function createFilterForDfs_code(query) {
+      console.log('query: ' + query)
+      var Query = query;
+
+      return function filterFn(item) {
+        var lowercaseQuery = angular.lowercase(query);
+
+        return (item.size.indexOf(query) === 0);
+
+      };
+    }
+
+    function selectedDfs_codeChange(item) {
+      console.log(item);
+    }
+
+    function searchTextDfs_codeChange(text) {
+      vm.searchTextDfs_code = text;
+    }
+    // AUTOCOMPLETE for dfs_code ENDS
+
+
+    // AUTOCOMPLETE for pfu STARTS
+
+    vm.selectedItem = null;
+    vm.searchPfu = [];
+    vm.pfuSearch = pfuSearch;
+    vm.searchTextPfuChange = searchTextPfuChange;
+    vm.selectedPfuChange = selectedPfuChange;
+    vm.simulateQuery = false;
+    vm.pfuArr = [];
+    vm.tempPfu = '';
+
+    function pfuSearch(query) {
+      var results = query ? vm.pfuArr.filter(createFilterForPfu(query)) : vm.pfuArr,
+        deferred;
+      if (vm.simulateQuery) {
+        deferred = $q.defer();
+        $timeout(function () {
+          deferred.resolve(results);
+        }, Math.random() * 1000, false);
+        return deferred.promise;
+      } else {
+        return results;
+      }
+    }
+
+    function filterPfu() {
+      // if(vm.searchText === '') {
+      //   return vm.pfu_code;
+      // }
+      return vm.pfu_code.filter(createFilterPfu);
+    }
+
+    function createFilterPfu(value) {
+
+      var reg = new RegExp(angular.lowercase(vm.searchTextPfu), 'g');
+
+      if (angular.lowercase(value).match(reg)) {
+        return true;
+      }
+
+      return false;
+    }
+
+    function createFilterForPfu(query) {
+      console.log('query: ' + query)
+      var Query = query;
+
+      return function filterFn(item) {
+        var lowercaseQuery = angular.lowercase(query);
+
+        return (item.size.indexOf(query) === 0);
+
+      };
+    }
+
+    function selectedPfuChange(item) {
+      console.log(item);
+    }
+
+    function searchTextPfuChange(text) {
+      vm.searchTextPfu = text;
+    }
+    // AUTOCOMPLETE for pfu ENDS
+
+
+
     function signup() {
-      if (vm.form.$invalid) {
-        return;
-      }
-      if (vm.data.password !== vm.password) {
-        toastr.warning('Паролі не співпадають!');
-        return;
-      }
+
+      // if (vm.form.$invalid) {
+      //   return;
+      // }
+      // if (vm.data.password !== vm.password) {
+      //   toastr.warning('Паролі не співпадають!');
+      //   return;
+      // }
+
       vm.data.profile.city = vm.city.city;
       vm.data.profile.area = vm.area.area;
       vm.data.profile.region = vm.region.region;
-      vm.data.profile.pfu_code = vm.pfu_codes.code;
-      vm.data.profile.pfu_name = vm.pfu_codes.pfu_name;
+      // vm.data.profile.pfu_code = vm.pfu_codes.code;
+      // vm.data.profile.pfu_name = vm.pfu_codes.pfu_name;
+      // console.log(vm.data);
+      // return;
       // vm.data.profile.city_id = vm.city.id;
       // console.log(vm.data.profile.city);
       user.signup(vm.data)
