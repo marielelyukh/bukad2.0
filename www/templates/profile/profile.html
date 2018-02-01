@@ -4,21 +4,21 @@
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.ident_code'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <input style="border-bottom: 1px solid #333" aria-label="123" ng-model="vm.data.profile.ident_code"
+          <input style="border-bottom: 1px solid #333; margin-top: -15px" aria-label="123" ng-model="vm.data.profile.ident_code"
                  type="text">
         </md-input-container>
       </div>
       <div style="margin-top: -25px">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.insurance'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <input style="border-bottom: 1px solid #333" aria-label="123" ng-model="vm.data.profile.insurance"
+          <input style="border-bottom: 1px solid #333;  margin-top: -15px" aria-label="123" ng-model="vm.data.profile.insurance"
                  type="text">
         </md-input-container>
       </div>
       <div style="margin-top: -25px">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.initials'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <input style="border-bottom: 1px solid #333" aria-label="123" ng-model="vm.data.profile.initials" type="text">
+          <input style="border-bottom: 1px solid #333;  margin-top: -15px" aria-label="123" ng-model="vm.data.profile.initials" type="text">
         </md-input-container>
       </div>
 
@@ -26,7 +26,7 @@
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.postcode'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <input style="border-bottom: 1px solid #333" aria-label="123" ng-model="vm.data.profile.postcode" type="text">
+          <input style="border-bottom: 1px solid #333;  margin-top: -15px" aria-label="123" ng-model="vm.data.profile.postcode" type="text">
         </md-input-container>
       </div>
 
@@ -70,15 +70,8 @@
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.city'|translate}}</label>
-        <!--<md-input-container class="md-block" flex>-->
-          <!--<md-select style="border-bottom: 1px solid #333" id="city" ng-model="vm.data.profile.city"-->
-                     <!--aria-label="sort">-->
-            <!--<md-option ng-value="city.city" ng-repeat="city in vm.cities">{{city.city}}-->
-            <!--</md-option>-->
-          <!--</md-select>-->
-        <!--</md-input-container>-->
         <md-autocomplete md-search-text-change="vm.searchTextChange(item.searchCity)"
-                         md-selected-item-change="vm.selectedItemChange(item.city)"
+                         md-selected-item-change="vm.selectedCityChange(item.city)"
                          md-selected-item="vm.data.profile.city"
                          md-search-text="item.searchCity"
                          md-items="item in vm.filterCity()"
@@ -100,14 +93,6 @@
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_name'|translate}}</label>
-        <!--<md-input-container class="md-block" flex>-->
-          <!--<md-select style="border-bottom: 1px solid #333"-->
-                     <!--id="pfu" ng-model="vm.data.profile.dfs_name"-->
-                     <!--aria-label="sort">-->
-            <!--<md-option ng-value="dfs_code" ng-repeat="dfs_code in vm.dfs_organization">{{dfs_code}}-->
-            <!--</md-option>-->
-          <!--</md-select>-->
-        <!--</md-input-container>-->
         <md-autocomplete md-search-text-change="vm.searchTextDfsChange(item.searchDfs)"
                          md-selected-item-change="vm.selectedDfsChange(item)"
                          md-selected-item="vm.data.profile.dfs_name"
@@ -129,15 +114,6 @@
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_code'|translate}}</label>
-        <!--<md-input-container class="md-block" flex>-->
-          <!--<md-select style="border-bottom: 1px solid #333"-->
-                     <!--id="dfs_code" ng-model="vm.data.profile.dfs_code"-->
-                     <!--aria-label="sort">-->
-            <!--<md-option ng-value="{{dfs_code.code}}" ng-repeat="dfs_code in vm.dfs_code">{{dfs_code.code}},-->
-              <!--{{dfs_code.name}}-->
-            <!--</md-option>-->
-          <!--</md-select>-->
-        <!--</md-input-container>-->
         <md-autocomplete md-search-text-change="vm.searchTextDfs_codeChange(item.searchDfs_code)"
                          md-selected-item-change="vm.selectedDfs_codeChange(item)"
                          md-selected-item="vm.data.profile.dfs_code"
@@ -161,7 +137,7 @@
           <md-select ng-change="vm.getGroups(vm.data.profile.kved_topic)"
                      ng-init="vm.getGroups(vm.data.profile.kved_topic)"
                      id="topic"
-                     style="border-bottom: 1px solid #333"
+                     style="border-bottom: 1px solid #333; margin-top: -15px"
                      ng-model="vm.data.profile.kved_topic"
                      aria-label="sort">
             <md-option ng-value="topic" ng-repeat="topic in vm.topic">{{topic}}
@@ -173,7 +149,7 @@
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_group'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333" ng-change="vm.getClass(vm.data.profile.kved_group)"
+          <md-select style="border-bottom: 1px solid #333;  margin-top: -15px" ng-change="vm.getClass(vm.data.profile.kved_group)"
                      ng-init="vm.getClass(vm.data.profile.kved_group)" id="group" ng-model="vm.data.profile.kved_group"
                      aria-label="sort">
             <md-option ng-value="group" ng-repeat="group in vm.groups">{{group}}
@@ -185,7 +161,7 @@
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_code'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333" id="class" ng-model="vm.data.profile.kved_class"
+          <md-select style="border-bottom: 1px solid #333; margin-top: -15px" id="class" ng-model="vm.data.profile.kved_class"
                      aria-label="sort">
             <md-option ng-value="class" ng-repeat="class in vm.class">{{class}}
             </md-option>
@@ -195,15 +171,6 @@
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.pfu_code'|translate}}</label>
-        <!--<md-input-container class="md-block" flex>-->
-          <!--<md-select style="border-bottom: 1px solid #333"-->
-                     <!--id="pfu_code" ng-model="vm.data.profile.pfu_name"-->
-                     <!--aria-label="sort">-->
-            <!--<md-option ng-value="pfu_code.pfu_name" ng-selected="$index === 0" ng-repeat="pfu_code in vm.pfu_code track by $index">{{pfu_code.code}},-->
-              <!--{{pfu_code.pfu_name}}-->
-            <!--</md-option>-->
-          <!--</md-select>-->
-        <!--</md-input-container>-->
         <md-autocomplete md-search-text-change="vm.searchTextPfuChange(item.searchPfu)"
                          md-selected-item-change="vm.selectedPfuChange(item)"
                          md-selected-item="vm.data.profile.pfu"
@@ -253,7 +220,7 @@
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.email'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <input aria-label="123" style="border-bottom: 1px solid #333" ng-model="vm.data.email" type="text">
+          <input aria-label="123" style="border-bottom: 1px solid #333;  margin-top: -15px" ng-model="vm.data.email" type="text">
         </md-input-container>
       </div>
 
@@ -262,6 +229,7 @@
         <md-input-container class="md-block" flex>
           <input
             name="password"
+            style="margin-top: -15px"
             id="password"
             ng-model="vm.data.password"
             aria-label="password"
@@ -274,6 +242,7 @@
         <md-input-container class="md-block" flex>
           <input
             name="tpassword"
+            style="margin-top: -15px"
             id="tpassword"
             ng-pattern="vm.data.password"
             ng-model="vm.password"

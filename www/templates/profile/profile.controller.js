@@ -23,6 +23,8 @@
     vm.filterDfs_code = filterDfs_code;
     vm.filterPfu = filterPfu;
     vm.selectLanguage = selectLanguage;
+    vm.getFirstArea = getFirstArea;
+    vm.getFirstCity = getFirstCity;
     vm.mainLanguage = $localStorage.locale;
     vm.user_id = $localStorage.id;
     vm.data = profileData;
@@ -70,7 +72,43 @@
       if(vm.mainLanguage === 'ru') {
         $translate.use('ru');
       }
+    }
 
+    activate();
+    function activate() {
+      getFirstArea();
+      getFirstCity();
+    }
+
+    function getFirstArea() {
+      user.getAreas({region: vm.data.profile.region})
+        .then(function (res) {
+          vm.areas = res;
+          // vm.freeCustomersArr = vm.areas;
+        });
+      user.getPfu({region:  vm.data.profile.region})
+        .then(function (res) {
+          vm.pfu_code = res;
+        });
+
+      user.getDfs({region:  vm.data.profile.region})
+        .then(function (res) {
+          vm.dfs_codes = res;
+        });
+
+      user.getDfsCode({region:  vm.data.profile.region})
+        .then(function (res) {
+          // console.log(res)
+          vm.dfs = res;
+        });
+    }
+
+    function getFirstCity() {
+      user.getCities({region: vm.data.profile.region, area: vm.data.profile.area})
+        .then(function (res) {
+          vm.cities = res;
+          // vm.freeCustomersArr = vm.areas;
+        });
     }
 
     // AUTOCOMPLETE for region STARTS
@@ -234,7 +272,7 @@
     vm.searchCity = [];
     vm.citySearch = citySearch;
     vm.searchTextChange = searchTextChange;
-    vm.selectedItemChange = selectedItemChange;
+    vm.selectedCityChange = selectedCityChange;
     vm.simulateQuery = false;
     vm.cityArr = [];
     vm.tempCity = '';
@@ -258,10 +296,12 @@
     // функция которая вызываеться при изменении инпута и присваивает новый текст в переменную
     function searchTextChange(text) {
       vm.searchText = text;
+
     }
 
     // если мы выбираем значение в предложке то функция вызываеться (но вроде и так всё работает потому что есть md-selected-item="vm.data.profile.city")
-    function selectedItemChange(item) {
+    function selectedCityChange(item) {
+      // vm.data.profile.city = item;
       console.log(item);
     }
 
@@ -343,6 +383,7 @@
 
     function searchTextDfsChange(text) {
       vm.searchTextDfs = text;
+
     }
 
     function createFilterDfs(value) {
@@ -500,21 +541,20 @@
     }
     // AUTOCOMPLETE for pfu ENDS
 
-
-
-
-
-
-
     function update() {
       if (vm.form.$invalid) {
         return;
       }
-      vm.data.profile.city = vm.city.city;
-      vm.data.profile.area = vm.area.area;
-      vm.data.profile.region = vm.region.region;
-      // vm.data.profile.pfu_code = vm.pfu_codes.code;
-      // vm.data.profile.pfu_name = vm.pfu_codes.pfu_name;
+      vm.data.profile.local = vm.mainLanguage;
+      if(vm.data.profile.city.city){
+        vm.data.profile.city = vm.data.profile.city.city;
+      }
+      if(vm.data.profile.area.area){
+        vm.data.profile.area = vm.data.profile.area.area;
+      }
+      if(vm.data.profile.region.region){
+        vm.data.profile.region = vm.data.profile.region.region;
+      }
       user.update(vm.data)
         .then(function (res) {
           toastr.success($translate.instant('Changes_save'));

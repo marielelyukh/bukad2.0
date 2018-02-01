@@ -37,6 +37,13 @@
           </div>
         </div>
       </md-input-container>
+      <div ng-if="vm.data.password && vm.data.email" class="md-block" layout="row" layout-align="center center">
+        <md-checkbox ng-model="vm.data.save"
+                     ng-change="vm.AutoSave()"
+                     aria-label="Checkbox 1"
+                     style="color: grey;">{{'Login.RememberMe' | translate}}
+        </md-checkbox>
+      </div>
       <div layout="column" layout-margin>
         <md-button class=" md-raised waves-effect waves-light"
                    type="submit"
@@ -50,12 +57,15 @@
     <!--<div class="link">-->
     <!--<a  ng-click="vm.reset()">Відновити пароль</a>-->
     <!--</div>-->
-    <div class="link">
-      <a ng-click="vm.signup()">{{'Login.SignUp'|translate}}</a>
+    <div style="margin-top: 10px" class="link">
+      <a  ng-click="vm.signup()">{{'Login.SignUp'|translate}}</a>
     </div>
-    <div class="link" style="margin-top: 10px">
-        <span>{{'Login.DontHaveQuestion'|translate}}
-           </span><a style="text-decoration: none !important;" href="tel:{{'+380662279755'}}">+380662279755</a>
+    <div style="margin-top: 10px" class="link">
+      <a ng-click="vm.resetPass()">{{'Login.ResetPassword'|translate}}</a>
+    </div>
+    <div class="link" layout="column" style="margin-top: 10px">
+        <span style="color: gray; font-size: 1.0em !important;">{{'Login.DontHaveQuestion'|translate}}</span>
+      <a style="text-decoration: none !important; color: #039BE5; font-size: 1.2em;" href="tel:{{'+380662279755'}}">+380662279755</a>
     </div>
 
     <md-input-container layout="row" layout-align="center center">

@@ -30,7 +30,8 @@
       getDfsCode: getDfsCode,
       check: check,
       device: device,
-      confirm_email: confirm_email
+      confirm_email: confirm_email,
+      resetPassword: resetPassword
 
 
     };
@@ -48,6 +49,13 @@
 
     function confirm_email(data) {
       return http.post(url.user.confirm_email, data)
+        .then(function (res) {
+          return res;
+        });
+    }
+
+    function resetPassword(data) {
+      return http.post(url.user.resetPassword, data)
         .then(function (res) {
           return res;
         });

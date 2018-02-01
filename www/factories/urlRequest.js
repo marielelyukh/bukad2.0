@@ -29,7 +29,8 @@
             getDfsCode:           baseUrl + 'register/dfs',
             check:                baseUrl + 'auth/check',
             device:               baseUrl + 'auth/device',
-            confirm_email:        baseUrl + 'auth/email/confirm'
+            confirm_email:        baseUrl + 'auth/email/confirm',
+            resetPassword:        baseUrl + 'auth/password/reset'
           },
 
           group: {

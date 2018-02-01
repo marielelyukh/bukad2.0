@@ -45,35 +45,49 @@
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">{{'Taxes.esv_workers'|translate}}</label>
                 <md-input-container class="md-block" flex>
-                    <input aria-label="123" disabled ng-model="vm.tmp.esv_tax" type="text" >
+                    <input
+                      style="margin-top: -15px"
+                      aria-label="123" disabled ng-model="vm.tmp.esv_tax" type="text" >
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">{{'Taxes.army_sum'|translate}}</label>
                 <md-input-container class="md-block" flex>
-                    <input aria-label="123" disabled ng-model="vm.tmp.army_tax" type="text" >
+                    <input
+                      style="margin-top: -15px"
+                      aria-label="123" disabled ng-model="vm.tmp.army_tax" type="text" >
                 </md-input-container>
             </div>
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">{{'Taxes.income_tax'|translate}}</label>
                 <md-input-container class="md-block" flex>
-                    <input aria-label="123" disabled ng-model="vm.tmp.income_tax" type="text" >
+                    <input style="margin-top: -15px"
+                           aria-label="123" disabled ng-model="vm.tmp.income_tax" type="text" >
                 </md-input-container>
             </div>
 
             <div style="margin-top: -25px">
                 <label style="color: #666666; font-size: 1em;">{{'Taxes.sum_for_all'|translate}}</label>
                 <md-input-container class="md-block" flex>
-                    <input aria-label="123" disabled ng-model="vm.tmp.sum" type="text" >
+                    <input style="margin-top: -15px"
+                           aria-label="123" disabled ng-model="vm.tmp.sum" type="text" >
                 </md-input-container>
             </div>
+          <div layout="column"
+               layout-align="center end"
+               class="link" layout-margin>
+            <div class="link">
+              <md-button md-no-ink ng-disabled="!vm.tmp"
+                         ui-sref="app.list_of_staffTax
+                         ({staff_tax: vm.data, values: vm.tmp, data_salary: vm.salary, count_workers: vm.data.count_workers})"
+                         class="md-primary" style="font-size: 17px" type="submit">{{'SignUp.continue'|translate}}</md-button>
+
+              <!--<a style="text-decoration: none" ui-sref="app.list_of_staffTax({staff_tax: vm.data, values: vm.tmp, data_salary: vm.salary, count_workers: vm.data.count_workers})">{{'SignUp.continue'|translate}}</a>-->
+            </div>
+          </div>
 
         </form>
-        <div layout="column" layout-align="center end" class="link" layout-margin>
-            <div class="link">
-                <a style="text-decoration: none"  ui-sref="app.list_of_staffTax({staff_tax: vm.data, values: vm.tmp, data_salary: vm.salary, count_workers: vm.data.count_workers})">{{'SignUp.continue'|translate}}</a>
-            </div>
-        </div>
+
 
     </ion-content>
 </ion-view>

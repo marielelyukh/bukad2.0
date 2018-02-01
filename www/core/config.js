@@ -31,7 +31,8 @@
         url: '/login',
         templateUrl: 'templates/login/login.html',
         controller: 'Login',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        cache: false
       })
       .state('signup', {
         url: '/signup',
@@ -50,6 +51,13 @@
         url: '/confirm_email',
         templateUrl: 'templates/confirm_email/confirm_email.html',
         controller: 'confirmEmail',
+        controllerAs: 'vm'
+
+      })
+      .state('resetPassword', {
+        url: '/reset_password',
+        templateUrl: 'templates/reset_password/reset_password.html',
+        controller: 'resetPassword',
         controllerAs: 'vm'
 
       })
@@ -220,7 +228,8 @@
             templateUrl: 'templates/profile/profile.html',
             controller: 'Profile',
             controllerAs: 'vm'
-          }
+          },
+          cache: false
         },
         resolve: {
           profileData: function (user, $localStorage) {

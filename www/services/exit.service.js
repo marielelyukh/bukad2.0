@@ -27,10 +27,10 @@
               navigator.app.exitApp();
 
             }
+
           });
-        } else {
-          window.history.back();
         }
+
       }, 100);
     }
   }

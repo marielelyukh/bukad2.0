@@ -1,10 +1,12 @@
 <ion-view view-title="{{'Taxes.title_esv'|translate}}" class="single_fop">
   <ion-content>
-    <form style="padding: 20px" name="vm.form" novalidate>
+    <form style="padding: 20px" ng-submit="vm.paySecondGroup()" name="vm.form" novalidate>
       <div>
         <label for="data_payer" style="color: #666666; font-size: 1em;">{{'Taxes.data_payer'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <input aria-label="123" required name="data_payer" id="data_payer" ng-model="vm.data.payer"
+          <input aria-label="123"
+                 style="margin-top: -15px"
+                 required name="data_payer" id="data_payer" ng-model="vm.data.payer"
                  type="text" >
           <div class="error-block" ng-messages="vm.form.data_payer.$error">
             <div class="error-block" ng-message="required">
@@ -18,6 +20,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.getter'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  required
                  name="getter"
                  ng-model="vm.data.getter" type="text" >
@@ -34,6 +37,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.getter_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  required
                  name="getter_code"
                  ng-model="vm.data.getter_code" type="text">
@@ -49,6 +53,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.account_number'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123" required
+                 style="margin-top: -15px"
                  name="account_number" ng-model="vm.data.account_number" type="text">
           <div class="error-block" ng-messages="vm.form.account_number.$error">
             <div class="error-block" ng-message="required">
@@ -62,6 +67,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.getter_bank'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  required
                  name="getter_bank"
                  ng-model="vm.data.getter_bank" type="text">
@@ -76,7 +82,9 @@
       <div style="margin-top: -25px">
         <label style="color: #666666; font-size: 1em;">{{'Taxes.bank_code'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <input aria-label="123" required
+          <input aria-label="123"
+                 style="margin-top: -15px"
+                 required
                  name="bank_code" ng-model="vm.data.bank_code" type="text">
           <div class="error-block" ng-messages="vm.form.bank_code.$error">
             <div class="error-block" ng-message="required">
@@ -90,6 +98,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.sum'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  name="sum"
                  required
                  ng-model="vm.data.sum"
@@ -107,6 +116,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.appointment'|translate}}</label>
         <md-input-container class="md-block" flex>
           <textarea aria-label="123"
+                    style="margin-top: -15px"
                     required
                     name="appointment"
                     disabled rows="2" ng-model="vm.data.appointment"
@@ -118,6 +128,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.for_time'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  name="for_time"
                  required
                  ng-model="vm.data.for_time"
@@ -131,20 +142,14 @@
           </div>
         </md-input-container>
       </div>
+      <div layout="column"
+           layout-align="center end" class="link" layout-margin>
+        <div class="link" style="color: #039BE5 !important;">
+          <md-button md-no-ink class="md-primary" style="font-size: 17px" type="submit">{{'SignUp.continue'|translate}}</md-button>
+        </div>
+      </div>
     </form>
 
-    <div layout="column" ng-click="vm.paySecondGroup()"
-         layout-align="center end" class="link" layout-margin>
-      <div class="link" style="color: #039BE5 !important;">
-        <a>{{'SignUp.continue'|translate}}</a>
-      </div>
-    </div>
-
-    <!--<div layout="column" ng-if="vm.pay_data.uapay.paymentPageUrl" layout-align="center end" class="link" layout-margin>-->
-      <!--<div class="link" style="color: #039BE5 !important;">-->
-        <!--<a ng-click="vm.changeUrl()">Пiдтвердити</a>-->
-      <!--</div>-->
-    <!--</div>-->
 
 
   </ion-content>

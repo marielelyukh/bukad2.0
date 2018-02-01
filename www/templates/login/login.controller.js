@@ -17,12 +17,15 @@
     vm.login = login;
     vm.signup = signup;
     vm.selectLanguage = selectLanguage;
+    vm.resetPass = resetPass;
+    vm.AutoSave = AutoSave;
     vm.language = 'ua';
+    vm.data = {};
     vm.emailRegExp = /^((([a-zA-Z\-0-9_.])+[a-zA-Z0-9_.]{2,})|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    vm.onSubmit = onSubmit;
 
     exit.buttonExit($state.current.url);
     console.log($state.current.url)
+
 
 
     if ($localStorage.locale) {
@@ -43,18 +46,33 @@
       delete $localStorage.group;
     }
 
+
     activate();
     function activate() {
       selectLanguage();
     }
 
-    function onSubmit() {
-      console.log('sdfsdf');
+    if($localStorage.save) {
+      vm.data = $localStorage.save;
+    }
+
+    function AutoSave() {
+      if(vm.data.save) {
+        $localStorage.save = {};
+        $localStorage.save = vm.data;
+        console.log($localStorage.save);
+      }
+      if(!vm.data.save) {
+        delete $localStorage.save;
+        console.log($localStorage.save);
+      }
+    }
+
+    function resetPass() {
+      $state.go('resetPassword');
     }
 
     function selectLanguage () {
-      // $translate.use('ru');
-      // $localStorage.locale = 'ru-RU';
       if(vm.language){
         $localStorage.locale = vm.language;
         if(vm.language === 'ua') {
@@ -71,10 +89,8 @@
       if (vm.form.$invalid) {
         return;
       }
-      // if(!vm.data.email || !vm.data.password) {
-      //
-      // }
-      user.login(vm.data)
+
+      user.login({email: vm.data.email, password: vm.data.password})
         .then(function (res) {
           if(res.status === 'email'){
             $state.go('confirmEmail');

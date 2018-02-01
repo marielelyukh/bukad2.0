@@ -14,6 +14,7 @@
         <md-input-container class="md-block" flex>
           <input
             required
+            style="margin-top: -15px"
             name="email"
             autocomplete="off"
             maxlength="255"
@@ -38,6 +39,7 @@
         <md-input-container class="md-block" flex>
           <input
             required
+            style="margin-top: -15px"
             name="password"
             id="password"
             ng-model="vm.data.password"
@@ -56,6 +58,7 @@
         <md-input-container class="md-block" flex>
           <input
             required
+            style="margin-top: -15px"
             name="tpassword"
             id="tpassword"
             ng-pattern="vm.data.password"
@@ -78,6 +81,7 @@
         <md-input-container class="md-block" flex>
           <input
             required
+            style="margin-top: -15px"
             name="code"
             ng-model="vm.data.profile.ident_code"
             aria-label="ident_code"
@@ -94,6 +98,7 @@
         <md-input-container class="md-block" flex>
           <input
             required
+            style="margin-top: -15px"
             name="number_insurance"
             ng-model="vm.data.profile.insurance"
             aria-label="insurance"
@@ -111,6 +116,7 @@
         <md-input-container class="md-block" flex>
           <input
             required
+            style="margin-top: -15px"
             name="initials"
             ng-model="vm.data.profile.initials"
             aria-label="initials"
@@ -130,6 +136,7 @@
         <md-input-container class="md-block" flex>
           <input
             required
+            style="margin-top: -15px"
             name="postcode"
             ng-model="vm.data.profile.postcode"
             aria-label="postcode"
@@ -300,7 +307,7 @@
       <div ng-if="vm.kved_topic">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_group'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <md-select required style="border-bottom: 1px solid #333" ng-change="vm.getClass(vm.kved_group)"
+          <md-select required style="border-bottom: 1px solid #333; margin-top: -15px"  ng-change="vm.getClass(vm.kved_group)"
                      id="kved_group"
                      ng-model="vm.kved_group" name="kved_group"
                      aria-label="sort" required>
@@ -318,7 +325,7 @@
       <div ng-if="vm.kved_group">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_code'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333" id="kved_code" ng-model="vm.data.profile.kved_code"
+          <md-select style="border-bottom: 1px solid #333;  margin-top: -15px" id="kved_code" ng-model="vm.data.profile.kved_code"
                      aria-label="sort" required name="kved_code">
             <md-option ng-value="class" ng-repeat="class in vm.class">{{class}}
             </md-option>
@@ -388,22 +395,19 @@
         </div>
       </div>
 
-      <div layout="column" class="link" layout-margin>
-        <div>
+        <div  class="link" layout-margin>
           <md-button md-no-ink class="md-primary" style="font-size: 17px" type="submit">{{'SignUp.continue'|translate}}</md-button>
         </div>
-        <div>
+        <div class="link">
           <span style="color: #333">{{'SignUp.dontHaveAccount'|translate}}</span>
           <a style="text-decoration: none" href="#/login">{{'Login.SignIn'|translate}}</a>
         </div>
-        <div style="margin-top: 10px">
-        <span style="color: #333; font-size: 1.0em;">{{'Login.DontHaveQuestion'|translate}}
-           </span><a style="text-decoration: none !important; font-size: 1.2em;" href="tel:{{'+380662279755'}}">+380662279755</a>
-        </div>
-      </div>
     </form>
 
-
+    <div class="link" layout="column" style="margin-top: 10px; margin-bottom: 10px">
+      <span style="color: gray; font-size: 1.0em !important;">{{'Login.DontHaveQuestion'|translate}}</span>
+      <a style="text-decoration: none !important; color: #039BE5; font-size: 1.1em !important;" href="tel:{{'+380662279755'}}">+380662279755</a>
+    </div>
 
   </ion-content>
 </ion-view>

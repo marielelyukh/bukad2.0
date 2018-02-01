@@ -1,10 +1,11 @@
 <ion-view view-title="{{'Taxes.title_singular'|translate}}" class="single_fop">
   <ion-content>
-    <form style="padding: 20px" name="vm.form" novalidate>
+    <form style="padding: 20px" ng-submit="vm.payFirstGroup()" name="vm.form" novalidate>
       <div>
         <label for="data_payer" style="color: #666666; font-size: 1em;">{{'Taxes.data_payer'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  required
                  name="data_payer"
                  id="data_payer"
@@ -22,6 +23,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.getter'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  required
                  id="getter"
                  name="getter"
@@ -40,6 +42,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.getter_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  required
                  id="getter_code"
                  name="getter_code"
@@ -57,6 +60,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.getter_bank'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  required
                  id="getter_bank"
                  name="getter_bank"
@@ -74,6 +78,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.account_number'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  required
                  id="account_number"
                  name="account_number"
@@ -91,6 +96,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.bank_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  required
                  id="bank_code"
                  name="bank_code"
@@ -108,6 +114,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.income'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  id="income"
                  name="income"
                  required
@@ -134,6 +141,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.sum'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  required
                  id="sum"
                  name="sum"
@@ -152,6 +160,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.appointment'|translate}}</label>
         <md-input-container class="md-block" flex>
           <textarea aria-label="123"
+                    style="margin-top: -15px"
                     disabled
                     rows="2"
                     required
@@ -170,6 +179,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.for_time'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
+                 style="margin-top: -15px"
                  required
                  id="for_time"
                  name="for_time"
@@ -183,14 +193,15 @@
           </div>
         </md-input-container>
       </div>
+      <div layout="column" layout-align="center end" class="link" layout-margin>
+        <div class="link" style="color: #039BE5 !important;">
+          <md-button md-no-ink class="md-primary" style="font-size: 17px" type="submit">{{'SignUp.continue'|translate}}</md-button>
+        </div>
+      </div>
 
     </form>
 
-    <div layout="column" layout-align="center end" class="link" layout-margin>
-      <div class="link" ng-click="vm.payFirstGroup()" style="color: #039BE5 !important;">
-        <a>{{'SignUp.continue'|translate}}</a>
-      </div>
-    </div>
+
 
   </ion-content>
 </ion-view>
