@@ -119,6 +119,7 @@
     vm.regionSearch = regionSearch;
     vm.searchTextRegionChange = searchTextRegionChange;
     vm.selectedRegionChange = selectedRegionChange;
+    vm.selectRegion = selectRegion;
     vm.simulateQuery = false;
     vm.regionArr = [];
     vm.tempRegion = '';
@@ -167,30 +168,58 @@
 
     function searchTextRegionChange(text) {
       vm.searchTextRegion = text;
+      console.log(vm.searchTextRegion);
     }
 
     function selectedRegionChange(item) {
-      user.getAreas({region: item})
-        .then(function (res) {
-          vm.areas = res;
-          // vm.freeCustomersArr = vm.areas;
-        });
-      user.getPfu({region:  item})
-        .then(function (res) {
-          vm.pfu_code = res;
-        });
+      // vm.tmp_region = item.region;
+      console.log(item);
 
-      user.getDfs({region:  item})
-        .then(function (res) {
-          vm.dfs_codes = res;
-        });
+        user.getAreas({region: item.region})
+          .then(function (res) {
+            vm.areas = res;
+            // vm.freeCustomersArr = vm.areas;
+          });
+        user.getPfu({region:  item.region})
+          .then(function (res) {
+            vm.pfu_code = res;
+          });
 
-      user.getDfsCode({region:  item})
-        .then(function (res) {
-          // console.log(res)
-          vm.dfs = res;
-        });
-      // console.log(item);
+        user.getDfs({region:  item.region})
+          .then(function (res) {
+            vm.dfs_codes = res;
+          });
+
+        user.getDfsCode({region:  item.region})
+          .then(function (res) {
+            // console.log(res)
+            vm.dfs = res;
+          });
+    }
+
+    function selectRegion(item, index) {
+      console.log(item);
+
+      // user.getAreas({region: item})
+      //   .then(function (res) {
+      //     vm.areas = res;
+      //     // vm.freeCustomersArr = vm.areas;
+      //   });
+      // user.getPfu({region:  item})
+      //   .then(function (res) {
+      //     vm.pfu_code = res;
+      //   });
+      //
+      // user.getDfs({region:  item})
+      //   .then(function (res) {
+      //     vm.dfs_codes = res;
+      //   });
+      //
+      // user.getDfsCode({region:  item})
+      //   .then(function (res) {
+      //     // console.log(res)
+      //     vm.dfs = res;
+      //   });
     }
 
     // AUTOCOMPLETE for region ENDS
@@ -545,7 +574,7 @@
       if (vm.form.$invalid) {
         return;
       }
-      vm.data.profile.local = vm.mainLanguage;
+      vm.data.profile.locale = vm.mainLanguage;
       if(vm.data.profile.city.city){
         vm.data.profile.city = vm.data.profile.city.city;
       }

@@ -65,6 +65,7 @@
 
 
     function payArmy() {
+      return;
       if (vm.form.$invalid) {
         return;
       }
@@ -97,6 +98,7 @@
     }
 
     function payIncome_tax() {
+      return;
       if (vm.form.$invalid) {
         return;
       }
@@ -125,6 +127,7 @@
     }
 
     function payEsv() {
+      return;
       if (vm.form.$invalid) {
         return;
       }

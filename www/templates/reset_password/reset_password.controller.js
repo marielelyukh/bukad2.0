@@ -20,7 +20,7 @@
       if (vm.form.$invalid) {
         return;
       }
-      user.resetPassword(vm.email)
+      user.resetPassword({email: vm.email})
         .then(function (res) {
             $state.go('login');
           });

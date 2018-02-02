@@ -37,6 +37,7 @@
     vm.searchTextDfs = '';
     vm.searchTextDfs_code = '';
     vm.searchTextPfu = '';
+    vm.data.profile.locale = $localStorage.locale;
 
 
     user.getTopic()

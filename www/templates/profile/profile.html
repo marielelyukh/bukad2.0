@@ -33,14 +33,15 @@
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.region'|translate}}</label>
         <md-autocomplete md-search-text-change="vm.searchTextRegionChange(item.searchRegion)"
-                         md-selected-item-change="vm.selectedRegionChange(item.region)"
-                         md-selected-item="vm.region"
+                         md-selected-item-change="vm.selectedRegionChange(item)"
+                         md-selected-item="vm.data.profile.region"
                          md-search-text="item.searchRegion"
                          md-items="item in vm.filterRegion()"
                          md-item-text="item.region"
                          md-require-match
                          md-min-length="0"
                          md-no-cache="true"
+                         ng-blur="vm.selectRegion(item.region, $index)"
                          md-floating-label="Область">
           <md-item-template>
                               <span md-highlight-text="item.searchRegion"
@@ -70,7 +71,7 @@
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.city'|translate}}</label>
-        <md-autocomplete md-search-text-change="vm.searchTextChange(item.searchCity)"
+        <md-autocomplete md-search-text-change="vm.searchTextChange(item.searchText)"
                          md-selected-item-change="vm.selectedCityChange(item.city)"
                          md-selected-item="vm.data.profile.city"
                          md-search-text="item.searchCity"

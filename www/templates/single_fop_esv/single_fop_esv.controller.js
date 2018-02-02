@@ -30,9 +30,10 @@
 
 
       function paySecondGroup() {
-        // if (vm.form.$invalid) {
-        //   return;
-        // }
+        return;
+        if (vm.form.$invalid) {
+          return;
+        }
         group.paySecondTax(vm.data)
           .then(function (res) {
             vm.pay_data = res;

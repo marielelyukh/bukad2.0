@@ -90,7 +90,8 @@
         return;
       }
 
-      user.login({email: vm.data.email, password: vm.data.password})
+
+      user.login({email: vm.data.email, password: vm.data.password, locale: vm.language})
         .then(function (res) {
           if(res.status === 'email'){
             $state.go('confirmEmail');

@@ -45,6 +45,7 @@
             });
 
       function payFirstGroup() {
+        return;
         if (vm.form.$invalid) {
           return;
         }
