@@ -15,6 +15,11 @@
         vm.mainLanguage = $localStorage.locale;
         vm.salary = $stateParams.data_salary;
         vm.count_workers = $stateParams.count_workers;
+
+      group.getStatusWorkers()
+        .then(function (res) {
+          vm.taxes_status = res;
+        });
     }
 })();
 

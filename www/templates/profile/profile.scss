@@ -18,6 +18,13 @@
             }
 
         }
+
+        .md-virtual-repeat-container.md-autocomplete-suggestions-container {
+          height: 420px;
+          max-height: 420px !important;
+        }
+
+
         padding: 0 20px;
     }
 

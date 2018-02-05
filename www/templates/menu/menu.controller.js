@@ -22,7 +22,7 @@
         function logout() {
             $state.go('login');
             delete $localStorage.token;
-            delete $sessionStorage.id;
+            delete $localStorage.id;
         }
 
       function notificationGo() {

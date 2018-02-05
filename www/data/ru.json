@@ -11,6 +11,11 @@
   "ConfirmEmail": "Подтвердить email",
   "ResetPassword": "Восстановить пароль",
   "Send":"Отправить",
+  "Send_code_again": "Выслать код еще раз?(Введите email)",
+  "OldPassword": "Старый пароль",
+  "ChangePassword": "Поменять пароль",
+  "Month": "Месяц",
+  "Year": "Год",
   "Login": {
     "SignIn": "Войти",
     "Email": "Электронная почта",
@@ -51,7 +56,13 @@
     "yes": "Да",
     "fieldRequired": "Это обязательное поле!",
     "emailValid": "Ваш email должен выглядеть, как email и быть от 5-30 символов.",
-    "passValid": "Пароли не совпадают!"
+    "passValid": "Пароли не совпадают!",
+    "select_region": "Выберите регион...",
+    "select_area": "Выберите район...",
+    "select_city": "Выберите город, село...",
+    "select_dfs_name": "Выберите ДФС...",
+    "select_dfs_code": "Выберите код ДФС...",
+    "select_pfu_code": "Виберите код ПФУ..."
   },
   "Taxes": {
     "data_payer": "Плательщик",
@@ -64,7 +75,7 @@
     "calculate_sum": "Расчитать сумму",
     "sum": "Сумма налога,грн",
     "appointment": "Назначение",
-    "for_time": "Единий налог ФЛП за",
+    "for_time": "Поменять назначение платежа:",
     "fop_tax": "Налог ФЛП",
     "esv": "ЕCB",
     "singular_tax": "Единый",

@@ -16,14 +16,16 @@
     vm.payEsv = payEsv;
     vm.editDate = editDate;
     vm.changeUrl = changeUrl;
+    vm.getMonth = getMonth;
+    vm.getYear = getYear;
     vm.tmp = $stateParams.values;
     vm.salary = $stateParams.data_salary;
     vm.count_workers = $stateParams.count_workers;
-    console.log($stateParams.count_workers);
     vm.type = $stateParams.type;
     vm.title = $stateParams.title;
+    // console.log($stateParams.count_workers);
     // vm.data = $stateParams.staff_tax;
-    console.log(vm.data);
+    // console.log(vm.data);
 
 
     if (vm.type === 1) {
@@ -31,8 +33,9 @@
         .then(function (res) {
           vm.data = res;
           vm.replace_date = vm.data.appointment;
-          var re = /replace/g;
-          vm.data.appointment = vm.data.appointment.replace(re, vm.data.for_time);
+          var re = /month/g;
+          var repl = /year/g;
+          vm.data.appointment = vm.data.appointment.replace(re, vm.data.month).replace(repl, vm.data.year);
         });
     }
 
@@ -41,8 +44,9 @@
         .then(function (res) {
           vm.data = res;
           vm.replace_date = vm.data.appointment;
-          var re = /replace/g;
-          vm.data.appointment = vm.data.appointment.replace(re, vm.data.for_time);
+          var re = /month/g;
+          var repl = /year/g;
+          vm.data.appointment = vm.data.appointment.replace(re, vm.data.month).replace(repl, vm.data.year);
 
         });
     }
@@ -52,15 +56,41 @@
         .then(function (res) {
           vm.data = res;
           vm.replace_date = vm.data.appointment;
-          var re = /replace/g;
-          vm.data.appointment = vm.data.appointment.replace(re, vm.data.for_time);
+          var re = /month/g;
+          var repl = /year/g;
+          vm.data.appointment = vm.data.appointment.replace(re, vm.data.month).replace(repl, vm.data.year);
         });
     }
 
+    function getMonth() {
+      var list = [];
+      for (var i = 1; i <= 12; i++) {
+        if (i <= 9) {
+          list.push("0" + i);
+        }
+        else {
+          list.push(i.toString());
+        }
+      }
+      return list;
+    }
+
+    function getYear() {
+      var now = new Date();
+      var year = now.getFullYear();
+
+      var list = [];
+
+      for (var i = year - 3; i <= year + 3; i++) {
+        list.push(i);
+      }
+      return list;
+    }
+
     function editDate() {
-      var rep = /replace/g;
-      vm.data.appointment = vm.replace_date.replace(rep, vm.data.for_time);
-      // vm.data.appointment = vm.data.for_time;
+      var month = /month/g;
+      var year = /year/g;
+      vm.data.appointment = vm.replace_date.replace(month, vm.data.month).replace(year, vm.data.year);
     }
 
 

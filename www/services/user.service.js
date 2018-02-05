@@ -31,7 +31,8 @@
       check: check,
       device: device,
       confirm_email: confirm_email,
-      resetPassword: resetPassword
+      resetPassword: resetPassword,
+      sendCodeAgain: sendCodeAgain
 
 
     };
@@ -49,6 +50,13 @@
 
     function confirm_email(data) {
       return http.post(url.user.confirm_email, data)
+        .then(function (res) {
+          return res;
+        });
+    }
+
+    function sendCodeAgain(data) {
+      return http.post(url.user.sendCodeAgain, data)
         .then(function (res) {
           return res;
         });

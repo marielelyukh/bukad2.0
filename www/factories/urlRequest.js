@@ -30,7 +30,8 @@
             check:                baseUrl + 'auth/check',
             device:               baseUrl + 'auth/device',
             confirm_email:        baseUrl + 'auth/email/confirm',
-            resetPassword:        baseUrl + 'auth/password/reset'
+            resetPassword:        baseUrl + 'auth/password/reset',
+            sendCodeAgain:        baseUrl + 'auth/email/confirm/restart'
           },
 
           group: {
@@ -49,7 +50,8 @@
             getAllTaxes:          baseUrl + 'taxes/statuses/',
             getArmyData:          baseUrl + 'army/tax/requisites',
             getIncomeData:        baseUrl + 'income/tax/requisites',
-            getEmployeeData:      baseUrl + 'employee/tax/requisites'
+            getEmployeeData:      baseUrl + 'employee/tax/requisites',
+            getStatusWorkers:     baseUrl + '3rdtax/statuses'
           }
         };
       }

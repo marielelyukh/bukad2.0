@@ -167,32 +167,55 @@
                     id="appointment"
                     name="appointment"
                     ng-model="vm.data.appointment"></textarea>
-        </md-input-container>
-        <div class="error-block" ng-messages="vm.form.appointment.$error">
-          <div class="error-block" ng-message="required">
-            {{'SignUp.fieldRequired'|translate}}
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">{{'Taxes.for_time'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <input aria-label="123"
-                 style="margin-top: -15px"
-                 required
-                 id="for_time"
-                 name="for_time"
-                 ng-change="vm.editDate()"
-                 ng-model="vm.data.for_time"
-                 type="text">
-          <div class="error-block" ng-messages="vm.form.for_time.$error">
+          <div class="error-block" ng-messages="vm.form.appointment.$error">
             <div class="error-block" ng-message="required">
               {{'SignUp.fieldRequired'|translate}}
             </div>
           </div>
         </md-input-container>
+
       </div>
+
+      <div style="margin-top: -25px">
+        <label style="color: #666666; font-size: 1em;">{{'Taxes.for_time'|translate}}</label>
+        <div layout="row" layout-align="space-between center">
+        <md-input-container flex="45" class="md-block">
+          <label for="month">{{'Month'|translate}}</label>
+          <md-select id="month"
+                     ng-change="vm.editDate()"
+                     style="border-bottom: 1px solid #333; "
+                     ng-model="vm.data.month"
+                     aria-label="sort">
+            <md-option ng-value="topic" ng-repeat="topic in vm.getMonth()">{{topic}}
+            </md-option>
+          </md-select>
+          <div class="error-block" ng-messages="vm.form.month.$error">
+            <div class="error-block" ng-message="required">
+              {{'SignUp.fieldRequired'|translate}}
+            </div>
+          </div>
+        </md-input-container>
+          <md-input-container flex="45" class="md-block">
+            <label for="year">{{'Year'|translate}}</label>
+            <md-select id="year"
+                       ng-change="vm.editDate()"
+                       style="border-bottom: 1px solid #333;"
+                       ng-model="vm.data.year"
+                       aria-label="sort">
+              <md-option ng-value="topic" ng-repeat="topic in vm.getYear()">{{topic}}
+              </md-option>
+            </md-select>
+            <div class="error-block" ng-messages="vm.form.month.$error">
+              <div class="error-block" ng-message="required">
+                {{'SignUp.fieldRequired'|translate}}
+              </div>
+            </div>
+          </md-input-container>
+        </div>
+
+      </div>
+
+
       <div layout="column" layout-align="center end" class="link" layout-margin>
         <div class="link" style="color: #039BE5 !important;">
           <md-button md-no-ink class="md-primary" style="font-size: 17px" type="submit">{{'SignUp.continue'|translate}}</md-button>

@@ -14,7 +14,18 @@
 
     var vm = this;
     vm.confirmEmail = confirmEmail;
+    vm.sendAgain = sendAgain;
     vm.emailRegExp = /^((([a-zA-Z\-0-9_.])+[a-zA-Z0-9_.]{2,})|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+    function sendAgain() {
+      user.sendCodeAgain({email: vm.data.email})
+        .then(function (res) {
+
+        });
+    }
+
+
 
     function confirmEmail() {
       if (vm.form.$invalid) {

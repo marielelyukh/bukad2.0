@@ -173,6 +173,12 @@
 
     function selectedRegionChange(item) {
       // vm.tmp_region = item.region;
+      // vm.data.profile.area = '';
+      // vm.data.profile.city = '';
+      // vm.data.profile.dfs_name = '';
+      // vm.data.profile.dfs_code = '';
+      // vm.data.profile.pfu = '';
+
       console.log(item);
 
         user.getAreas({region: item.region})

@@ -162,7 +162,8 @@
                          required
                          md-min-length="0"
                          md-no-cache="true"
-                         md-floating-label="Область">
+                         md-menu-class="autocomplete-custom-template"
+                         md-floating-label="{{'SignUp.select_region'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchRegion"
                                     md-highlight-flags="^i">{{item.region}}</span>
@@ -189,7 +190,7 @@
                          required
                          md-min-length="0"
                          md-no-cache="true"
-                         md-floating-label="Район">
+                         md-floating-label="{{'SignUp.select_area'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchArea"
                                     md-highlight-flags="^i">{{item.area}}</span>
@@ -216,7 +217,7 @@
                          required
                          md-min-length="0"
                          md-no-cache="true"
-                         md-floating-label="Місто/село">
+                         md-floating-label="{{'SignUp.select_city'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchCity"
                                     md-highlight-flags="^i">{{item.city}}</span>
@@ -246,7 +247,7 @@
                          md-min-length="0"
                          required
                          md-no-cache="true"
-                         md-floating-label="{{'SignUp.dfs_name'|translate}}">
+                         md-floating-label="{{'SignUp.select_dfs_name'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchDfs"
                                     md-highlight-flags="^i">{{item}}</span>
@@ -273,7 +274,8 @@
                          md-min-length="0"
                          required
                          md-no-cache="true"
-                         md-floating-label="{{'SignUp.dfs_code'|translate}}">
+                         md-menu-class="autocomplete-custom-template"
+                         md-floating-label="{{'SignUp.select_dfs_code'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchDfs_code"
                                     md-highlight-flags="^i">{{item}}</span>
@@ -351,7 +353,7 @@
                          required
                          md-min-length="0"
                          md-no-cache="true"
-                         md-floating-label="{{'SignUp.pfu_code'|translate}}">
+                         md-floating-label="{{'SignUp.select_pfu_code'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchPfu"
                                     md-highlight-flags="^i">{{item}}</span>

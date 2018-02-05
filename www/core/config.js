@@ -186,7 +186,8 @@
           values: null,
           data_salary: null,
           count_workers: null
-        }
+        },
+        cache: false
       })
 
       .state('app.pay_staff_tax', {
@@ -228,9 +229,7 @@
             templateUrl: 'templates/profile/profile.html',
             controller: 'Profile',
             controllerAs: 'vm'
-          },
-          cache: false
-        },
+          }},
         resolve: {
           profileData: function (user, $localStorage) {
             return user.one({
@@ -243,7 +242,8 @@
         },
         params: {
           staff_tax: null
-        }
+        },
+        cache: false
       });
 
     $translateProvider.registerAvailableLanguageKeys(['en', 'ru', 'ua'], {

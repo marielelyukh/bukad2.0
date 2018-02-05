@@ -11,6 +11,11 @@
   "ConfirmEmail": "Пiдтвердити email",
   "ResetPassword": "Вiдновити пароль",
   "Send":"Вiдправити",
+  "Send_code_again": "Вислати код ще раз?(Введiть email)",
+  "OldPassword": "Старий пароль",
+  "ChangePassword": "Змiнити пароль",
+  "Month": "Мiсяць",
+  "Year": "Рiк",
   "Login": {
     "SignIn": "Увiйти",
     "Email": "Електронна пошта",
@@ -51,7 +56,16 @@
     "fieldRequired": "Це поле обов`язкове!",
     "emailValid": "Ваш email повинен виглядати як email і бути від 5-30 символів.",
     "passValid": "Паролi не спiвпадають!",
-    "yes": "Так"
+    "yes": "Так",
+    "select_region": "Виберiть регiон...",
+    "select_area": "Виберiть район...",
+    "select_city": "Виберiть мicто, село...",
+    "select_dfs_name": "Виберiть ДФС",
+    "select_dfs_code": "Виберiть код ДФС",
+    "select_pfu_code": "Виберiть код ПФУ"
+
+
+
   },
   "Taxes": {
     "data_payer": "Платник",
@@ -64,7 +78,7 @@
     "calculate_sum": "Розрахувати суму",
     "sum": "Сума податку,грн",
     "appointment": "Призначення",
-    "for_time": "Єдиний податок ФОП за",
+    "for_time": "Зміннити призначення платежу:",
     "fop_tax": "Податок ФОП",
     "esv": "ЄCB",
     "singular_tax": "Єдиний",

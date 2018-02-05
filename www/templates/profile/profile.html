@@ -42,7 +42,7 @@
                          md-min-length="0"
                          md-no-cache="true"
                          ng-blur="vm.selectRegion(item.region, $index)"
-                         md-floating-label="Область">
+                         md-floating-label="{{'SignUp.select_region'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchRegion"
                                     md-highlight-flags="^i">{{item.region}}</span>
@@ -61,7 +61,7 @@
                          md-require-match
                          md-min-length="0"
                          md-no-cache="true"
-                         md-floating-label="Район">
+                         md-floating-label="{{'SignUp.select_area'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchArea"
                                     md-highlight-flags="^i">{{item.area}}</span>
@@ -80,7 +80,7 @@
                          md-require-match
                          md-min-length="0"
                          md-no-cache="true"
-                         md-floating-label="Місто/село">
+                         md-floating-label="{{'SignUp.select_city'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchCity"
                                     md-highlight-flags="^i">{{item.city}}</span>
@@ -103,7 +103,7 @@
                          md-require-match
                          md-min-length="0"
                          md-no-cache="true"
-                         md-floating-label="{{'SignUp.dfs_name'|translate}}">
+                         md-floating-label="{{'SignUp.select_dfs_name'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchDfs"
                                     md-highlight-flags="^i">{{item}}</span>
@@ -124,7 +124,7 @@
                          md-require-match
                          md-min-length="0"
                          md-no-cache="true"
-                         md-floating-label="{{'SignUp.dfs_code'|translate}}">
+                         md-floating-label="{{'SignUp.select_dfs_code'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchDfs_code"
                                     md-highlight-flags="^i">{{item}}</span>
@@ -181,7 +181,7 @@
                          md-require-match
                          md-min-length="0"
                          md-no-cache="true"
-                         md-floating-label="{{'SignUp.pfu_code'|translate}}">
+                         md-floating-label="{{'SignUp.select_pfu_code'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchPfu"
                                     md-highlight-flags="^i">{{item}}</span>
@@ -226,7 +226,7 @@
       </div>
 
       <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">{{'SignUp.password'|translate}}</label>
+        <label style="color: #666666; font-size: 1em;">{{'OldPassword'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
             name="password"
@@ -239,13 +239,26 @@
       </div>
 
       <div style="margin-top: -25px">
+        <label style="color: #666666; font-size: 1em;">{{'ChangePassword'|translate}}</label>
+        <md-input-container class="md-block" flex>
+          <input
+            name="password"
+            style="margin-top: -15px"
+            id="password"
+            ng-model="vm.data.new_password"
+            aria-label="password"
+            type="password"/>
+        </md-input-container>
+      </div>
+
+      <div style="margin-top: -25px">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.tpassword'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
             name="tpassword"
             style="margin-top: -15px"
             id="tpassword"
-            ng-pattern="vm.data.password"
+            ng-pattern="vm.data.new_password"
             ng-model="vm.password"
             aria-label="password"
             type="password"/>

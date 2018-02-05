@@ -31,7 +31,8 @@
       payEsv: payEsv,
       payArmy: payArmy,
       payIncome_tax: payIncome_tax,
-      getAllTaxes: getAllTaxes
+      getAllTaxes: getAllTaxes,
+      getStatusWorkers: getStatusWorkers
     };
 
 
@@ -44,6 +45,13 @@
 
     function payArmy(data) {
       return http.post(url.group.payArmy, data)
+        .then(function (res) {
+          return res;
+        });
+    }
+
+    function getStatusWorkers(data) {
+      return http.get(url.group.getStatusWorkers, data)
         .then(function (res) {
           return res;
         });
