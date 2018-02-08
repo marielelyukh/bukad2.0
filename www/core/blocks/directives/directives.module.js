@@ -6,7 +6,9 @@
     angular
         .module('directives.module', [
             'directive.truncText',
-            'directive.textOverflow'
+            'directive.textOverflow',
+            'directive.capitalize'
+
         ]);
 })();
 

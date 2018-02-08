@@ -94,6 +94,8 @@
       user.login({email: vm.data.email, password: vm.data.password, locale: vm.language})
         .then(function (res) {
           if(res.status === 'email'){
+            $sessionStorage.email = vm.data.email;
+            $sessionStorage.password = vm.data.password;
             $state.go('confirmEmail');
             return;
           }

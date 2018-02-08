@@ -18,7 +18,7 @@
       <div style="margin-top: -25px">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.initials'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <input style="border-bottom: 1px solid #333;  margin-top: -15px" aria-label="123" ng-model="vm.data.profile.initials" type="text">
+          <input style="border-bottom: 1px solid #333; text-transform: capitalize; margin-top: -15px" aria-label="123" ng-model="vm.data.profile.initials" type="text">
         </md-input-container>
       </div>
 
@@ -103,9 +103,10 @@
                          md-require-match
                          md-min-length="0"
                          md-no-cache="true"
+                         md-menu-class="autocomplete-custom-template"
                          md-floating-label="{{'SignUp.select_dfs_name'|translate}}">
           <md-item-template>
-                              <span md-highlight-text="item.searchDfs"
+                              <span class="item-title" md-highlight-text="item.searchDfs"
                                     md-highlight-flags="^i">{{item}}</span>
           </md-item-template>
         </md-autocomplete>
@@ -124,9 +125,10 @@
                          md-require-match
                          md-min-length="0"
                          md-no-cache="true"
+                         md-menu-class="autocomplete-custom-template"
                          md-floating-label="{{'SignUp.select_dfs_code'|translate}}">
           <md-item-template>
-                              <span md-highlight-text="item.searchDfs_code"
+                              <span class="item-title" md-highlight-text="item.searchDfs_code"
                                     md-highlight-flags="^i">{{item}}</span>
           </md-item-template>
         </md-autocomplete>
@@ -181,9 +183,10 @@
                          md-require-match
                          md-min-length="0"
                          md-no-cache="true"
+                         md-menu-class="autocomplete-custom-template"
                          md-floating-label="{{'SignUp.select_pfu_code'|translate}}">
           <md-item-template>
-                              <span md-highlight-text="item.searchPfu"
+                              <span class="item-title" md-highlight-text="item.searchPfu"
                                     md-highlight-flags="^i">{{item}}</span>
           </md-item-template>
         </md-autocomplete>
@@ -225,13 +228,18 @@
         </md-input-container>
       </div>
 
-      <div style="margin-top: -25px">
+      <div class="link" ng-click="vm.changePassword = !vm.changePassword">
+        <a>ПОМЕНЯТЬ ПАРОЛЬ</a>
+      </div>
+
+      <div ng-if="vm.changePassword">
+      <div >
         <label style="color: #666666; font-size: 1em;">{{'OldPassword'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
             name="password"
             style="margin-top: -15px"
-            id="password"
+            id="old_password"
             ng-model="vm.data.password"
             aria-label="password"
             type="password"/>
@@ -268,6 +276,9 @@
             </div>
           </div>
         </md-input-container>
+      </div>
+
+
       </div>
 
 

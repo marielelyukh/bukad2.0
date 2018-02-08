@@ -1,4 +1,35 @@
+.autocomplete-custom-template  li {
+  border-bottom: 1px solid #CCCCCC;
+  height: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  white-space: normal;
+
+}
+
+.autocomplete-custom-template input {
+  word-wrap: break-word
+}
+
+.autocomplete-custom-template li li:last-child {
+  border-bottom-width: 0;
+}
+.autocomplete-custom-template li .item-title,
+.autocomplete-custom-template li .item-metadata {
+  display: block;
+  line-height: 3;
+  word-wrap: break-word
+}
+
+
 .signup {
+  .testClass {
+    //color: hotpink;
+  }
+  //.autocomplete-custom-template .item-title md-icon {
+  //  height: 18px;
+  //  width: 18px;
+  //}
     p.title {
         color: #333;
         padding: 5%;
@@ -7,40 +38,6 @@
     }
 
     form {
-        .myAutocomplete{
-            md-autocomplete{
-                border: 1px solid white;
-                input {
-                    border-bottom: 1px solid white !important;
-                }
-            }
-            md-input-container{
-                margin-top: -2px;
-                input {
-                    border-bottom: 1px solid white !important;
-
-                }
-            }
-        }
-      .autocomplete-custom-template li {
-        border-bottom: 1px solid #ccc;
-        height: 80px;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        white-space: normal;
-      }
-      .autocomplete-custom-template li:last-child {
-        border-bottom-width: 0;
-      }
-      .autocomplete-custom-template .item-title,
-      .autocomplete-custom-template .item-metadata {
-        display: block;
-        line-height: 2;
-      }
-      .autocomplete-custom-template .item-title md-icon {
-        height: 18px;
-        width: 18px;
-      }
         md-input-container{
             input {
                 border-bottom: 1px solid grey;

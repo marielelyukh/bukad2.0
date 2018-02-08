@@ -15,16 +15,15 @@
     var vm = this;
     vm.confirmEmail = confirmEmail;
     vm.sendAgain = sendAgain;
-    vm.emailRegExp = /^((([a-zA-Z\-0-9_.])+[a-zA-Z0-9_.]{2,})|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+    vm.data = {};
+    vm.data.email = $sessionStorage.email;
+    vm.data.password = $sessionStorage.password;
 
     function sendAgain() {
       user.sendCodeAgain({email: vm.data.email})
         .then(function (res) {
-
         });
     }
-
 
 
     function confirmEmail() {
@@ -37,6 +36,8 @@
             toastr.error($translate.instant('InvalidLogin'));
           }
           if (res.token) {
+            delete $sessionStorage.email;
+            delete $sessionStorage.password;
             $localStorage.token = res.token;
             delete res.token;
             $localStorage.group = res.group;

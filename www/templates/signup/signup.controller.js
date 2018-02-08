@@ -6,11 +6,17 @@
 
   angular
     .module('app')
+    .filter('capitalize', function() {
+      return function (input) {
+        return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+      };
+    })
     .controller('Signup', Signup);
 
-  Signup.$inject = ['$state', '$ionicHistory', 'user', 'toastr', '$q', '$scope', '$log', '$ionicPlatform', '$localStorage', '$timeout'];
 
-  function Signup($state, $ionicHistory, user, toastr, $q, $scope, $log, $ionicPlatform, $localStorage, $timeout) {
+  Signup.$inject = ['$sessionStorage', '$state', '$ionicHistory', 'user', 'toastr', '$q', '$scope', '$log', '$ionicPlatform', '$localStorage', '$timeout'];
+
+  function Signup($sessionStorage, $state, $ionicHistory, user, toastr, $q, $scope, $log, $ionicPlatform, $localStorage, $timeout) {
 
     var vm = this;
     vm.signup = signup;
@@ -37,7 +43,7 @@
     vm.searchTextDfs = '';
     vm.searchTextDfs_code = '';
     vm.searchTextPfu = '';
-    vm.data.profile.locale = $localStorage.locale;
+    // vm.data.profile.locale = $localStorage.locale;
 
 
     user.getTopic()
@@ -49,6 +55,7 @@
       .then(function (res) {
         vm.regions = res;
       });
+
 
 
     function getArea(region) {
@@ -543,6 +550,8 @@
       vm.data.profile.region = vm.region.region;
       user.signup(vm.data)
         .then(function (res) {
+          $sessionStorage.email = vm.data.email;
+          $sessionStorage.password = vm.data.password;
           $state.go('confirmEmail');
           toastr.success('Ви успішно зареєстровані!');
 

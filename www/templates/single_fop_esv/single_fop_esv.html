@@ -5,9 +5,10 @@
         <label for="data_payer" style="color: #666666; font-size: 1em;">{{'Taxes.data_payer'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
-                 style="margin-top: -15px"
+                 style="margin-top: -15px; color: black"
+                 disabled
                  required name="data_payer" id="data_payer" ng-model="vm.data.payer"
-                 type="text" >
+                 type="text">
           <div class="error-block" ng-messages="vm.form.data_payer.$error">
             <div class="error-block" ng-message="required">
               {{'SignUp.fieldRequired'|translate}}
@@ -20,10 +21,11 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.getter'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
-                 style="margin-top: -15px"
+                 style="margin-top: -15px; color: black"
                  required
+                 disabled
                  name="getter"
-                 ng-model="vm.data.getter" type="text" >
+                 ng-model="vm.data.getter" type="text">
           <div class="error-block" ng-messages="vm.form.getter.$error">
             <div class="error-block" ng-message="required">
               {{'SignUp.fieldRequired'|translate}}
@@ -37,8 +39,9 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.getter_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
-                 style="margin-top: -15px"
+                 style="margin-top: -15px; color: black"
                  required
+                 disabled
                  name="getter_code"
                  ng-model="vm.data.getter_code" type="text">
           <div class="error-block" ng-messages="vm.form.getter_code.$error">
@@ -53,7 +56,8 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.account_number'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123" required
-                 style="margin-top: -15px"
+                 disabled
+                 style="margin-top: -15px; color: black"
                  name="account_number" ng-model="vm.data.account_number" type="text">
           <div class="error-block" ng-messages="vm.form.account_number.$error">
             <div class="error-block" ng-message="required">
@@ -67,8 +71,9 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.getter_bank'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
-                 style="margin-top: -15px"
+                 style="margin-top: -15px; color: black"
                  required
+                 disabled
                  name="getter_bank"
                  ng-model="vm.data.getter_bank" type="text">
           <div class="error-block" ng-messages="vm.form.getter_bank.$error">
@@ -83,8 +88,9 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.bank_code'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input aria-label="123"
-                 style="margin-top: -15px"
+                 style="margin-top: -15px; color: black"
                  required
+                 disabled
                  name="bank_code" ng-model="vm.data.bank_code" type="text">
           <div class="error-block" ng-messages="vm.form.bank_code.$error">
             <div class="error-block" ng-message="required">
@@ -116,7 +122,7 @@
         <label style="color: #666666; font-size: 1em;">{{'Taxes.appointment'|translate}}</label>
         <md-input-container class="md-block" flex>
           <textarea aria-label="123"
-                    style="margin-top: -15px"
+                    style="margin-top: -15px; color: black"
                     required
                     name="appointment"
                     disabled rows="2" ng-model="vm.data.appointment"
@@ -125,22 +131,22 @@
       </div>
 
       <!--<div style="margin-top: -25px">-->
-        <!--<label style="color: #666666; font-size: 1em;">{{'Taxes.for_time'|translate}}</label>-->
-        <!--<md-input-container class="md-block" flex>-->
-          <!--<input aria-label="123"-->
-                 <!--style="margin-top: -15px"-->
-                 <!--name="for_time"-->
-                 <!--required-->
-                 <!--ng-model="vm.data.for_time"-->
-                 <!--type="text"-->
-                 <!--ng-change="vm.editDate()"-->
-          <!--&gt;-->
-          <!--<div class="error-block" ng-messages="vm.form.for_time.$error">-->
-            <!--<div class="error-block" ng-message="required">-->
-              <!--{{'SignUp.fieldRequired'|translate}}-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</md-input-container>-->
+      <!--<label style="color: #666666; font-size: 1em;">{{'Taxes.for_time'|translate}}</label>-->
+      <!--<md-input-container class="md-block" flex>-->
+      <!--<input aria-label="123"-->
+      <!--style="margin-top: -15px"-->
+      <!--name="for_time"-->
+      <!--required-->
+      <!--ng-model="vm.data.for_time"-->
+      <!--type="text"-->
+      <!--ng-change="vm.editDate()"-->
+      <!--&gt;-->
+      <!--<div class="error-block" ng-messages="vm.form.for_time.$error">-->
+      <!--<div class="error-block" ng-message="required">-->
+      <!--{{'SignUp.fieldRequired'|translate}}-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--</md-input-container>-->
       <!--</div>-->
 
       <div style="">
@@ -185,11 +191,12 @@
       <div layout="column"
            layout-align="center end" class="link" layout-margin>
         <div class="link" style="color: #039BE5 !important;">
-          <md-button md-no-ink class="md-primary" style="font-size: 17px" type="submit">{{'SignUp.continue'|translate}}</md-button>
+          <md-button md-no-ink class="md-primary" style="font-size: 17px" type="submit">
+            {{'SignUp.continue'|translate}}
+          </md-button>
         </div>
       </div>
     </form>
-
 
 
   </ion-content>

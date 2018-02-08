@@ -116,7 +116,8 @@
         <md-input-container class="md-block" flex>
           <input
             required
-            style="margin-top: -15px"
+            class="testClass"
+            style="margin-top: -15px; text-transform: capitalize;"
             name="initials"
             ng-model="vm.data.profile.initials"
             aria-label="initials"
@@ -162,10 +163,9 @@
                          required
                          md-min-length="0"
                          md-no-cache="true"
-                         md-menu-class="autocomplete-custom-template"
                          md-floating-label="{{'SignUp.select_region'|translate}}">
           <md-item-template>
-                              <span md-highlight-text="item.searchRegion"
+                              <span class="item-title" md-highlight-text="item.searchRegion"
                                     md-highlight-flags="^i">{{item.region}}</span>
           </md-item-template>
           <div class="error-block" ng-messages="vm.form.region_autocomplete.$error">
@@ -247,9 +247,10 @@
                          md-min-length="0"
                          required
                          md-no-cache="true"
+                         md-menu-class="autocomplete-custom-template"
                          md-floating-label="{{'SignUp.select_dfs_name'|translate}}">
           <md-item-template>
-                              <span md-highlight-text="item.searchDfs"
+                              <span class="item-title" md-highlight-text="item.searchDfs"
                                     md-highlight-flags="^i">{{item}}</span>
           </md-item-template>
           <div class="error-block" ng-messages="vm.form.dfs_autocomplete.$error">
@@ -277,7 +278,7 @@
                          md-menu-class="autocomplete-custom-template"
                          md-floating-label="{{'SignUp.select_dfs_code'|translate}}">
           <md-item-template>
-                              <span md-highlight-text="item.searchDfs_code"
+                              <span class="item-title" md-highlight-text="item.searchDfs_code"
                                     md-highlight-flags="^i">{{item}}</span>
           </md-item-template>
           <div class="error-block" ng-messages="vm.form.dfs_code_autocomplete.$error">
@@ -353,6 +354,7 @@
                          required
                          md-min-length="0"
                          md-no-cache="true"
+                         md-menu-class="autocomplete-custom-template"
                          md-floating-label="{{'SignUp.select_pfu_code'|translate}}">
           <md-item-template>
                               <span md-highlight-text="item.searchPfu"

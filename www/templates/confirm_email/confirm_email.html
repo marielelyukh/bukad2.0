@@ -18,39 +18,39 @@
           </div>
         </div>
       </md-input-container>
-      <md-input-container class="md-block" flex>
-        <label for="email">{{'Login.Email'|translate}}</label>
-        <input required
-               name="email"
-               autocomplete="off"
-               maxlength="255"
-               id="email"
-               ng-pattern="vm.emailRegExp"
-               ng-model="vm.data.email"
-               aria-label="email"/>
-        <div class="error-block" ng-messages="vm.form.email.$error">
-          <div class="error-block" ng-message="required">
-            {{'SignUp.fieldRequired'|translate}}
-          </div>
-          <div class="error-block" ng-message-exp="['maxlength', 'pattern']">
-            <span class="error">{{'SignUp.emailValid'|translate}}</span>
-          </div>
-        </div>
-      </md-input-container>
-      <md-input-container class="md-block" flex>
-        <label for="password">{{'Login.Password'|translate}}</label>
-        <input required
-               name="password"
-               id="password"
-               ng-model="vm.data.password"
-               aria-label="password"
-               type="password"/>
-        <div class="error-block" ng-messages="vm.form.password.$error">
-          <div class="error-block" ng-message="required">
-            {{'SignUp.fieldRequired'|translate}}
-          </div>
-        </div>
-      </md-input-container>
+      <!--<md-input-container class="md-block" flex>-->
+        <!--<label for="email">{{'Login.Email'|translate}}</label>-->
+        <!--<input required-->
+               <!--name="email"-->
+               <!--autocomplete="off"-->
+               <!--maxlength="255"-->
+               <!--id="email"-->
+               <!--ng-pattern="vm.emailRegExp"-->
+               <!--ng-model="vm.data.email"-->
+               <!--aria-label="email"/>-->
+        <!--<div class="error-block" ng-messages="vm.form.email.$error">-->
+          <!--<div class="error-block" ng-message="required">-->
+            <!--{{'SignUp.fieldRequired'|translate}}-->
+          <!--</div>-->
+          <!--<div class="error-block" ng-message-exp="['maxlength', 'pattern']">-->
+            <!--<span class="error">{{'SignUp.emailValid'|translate}}</span>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</md-input-container>-->
+      <!--<md-input-container class="md-block" flex>-->
+        <!--<label for="password">{{'Login.Password'|translate}}</label>-->
+        <!--<input required-->
+               <!--name="password"-->
+               <!--id="password"-->
+               <!--ng-model="vm.data.password"-->
+               <!--aria-label="password"-->
+               <!--type="password"/>-->
+        <!--<div class="error-block" ng-messages="vm.form.password.$error">-->
+          <!--<div class="error-block" ng-message="required">-->
+            <!--{{'SignUp.fieldRequired'|translate}}-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</md-input-container>-->
       <div layout="column" layout-margin>
         <md-button class=" md-raised waves-effect waves-light"
                    style="background-color: grey; color: white"

@@ -25,6 +25,7 @@
     vm.selectLanguage = selectLanguage;
     vm.getFirstArea = getFirstArea;
     vm.getFirstCity = getFirstCity;
+    vm.changePassword = false;
     vm.mainLanguage = $localStorage.locale;
     vm.user_id = $localStorage.id;
     vm.data = profileData;
