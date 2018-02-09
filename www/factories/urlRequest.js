@@ -51,7 +51,8 @@
             getArmyData:          baseUrl + 'army/tax/requisites',
             getIncomeData:        baseUrl + 'income/tax/requisites',
             getEmployeeData:      baseUrl + 'employee/tax/requisites',
-            getStatusWorkers:     baseUrl + '3rdtax/statuses'
+            getStatusWorkers:     baseUrl + '3rdtax/statuses',
+            getSalary:            baseUrl + 'get/salary'
           }
         };
       }

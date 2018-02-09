@@ -95,7 +95,8 @@
         params: {
           template_data: null,
           group: null
-        }
+        },
+        cache: false
       })
 
       .state('app.single_fop_esv', {
@@ -110,7 +111,8 @@
         params: {
           template_data: null,
           group: null
-        }
+        },
+        cache: false
       })
 
       .state('app.pay_single_fop', {
@@ -131,8 +133,8 @@
           appointment: null,
           for_time: null,
           data: null
-        }
-
+        },
+        cache: false
       })
 
       .state('app.pay_single_fop_esv', {
@@ -153,8 +155,8 @@
           appointment: null,
           for_time: null,
           data: null
-        }
-
+        },
+        cache: false
       })
 
       .state('app.staff_tax', {
@@ -169,7 +171,8 @@
         params: {
           group: null,
           template_data: null
-        }
+        },
+        cache: false
       })
 
       .state('app.list_of_staffTax', {
@@ -206,7 +209,8 @@
           type: null,
           title: null,
           count_workers: null
-        }
+        },
+        cache: false
       })
 
 

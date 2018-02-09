@@ -5,9 +5,9 @@
     .module('app')
     .controller('SingleFop', SingleFop);
 
-  SingleFop.$inject = ['$translate', '$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group', '$localStorage', '$timeout', '$window'];
+  SingleFop.$inject = ['exit', '$translate', '$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group', '$localStorage', '$timeout', '$window'];
 
-  function SingleFop($translate, $ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams, $scope, group, $localStorage, $timeout, $window) {
+  function SingleFop(exit, $translate, $ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams, $scope, group, $localStorage, $timeout, $window) {
 
     var vm = this;
     vm.getSum = getSum;
@@ -19,6 +19,9 @@
     vm.user_group = $localStorage.group;
     vm.tmp = {};
     vm.data = {};
+
+    exit.buttonBack($state.current.url);
+
 
 
     function getMonth() {

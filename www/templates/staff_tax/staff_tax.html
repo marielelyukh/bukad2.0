@@ -8,16 +8,19 @@
               <span style="height: 25px; width: 25px;"><span style="margin-left: 5px; color: #666666;"><b>{{vm.data.count_workers}}</b></span></span>
             </div>
 
-            <div layout="row" ng-repeat="input in inputs" layout-align="space-between center">
+            <div layout="row" ng-repeat="input in vm.salary track by $index" layout-align="space-between center">
                 <h4>{{$index+1}}</h4>
                 <md-input-container class="md-block" flex>
                 <input aria-label="123" style="margin-left: 20px; width: 80%;"  ng-model="vm.salary[$index]" type="number">
             </md-input-container>
             <h4>ЗП, грн</h4>
-                <i ng-show="inputs.length >= 2"
+                <i ng-show="vm.salary.length >= 2"
                    ng-click="removeInput($index)"
                    style="margin-left: 15px;  color: grey" class="icon fa fa-close " aria-hidden="true"></i>
               </div>
+
+
+
             <div layout="row" style="margin-top: 10px;" layout-align="space-between center">
 
               <md-button class=" md-raised waves-effect waves-light"

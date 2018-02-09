@@ -5,9 +5,9 @@
     .module('app')
     .controller('SingleFopE', SingleFopE);
 
-  SingleFopE.$inject = ['$translate', '$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group', '$timeout', '$window'];
+  SingleFopE.$inject = ['exit', '$translate', '$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group', '$timeout', '$window'];
 
-  function SingleFopE($translate, $ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams, $scope, group, $timeout, $window) {
+  function SingleFopE(exit, $translate, $ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams, $scope, group, $timeout, $window) {
 
     var vm = this;
     vm.getEsvSum = getEsvSum;
@@ -28,6 +28,9 @@
     $scope.inputs = [{
       value: null
     }];
+
+
+    exit.buttonBack($state.current.url);
 
 
     function getMonth() {

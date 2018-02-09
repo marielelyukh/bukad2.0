@@ -8,9 +8,9 @@
     .module('app')
     .controller('Profile', Profile);
 
-  Profile.$inject = ['$timeout', '$translate', '$state', '$ionicHistory', '$sessionStorage', 'user', 'profileData', '$localStorage', 'toastr'];
+  Profile.$inject = ['exit', '$timeout', '$translate', '$state', '$ionicHistory', '$sessionStorage', 'user', 'profileData', '$localStorage', 'toastr'];
 
-  function Profile($timeout, $translate, $state, $ionicHistory, $sessionStorage, user, profileData, $localStorage, toastr) {
+  function Profile(exit, $timeout, $translate, $state, $ionicHistory, $sessionStorage, user, profileData, $localStorage, toastr) {
 
     var vm = this;
     vm.update = update;
@@ -40,6 +40,8 @@
     vm.searchTextDfs = '';
     vm.searchTextDfs_code = '';
     vm.searchTextPfu = '';
+
+    exit.buttonBack($state.current.url);
 
     user.getRegions()
       .then(function (res) {

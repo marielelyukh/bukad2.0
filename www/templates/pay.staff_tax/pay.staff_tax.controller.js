@@ -5,9 +5,9 @@
     .module('app')
     .controller('payStaffTax', payStaffTax);
 
-  payStaffTax.$inject = ['$translate', '$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', 'group', '$stateParams', '$sessionStorage', '$timeout', '$window'];
+  payStaffTax.$inject = ['exit', '$translate', '$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', 'group', '$stateParams', '$sessionStorage', '$timeout', '$window'];
 
-  function payStaffTax($translate, $ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, group, $stateParams, $sessionStorage, $timeout, $window) {
+  function payStaffTax(exit, $translate, $ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, group, $stateParams, $sessionStorage, $timeout, $window) {
 
     var vm = this;
     vm.back = back;
@@ -23,6 +23,8 @@
     vm.count_workers = $stateParams.count_workers;
     vm.type = $stateParams.type;
     vm.title = $stateParams.title;
+
+    exit.buttonBack($state.current.url);
     // console.log($stateParams.count_workers);
     // vm.data = $stateParams.staff_tax;
     // console.log(vm.data);
