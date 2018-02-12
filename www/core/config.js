@@ -171,8 +171,8 @@
         params: {
           group: null,
           template_data: null
-        },
-        cache: false
+        }
+        // cache: false
       })
 
       .state('app.list_of_staffTax', {
@@ -189,8 +189,8 @@
           values: null,
           data_salary: null,
           count_workers: null
-        },
-        cache: false
+        }
+        // cache: false
       })
 
       .state('app.pay_staff_tax', {

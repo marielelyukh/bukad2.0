@@ -18,7 +18,7 @@
     vm.data.user = $sessionStorage.id;
     vm.template_data = $stateParams.template_data;
 
-    exit.buttonBack($state.current.url);
+    // exit.buttonBack($state.current.url);
 
     group.getSalary()
       .then(function (res) {

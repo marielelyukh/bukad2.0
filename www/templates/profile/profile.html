@@ -1,11 +1,12 @@
 <ion-view class="profile" view-title="{{'Taxes.title_profile'|translate}}">
   <ion-content>
       <div  style="opacity: 0.5" class="ml-20 mt-20" disabled>
+        <span style="color: black">{{'check_admin'|translate}}:</span>
         <md-checkbox id="check_admin"
                      disabled
+                     style="margin-left: 15px"
                      ng-model="vm.data.profile.admin_check"
                      aria-label="check_admin">
-          <span style="color: black">{{'check_admin'|translate}}</span>
         </md-checkbox>
       </div>
 

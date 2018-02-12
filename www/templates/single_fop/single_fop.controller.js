@@ -20,7 +20,7 @@
     vm.tmp = {};
     vm.data = {};
 
-    exit.buttonBack($state.current.url);
+    // exit.buttonBack($state.current.url);
 
 
 

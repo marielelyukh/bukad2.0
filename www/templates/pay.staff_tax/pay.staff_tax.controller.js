@@ -24,7 +24,7 @@
     vm.type = $stateParams.type;
     vm.title = $stateParams.title;
 
-    exit.buttonBack($state.current.url);
+    // exit.buttonBack($state.current.url);
     // console.log($stateParams.count_workers);
     // vm.data = $stateParams.staff_tax;
     // console.log(vm.data);

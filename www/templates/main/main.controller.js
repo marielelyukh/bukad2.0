@@ -17,7 +17,7 @@
         console.log(vm.user_group);
 
 
-        exit.buttonExit($state.current.url);
+        // exit.buttonExit($state.current.url);
 
 
         group.getAllTaxes()

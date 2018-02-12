@@ -16,7 +16,7 @@
         vm.salary = $stateParams.data_salary;
         vm.count_workers = $stateParams.count_workers;
 
-      exit.buttonBack($state.current.url);
+      // exit.buttonBack($state.current.url);
 
       group.getStatusWorkers()
         .then(function (res) {

@@ -41,7 +41,7 @@
     vm.searchTextDfs_code = '';
     vm.searchTextPfu = '';
 
-    exit.buttonBack($state.current.url);
+    // exit.buttonBack($state.current.url);
 
     user.getRegions()
       .then(function (res) {
