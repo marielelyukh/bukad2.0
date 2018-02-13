@@ -1,13 +1,9 @@
 <ion-view class="profile" view-title="{{'Taxes.title_profile'|translate}}">
   <ion-content>
-      <div  style="opacity: 0.5" class="ml-20 mt-20" disabled>
+      <div  style="opacity: 0.5" class="ml-20 mt-20 mr-20" layout="row" layout-align="end center" disabled>
         <span style="color: black">{{'check_admin'|translate}}:</span>
-        <md-checkbox id="check_admin"
-                     disabled
-                     style="margin-left: 15px"
-                     ng-model="vm.data.profile.admin_check"
-                     aria-label="check_admin">
-        </md-checkbox>
+        <i ng-if="vm.data.profile.check_admin"  style="color: darkgreen !important; height: 20px; width: 20px" class="icon ion-android-checkbox ml-10"></i>
+        <i  ng-if="!vm.data.profile.check_admin"  style="color: darkred !important; height: 20px; width: 20px" class="icon ion-android-checkbox ml-10"></i>
       </div>
 
     <form style="margin-top: 10px" name="vm.form" novalidate>
@@ -239,7 +235,7 @@
       </div>
 
       <div class="link" ng-click="vm.changePassword = !vm.changePassword">
-        <a>ПОМЕНЯТЬ ПАРОЛЬ</a>
+        <a>{{'ChangePassword'|translate}}</a>
       </div>
 
       <div ng-if="vm.changePassword">
@@ -315,8 +311,6 @@
         </md-select>
       </md-input-container>
     </div>
-
-
 
   </ion-content>
 </ion-view>

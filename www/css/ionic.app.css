@@ -9903,6 +9903,10 @@ a.button {
   line-height: 3;
   word-wrap: break-word; }
 
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  md-autocomplete {
+    width: 100%; } }
+
 .signup p.title {
   color: #333;
   padding: 5%;
