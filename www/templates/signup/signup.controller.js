@@ -43,7 +43,8 @@
     vm.searchTextDfs = '';
     vm.searchTextDfs_code = '';
     vm.searchTextPfu = '';
-    // vm.data.profile.locale = $localStorage.locale;
+    vm.showDetails = false;
+    vm.data.profile.locale = $localStorage.locale;
 
 
     user.getTopic()
@@ -208,9 +209,11 @@
       // console.log(vm.region);
       user.getCities({region: vm.region.region, area: item.area})
         .then(function (res) {
+          if(res.length === 1){
+            vm.city = res[0].city;
+            // vm.data.profile.city = res[0].city;
+          }
           vm.cities = res;
-          console.log(vm.cities);
-          // debugger
         });
 
       user.getPfu({region:  vm.region.region})
@@ -298,7 +301,9 @@
 
     // если мы выбираем значение в предложке то функция вызываеться (но вроде и так всё работает потому что есть md-selected-item="vm.data.profile.city")
     function selectedItemChange(item) {
-      console.log(item);
+      console.log(vm.city.city);
+      console.log(vm.city)
+
     }
 
     // функция которая вызываеться что бы отфильтровать массив
@@ -454,7 +459,7 @@
     }
 
     function createFilterForDfs_code(query) {
-      console.log('query: ' + query)
+      console.log('query: ' + query);
       var Query = query;
 
       return function filterFn(item) {
@@ -545,36 +550,27 @@
       if (vm.form.$invalid) {
         return;
       }
-      vm.data.profile.city = vm.city.city;
+      if(!vm.data.profile.dfs_code) {
+        delete vm.data.profile.dfs_code;
+      }
+      if(!vm.data.profile.pfu){
+        delete vm.data.profile.pfu;
+      }
+      if(vm.city){
+        vm.data.profile.city = vm.city;
+      }
+      if(vm.city.city){
+        vm.data.profile.city = vm.city.city;
+      }
       vm.data.profile.area = vm.area.area;
       vm.data.profile.region = vm.region.region;
+
       user.signup(vm.data)
         .then(function (res) {
           $sessionStorage.email = vm.data.email;
           $sessionStorage.password = vm.data.password;
           $state.go('confirmEmail');
           toastr.success('Ви успішно зареєстровані!');
-
-          // $localStorage.token = res.token;
-          // delete res.token;
-          // $localStorage.group = res.group;
-          // $localStorage.id = res.user_id;
-          // $ionicPlatform.ready(function () {
-          //   FCMPlugin.getToken(
-          //     function (token) {
-          //       $localStorage.my_notifications_id = token;
-          //       user.device({token: token});
-          //
-          //       console.log('Token: ' + token);
-          //     },
-          //     function (err) {
-          //       alert('error retrieving token: ' + token);
-          //       console.log('error retrieving token: ' + err);
-          //     }
-          //   );
-          // });
-          // $state.go('app.main');
-          // vm.data = {};
         });
 
     }
@@ -592,36 +588,6 @@
 
     }
 
-    // function search(address) {
-    //   var deferred = $q.defer();
-    //   getResults(address).then(
-    //     function (predictions) {
-    //       var results = [];
-    //       for (var i = 0, prediction; prediction = predictions[i]; i++) {
-    //         results.push(prediction);
-    //       }
-    //       deferred.resolve(results);
-    //     }
-    //   );
-    //   return deferred.promise;
-    // }
-
-    // function getResults(address) {
-    //   var deferred = $q.defer();
-    //   try {
-    //     vm.gmapsService.getPlacePredictions({
-    //       input: address,
-    //       types: ['(cities)'],
-    //       componentRestrictions: {country: 'ua'}
-    //     }, function (data) {
-    //       console.log(data);
-    //       deferred.resolve(data);
-    //     });
-    //   } catch (e) {
-    //   }
-    //   return deferred.promise;
-    // }
-
     function onSelectAddress(address, callback) {
       var geocoder = new google.maps.Geocoder();
 
@@ -635,9 +601,5 @@
       });
     }
 
-    // function changeCity() {
-    //   console.log('click');
-    //   console.log(vm.selectedItem);
-    // }
   }
 })();

@@ -32,7 +32,8 @@
       device: device,
       confirm_email: confirm_email,
       resetPassword: resetPassword,
-      sendCodeAgain: sendCodeAgain
+      sendCodeAgain: sendCodeAgain,
+      getNotification: getNotification
 
 
     };
@@ -78,6 +79,13 @@
 
     function check(data) {
       return http.get(url.user.check, data)
+        .then(function (res) {
+          return res;
+        });
+    }
+
+    function getNotification(data) {
+      return http.get(url.user.getNotification, data)
         .then(function (res) {
           return res;
         });

@@ -12,6 +12,8 @@
         var vm = this;
         vm.selectLanguage = selectLanguage;
         vm.user_group = $localStorage.group;
+        vm.special_status = $localStorage.special_status;
+        console.log(vm.special_status)
         vm.mainLanguage = $localStorage.locale;
         console.log(vm.mainLanguage);
         console.log(vm.user_group);

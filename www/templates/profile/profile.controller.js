@@ -26,6 +26,7 @@
     vm.getFirstArea = getFirstArea;
     vm.getFirstCity = getFirstCity;
     vm.changePassword = false;
+    vm.showDetails = false;
     vm.mainLanguage = $localStorage.locale;
     vm.user_id = $localStorage.id;
     vm.data = profileData;
@@ -583,6 +584,12 @@
       if (vm.form.$invalid) {
         return;
       }
+      if(!vm.data.profile.dfs_code) {
+        delete vm.data.profile.dfs_code;
+      }
+      if(!vm.data.profile.pfu){
+        delete vm.data.profile.pfu;
+      }
       vm.data.profile.locale = vm.mainLanguage;
       if(vm.data.profile.city.city){
         vm.data.profile.city = vm.data.profile.city.city;
@@ -597,6 +604,7 @@
         .then(function (res) {
           toastr.success($translate.instant('Changes_save'));
           $localStorage.group = res.profile.group;
+          $localStorage.special_status = res.profile.status;
         });
     }
 

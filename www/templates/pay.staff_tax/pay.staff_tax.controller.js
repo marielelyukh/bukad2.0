@@ -18,7 +18,7 @@
     vm.changeUrl = changeUrl;
     vm.getMonth = getMonth;
     vm.getYear = getYear;
-    vm.tmp = $stateParams.values;
+    vm.tmp = $sessionStorage.tmp;
     vm.salary = $stateParams.data_salary;
     vm.count_workers = $stateParams.count_workers;
     vm.type = $stateParams.type;

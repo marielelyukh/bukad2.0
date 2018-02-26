@@ -4,34 +4,36 @@
   "GotoUaPay": "Перейти к сраничке оплаты?",
   "Yes": "Да",
   "No": "Нет",
-  "Changes_save":"Змiни збережено!",
+  "Changes_save": "Змiни збережено!",
   "InvalidLogin": "Невірний логін, пароль або код",
   "Confirm": "Пiдтвердити",
   "Confirm_EMAIL": "Код пiдтвердження",
   "ConfirmEmail": "Пiдтвердити email",
   "ResetPassword": "Вiдновити пароль",
-  "Send":"Вiдправити",
+  "Send": "Вiдправити",
   "Send_code_again": "Вислати код ще раз?(Введiть email)",
   "OldPassword": "Старий пароль",
-  "ChangePassword": "Змiнити пароль",
+  "ChangePassword": "> ЗМIНИТИ ПАРОЛЬ",
+  "Change_Password": "Змiнити пароль",
   "Month": "Мiсяць",
   "Year": "Рiк",
   "check_admin": "Пeрeвiрено адмiнiстратором",
+  "no_notification":"Тут поки що немає сповiщень...",
+  "notification": "Сповiщення",
   "Login": {
     "SignIn": "Увiйти",
     "Email": "Електронна пошта",
     "Password": "Пароль",
     "DontHaveQuestion": "Якщо у вас виникли запитання чи необхідна допомога - зателефонуйте нам:",
     "Auth": "Авторизацiя",
-    "SignUp":"Ви ще не зареєстровані?",
+    "SignUp": "Ви ще не зареєстровані?",
     "ResetPassword": "Забули пароль?",
     "RememberMe": "Запам`ятати мене"
-
   },
   "SignUp": {
-    "signUp":"Реєстрація",
-    "data":"Дані акаунту:",
-    "details":"Деталі:",
+    "signUp": "Реєстрація",
+    "data": "Дані акаунту:",
+    "details": "Данi для звiтностi",
     "email": "Електронна пошта",
     "password": "Пароль",
     "tpassword": "Пiдтвердити пароль",
@@ -63,10 +65,9 @@
     "select_city": "Виберiть мicто, село...",
     "select_dfs_name": "Виберiть ДФС",
     "select_dfs_code": "Виберiть код ДФС",
-    "select_pfu_code": "Виберiть код ПФУ"
-
-
-
+    "select_pfu_code": "Виберiть код ПФУ",
+    "show_data": "> ПОКАЗАТИ ДАНI ДЛЯ ЗВIТНОСТI",
+    "hide_data": "< ПРИХОВАТИ ДАНI ДЛЯ ЗВIТНОСТI"
   },
   "Taxes": {
     "data_payer": "Платник",
@@ -85,7 +86,7 @@
     "singular_tax": "Єдиний",
     "money_tax": "Прибутковий податок",
     "army_tax": "Військовий збір",
-    "title_splata": "Сплата податків",
+    "title_splata": "Сплата податків з найманих працівників",
     "title_main": "Головна",
     "title_profile": "Профiль",
     "title_esv": "Податок ФОП ЄCB",
@@ -98,9 +99,11 @@
     "sum_for_all": "Загальна сума податку (ЄСВ, ВЗ, Приб., грн)",
     "save_data": "Зберегти",
     "staff_tax": "Податок з найманих",
+    "staff_tax_esv": "ЄСВ з найманих",
     "workers": "працiвникiв",
-    "esv_vz": "ЄCB, ВЗ,"
-
-
+    "esv_vz": "ЄCB, ВЗ,",
+    "notification": "Сповiщення",
+    "count_workers":"Кількість найманиx працівників:",
+    "max_count": "(до 10 чоловік)"
   }
 }

@@ -107,6 +107,7 @@
             delete res.token;
             $localStorage.group = res.group;
             $localStorage.id = res.user_id;
+            $localStorage.special_status = res.special_status;
             $ionicPlatform.ready(function () {
               FCMPlugin.getToken(
                 function (token) {

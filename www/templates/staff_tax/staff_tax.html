@@ -2,9 +2,7 @@
     <ion-content>
         <form>
             <div layout="row" style="margin-top: 20px" layout-align="space-between center">
-                <h4 ng-if="vm.mainLanguage === 'ua'">Кількість найманиx працівників: <br><span style="color: #666666; font-size: 1em">(до 10 чоловік)</span> </h4>
-                <h4 ng-if="vm.mainLanguage === 'ru'">Количество наемных сотрудников: <br><span style="color: #666666; font-size: 1em">(до 10 человек)</span> </h4>
-
+                <h4>{{'Taxes.count_workers'|translate}}<br><span style="color: #666666; font-size: 1em">{{'Taxes.max_count'|translate}}</span> </h4>
               <span style="height: 25px; width: 25px;"><span style="margin-left: 5px; color: #666666;"><b>{{vm.data.count_workers}}</b></span></span>
             </div>
 
@@ -33,7 +31,7 @@
                 <md-button class="md-icon-button"
                            aria-label="true"
                            ng-click="addInput()"
-                           ng-show="inputs.length < 10">
+                           ng-show="vm.data.count_workers < 10">
 
                     <md-icon md-font-icon="fa fa-plus fa-lg" aria-hidden="true"></md-icon>
                 </md-button>

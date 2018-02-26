@@ -17,11 +17,18 @@
     vm.sendAgain = sendAgain;
     vm.data = {};
     vm.data.email = $sessionStorage.email;
+    vm.language =  $localStorage.locale;
     vm.data.password = $sessionStorage.password;
 
     function sendAgain() {
       user.sendCodeAgain({email: vm.data.email})
         .then(function (res) {
+          if(vm.language === 'ua'){
+            toastr.success('Новий код надiслано на Ваш email!');
+          }
+          if(vm.language === 'ru'){
+            toastr.success('Новый код отправлено на Ваш email!');
+          }
         });
     }
 
@@ -42,6 +49,7 @@
             delete res.token;
             $localStorage.group = res.group;
             $localStorage.id = res.user_id;
+            $localStorage.special_status = res.special_status;
             $ionicPlatform.ready(function () {
               FCMPlugin.getToken(
                 function (token) {
@@ -62,6 +70,12 @@
 
             });
             $state.go('app.main');
+            if(vm.language === 'ua'){
+              toastr.success('Ви успішно зареєстровані!');
+            }
+            if(vm.language === 'ru'){
+              toastr.success('Вы успешно зарегистрированы!');
+            }
 
 
           }

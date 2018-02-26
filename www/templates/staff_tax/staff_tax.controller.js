@@ -5,13 +5,14 @@
     .module('app')
     .controller('staffTax', staffTax);
 
-  staffTax.$inject = ['exit', '$localStorage', '$rootScope', '$state', '$ionicHistory', 'user', '$scope', 'group', '$sessionStorage', '$stateParams'];
+  staffTax.$inject = ['toastr', 'exit', '$localStorage', '$rootScope', '$state', '$ionicHistory', 'user', '$scope', 'group', '$sessionStorage', '$stateParams'];
 
-  function staffTax(exit, $localStorage, $rootScope, $state, $ionicHistory, user, $scope, group, $sessionStorage, $stateParams) {
+  function staffTax(toastr, exit, $localStorage, $rootScope, $state, $ionicHistory, user, $scope, group, $sessionStorage, $stateParams) {
 
     var vm = this;
     vm.getTaxData = getTaxData;
     vm.mainLanguage = $localStorage.locale;
+    vm.language =  $localStorage.locale;
     vm.data = {};
     vm.data.email_invoice = true;
     vm.data.template = false;
@@ -55,9 +56,19 @@
     };
 
     function getTaxData() {
+      if(!vm.salary) {
+        if(vm.language === 'ua'){
+          toastr.warning('Заповнiть спiвробiтникiв!');
+        }
+        if(vm.language === 'ru'){
+          toastr.warning('Заполните сотрудников!');
+        }
+        return;
+      }
       group.getData({salary: vm.salary})
         .then(function (res) {
           vm.tmp = res;
+          $sessionStorage.tmp = vm.tmp;
         });
     }
 

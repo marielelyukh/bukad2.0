@@ -93,23 +93,7 @@
           </div>
         </md-input-container>
       </div>
-      <div style="margin-top: -25px">
-        <label style="color: #666666; font-size: 1em;">{{'SignUp.insurance'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <input
-            required
-            style="margin-top: -15px"
-            name="number_insurance"
-            ng-model="vm.data.profile.insurance"
-            aria-label="insurance"
-            type="number"/>
-          <div class="error-block" ng-messages="vm.form.number_insurance.$error">
-            <div class="error-block" ng-message="required">
-              {{'SignUp.fieldRequired'|translate}}
-            </div>
-          </div>
-        </md-input-container>
-      </div>
+
 
       <div style="margin-top: -25px">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.initials'|translate}}</label>
@@ -231,11 +215,7 @@
             </div>
           </div>
         </md-autocomplete>
-
       </div>
-
-      <h4>{{'SignUp.details'|translate}}</h4>
-
 
       <div ng-if="vm.region">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_name'|translate}}</label>
@@ -265,111 +245,141 @@
       </div>
 
 
-      <div ng-if="vm.region">
-        <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_code'|translate}}</label>
-        <md-autocomplete md-input-name="dfs_code_autocomplete"
-                         md-search-text-change="vm.searchTextDfs_codeChange(item.searchDfs_code)"
-                         md-selected-item-change="vm.selectedDfs_codeChange(item)"
-                         md-selected-item="vm.data.profile.dfs_code"
-                         md-search-text="item.searchDfs_code"
-                         md-items="item in vm.filterDfs_code()"
-                         md-item-text="item"
-                         md-require-match
-                         md-min-length="0"
-                         required
-                         md-no-cache="true"
-                         md-menu-class="autocomplete-custom-template"
-                         md-floating-label="{{'SignUp.select_dfs_code'|translate}}">
-          <md-item-template>
+      <div ng-if="!vm.showDetails" layout="row" layout-align="end center" class="link mb-25" ng-click="vm.showDetails = !vm.showDetails">
+        <a>{{'SignUp.show_data'|translate}}</a>
+      </div>
+      <div ng-if="vm.showDetails" layout="row" layout-align="end center" class="link  mb-25" ng-click="vm.showDetails = !vm.showDetails">
+        <a>{{'SignUp.hide_data'|translate}}</a>
+      </div>
+
+
+      <div ng-show="vm.showDetails">
+        <h4>{{'SignUp.details'|translate}}:</h4>
+        <div>
+          <label style="color: #666666; font-size: 1em;">{{'SignUp.insurance'|translate}}</label>
+          <md-input-container class="md-block" flex>
+            <input
+
+              style="margin-top: -15px"
+              name="number_insurance"
+              ng-model="vm.data.profile.insurance"
+              aria-label="insurance"
+              type="number"/>
+            <div class="error-block" ng-messages="vm.form.number_insurance.$error">
+              <div class="error-block" ng-message="required">
+                {{'SignUp.fieldRequired'|translate}}
+              </div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <div ng-if="vm.region">
+          <label style="color: #666666; font-size: 1em;">{{'SignUp.dfs_code'|translate}}</label>
+          <md-autocomplete md-input-name="dfs_code_autocomplete"
+                           md-search-text-change="vm.searchTextDfs_codeChange(item.searchDfs_code)"
+                           md-selected-item-change="vm.selectedDfs_codeChange(item)"
+                           md-selected-item="vm.data.profile.dfs_code"
+                           md-search-text="item.searchDfs_code"
+                           md-items="item in vm.filterDfs_code()"
+                           md-item-text="item"
+                           md-require-match
+                           md-min-length="0"
+                           md-no-cache="true"
+                           md-menu-class="autocomplete-custom-template"
+                           md-floating-label="{{'SignUp.select_dfs_code'|translate}}">
+            <md-item-template>
                               <span class="item-title" md-highlight-text="item.searchDfs_code"
                                     md-highlight-flags="^i">{{item}}</span>
-          </md-item-template>
-          <div class="error-block" ng-messages="vm.form.dfs_code_autocomplete.$error">
-            <div class="error-block" ng-message="required">
-              {{'SignUp.fieldRequired'|translate}}
+            </md-item-template>
+            <div class="error-block" ng-messages="vm.form.dfs_code_autocomplete.$error">
+              <div class="error-block" ng-message="required">
+                {{'SignUp.fieldRequired'|translate}}
+              </div>
             </div>
-          </div>
-        </md-autocomplete>
-      </div>
+          </md-autocomplete>
+        </div>
 
-      <div>
-        <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_topic'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <md-select required style="border-bottom: 1px solid #333" ng-change="vm.getGroups(vm.kved_topic)" id="topic"
-                     ng-model="vm.kved_topic"
-                     aria-label="sort">
-            <md-option ng-value="topic" ng-repeat="topic in vm.topic">{{topic}}
-            </md-option>
-          </md-select>
-          <div class="error-block" ng-messages="vm.form.dfs_code_code.$error">
-            <div class="error-block" ng-message="required">
-              {{'SignUp.fieldRequired'|translate}}
+        <div>
+          <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_topic'|translate}}</label>
+          <md-input-container class="md-block" flex>
+            <md-select style="border-bottom: 1px solid #333" ng-change="vm.getGroups(vm.kved_topic)" id="topic"
+                       ng-model="vm.kved_topic"
+                       aria-label="sort">
+              <md-option ng-value="topic" ng-repeat="topic in vm.topic">{{topic}}
+              </md-option>
+            </md-select>
+            <div class="error-block" ng-messages="vm.form.dfs_code_code.$error">
+              <div class="error-block" ng-message="required">
+                {{'SignUp.fieldRequired'|translate}}
+              </div>
             </div>
-          </div>
-        </md-input-container>
-      </div>
+          </md-input-container>
+        </div>
 
 
-      <div ng-if="vm.kved_topic">
-        <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_group'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <md-select required style="border-bottom: 1px solid #333; margin-top: -15px"  ng-change="vm.getClass(vm.kved_group)"
-                     id="kved_group"
-                     ng-model="vm.kved_group" name="kved_group"
-                     aria-label="sort" required>
-            <md-option ng-value="group" ng-repeat="group in vm.groups">{{group}}
-            </md-option>
-          </md-select>
-          <div class="error-block" ng-messages="vm.form.kved_group.$error">
-            <div class="error-block" ng-message="required">
-              {{'SignUp.fieldRequired'|translate}}
+        <div ng-if="vm.kved_topic">
+          <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_group'|translate}}</label>
+          <md-input-container class="md-block" flex>
+            <md-select style="border-bottom: 1px solid #333; margin-top: -15px"
+                       ng-change="vm.getClass(vm.kved_group)"
+                       id="kved_group"
+                       ng-model="vm.kved_group" name="kved_group"
+                       aria-label="sort" >
+              <md-option ng-value="group" ng-repeat="group in vm.groups">{{group}}
+              </md-option>
+            </md-select>
+            <div class="error-block" ng-messages="vm.form.kved_group.$error">
+              <div class="error-block" ng-message="required">
+                {{'SignUp.fieldRequired'|translate}}
+              </div>
             </div>
-          </div>
-        </md-input-container>
-      </div>
+          </md-input-container>
+        </div>
 
-      <div ng-if="vm.kved_group">
-        <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_code'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <md-select style="border-bottom: 1px solid #333;  margin-top: -15px" id="kved_code" ng-model="vm.data.profile.kved_code"
-                     aria-label="sort" required name="kved_code">
-            <md-option ng-value="class" ng-repeat="class in vm.class">{{class}}
-            </md-option>
-          </md-select>
-          <div class="error-block" ng-messages="vm.form.kved_code.$error">
-            <div class="error-block" ng-message="required">
-              {{'SignUp.fieldRequired'|translate}}
+        <div ng-if="vm.kved_group">
+          <label style="color: #666666; font-size: 1em;">{{'SignUp.kved_code'|translate}}</label>
+          <md-input-container class="md-block" flex>
+            <md-select style="border-bottom: 1px solid #333;  margin-top: -15px" id="kved_code"
+                       ng-model="vm.data.profile.kved_code"
+                       aria-label="sort"  name="kved_code">
+              <md-option ng-value="class" ng-repeat="class in vm.class">{{class}}
+              </md-option>
+            </md-select>
+            <div class="error-block" ng-messages="vm.form.kved_code.$error">
+              <div class="error-block" ng-message="required">
+                {{'SignUp.fieldRequired'|translate}}
+              </div>
             </div>
-          </div>
-        </md-input-container>
-      </div>
+          </md-input-container>
+        </div>
 
-      <div ng-if="vm.city">
-        <label style="color: #666666; font-size: 1em;">{{'SignUp.pfu_code'|translate}}</label>
-        <md-autocomplete md-input-name="pfu_autocomplete"
-                         md-search-text-change="vm.searchTextPfuChange(item.searchPfu)"
-                         md-selected-item-change="vm.selectedPfuChange(item)"
-                         md-selected-item="vm.data.profile.pfu"
-                         md-search-text="item.searchPfu"
-                         md-items="item in vm.filterPfu()"
-                         md-item-text="item"
-                         md-require-match
-                         required
-                         md-min-length="0"
-                         md-no-cache="true"
-                         md-menu-class="autocomplete-custom-template"
-                         md-floating-label="{{'SignUp.select_pfu_code'|translate}}">
-          <md-item-template>
+        <div ng-if="vm.city">
+          <label style="color: #666666; font-size: 1em;">{{'SignUp.pfu_code'|translate}}</label>
+          <md-autocomplete md-input-name="pfu_autocomplete"
+                           md-search-text-change="vm.searchTextPfuChange(item.searchPfu)"
+                           md-selected-item-change="vm.selectedPfuChange(item)"
+                           md-selected-item="vm.data.profile.pfu"
+                           md-search-text="item.searchPfu"
+                           md-items="item in vm.filterPfu()"
+                           md-item-text="item"
+                           md-require-match
+                           md-min-length="0"
+                           md-no-cache="true"
+                           md-menu-class="autocomplete-custom-template"
+                           md-floating-label="{{'SignUp.select_pfu_code'|translate}}">
+            <md-item-template>
                               <span md-highlight-text="item.searchPfu"
                                     md-highlight-flags="^i">{{item}}</span>
-          </md-item-template>
-          <div class="error-block" ng-messages="vm.form.pfu_autocomplete.$error">
-            <div class="error-block" ng-message="required">
-              {{'SignUp.fieldRequired'|translate}}
+            </md-item-template>
+            <div class="error-block" ng-messages="vm.form.pfu_autocomplete.$error">
+              <div class="error-block" ng-message="required">
+                {{'SignUp.fieldRequired'|translate}}
+              </div>
             </div>
-          </div>
-        </md-autocomplete>
+          </md-autocomplete>
+        </div>
       </div>
+
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.group'|translate}}</label>
@@ -402,18 +412,20 @@
         </div>
       </div>
 
-        <div  class="link" layout-margin>
-          <md-button md-no-ink class="md-primary" style="font-size: 17px" type="submit">{{'SignUp.continue'|translate}}</md-button>
-        </div>
-        <div class="link">
-          <span style="color: #333">{{'SignUp.dontHaveAccount'|translate}}</span>
-          <a style="text-decoration: none" href="#/login">{{'Login.SignIn'|translate}}</a>
-        </div>
+      <div class="link"  layout="row" layout-align="end center"  layout-margin>
+        <md-button md-no-ink class="md-primary" style="font-size: 17px" type="submit">{{'SignUp.continue'|translate}}
+        </md-button>
+      </div>
+      <div class="link">
+        <span style="color: #333">{{'SignUp.dontHaveAccount'|translate}}</span>
+        <a style="text-decoration: none" href="#/login">{{'Login.SignIn'|translate}}</a>
+      </div>
     </form>
 
     <div class="link" layout="column" style="margin-top: 10px; margin-bottom: 10px">
       <span style="color: gray; font-size: 1.0em !important;">{{'Login.DontHaveQuestion'|translate}}</span>
-      <a style="text-decoration: none !important; color: #039BE5; font-size: 1.1em !important;" href="tel:{{'+380662279755'}}">+380662279755</a>
+      <a style="text-decoration: none !important; color: #039BE5; font-size: 1.1em !important;"
+         href="tel:{{'+380662279755'}}">+380662279755</a>
     </div>
 
   </ion-content>

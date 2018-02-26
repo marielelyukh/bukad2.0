@@ -12,7 +12,7 @@
                 <i ng-if="vm.taxes_data.single_tax.status == 0" style="color: red !important;" class="icon ion-android-checkbox"></i>
             </div>
             </ion-item>
-            <ion-item>
+            <ion-item  ng-if="!vm.special_status">
                 <div class="item-icon-left"  ui-sref="app.single_fop_esv({group: 'group1'})">
                     <h2>{{'Taxes.fop_tax'|translate}}</h2>
                     <p class="secondText">{{'Taxes.esv'|translate}}</p>

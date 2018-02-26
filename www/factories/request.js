@@ -73,7 +73,7 @@
             }
 
             $ionicLoading.show({
-                template: '...'
+                // template: '...'
             });
 
             return $http(config)

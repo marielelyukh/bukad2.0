@@ -38,8 +38,8 @@
         </div>
         <div class="item-icon-left" ui-sref="app.pay_staff_tax({staff_tax: vm.data, values: vm.tmp, type: 3, title: 'ЄСВ на найманих працiвникiв', data_salary: vm.salary, count_workers: vm.count_workers})">
           <!--<h2 style="color: #333 !important;">ЄСВ на найманих<br> працівників</h2>-->
-          <h2 style="color: #333 !important;" ng-if="vm.mainLanguage === 'ua'">ЄСВ на найманих <br> працівників</h2>
-          <h2 style="color: #333 !important;" ng-if="vm.mainLanguage === 'ru'">ЕСВ с наемных <br> сотрудников</h2>
+          <h2 style="color: #333 !important;" >{{'Taxes.staff_tax_esv'|translate}}<br> {{'Taxes.workers'|translate}}</h2>
+
         </div>
         <div class="item-icon-right">
           <i  class="icon ion-chevron-right"></i>

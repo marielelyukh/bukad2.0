@@ -31,7 +31,8 @@
             device:               baseUrl + 'auth/device',
             confirm_email:        baseUrl + 'auth/email/confirm',
             resetPassword:        baseUrl + 'auth/password/reset',
-            sendCodeAgain:        baseUrl + 'auth/email/confirm/restart'
+            sendCodeAgain:        baseUrl + 'auth/email/confirm/restart',
+            getNotification:      baseUrl + 'messages/get'
           },
 
           group: {

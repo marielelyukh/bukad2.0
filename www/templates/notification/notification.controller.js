@@ -10,14 +10,10 @@
   function Notification($rootScope, $state, $ionicHistory, user, $sessionStorage, group, $localStorage, exit) {
 
     var vm = this;
-    vm.user_group = $localStorage.group;
-    exit.buttonExit($state.current.url);
 
-    console.log(vm.user_group);
-
-    group.getAllTaxes()
+    user.getNotification()
       .then(function (res) {
-        vm.taxes_data = res;
+        vm.notification_data = res;
       });
 
   }

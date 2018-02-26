@@ -5,9 +5,9 @@
     .module('app')
     .controller('SingleFop', SingleFop);
 
-  SingleFop.$inject = ['exit', '$translate', '$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group', '$localStorage', '$timeout', '$window'];
+  SingleFop.$inject = ['toastr', 'exit', '$translate', '$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group', '$localStorage', '$timeout', '$window'];
 
-  function SingleFop(exit, $translate, $ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams, $scope, group, $localStorage, $timeout, $window) {
+  function SingleFop(toastr, exit, $translate, $ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams, $scope, group, $localStorage, $timeout, $window) {
 
     var vm = this;
     vm.getSum = getSum;
@@ -107,8 +107,17 @@
       $state.go('app.main');
     }
 
-
+    vm.language =  $localStorage.locale;
     function getSum() {
+      if(!vm.tmp.income) {
+        if(vm.language === 'ua'){
+          toastr.warning('Введiть суму товарообiгу!');
+        }
+        if(vm.language === 'ru'){
+          toastr.warning('Введите сумму товарооборота!');
+        }
+        return;
+      }
       group.firstTaxIncome({income: vm.tmp.income})
         .then(function (res) {
           vm.data.sum = res.value;

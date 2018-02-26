@@ -171,8 +171,8 @@
         params: {
           group: null,
           template_data: null
-        }
-        // cache: false
+        },
+        cache: false
       })
 
       .state('app.list_of_staffTax', {
