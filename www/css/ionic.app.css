@@ -10006,8 +10006,8 @@ a.button {
     color: #333;
     font-size: 1.1em; }
   .staff_tax form .calculate {
-    background-color: grey;
-    color: white; }
+    background-color: white;
+    color: black; }
   .staff_tax form .BTN {
     background-color: #039BE5;
     color: white; }

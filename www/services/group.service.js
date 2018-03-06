@@ -33,9 +33,17 @@
       payIncome_tax: payIncome_tax,
       getAllTaxes: getAllTaxes,
       getStatusWorkers: getStatusWorkers,
-      getSalary: getSalary
+      getSalary: getSalary,
+      saveWorkers: saveWorkers
     };
 
+
+    function saveWorkers(data) {
+      return http.post(url.group.saveWorkers, data)
+        .then(function (res) {
+          return res;
+        });
+    }
 
     function payFirstGroup(data) {
       return http.post(url.group.payFirstGroup, data)

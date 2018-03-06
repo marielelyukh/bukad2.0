@@ -53,7 +53,8 @@
             getIncomeData:        baseUrl + 'income/tax/requisites',
             getEmployeeData:      baseUrl + 'employee/tax/requisites',
             getStatusWorkers:     baseUrl + '3rdtax/statuses',
-            getSalary:            baseUrl + 'get/salary'
+            getSalary:            baseUrl + 'get/salary',
+            saveWorkers:          baseUrl + 'save/salary'
           }
         };
       }

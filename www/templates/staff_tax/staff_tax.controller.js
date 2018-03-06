@@ -11,13 +11,17 @@
 
     var vm = this;
     vm.getTaxData = getTaxData;
+    vm.saveWorkers = saveWorkers;
     vm.mainLanguage = $localStorage.locale;
     vm.language =  $localStorage.locale;
     vm.data = {};
+    vm.salary = [];
     vm.data.email_invoice = true;
     vm.data.template = false;
     vm.data.user = $sessionStorage.id;
     vm.template_data = $stateParams.template_data;
+    vm.salary = [];
+    vm.salary.push(null);
 
     // exit.buttonBack($state.current.url);
 
@@ -34,6 +38,10 @@
         }
 
       });
+
+    function saveWorkers() {
+      group.saveWorkers({salary: vm.salary});
+    }
 
     if (vm.template_data) {
       vm.data = vm.template_data;
