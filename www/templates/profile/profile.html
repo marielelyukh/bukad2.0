@@ -9,7 +9,7 @@
       </div>
     </div>
 
-    <form style="margin-top: 10px" name="vm.form" novalidate>
+    <form style="margin-top: 10px" name="vm.form" ng-submit="vm.update()" novalidate>
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.ident_code'|translate}}</label>
         <md-input-container class="md-block" flex>
@@ -387,32 +387,33 @@
         </div>
 
       </div>
+      <div layout="row" layout-align="space-around center" layout-margin>
+        <md-button flex="70" class=" md-raised waves-effect waves-light"
+                   style="background-color: grey; color: white"
+                   type="submit"
+                   aria-label="true">
+          {{'Taxes.save_data'|translate}}
+        </md-button>
+        <md-input-container flex="25" layout="row" layout-align="center center">
+          <md-select ng-change="vm.selectLanguage()"
+                     id="language"
+                     name="language"
+                     ng-model="vm.mainLanguage"
+                     aria-label="sort">
+
+            <md-option ng-value="'ua'"><img class="flag" ng-src="img/ua.jpg">
+              <span class="language">UA</span>
+            </md-option>
+
+            <md-option ng-value="'ru'"><img class="flag" ng-src="img/ru.png">
+              <span class="language">RU</span>
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
 
     </form>
-    <div layout="row" layout-align="space-around center" layout-margin>
-      <md-button flex="70" class=" md-raised waves-effect waves-light"
-                 style="background-color: grey; color: white"
-                 ng-click="vm.update()"
-                 aria-label="true">
-        {{'Taxes.save_data'|translate}}
-      </md-button>
-      <md-input-container flex="25" layout="row" layout-align="center center">
-        <md-select ng-change="vm.selectLanguage()"
-                   id="language"
-                   name="language"
-                   ng-model="vm.mainLanguage"
-                   aria-label="sort">
 
-          <md-option ng-value="'ua'"><img class="flag" ng-src="img/ua.jpg">
-            <span class="language">UA</span>
-          </md-option>
-
-          <md-option ng-value="'ru'"><img class="flag" ng-src="img/ru.png">
-            <span class="language">RU</span>
-          </md-option>
-        </md-select>
-      </md-input-container>
-    </div>
 
   </ion-content>
 </ion-view>

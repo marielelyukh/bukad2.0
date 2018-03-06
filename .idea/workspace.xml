@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a4419572-a489-41ef-812e-c4ae95ec5901" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.min.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/data/ru.json" afterPath="$PROJECT_DIR$/www/data/ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/data/ua.json" afterPath="$PROJECT_DIR$/www/data/ua.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/factories/urlRequest.js" afterPath="$PROJECT_DIR$/www/factories/urlRequest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/services/group.service.js" afterPath="$PROJECT_DIR$/www/services/group.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/main/main.html" afterPath="$PROJECT_DIR$/www/templates/main/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/notification/notification.html" afterPath="$PROJECT_DIR$/www/templates/notification/notification.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.controller.js" afterPath="$PROJECT_DIR$/www/templates/profile/profile.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.html" afterPath="$PROJECT_DIR$/www/templates/profile/profile.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,6 +33,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="staff_tax.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -51,6 +52,16 @@
                 <element signature="n#style#0;n#md-button#0;n#div#2;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-button#0;n#div#3;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="560" column="5" lean-forward="false" selection-start-line="560" selection-start-column="5" selection-end-line="562" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="staff_tax.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="staff_tax.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="85">
               <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
@@ -382,9 +393,7 @@
         <option value="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.controller.js" />
         <option value="$PROJECT_DIR$/www/templates/menu/menu.controller.js" />
         <option value="$PROJECT_DIR$/www/templates/main/main.controller.js" />
-        <option value="$PROJECT_DIR$/www/templates/profile/profile.html" />
         <option value="$PROJECT_DIR$/www/templates/signup/signup.controller.js" />
-        <option value="$PROJECT_DIR$/www/templates/profile/profile.controller.js" />
         <option value="$PROJECT_DIR$/www/templates/main/main.html" />
         <option value="$PROJECT_DIR$/www/data/ru.json" />
         <option value="$PROJECT_DIR$/www/data/ua.json" />
@@ -394,6 +403,8 @@
         <option value="$PROJECT_DIR$/www/templates/notification/notification.html" />
         <option value="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" />
         <option value="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss" />
+        <option value="$PROJECT_DIR$/www/templates/profile/profile.controller.js" />
+        <option value="$PROJECT_DIR$/www/templates/profile/profile.html" />
       </list>
     </option>
   </component>
@@ -966,7 +977,7 @@
       <workItem from="1520247259475" duration="1418000" />
       <workItem from="1520250258972" duration="2414000" />
       <workItem from="1520331803840" duration="12247000" />
-      <workItem from="1520364127266" duration="3365000" />
+      <workItem from="1520364127266" duration="3898000" />
     </task>
     <task id="LOCAL-00001" summary="push notification">
       <created>1515582125800</created>
@@ -1094,11 +1105,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520354893408</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="save salary, autocomplete city">
+      <created>1520374645388</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1520374645388</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="461181000" />
+    <option name="totallyTimeSpent" value="461714000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1195,7 +1213,8 @@
     <MESSAGE value="fix bugs" />
     <MESSAGE value="fix bugs android 4.2" />
     <MESSAGE value="notification page, fix bugs with pages, taxes, registration, addition from customers" />
-    <option name="LAST_COMMIT_MESSAGE" value="notification page, fix bugs with pages, taxes, registration, addition from customers" />
+    <MESSAGE value="save salary, autocomplete city" />
+    <option name="LAST_COMMIT_MESSAGE" value="save salary, autocomplete city" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1466,16 +1485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="122" column="61" lean-forward="false" selection-start-line="122" selection-start-column="61" selection-end-line="122" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#5;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1488,14 +1497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="198" column="26" lean-forward="false" selection-start-line="198" selection-start-column="26" selection-end-line="198" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="331" column="0" lean-forward="false" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1558,6 +1559,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="138" column="62" lean-forward="false" selection-start-line="138" selection-start-column="18" selection-end-line="138" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="560" column="5" lean-forward="false" selection-start-line="560" selection-start-column="5" selection-end-line="562" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1569,18 +1594,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="138" column="62" lean-forward="false" selection-start-line="138" selection-start-column="18" selection-end-line="138" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss">
+    <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
           <folding />
         </state>
       </provider>
