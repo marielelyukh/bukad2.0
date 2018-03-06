@@ -8,9 +8,9 @@
     .module('app')
     .controller('Profile', Profile);
 
-  Profile.$inject = ['exit', '$timeout', '$translate', '$state', '$ionicHistory', '$sessionStorage', 'user', 'profileData', '$localStorage', 'toastr'];
+  Profile.$inject = ['$q', 'exit', '$timeout', '$translate', '$state', '$ionicHistory', '$sessionStorage', 'user', 'profileData', '$localStorage', 'toastr'];
 
-  function Profile(exit, $timeout, $translate, $state, $ionicHistory, $sessionStorage, user, profileData, $localStorage, toastr) {
+  function Profile($q, exit, $timeout, $translate, $state, $ionicHistory, $sessionStorage, user, profileData, $localStorage, toastr) {
 
     var vm = this;
     vm.update = update;
@@ -25,6 +25,7 @@
     vm.selectLanguage = selectLanguage;
     vm.getFirstArea = getFirstArea;
     vm.getFirstCity = getFirstCity;
+    vm.emailRegExp = /^((([a-zA-Z\-0-9_.])+[a-zA-Z0-9_.]{2,})|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     vm.changePassword = false;
     vm.showDetails = false;
     vm.mainLanguage = $localStorage.locale;
@@ -209,27 +210,6 @@
 
     function selectRegion(item, index) {
       console.log(item);
-
-      // user.getAreas({region: item})
-      //   .then(function (res) {
-      //     vm.areas = res;
-      //     // vm.freeCustomersArr = vm.areas;
-      //   });
-      // user.getPfu({region:  item})
-      //   .then(function (res) {
-      //     vm.pfu_code = res;
-      //   });
-      //
-      // user.getDfs({region:  item})
-      //   .then(function (res) {
-      //     vm.dfs_codes = res;
-      //   });
-      //
-      // user.getDfsCode({region:  item})
-      //   .then(function (res) {
-      //     // console.log(res)
-      //     vm.dfs = res;
-      //   });
     }
 
     // AUTOCOMPLETE for region ENDS
@@ -304,14 +284,13 @@
     }
     // AUTOCOMPLETE for area ENDS
 
-
     // AUTOCOMPLETE for city STARTS
 
     vm.selectedItem = null;
     vm.searchCity = [];
     vm.citySearch = citySearch;
     vm.searchTextChange = searchTextChange;
-    vm.selectedCityChange = selectedCityChange;
+    vm.selectedItemChange = selectedItemChange;
     vm.simulateQuery = false;
     vm.cityArr = [];
     vm.tempCity = '';
@@ -339,9 +318,8 @@
     }
 
     // если мы выбираем значение в предложке то функция вызываеться (но вроде и так всё работает потому что есть md-selected-item="vm.data.profile.city")
-    function selectedCityChange(item) {
-      // vm.data.profile.city = item;
-      console.log(item);
+    function selectedItemChange(item) {
+      console.log(vm.city.city);
     }
 
     // функция которая вызываеться что бы отфильтровать массив

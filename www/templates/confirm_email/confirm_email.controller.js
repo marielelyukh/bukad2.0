@@ -50,6 +50,7 @@
             $localStorage.group = res.group;
             $localStorage.id = res.user_id;
             $localStorage.special_status = res.special_status;
+            $localStorage.email = res.email;
             $ionicPlatform.ready(function () {
               FCMPlugin.getToken(
                 function (token) {
@@ -70,12 +71,7 @@
 
             });
             $state.go('app.main');
-            if(vm.language === 'ua'){
-              toastr.success('Ви успішно зареєстровані!');
-            }
-            if(vm.language === 'ru'){
-              toastr.success('Вы успешно зарегистрированы!');
-            }
+
 
 
           }

@@ -13,8 +13,8 @@
   "Send": "Вiдправити",
   "Send_code_again": "Вислати код ще раз?(Введiть email)",
   "OldPassword": "Старий пароль",
-  "ChangePassword": "> ЗМIНИТИ ПАРОЛЬ",
-  "Change_Password": "Змiнити пароль",
+  "ChangePassword": "ЗМIНИТИ ПАРОЛЬ",
+  "Change_Password": "Новий пароль",
   "Month": "Мiсяць",
   "Year": "Рiк",
   "check_admin": "Пeрeвiрено адмiнiстратором",
@@ -28,7 +28,8 @@
     "Auth": "Авторизацiя",
     "SignUp": "Ви ще не зареєстровані?",
     "ResetPassword": "Забули пароль?",
-    "RememberMe": "Запам`ятати мене"
+    "RememberMe": "Запам`ятати мене",
+    "emailMe": "або зв'яжіться зa допомогою електронної пошти:"
   },
   "SignUp": {
     "signUp": "Реєстрація",
@@ -36,7 +37,7 @@
     "details": "Данi для звiтностi",
     "email": "Електронна пошта",
     "password": "Пароль",
-    "tpassword": "Пiдтвердити пароль",
+    "tpassword": "Пiдтвердити новий пароль",
     "address": "Адреса",
     "ident_code": "Ідентифікаційний код",
     "insurance": "Номер страхувальника",
@@ -67,7 +68,9 @@
     "select_dfs_code": "Виберiть код ДФС",
     "select_pfu_code": "Виберiть код ПФУ",
     "show_data": "> ПОКАЗАТИ ДАНI ДЛЯ ЗВIТНОСТI",
-    "hide_data": "< ПРИХОВАТИ ДАНI ДЛЯ ЗВIТНОСТI"
+    "hide_data": "< ПРИХОВАТИ ДАНI ДЛЯ ЗВIТНОСТI",
+    "ident_valid": "Iдентифiкацiйний код повинен бути рiвно 10 символiв",
+    "postcode_valid": "Iндекс повинен бути рiвно 5 символiв"
   },
   "Taxes": {
     "data_payer": "Платник",

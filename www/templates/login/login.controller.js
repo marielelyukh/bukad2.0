@@ -108,6 +108,7 @@
             $localStorage.group = res.group;
             $localStorage.id = res.user_id;
             $localStorage.special_status = res.special_status;
+            $localStorage.email = res.email;
             $ionicPlatform.ready(function () {
               FCMPlugin.getToken(
                 function (token) {
@@ -120,16 +121,8 @@
                   alert('error retrieving token: ' + token);
                   console.log('error retrieving token: ' + err);
                 });
-              FCMPlugin.onNotification(function (data) {
-                if(data.message) {
-                  $state.go('app.notification');
-                }
-              });
-
             });
             $state.go('app.main');
-
-
           }
         });
     }

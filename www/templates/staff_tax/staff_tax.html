@@ -21,9 +21,10 @@
 
             <div layout="row" style="margin-top: 10px;" layout-align="space-between center">
 
-              <md-button class=" md-raised waves-effect waves-light"
-                         style="background-color: grey; color: white"
+              <md-button class="md-raised waves-effect waves-light"
+                         ng-class="vm.salary.length >= 1 ? 'calculate' : ''"
                          aria-label="true"
+                         ng-disabled="vm.salary.length < 1"
                          ng-click="vm.getTaxData()">
                 {{'Taxes.calculate_data'|translate}}
               </md-button>

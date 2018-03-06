@@ -18,6 +18,7 @@
     vm.getYear = getYear;
     vm.user_group = $localStorage.group;
     vm.tmp = {};
+    vm.tmp.income = '';
     vm.data = {};
 
     // exit.buttonBack($state.current.url);

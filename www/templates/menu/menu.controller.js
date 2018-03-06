@@ -23,6 +23,7 @@
             $state.go('login');
             delete $localStorage.token;
             delete $localStorage.id;
+            delete $localStorage.email;
         }
 
       function notificationGo() {

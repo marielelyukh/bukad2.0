@@ -83,12 +83,17 @@
             required
             style="margin-top: -15px"
             name="code"
+            maxlength="10"
+            minlength="10"
             ng-model="vm.data.profile.ident_code"
             aria-label="ident_code"
             type="number"/>
           <div class="error-block" ng-messages="vm.form.code.$error">
             <div class="error-block" ng-message="required">
               {{'SignUp.fieldRequired'|translate}}
+            </div>
+            <div class="error-block" ng-message-exp="['maxlength', 'minlength']">
+              <span class="error">{{'SignUp.ident_valid'|translate}}</span>
             </div>
           </div>
         </md-input-container>
@@ -101,7 +106,7 @@
           <input
             required
             class="testClass"
-            style="margin-top: -15px; text-transform: capitalize;"
+            style="margin-top: -15px; text-transform: capitalize !important;"
             name="initials"
             ng-model="vm.data.profile.initials"
             aria-label="initials"
@@ -123,12 +128,17 @@
             required
             style="margin-top: -15px"
             name="postcode"
+            maxlength="5"
+            minlength="5"
             ng-model="vm.data.profile.postcode"
             aria-label="postcode"
             type="number"/>
           <div class="error-block" ng-messages="vm.form.postcode.$error">
             <div class="error-block" ng-message="required">
               {{'SignUp.fieldRequired'|translate}}
+            </div>
+            <div class="error-block" ng-message-exp="['maxlength', 'minlength']">
+              <span class="error">{{'SignUp.postcode_valid'|translate}}</span>
             </div>
           </div>
         </md-input-container>
@@ -426,6 +436,8 @@
       <span style="color: gray; font-size: 1.0em !important;">{{'Login.DontHaveQuestion'|translate}}</span>
       <a style="text-decoration: none !important; color: #039BE5; font-size: 1.1em !important;"
          href="tel:{{'+380662279755'}}">+380662279755</a>
+      <span class="pt-5" style="color: gray; font-size: 1.0em !important;">{{'Login.emailMe'|translate}}</span>
+      <a style="text-decoration: none !important; color: #039BE5; font-size: 1.2em;" href="mailto:{{'bukadinfo@gmail.com'}}">bukadinfo@gmail.com</a>
     </div>
 
   </ion-content>

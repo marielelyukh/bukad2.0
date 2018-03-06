@@ -44,6 +44,7 @@
     vm.searchTextDfs_code = '';
     vm.searchTextPfu = '';
     vm.showDetails = false;
+    vm.language =  $localStorage.locale;
     vm.data.profile.locale = $localStorage.locale;
 
 
@@ -302,7 +303,7 @@
     // если мы выбираем значение в предложке то функция вызываеться (но вроде и так всё работает потому что есть md-selected-item="vm.data.profile.city")
     function selectedItemChange(item) {
       console.log(vm.city.city);
-      console.log(vm.city)
+      console.log(vm.city);
 
     }
 
@@ -570,7 +571,12 @@
           $sessionStorage.email = vm.data.email;
           $sessionStorage.password = vm.data.password;
           $state.go('confirmEmail');
-          toastr.success('Ви успішно зареєстровані!');
+          if(vm.language === 'ua'){
+            toastr.success('Ви успішно зареєстровані!');
+          }
+          if(vm.language === 'ru'){
+            toastr.success('Вы успешно зарегистрированы!');
+          }
         });
 
     }

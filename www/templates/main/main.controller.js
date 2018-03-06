@@ -12,14 +12,15 @@
         var vm = this;
         vm.selectLanguage = selectLanguage;
         vm.user_group = $localStorage.group;
+        vm.email = $localStorage.email;
         vm.special_status = $localStorage.special_status;
-        console.log(vm.special_status)
         vm.mainLanguage = $localStorage.locale;
-        console.log(vm.mainLanguage);
-        console.log(vm.user_group);
+        // console.log(vm.mainLanguage);
+        // console.log(vm.user_group);
+        // console.log(vm.special_status)
 
 
-        // exit.buttonExit($state.current.url);
+        exit.buttonExit($state.current.url);
 
 
         group.getAllTaxes()

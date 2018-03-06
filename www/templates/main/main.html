@@ -1,5 +1,8 @@
 <ion-view view-title="{{'Taxes.title_main'|translate}}" class="main">
     <ion-content>
+      <div class="mt-20 mr-25" layout="row" layout-align="end center">
+        <span style="color: #333">{{vm.email}}</span>
+      </div>
         <ion-list class="item">
             <ion-item>
             <div class="item-icon-left" ui-sref="app.single_fop({group: 'group1'})">
@@ -34,37 +37,12 @@
                   <i ng-if="vm.taxes_data.employee_tax.status == 0" style="color: red !important;" class="icon ion-android-checkbox"></i>
                 </div>
             </ion-item>
-            <!--<ion-item>-->
-                <!--<div class="item-icon-left">-->
-                    <!--<h2>Звітність</h2>-->
-                    <!--<p class="secondText">Декларація єдиний</p>-->
-                <!--</div>-->
-                <!--<div class="item-icon-right">-->
-                    <!--<i style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>-->
-                <!--</div>-->
-            <!--</ion-item>-->
-            <!--<ion-item>-->
-                <!--<div class="item-icon-left">-->
-                    <!--<h2>Звітність</h2>-->
-                    <!--<p class="secondText">ЄCB річний</p>-->
-                <!--</div>-->
-                <!--<div class="item-icon-right">-->
-                    <!--<i style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>-->
-                <!--</div>-->
-            <!--</ion-item>-->
-            <!--<ion-item>-->
-                <!--<div class="item-icon-left">-->
-                    <!--<h2>Звітність</h2>-->
-                    <!--<p class="secondText">№ 1-ДФ</p>-->
-                <!--</div>-->
-                <!--<div class="item-icon-right">-->
-                    <!--<i style="color: darkgreen !important;" class="icon ion-android-checkbox"></i>-->
-                <!--</div>-->
-            <!--</ion-item>-->
         </ion-list>
       <div class="link" layout="column" style="margin-top: 10px; text-align: center;  ">
         <span style="color: gray; font-size: 1.0em !important;">{{'Login.DontHaveQuestion'|translate}}</span>
         <a style="text-decoration: none !important; color: #039BE5; font-size: 1.2em;" href="tel:{{'+380662279755'}}">+380662279755</a>
+        <span class="pt-5" style="color: gray; font-size: 1.0em !important;">{{'Login.emailMe'|translate}}</span>
+        <a style="text-decoration: none !important; color: #039BE5; font-size: 1.2em;" href="mailto:{{'bukadinfo@gmail.com'}}">bukadinfo@gmail.com</a>
       </div>
     </ion-content>
 </ion-view>

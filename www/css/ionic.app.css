@@ -9948,6 +9948,9 @@ a.button {
   .single_fop form md-input-container label {
     color: #333;
     font-size: 1.1em; }
+  .single_fop form .calculate {
+    background-color: grey;
+    color: white; }
   .single_fop form h4 {
     color: black;
     font-size: 1.1em; }
@@ -10002,6 +10005,9 @@ a.button {
   .staff_tax form md-input-container label {
     color: #333;
     font-size: 1.1em; }
+  .staff_tax form .calculate {
+    background-color: grey;
+    color: white; }
   .staff_tax form .BTN {
     background-color: #039BE5;
     color: white; }
