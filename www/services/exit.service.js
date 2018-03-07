@@ -5,13 +5,14 @@
     .module('model.exit', [])
     .service('exit', exit);
 
-  exit.$ingect = ['$ionicHistory', '$translate', '$ionicPlatform', '$ionicPopup', '$state'];
+  exit.$ingect = ['$localStorage', '$ionicHistory', '$translate', '$ionicPlatform', '$ionicPopup', '$state'];
 
-  function exit($ionicHistory, $translate, $ionicPlatform, $ionicPopup, $state) {
+  function exit($localStorage, $ionicHistory, $translate, $ionicPlatform, $ionicPopup, $state) {
     return {
       buttonExit: buttonExit,
       buttonBack: buttonBack,
-      buttonMain: buttonMain
+      buttonMain: buttonMain,
+      buttonMenu: buttonMenu
     };
 
     function buttonExit(location) {
@@ -50,6 +51,16 @@
       $ionicPlatform.registerBackButtonAction(function () {
         if ($state.current.url === location) {
           window.history.back();
+        }
+      }, 100);
+
+    }
+
+    function buttonMenu(location) {
+      $ionicPlatform.registerBackButtonAction(function () {
+        if ($state.current.url === location) {
+          $localStorage.menuLocation = 1;
+          // window.history.back();
         }
       }, 100);
 

@@ -10,6 +10,8 @@
         md-input-container{
             input {
                 border-bottom: 1px solid grey;
+                word-wrap: break-word !important;
+                width: 100% !important;
 
             }
             label{
@@ -27,6 +29,11 @@
 
         padding: 0 20px;
     }
+
+  .save {
+    background-color: white;
+    color: black;
+  }
 
     .link {
         text-align: center;

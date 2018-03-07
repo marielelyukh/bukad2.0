@@ -20,8 +20,8 @@
     vm.data.template = false;
     vm.data.user = $sessionStorage.id;
     vm.template_data = $stateParams.template_data;
-    vm.salary = [];
-    vm.salary.push(null);
+    // vm.salary = [];
+    // vm.salary.push(null);
 
     // exit.buttonBack($state.current.url);
 
@@ -40,6 +40,15 @@
       });
 
     function saveWorkers() {
+      if(vm.salary.length < 1) {
+        if(vm.language === 'ua'){
+          toastr.warning('Заповнiть спiвробiтникiв!');
+        }
+        if(vm.language === 'ru'){
+          toastr.warning('Заполните сотрудников!');
+        }
+        return;
+      }
       group.saveWorkers({salary: vm.salary});
     }
 
@@ -78,6 +87,7 @@
           vm.tmp = res;
           $sessionStorage.tmp = vm.tmp;
         });
+      group.saveWorkers({salary: vm.salary});
     }
 
 

@@ -134,9 +134,17 @@
         </md-input-container>
       </div>
 
-      <div layout="column" layout-align="center center" class="link" layout-margin  ng-if="vm.user_group == 'group3'">
+      <div layout="column" layout-align="center center" class="link" layout-margin  ng-if="vm.user_group == 'group3' && !vm.tmp.income">
         <md-button class="md-raised waves-effect waves-light"
-                   ng-class="vm.tmp.income ? 'calculate' : ''"
+                   style="color: black; background-color: white"
+                   aria-label="true"
+                   ng-click="vm.getSum()">
+          {{'Taxes.calculate_sum'|translate}}
+        </md-button>
+      </div>
+      <div layout="column" layout-align="center center" class="link" layout-margin  ng-if="vm.user_group == 'group3' && vm.tmp.income">
+        <md-button class=" md-raised waves-effect waves-light"
+                   style="background-color: grey; color: white"
                    aria-label="true"
                    ng-click="vm.getSum()">
           {{'Taxes.calculate_sum'|translate}}

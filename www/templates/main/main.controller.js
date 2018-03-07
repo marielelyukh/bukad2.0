@@ -15,17 +15,17 @@
         vm.email = $localStorage.email;
         vm.special_status = $localStorage.special_status;
         vm.mainLanguage = $localStorage.locale;
-        // console.log(vm.mainLanguage);
-        // console.log(vm.user_group);
-        // console.log(vm.special_status)
+
 
 
         exit.buttonExit($state.current.url);
 
 
+
         group.getAllTaxes()
           .then(function (res) {
             vm.taxes_data = res;
+            vm.email = res.email;
           });
 
       activate();

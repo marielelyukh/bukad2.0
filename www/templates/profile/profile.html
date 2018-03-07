@@ -204,21 +204,6 @@
         <a>{{'SignUp.hide_data'|translate}}</a>
       </div>
 
-      <!--<div layout="column" ng-if="!vm.showDetails" layout-align="center end" class="link" layout-margin>-->
-        <!--<div class="link" style="color: #039BE5 !important; ">-->
-          <!--<md-button md-no-ink class="md-primary"-->
-                     <!--ng-click="vm.showDetails = !vm.showDetails"-->
-                     <!--style="font-size: 17px" >{{'SignUp.show_data'|translate}}</md-button>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--<div layout="column" ng-if="vm.showDetails" layout-align="center end" class="link" layout-margin>-->
-        <!--<div class="link" style="color: #039BE5 !important; ">-->
-          <!--<md-button md-no-ink class="md-primary"-->
-                     <!--ng-click="vm.showDetails = !vm.showDetails"-->
-                     <!--style="font-size: 17px" >{{'SignUp.hide_data'|translate}}</md-button>-->
-        <!--</div>-->
-      <!--</div>-->
-
       <h4 ng-show="vm.showDetails">{{'SignUp.details'|translate}}:</h4>
 
       <div ng-show="vm.showDetails">
@@ -388,13 +373,14 @@
 
       </div>
       <div layout="row" layout-align="space-around center" layout-margin>
-        <md-button flex="70" class=" md-raised waves-effect waves-light"
+        <md-button flex="60" class=" md-raised waves-effect waves-light"
                    style="background-color: grey; color: white"
+                   ng-class="!vm.data.profile ? 'calculate' : ''"
                    type="submit"
                    aria-label="true">
           {{'Taxes.save_data'|translate}}
         </md-button>
-        <md-input-container flex="25" layout="row" layout-align="center center">
+        <md-input-container flex="40" layout="row" layout-align="center center">
           <md-select ng-change="vm.selectLanguage()"
                      id="language"
                      name="language"

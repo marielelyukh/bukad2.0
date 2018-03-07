@@ -14,7 +14,8 @@
         vm.profile = profile;
         vm.notificationGo = notificationGo;
 
-        $rootScope.$on('$stateChangeStart',
+
+      $rootScope.$on('$stateChangeStart',
             function(event, toState, toParams, fromState, fromParams){
 
             });

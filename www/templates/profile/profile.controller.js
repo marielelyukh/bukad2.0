@@ -582,6 +582,7 @@
           toastr.success($translate.instant('Changes_save'));
           $localStorage.group = res.profile.group;
           $localStorage.special_status = res.profile.status;
+          $localStorage.email = res.email;
         });
     }
 

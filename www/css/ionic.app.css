@@ -9890,6 +9890,9 @@ a.button {
   padding-bottom: 8px;
   white-space: normal;
   width: 100% !important; }
+  .autocomplete-custom-template li input {
+    word-wrap: break-word;
+    width: 100% !important; }
 
 .autocomplete-custom-template input {
   word-wrap: break-word; }
@@ -9916,7 +9919,9 @@ a.button {
 .signup form {
   padding: 0 20px; }
   .signup form md-input-container input {
-    border-bottom: 1px solid grey; }
+    border-bottom: 1px solid grey;
+    word-wrap: break-word;
+    width: 100% !important; }
   .signup form md-input-container label {
     color: #333;
     font-size: 1.1em; }
@@ -10081,13 +10086,19 @@ a.button {
 .profile form {
   padding: 0 20px; }
   .profile form md-input-container input {
-    border-bottom: 1px solid grey; }
+    border-bottom: 1px solid grey;
+    word-wrap: break-word !important;
+    width: 100% !important; }
   .profile form md-input-container label {
     color: #333;
     font-size: 1.1em; }
   .profile form .md-virtual-repeat-container.md-autocomplete-suggestions-container {
     height: 420px;
     max-height: 420px !important; }
+
+.profile .save {
+  background-color: white;
+  color: black; }
 
 .profile .link {
   text-align: center;

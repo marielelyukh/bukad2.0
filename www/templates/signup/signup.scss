@@ -5,6 +5,10 @@
   padding-bottom: 8px;
   white-space: normal;
   width: 100% !important;
+  input {
+    word-wrap: break-word;
+    width: 100% !important;
+  }
 
 }
 
@@ -48,6 +52,8 @@
         md-input-container{
             input {
                 border-bottom: 1px solid grey;
+                word-wrap: break-word;
+                width: 100% !important;
 
             }
             label{
