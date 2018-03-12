@@ -9,7 +9,7 @@
       function () {
 
         // var baseUrl = 'http://192.168.0.161:8000/api/v1/';
-        var baseUrl = 'http://46.101.195.13/bukad/api/v1/';
+        var baseUrl = 'http://bukad.tk/api/v1/';
         return {
 
           user: {

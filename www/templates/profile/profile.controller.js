@@ -41,6 +41,12 @@
     vm.searchTextDfs = '';
     vm.searchTextDfs_code = '';
     vm.searchTextPfu = '';
+    vm.titleCase = titleCase;
+
+    function titleCase() {
+      return vm.data.profile.initials[0].toUpperCase() + vm.data.profile.initials.slice(1);
+    }
+    // titleCase("I'm a little tea pot");
 
     // exit.buttonBack($state.current.url);
 

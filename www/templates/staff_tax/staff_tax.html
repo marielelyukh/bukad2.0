@@ -14,14 +14,14 @@
             <h4>ЗП, грн</h4>
                 <i ng-show="vm.salary.length >= 2"
                    ng-click="removeInput($index)"
-                   style="margin-left: 15px;  color: grey" class="icon fa fa-close " aria-hidden="true"></i>
+                   style="margin-left: 15px;  color: grey" class="icon fa fa-2x fa-close " aria-hidden="true"></i>
               </div>
 
             <div layout="row" style="margin-top: 10px;" layout-align="space-between center">
 
               <md-button class="md-raised waves-effect waves-light"
-                         ng-if="vm.salary.length < 1"
-                         style="background-color: white; color: black;"
+                         ng-if="!vm.salary"
+                         style="background-color: white; color: #039BE5;"
                          aria-label="true"
                          ng-disabled="vm.salary.length < 1"
                          ng-click="vm.getTaxData()">
@@ -29,11 +29,12 @@
               </md-button>
 
               <md-button class="md-raised waves-effect waves-light"
-                         style="background-color: grey; color: white;"
-                         ng-if="vm.salary.length >= 1"
                          aria-label="true"
+                         ng-if="vm.salary"
+                         style="background-color: white; color: #039BE5;"
+                         ng-style="myStyle"
                          ng-disabled="vm.salary.length < 1"
-                         ng-click="vm.getTaxData()">
+                         ng-click="vm.getTaxData(); myStyle={color:'grey'}">
                 {{'Taxes.calculate_data'|translate}}
               </md-button>
 
@@ -42,7 +43,7 @@
                            ng-click="addInput()"
                            ng-show="vm.data.count_workers < 10">
 
-                    <md-icon md-font-icon="fa fa-plus fa-lg" aria-hidden="true"></md-icon>
+                    <md-icon md-font-icon="fa fa-2x fa-plus fa-lg" aria-hidden="true"></md-icon>
                 </md-button>
             </div>
 

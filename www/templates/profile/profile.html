@@ -9,7 +9,7 @@
       </div>
     </div>
 
-    <form style="margin-top: 10px" name="vm.form" ng-submit="vm.update()" novalidate>
+    <form style="margin-top: 10px" name="vm.form" ng-submit="vm.update(); myStyle={color:'gray'}" novalidate>
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.ident_code'|translate}}</label>
         <md-input-container class="md-block" flex>
@@ -33,8 +33,8 @@
       <div style="margin-top: -25px">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.initials'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <input style="border-bottom: 1px solid #333; text-transform: capitalize !important; margin-top: -15px" aria-label="123" required  name="initials"
-                 ng-model="vm.data.profile.initials" type="text">
+          <input style=" text-transform: capitalize !important; border-bottom: 1px solid #333; margin-top: -15px" aria-label="123" required  name="initials"
+                 ng-model="vm.data.profile.initials" ng-blur="vm.titleCase()" type="text">
           <div class="error-block" ng-messages="vm.form.initials.$error">
             <div class="error-block" ng-message="required">
               {{'SignUp.fieldRequired'|translate}}
@@ -374,9 +374,11 @@
       </div>
       <div layout="row" layout-align="space-around center" layout-margin>
         <md-button flex="60" class=" md-raised waves-effect waves-light"
-                   style="background-color: grey; color: white"
+                   style="background-color: white; color: #039BE5;"
+                   ng-style="myStyle"
                    ng-class="!vm.data.profile ? 'calculate' : ''"
                    type="submit"
+
                    aria-label="true">
           {{'Taxes.save_data'|translate}}
         </md-button>

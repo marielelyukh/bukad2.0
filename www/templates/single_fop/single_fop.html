@@ -136,7 +136,7 @@
 
       <div layout="column" layout-align="center center" class="link" layout-margin  ng-if="vm.user_group == 'group3' && !vm.tmp.income">
         <md-button class="md-raised waves-effect waves-light"
-                   style="color: black; background-color: white"
+                   style="background-color: white; color: #039BE5;"
                    aria-label="true"
                    ng-click="vm.getSum()">
           {{'Taxes.calculate_sum'|translate}}
@@ -144,9 +144,10 @@
       </div>
       <div layout="column" layout-align="center center" class="link" layout-margin  ng-if="vm.user_group == 'group3' && vm.tmp.income">
         <md-button class=" md-raised waves-effect waves-light"
-                   style="background-color: grey; color: white"
+                   style="background-color: white; color: #039BE5;"
+                   ng-style="myStyle"
                    aria-label="true"
-                   ng-click="vm.getSum()">
+                   ng-click="vm.getSum(); myStyle={color:'grey'}">
           {{'Taxes.calculate_sum'|translate}}
         </md-button>
       </div>

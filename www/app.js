@@ -45,7 +45,7 @@
       }, false);
 
       document.addEventListener("backbutton", function () {
-        if($state.current.url !== '/login') {
+        if($state.current.url !== '/login' || $state.current.url !== '/main') {
           window.history.back();
         }
 
