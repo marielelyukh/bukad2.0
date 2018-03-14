@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4419572-a489-41ef-812e-c4ae95ec5901" name="Default" comment="changes 12.03 1.0">
+    <list default="true" id="a4419572-a489-41ef-812e-c4ae95ec5901" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/core/config.js" afterPath="$PROJECT_DIR$/www/core/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/data/ru.json" afterPath="$PROJECT_DIR$/www/data/ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/data/ua.json" afterPath="$PROJECT_DIR$/www/data/ua.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.controller.js" afterPath="$PROJECT_DIR$/www/templates/profile/profile.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.html" afterPath="$PROJECT_DIR$/www/templates/profile/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/signup/signup.html" afterPath="$PROJECT_DIR$/www/templates/signup/signup.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,8 +44,8 @@
       <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="382" column="12" lean-forward="true" selection-start-line="382" selection-start-column="12" selection-end-line="382" selection-end-column="12" />
+            <state relative-caret-position="138">
+              <caret line="401" column="14" lean-forward="true" selection-start-line="401" selection-start-column="14" selection-end-line="401" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#md-input-container#0;n#div#1;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-button#0;n#div#21;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
@@ -915,7 +909,7 @@
       <workItem from="1520938843331" duration="13002000" />
       <workItem from="1520966672031" duration="350000" />
       <workItem from="1520967850594" duration="543000" />
-      <workItem from="1521020951093" duration="23415000" />
+      <workItem from="1521020951093" duration="23728000" />
     </task>
     <task id="LOCAL-00001" summary="push notification">
       <created>1515582125800</created>
@@ -1064,11 +1058,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520879524869</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="autocomplete update">
+      <created>1521048873360</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1521048873361</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="525373000" />
+    <option name="totallyTimeSpent" value="525686000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1168,7 +1169,8 @@
     <MESSAGE value="save salary, autocomplete city" />
     <MESSAGE value="save salary, autocomplete city 1.0" />
     <MESSAGE value="changes 12.03" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes 12.03" />
+    <MESSAGE value="autocomplete update" />
+    <option name="LAST_COMMIT_MESSAGE" value="autocomplete update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1541,8 +1543,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="382" column="12" lean-forward="true" selection-start-line="382" selection-start-column="12" selection-end-line="382" selection-end-column="12" />
+        <state relative-caret-position="138">
+          <caret line="401" column="14" lean-forward="true" selection-start-line="401" selection-start-column="14" selection-end-line="401" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#input#0;n#md-input-container#0;n#div#1;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#0;n#div#21;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
