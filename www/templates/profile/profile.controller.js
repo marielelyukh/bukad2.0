@@ -1,5 +1,5 @@
 /**
- * Controller for signup page
+ * Controller for profile page
  */
 (function () {
   'use strict';
@@ -8,11 +8,17 @@
     .module('app')
     .controller('Profile', Profile);
 
-  Profile.$inject = ['$q', 'exit', '$timeout', '$translate', '$state', '$ionicHistory', '$sessionStorage', 'user', 'profileData', '$localStorage', 'toastr'];
+  Profile.$inject = ['$ionicPopup', '$q', 'exit', '$timeout', '$translate', '$state', '$ionicHistory', '$sessionStorage', 'user', 'profileData', '$localStorage', 'toastr'];
 
-  function Profile($q, exit, $timeout, $translate, $state, $ionicHistory, $sessionStorage, user, profileData, $localStorage, toastr) {
+  function Profile($ionicPopup, $q, exit, $timeout, $translate, $state, $ionicHistory, $sessionStorage, user, profileData, $localStorage, toastr) {
 
     var vm = this;
+    var area;
+    var dfs_name;
+    var region;
+    var city;
+    var dfs_code;
+    var pfu;
     vm.update = update;
     vm.getGroups = getGroups;
     vm.filterRegion = filterRegion;
@@ -33,22 +39,23 @@
     vm.region = vm.data.profile.region;
     vm.area = vm.data.profile.area;
     vm.city = vm.data.profile.city;
-    // vm.pfu_codes = vm.data.profile.pfu_name;
-
+    vm.pfu_codes = vm.data.profile.pfu_name;
     vm.searchText = '';
     vm.searchTextRegion = '';
     vm.searchTextArea = '';
     vm.searchTextDfs = '';
     vm.searchTextDfs_code = '';
     vm.searchTextPfu = '';
-    vm.titleCase = titleCase;
+    // vm.data.profile.pfu = '';
+    // vm.data.profile.dfs_code = '';
+    area = vm.data.profile.area;
+    dfs_name = vm.data.profile.dfs_name;
+    region = vm.data.profile.region;
+    city = vm.data.profile.city;
+    dfs_code = vm.data.profile.dfs_code;
+    pfu = vm.data.profile.pfu;
 
-    function titleCase() {
-      return vm.data.profile.initials[0].toUpperCase() + vm.data.profile.initials.slice(1);
-    }
-    // titleCase("I'm a little tea pot");
 
-    // exit.buttonBack($state.current.url);
 
     user.getRegions()
       .then(function (res) {
@@ -66,6 +73,7 @@
           vm.groups = res;
         });
     }
+
     function getClasses(group) {
       user.getClass({group: group})
         .then(function (res) {
@@ -73,18 +81,18 @@
         });
     }
 
-    function selectLanguage () {
-      // $translate.use('ru');
+    function selectLanguage() {
       $localStorage.locale = vm.mainLanguage;
-      if(vm.mainLanguage === 'ua') {
+      if (vm.mainLanguage === 'ua') {
         $translate.use('ua');
       }
-      if(vm.mainLanguage === 'ru') {
+      if (vm.mainLanguage === 'ru') {
         $translate.use('ru');
       }
     }
 
     activate();
+
     function activate() {
       getFirstArea();
       getFirstCity();
@@ -96,17 +104,17 @@
           vm.areas = res;
           // vm.freeCustomersArr = vm.areas;
         });
-      user.getPfu({region:  vm.data.profile.region})
+      user.getPfu({region: vm.data.profile.region})
         .then(function (res) {
           vm.pfu_code = res;
         });
 
-      user.getDfs({region:  vm.data.profile.region})
+      user.getDfs({region: vm.data.profile.region})
         .then(function (res) {
           vm.dfs_codes = res;
         });
 
-      user.getDfsCode({region:  vm.data.profile.region})
+      user.getDfsCode({region: vm.data.profile.region})
         .then(function (res) {
           // console.log(res)
           vm.dfs = res;
@@ -117,7 +125,6 @@
       user.getCities({region: vm.data.profile.region, area: vm.data.profile.area})
         .then(function (res) {
           vm.cities = res;
-          // vm.freeCustomersArr = vm.areas;
         });
     }
 
@@ -182,35 +189,32 @@
     }
 
     function selectedRegionChange(item) {
-      // vm.tmp_region = item.region;
-      // vm.data.profile.area = '';
-      // vm.data.profile.city = '';
-      // vm.data.profile.dfs_name = '';
-      // vm.data.profile.dfs_code = '';
-      // vm.data.profile.pfu = '';
-
+      region = item;
       console.log(item);
 
-        user.getAreas({region: item.region})
-          .then(function (res) {
-            vm.areas = res;
-            // vm.freeCustomersArr = vm.areas;
-          });
-        user.getPfu({region:  item.region})
-          .then(function (res) {
-            vm.pfu_code = res;
-          });
+      user.getAreas({region: item})
+        .then(function (res) {
+          vm.areas = res;
+          vm.data.profile.area = '';
+        });
+      user.getPfu({region: item})
+        .then(function (res) {
+          vm.pfu_code = res;
+          vm.data.profile.pfu = '';
+        });
 
-        user.getDfs({region:  item.region})
-          .then(function (res) {
-            vm.dfs_codes = res;
-          });
+      user.getDfs({region: item})
+        .then(function (res) {
+          vm.dfs_codes = res;
+          vm.data.profile.dfs_name = '';
+        });
 
-        user.getDfsCode({region:  item.region})
-          .then(function (res) {
-            // console.log(res)
-            vm.dfs = res;
-          });
+      user.getDfsCode({region: item})
+        .then(function (res) {
+          // console.log(res)
+          vm.dfs = res;
+          vm.data.profile.dfs_code = '';
+        });
     }
 
     function selectRegion(item, index) {
@@ -245,13 +249,13 @@
     }
 
     function selectedAreaChange(item) {
-      // console.log(vm.region);
-      if(item) {
+      if (item) {
         user.getCities({region: vm.region.region, area: item})
           .then(function (res) {
             vm.cities = res;
+            area = item;
+            vm.data.profile.city = '';
             console.log(vm.cities);
-            // debugger
           });
       }
 
@@ -287,6 +291,7 @@
     function searchTextAreaChange(text) {
       vm.searchTextArea = text;
     }
+
     // AUTOCOMPLETE for area ENDS
 
     // AUTOCOMPLETE for city STARTS
@@ -324,6 +329,7 @@
 
     // если мы выбираем значение в предложке то функция вызываеться (но вроде и так всё работает потому что есть md-selected-item="vm.data.profile.city")
     function selectedItemChange(item) {
+      city = item;
       console.log(vm.city.city);
     }
 
@@ -371,6 +377,7 @@
 
       };
     }
+
     // AUTOCOMPLETE for city ENDS
 
 
@@ -432,10 +439,11 @@
     }
 
     function selectedDfsChange(item) {
+      dfs_name = item;
       console.log(item);
     }
-    // AUTOCOMPLETE for dfs ENDS
 
+    // AUTOCOMPLETE for dfs ENDS
 
 
     // AUTOCOMPLETE for dfs_code STARTS
@@ -490,12 +498,26 @@
     }
 
     function selectedDfs_codeChange(item) {
-      console.log(item);
+      // console.log(item);
+      // if (Object.keys(item).length === 1) {
+      //   dfs_code = item;
+      // }
+      if(item) {
+        if(item.searchDfs_code) {
+          dfs_code = item.searchDfs_code
+        } else {
+          dfs_code = item;
+        }
+
+      }
+
+
     }
 
     function searchTextDfs_codeChange(text) {
       vm.searchTextDfs_code = text;
     }
+
     // AUTOCOMPLETE for dfs_code ENDS
 
 
@@ -525,9 +547,6 @@
     }
 
     function filterPfu() {
-      // if(vm.searchText === '') {
-      //   return vm.pfu_code;
-      // }
       return vm.pfu_code.filter(createFilterPfu);
     }
 
@@ -556,42 +575,57 @@
 
     function selectedPfuChange(item) {
       console.log(item);
+      // if (Object.keys(item).length === 1) {
+      //   pfu = item;
+      // }
+        if(item) {
+          if(item.searchPfu) {
+            pfu = item.searchPfu
+          } else {
+            pfu = item;
+          }
+
+        }
     }
 
     function searchTextPfuChange(text) {
       vm.searchTextPfu = text;
     }
+
     // AUTOCOMPLETE for pfu ENDS
 
     function update() {
       if (vm.form.$invalid) {
         return;
       }
-      if(!vm.data.profile.dfs_code) {
-        delete vm.data.profile.dfs_code;
-      }
-      if(!vm.data.profile.pfu){
-        delete vm.data.profile.pfu;
-      }
       vm.data.profile.locale = vm.mainLanguage;
-      if(vm.data.profile.city.city){
-        vm.data.profile.city = vm.data.profile.city.city;
-      }
-      if(vm.data.profile.area.area){
-        vm.data.profile.area = vm.data.profile.area.area;
-      }
-      if(vm.data.profile.region.region){
-        vm.data.profile.region = vm.data.profile.region.region;
-      }
-      user.update(vm.data)
-        .then(function (res) {
-          toastr.success($translate.instant('Changes_save'));
-          $localStorage.group = res.profile.group;
-          $localStorage.special_status = res.profile.status;
-          $localStorage.email = res.email;
-        });
-    }
+      var confirmPopup = $ionicPopup.confirm({
+        // title: $translate.instant('SaveProfile'),
+        template: $translate.instant('toMain'),
+        cancelText: $translate.instant('No'),
+        okText: $translate.instant('Yes')
+      });
+      confirmPopup.then(function (res) {
+        if (res) {
+          vm.data.profile.region = region;
+          vm.data.profile.dfs_name = dfs_name;
+          vm.data.profile.area = area;
+          vm.data.profile.city = city;
+          vm.data.profile.dfs_code = dfs_code;
+          vm.data.profile.pfu = pfu;
+          user.update(vm.data)
+            .then(function (res) {
+              toastr.success($translate.instant('Changes_save'));
+              $localStorage.group = res.profile.group;
+              $localStorage.special_status = res.profile.status;
+              $localStorage.email = res.email;
+              $state.go('app.main');
 
+            });
+
+        }
+      });
+    }
   }
 })();
 

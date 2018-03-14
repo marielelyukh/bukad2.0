@@ -121,28 +121,7 @@
 
       <h4>{{'SignUp.address'|translate}}:</h4>
 
-      <div>
-        <label style="color: #666666; font-size: 1em;">{{'SignUp.postcode'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <input
-            required
-            style="margin-top: -15px"
-            name="postcode"
-            maxlength="5"
-            minlength="5"
-            ng-model="vm.data.profile.postcode"
-            aria-label="postcode"
-            type="number"/>
-          <div class="error-block" ng-messages="vm.form.postcode.$error">
-            <div class="error-block" ng-message="required">
-              {{'SignUp.fieldRequired'|translate}}
-            </div>
-            <div class="error-block" ng-message-exp="['maxlength', 'minlength']">
-              <span class="error">{{'SignUp.postcode_valid'|translate}}</span>
-            </div>
-          </div>
-        </md-input-container>
-      </div>
+
 
       <div style="width:100%;">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.region'|translate}}</label>
@@ -264,6 +243,29 @@
 
 
       <div ng-show="vm.showDetails">
+
+        <div>
+          <label style="color: #666666; font-size: 1em;">{{'SignUp.postcode'|translate}}</label>
+          <md-input-container class="md-block" flex>
+            <input
+              style="margin-top: -15px"
+              name="postcode"
+              maxlength="5"
+              minlength="5"
+              ng-model="vm.data.profile.postcode"
+              aria-label="postcode"
+              type="number"/>
+            <div class="error-block" ng-messages="vm.form.postcode.$error">
+              <div class="error-block" ng-message="required">
+                {{'SignUp.fieldRequired'|translate}}
+              </div>
+              <div class="error-block" ng-message-exp="['maxlength', 'minlength']">
+                <span class="error">{{'SignUp.postcode_valid'|translate}}</span>
+              </div>
+            </div>
+          </md-input-container>
+        </div>
+
         <h4>{{'SignUp.details'|translate}}:</h4>
         <div>
           <label style="color: #666666; font-size: 1em;">{{'SignUp.insurance'|translate}}</label>

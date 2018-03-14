@@ -9,7 +9,7 @@
       </div>
     </div>
 
-    <form style="margin-top: 10px" name="vm.form" ng-submit="vm.update(); myStyle={color:'gray'}" novalidate>
+    <form style="margin-top: 10px" name="vm.form" ng-submit="vm.update(); " novalidate>
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.ident_code'|translate}}</label>
         <md-input-container class="md-block" flex>
@@ -44,30 +44,12 @@
       </div>
 
       <h4>{{'SignUp.address'|translate}}:</h4>
-      <div>
-        <label style="color: #666666; font-size: 1em;">{{'SignUp.postcode'|translate}}</label>
-        <md-input-container class="md-block" flex>
-          <input style="border-bottom: 1px solid #333;  margin-top: -15px"
-                 maxlength="5"
-                 minlength="5"
-                 aria-label="123"
-                 required name="postcode"
-                 ng-model="vm.data.profile.postcode" type="text">
-          <div class="error-block" ng-messages="vm.form.postcode.$error">
-            <div class="error-block" ng-message="required">
-              {{'SignUp.fieldRequired'|translate}}
-            </div>
-            <div class="error-block" ng-message-exp="['maxlength', 'minlength']">
-              <span class="error">{{'SignUp.postcode_valid'|translate}}</span>
-            </div>
-          </div>
-        </md-input-container>
-      </div>
+
 
       <div>
         <label style="color: #666666; font-size: 1em;">{{'SignUp.region'|translate}}</label>
         <md-autocomplete md-search-text-change="vm.searchTextRegionChange(item.searchRegion)"
-                         md-selected-item-change="vm.selectedRegionChange(item)"
+                         md-selected-item-change="vm.selectedRegionChange(item.region)"
                          md-selected-item="vm.data.profile.region"
                          md-search-text="item.searchRegion"
                          md-items="item in vm.filterRegion()"
@@ -104,7 +86,8 @@
                          required
                          md-min-length="0"
                          md-no-cache="true"
-                         md-floating-label="{{'SignUp.select_area'|translate}}">
+                         md-floating-label="{{'SignUp.select_area'|translate}}"
+                         md-input-id="area-id">
           <md-item-template>
                               <span md-highlight-text="item.searchArea"
                                     md-highlight-flags="^i">{{item.area}}</span>
@@ -205,6 +188,29 @@
       </div>
 
       <h4 ng-show="vm.showDetails">{{'SignUp.details'|translate}}:</h4>
+
+      <div ng-show="vm.showDetails">
+        <label style="color: #666666; font-size: 1em;">{{'SignUp.postcode'|translate}}</label>
+        <md-input-container class="md-block" flex>
+          <input
+            required
+            style="margin-top: -15px"
+            name="postcode"
+            maxlength="5"
+            minlength="5"
+            ng-model="vm.data.profile.postcode"
+            aria-label="postcode"
+            type="text"/>
+          <div class="error-block" ng-messages="vm.form.postcode.$error">
+            <div class="error-block" ng-message="required">
+              {{'SignUp.fieldRequired'|translate}}
+            </div>
+            <div class="error-block" ng-message-exp="['maxlength', 'minlength']">
+              <span class="error">{{'SignUp.postcode_valid'|translate}}</span>
+            </div>
+          </div>
+        </md-input-container>
+      </div>
 
       <div ng-show="vm.showDetails">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.insurance'|translate}}</label>
@@ -372,13 +378,19 @@
         </div>
 
       </div>
+      <div>
+
+      </div>
+      <!--<div class="link"  layout="row" layout-align="end center"  layout-margin>-->
+        <!--<md-button md-no-ink class="md-primary" style="font-size: 17px" type="submit"> {{'SaveProfile'|translate}}-->
+        <!--</md-button>-->
+      <!--</div>-->
+
       <div layout="row" layout-align="space-around center" layout-margin>
         <md-button flex="60" class=" md-raised waves-effect waves-light"
                    style="background-color: white; color: #039BE5;"
                    ng-style="myStyle"
-                   ng-class="!vm.data.profile ? 'calculate' : ''"
                    type="submit"
-
                    aria-label="true">
           {{'Taxes.save_data'|translate}}
         </md-button>
