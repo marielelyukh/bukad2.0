@@ -41,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="138">
@@ -51,6 +51,16 @@
                 <element signature="n#style#0;n#md-button#0;n#div#21;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
                 <marker date="1521048470883" expanded="false" signature="17957:17972" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -909,7 +919,7 @@
       <workItem from="1520938843331" duration="13002000" />
       <workItem from="1520966672031" duration="350000" />
       <workItem from="1520967850594" duration="543000" />
-      <workItem from="1521020951093" duration="23728000" />
+      <workItem from="1521020951093" duration="25402000" />
     </task>
     <task id="LOCAL-00001" summary="push notification">
       <created>1515582125800</created>
@@ -1065,11 +1075,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521048873361</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="autocomplete update">
+      <created>1521059136071</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1521059136071</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="525686000" />
+    <option name="totallyTimeSpent" value="527360000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1177,13 +1194,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/css/ionic.app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="14365" column="26" lean-forward="true" selection-start-line="14365" selection-start-column="26" selection-end-line="14365" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/ionic.app.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-27459">
@@ -1550,6 +1560,14 @@
             <element signature="n#style#0;n#md-button#0;n#div#21;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
             <marker date="1521048470883" expanded="false" signature="17957:17972" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
