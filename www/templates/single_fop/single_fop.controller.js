@@ -16,6 +16,7 @@
     vm.changeUrl = changeUrl;
     vm.getMonth = getMonth;
     vm.getYear = getYear;
+    vm.buttonDisabled = false;
     vm.user_group = $localStorage.group;
     vm.tmp = {};
     vm.tmp.income = '';
@@ -109,6 +110,7 @@
     }
 
     vm.language =  $localStorage.locale;
+
     function getSum() {
       if(!vm.tmp.income) {
         if(vm.language === 'ua'){

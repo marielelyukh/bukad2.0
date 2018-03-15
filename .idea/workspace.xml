@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a4419572-a489-41ef-812e-c4ae95ec5901" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.min.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.controller.js" afterPath="$PROJECT_DIR$/www/templates/profile/profile.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.html" afterPath="$PROJECT_DIR$/www/templates/profile/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" afterPath="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" afterPath="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop/single_fop.scss" afterPath="$PROJECT_DIR$/www/templates/single_fop/single_fop.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,11 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="profile.controller.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="profile.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1490">
-              <caret line="580" column="18" lean-forward="true" selection-start-line="580" selection-start-column="18" selection-end-line="580" selection-end-column="18" />
+            <state relative-caret-position="132">
+              <caret line="249" column="7" lean-forward="true" selection-start-line="249" selection-start-column="7" selection-end-line="249" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -44,23 +54,13 @@
       <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="401" column="14" lean-forward="true" selection-start-line="401" selection-start-column="14" selection-end-line="401" selection-end-column="14" />
+            <state relative-caret-position="322">
+              <caret line="398" column="36" lean-forward="false" selection-start-line="398" selection-start-column="36" selection-end-line="398" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#md-input-container#0;n#div#1;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-button#0;n#div#21;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                <marker date="1521048470883" expanded="false" signature="17957:17972" ph="..." />
+                <marker date="1521112896560" expanded="false" signature="17935:17950" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -323,7 +323,6 @@
         <option value="$PROJECT_DIR$/www/service-worker.js" />
         <option value="$PROJECT_DIR$/www/templates/main/main.scss" />
         <option value="$PROJECT_DIR$/www/core/core.module.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.js" />
         <option value="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html" />
         <option value="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html" />
@@ -343,16 +342,12 @@
         <option value="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.html" />
         <option value="$PROJECT_DIR$/www/templates/reset_password/reset_password.controller.js" />
         <option value="$PROJECT_DIR$/www/templates/login/login.html" />
-        <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" />
-        <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.scss" />
         <option value="$PROJECT_DIR$/www/templates/login/login.controller.js" />
         <option value="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.controller.js" />
         <option value="$PROJECT_DIR$/www/templates/signup/signup.controller.js" />
         <option value="$PROJECT_DIR$/www/services/group.service.js" />
-        <option value="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss" />
         <option value="$PROJECT_DIR$/www/templates/signup/signup.scss" />
         <option value="$PROJECT_DIR$/www/templates/profile/profile.scss" />
-        <option value="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" />
         <option value="$PROJECT_DIR$/www/services/exit.service.js" />
         <option value="$PROJECT_DIR$/www/templates/main/main.html" />
         <option value="$PROJECT_DIR$/www/templates/menu/menu.html" />
@@ -363,14 +358,19 @@
         <option value="$PROJECT_DIR$/www/factories/urlRequest.js" />
         <option value="$PROJECT_DIR$/www/templates/main/main.controller.js" />
         <option value="$PROJECT_DIR$/www/app.js" />
-        <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" />
-        <option value="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" />
         <option value="$PROJECT_DIR$/www/templates/signup/signup.html" />
         <option value="$PROJECT_DIR$/www/data/ua.json" />
         <option value="$PROJECT_DIR$/www/data/ru.json" />
         <option value="$PROJECT_DIR$/www/core/config.js" />
-        <option value="$PROJECT_DIR$/www/templates/profile/profile.controller.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" />
+        <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" />
+        <option value="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" />
+        <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" />
+        <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.scss" />
+        <option value="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss" />
         <option value="$PROJECT_DIR$/www/templates/profile/profile.html" />
+        <option value="$PROJECT_DIR$/www/templates/profile/profile.controller.js" />
       </list>
     </option>
   </component>
@@ -412,9 +412,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
+    <option name="x" value="170" />
+    <option name="y" value="9" />
+    <option name="width" value="781" />
+    <option name="height" value="715" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -522,6 +523,20 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="signup" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="single_fop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="staff_tax" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -544,7 +559,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../my_APP/myAPP" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../new-wedding" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -919,7 +934,7 @@
       <workItem from="1520938843331" duration="13002000" />
       <workItem from="1520966672031" duration="350000" />
       <workItem from="1520967850594" duration="543000" />
-      <workItem from="1521020951093" duration="25402000" />
+      <workItem from="1521020951093" duration="41961000" />
     </task>
     <task id="LOCAL-00001" summary="push notification">
       <created>1515582125800</created>
@@ -1086,7 +1101,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="527360000" />
+    <option name="totallyTimeSpent" value="543919000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1102,7 +1117,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21428572" sideWeight="0.43421054" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20461309" sideWeight="0.56578946" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19866072" sideWeight="0.56578946" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49702382" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5714286" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.4940476" order="11" side_tool="false" content_ui="tabs" />
@@ -1190,7 +1205,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="autocomplete update" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -1310,31 +1327,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/confirm_email/confirm_email.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
           <caret line="42" column="61" lean-forward="true" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="317" column="58" lean-forward="false" selection-start-line="317" selection-start-column="48" selection-end-line="317" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -1350,13 +1346,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1395,13 +1384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/main/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1427,20 +1409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="146" column="65" lean-forward="false" selection-start-line="146" selection-start-column="65" selection-end-line="146" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1495,14 +1463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7242">
-          <caret line="426" column="6" lean-forward="false" selection-start-line="426" selection-start-column="6" selection-end-line="429" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/menu/menu.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1543,30 +1503,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.controller.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1490">
-          <caret line="580" column="18" lean-forward="true" selection-start-line="580" selection-start-column="18" selection-end-line="580" selection-end-column="18" />
+        <state relative-caret-position="221">
+          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2855">
+          <caret line="407" column="50" lean-forward="true" selection-start-line="407" selection-start-column="50" selection-end-line="407" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="317" column="58" lean-forward="false" selection-start-line="317" selection-start-column="48" selection-end-line="317" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="125" column="21" lean-forward="false" selection-start-line="125" selection-start-column="10" selection-end-line="125" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="85" column="19" lean-forward="true" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#md-button#0;n#div#2;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <marker date="1521125911844" expanded="false" signature="1917:1957" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="138" column="36" lean-forward="false" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#md-button#0;n#div#7;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/single_fop/single_fop.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="401" column="14" lean-forward="true" selection-start-line="401" selection-start-column="14" selection-end-line="401" selection-end-column="14" />
+        <state relative-caret-position="322">
+          <caret line="398" column="36" lean-forward="false" selection-start-line="398" selection-start-column="36" selection-end-line="398" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#input#0;n#md-input-container#0;n#div#1;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-button#0;n#div#21;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <marker date="1521048470883" expanded="false" signature="17957:17972" ph="..." />
+            <marker date="1521112896560" expanded="false" signature="17935:17950" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="132">
+          <caret line="249" column="7" lean-forward="true" selection-start-line="249" selection-start-column="7" selection-end-line="249" selection-end-column="7" />
           <folding />
         </state>
       </provider>

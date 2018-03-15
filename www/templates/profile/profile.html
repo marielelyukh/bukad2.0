@@ -33,7 +33,7 @@
       <div style="margin-top: -25px">
         <label style="color: #666666; font-size: 1em;">{{'SignUp.initials'|translate}}</label>
         <md-input-container class="md-block" flex>
-          <input style=" text-transform: capitalize !important; border-bottom: 1px solid #333; margin-top: -15px" aria-label="123" required  name="initials"
+          <input style="text-transform: capitalize !important; border-bottom: 1px solid #333; margin-top: -15px" aria-label="123" required  name="initials"
                  ng-model="vm.data.profile.initials" ng-blur="vm.titleCase()" type="text">
           <div class="error-block" ng-messages="vm.form.initials.$error">
             <div class="error-block" ng-message="required">
@@ -193,7 +193,6 @@
         <label style="color: #666666; font-size: 1em;">{{'SignUp.postcode'|translate}}</label>
         <md-input-container class="md-block" flex>
           <input
-            required
             style="margin-top: -15px"
             name="postcode"
             maxlength="5"

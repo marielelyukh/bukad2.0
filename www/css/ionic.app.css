@@ -9954,8 +9954,8 @@ a.button {
     color: #333;
     font-size: 1.1em; }
   .single_fop form .calculate {
-    background-color: grey;
-    color: white; }
+    background-color: rgba(0, 0, 0, 0.12) !important;
+    color: grey !important; }
   .single_fop form h4 {
     color: black;
     font-size: 1.1em; }
@@ -10011,8 +10011,8 @@ a.button {
     color: #333;
     font-size: 1.1em; }
   .staff_tax form .calculate {
-    background-color: white;
-    color: black; }
+    background-color: rgba(0, 0, 0, 0.12) !important;
+    color: grey !important; }
   .staff_tax form .BTN {
     background-color: #039BE5;
     color: white; }

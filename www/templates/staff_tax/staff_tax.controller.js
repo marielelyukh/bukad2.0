@@ -15,7 +15,7 @@
     vm.mainLanguage = $localStorage.locale;
     vm.language =  $localStorage.locale;
     vm.data = {};
-    vm.salary = [];
+    vm.salary = [0];
     vm.data.email_invoice = true;
     vm.data.template = false;
     vm.data.user = $sessionStorage.id;

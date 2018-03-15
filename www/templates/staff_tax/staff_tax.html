@@ -9,7 +9,7 @@
             <div layout="row" ng-repeat="input in vm.salary track by $index" layout-align="space-between center">
                 <h4>{{$index+1}}</h4>
                 <md-input-container class="md-block" flex>
-                <input aria-label="123" style="margin-left: 20px; width: 80%;"  ng-model="vm.salary[$index]" type="number">
+                <input aria-label="123"  ng-change="vm.tmp = ''" style="margin-left: 20px; width: 80%;"   ng-model="vm.salary[$index]" type="number">
             </md-input-container>
             <h4>ЗП, грн</h4>
                 <i ng-show="vm.salary.length >= 2"
@@ -20,23 +20,23 @@
             <div layout="row" style="margin-top: 10px;" layout-align="space-between center">
 
               <md-button class="md-raised waves-effect waves-light"
-                         ng-if="!vm.salary"
                          style="background-color: white; color: #039BE5;"
                          aria-label="true"
-                         ng-disabled="vm.salary.length < 1"
-                         ng-click="vm.getTaxData()">
+                         ng-disabled="vm.tmp"
+                         ng-class="vm.tmp ? 'calculate' : ''"
+                         ng-click="vm.getTaxData();">
                 {{'Taxes.calculate_data'|translate}}
               </md-button>
 
-              <md-button class="md-raised waves-effect waves-light"
-                         aria-label="true"
-                         ng-if="vm.salary"
-                         style="background-color: white; color: #039BE5;"
-                         ng-style="myStyle"
-                         ng-disabled="vm.salary.length < 1"
-                         ng-click="vm.getTaxData(); myStyle={color:'grey'}">
-                {{'Taxes.calculate_data'|translate}}
-              </md-button>
+              <!--<md-button class="md-raised waves-effect waves-light"-->
+                         <!--aria-label="true"-->
+                         <!--ng-if="vm.salary"-->
+                         <!--style="background-color: white; color: #039BE5;"-->
+                         <!--ng-style="myStyle"-->
+                         <!--ng-disabled="vm.salary.length < 1"-->
+                         <!--ng-click="vm.getTaxData(); myStyle={color:'grey'}">-->
+                <!--{{'Taxes.calculate_data'|translate}}-->
+              <!--</md-button>-->
 
                 <md-button class="md-icon-button"
                            aria-label="true"

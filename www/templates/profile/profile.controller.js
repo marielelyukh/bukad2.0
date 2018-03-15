@@ -201,6 +201,7 @@
         .then(function (res) {
           vm.pfu_code = res;
           vm.data.profile.pfu = '';
+          pfu = '';
         });
 
       user.getDfs({region: item})
@@ -214,6 +215,7 @@
           // console.log(res)
           vm.dfs = res;
           vm.data.profile.dfs_code = '';
+          dfs_code = '';
         });
     }
 
@@ -586,6 +588,14 @@
           }
 
         }
+        // if(!item){
+        //   if(!item.searchPfu) {
+        //     pfu = '';
+        //   } else {
+        //     pfu = '';
+        // }
+        // }
+        console.log(item)
     }
 
     function searchTextPfuChange(text) {
