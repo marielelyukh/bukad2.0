@@ -18,39 +18,6 @@
           </div>
         </div>
       </md-input-container>
-      <!--<md-input-container class="md-block" flex>-->
-        <!--<label for="email">{{'Login.Email'|translate}}</label>-->
-        <!--<input required-->
-               <!--name="email"-->
-               <!--autocomplete="off"-->
-               <!--maxlength="255"-->
-               <!--id="email"-->
-               <!--ng-pattern="vm.emailRegExp"-->
-               <!--ng-model="vm.data.email"-->
-               <!--aria-label="email"/>-->
-        <!--<div class="error-block" ng-messages="vm.form.email.$error">-->
-          <!--<div class="error-block" ng-message="required">-->
-            <!--{{'SignUp.fieldRequired'|translate}}-->
-          <!--</div>-->
-          <!--<div class="error-block" ng-message-exp="['maxlength', 'pattern']">-->
-            <!--<span class="error">{{'SignUp.emailValid'|translate}}</span>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</md-input-container>-->
-      <!--<md-input-container class="md-block" flex>-->
-        <!--<label for="password">{{'Login.Password'|translate}}</label>-->
-        <!--<input required-->
-               <!--name="password"-->
-               <!--id="password"-->
-               <!--ng-model="vm.data.password"-->
-               <!--aria-label="password"-->
-               <!--type="password"/>-->
-        <!--<div class="error-block" ng-messages="vm.form.password.$error">-->
-          <!--<div class="error-block" ng-message="required">-->
-            <!--{{'SignUp.fieldRequired'|translate}}-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</md-input-container>-->
       <div layout="column" layout-margin>
         <md-button class=" md-raised waves-effect waves-light"
                    style="background-color: grey; color: white"
@@ -59,12 +26,24 @@
           {{'Confirm'|translate}}
         </md-button>
         <div style="margin-top: 10px; " class="link">
-          <a style="text-decoration: none !important;" ng-click="vm.sendAgain()">{{'Send_code_again'|translate}}</a>
+          <a style="text-decoration: none !important;" ng-style="myStyle" ng-click="vm.sendAgain(); myStyle = {color: 'grey'}">{{'Send_code_again'|translate}}</a>
         </div>
-        <!--<div style="margin-top: 10px; " class="link">-->
-          <!--<a style="text-decoration: none !important;" ui-sref="login">Назад</a>-->
-        <!--</div>-->
       </div>
+      <span ng-if="vm.language === 'ua'" class="link" style="color: gray; font-size: 1.0em !important;">
+        <p>При введенні коду підтвердження Замовником
+         відбувається акцепт Договору про використання сервісу Виконавця - 1А Букад. </p>
+        <p> Тим самим Замовник дає згоду: </p>
+         <p> 1. на оброблення персональних даних;</p>
+         <p>2. на отримання інформаційних розсилок на вказану під час реєстрації електронну пошту та телефон. </p>
+       <p> Докладно на 1a.biz.ua.</p>
+      </span>
+      <span ng-if="vm.language === 'ru'" class="link" style="color: gray; font-size: 1.0em !important;">
+        <p>При вводе кода подтверждения Заказчиком происходит акцепт Договора об использовании сервиса Исполнителя - 1А БУКАД. </p>
+        <p> Тем самым Заказчик дает согласие: </p>
+         <p> 1. на обработку персональных данных;</p>
+         <p>2. на получение информационных рассылок на указанный при регистрации электронную почту и телефон. </p>
+       <p> Дополнительно на 1a.biz.ua.</p>
+      </span>
     </form>
   </ion-content>
 </ion-view>

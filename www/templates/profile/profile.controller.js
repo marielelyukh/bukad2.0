@@ -196,6 +196,7 @@
         .then(function (res) {
           vm.areas = res;
           vm.data.profile.area = '';
+          vm.data.profile.city = '';
         });
       user.getPfu({region: item})
         .then(function (res) {

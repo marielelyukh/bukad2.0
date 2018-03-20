@@ -16,7 +16,7 @@
         vm.special_status = $localStorage.special_status;
         vm.mainLanguage = $localStorage.locale;
 
-        exit.buttonExit($state.current.url);
+        // exit.buttonExit($state.current.url);
 
         group.getAllTaxes()
           .then(function (res) {

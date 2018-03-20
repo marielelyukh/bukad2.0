@@ -54,14 +54,11 @@
       </div>
     </form>
 
-    <!--<div class="link">-->
-    <!--<a  ng-click="vm.reset()">Відновити пароль</a>-->
-    <!--</div>-->
     <div style="margin-top: 10px" class="link">
-      <a  ng-click="vm.signup()">{{'Login.SignUp'|translate}}</a>
+      <a  ng-click="vm.signup(); Style = {color: 'grey'}"  ng-style="Style">{{'Login.SignUp'|translate}}</a>
     </div>
     <div style="margin-top: 10px" class="link">
-      <a ng-click="vm.resetPass()">{{'Login.ResetPassword'|translate}}</a>
+      <a ng-click="vm.resetPass(); myStyle = {color: 'grey'}" ng-style="myStyle">{{'Login.ResetPassword'|translate}}</a>
     </div>
     <div class="link" layout="column" style="margin-top: 10px">
         <span style="color: gray; font-size: 1.0em !important;">{{'Login.DontHaveQuestion'|translate}}</span>

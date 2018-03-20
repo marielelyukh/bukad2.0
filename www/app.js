@@ -44,12 +44,23 @@
         alert('Search button');
       }, false);
 
-      document.addEventListener("backbutton", function () {
-        if($state.current.url !== '/login' || $state.current.url !== '/main') {
-          window.history.back();
+      // document.addEventListener("backbutton", function (fromState) {
+      //   if(fromState.name !== "login"){
+      //     window.history.back();
+      //     console.log('123')
+      //   } else {
+      //     return false;
+      //   }
+      // }, false);
+      $ionicPlatform.registerBackButtonAction(function (event) {
+        if($state.current.name ==="login"){
+          navigator.app.exitApp(); //<-- remove this line to disable the exit
         }
+        else {
+          navigator.app.backHistory();
+        }
+      }, 100);
 
-      }, false);
 
       if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
         cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -72,21 +83,6 @@
       /**
        * Check whether the user is authorized
        */
-      if ($localStorage.token) {
-        // user.check()
-        //   .then(function (res){
-        //     // // $rootScope.user = {
-        //     // //   id: res.id,
-        //     // //   group: res.group
-        //     // // }
-        //     //   $sessionStorage.group = res.group;
-        //     //   $sessionStorage.id = res.id;
-        //
-        //   })
-        $state.go('app.main');
-      } else {
-        $state.go('login');
-      }
 
       if ($localStorage.token) {
         user.check()

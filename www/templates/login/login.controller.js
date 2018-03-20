@@ -23,10 +23,8 @@
     vm.data = {};
     vm.emailRegExp = /^((([a-zA-Z\-0-9_.])+[a-zA-Z0-9_.]{2,})|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    exit.buttonExit($state.current.url);
-    console.log($state.current.url)
-
-
+    // exit.buttonExit($state.current.url);
+    // console.log($state.current.url)
 
     if ($localStorage.locale) {
       vm.language = $localStorage.locale;

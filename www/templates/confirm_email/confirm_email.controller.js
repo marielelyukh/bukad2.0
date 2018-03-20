@@ -19,6 +19,7 @@
     vm.data.email = $sessionStorage.email;
     vm.language =  $localStorage.locale;
     vm.data.password = $sessionStorage.password;
+    vm.Disabled = false;
 
     function sendAgain() {
       user.sendCodeAgain({email: vm.data.email})

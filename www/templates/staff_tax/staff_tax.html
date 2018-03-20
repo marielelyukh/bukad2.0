@@ -13,7 +13,7 @@
             </md-input-container>
             <h4>ЗП, грн</h4>
                 <i ng-show="vm.salary.length >= 2"
-                   ng-click="removeInput($index)"
+                   ng-click="removeInput($index); vm.tmp = ''"
                    style="margin-left: 15px;  color: grey" class="icon fa fa-2x fa-close " aria-hidden="true"></i>
               </div>
 

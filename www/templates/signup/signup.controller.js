@@ -171,6 +171,7 @@
     }
 
     function selectedRegionChange(item) {
+
       user.getAreas({region: item.region})
         .then(function (res) {
           vm.areas = res;

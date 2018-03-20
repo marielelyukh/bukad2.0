@@ -10,9 +10,7 @@
   function exit($localStorage, $ionicHistory, $translate, $ionicPlatform, $ionicPopup, $state) {
     return {
       buttonExit: buttonExit,
-      buttonBack: buttonBack,
-      buttonMain: buttonMain,
-      buttonMenu: buttonMenu
+
     };
 
     function buttonExit(location) {
@@ -29,6 +27,8 @@
               event.preventDefault();
               navigator.app.exitApp();
 
+            } else {
+              $state.go('app.main')
             }
 
           });
@@ -37,33 +37,9 @@
       }, 100);
     }
 
-    function buttonBack(location) {
-      $ionicPlatform.registerBackButtonAction(function () {
-        if ($state.current.url === location) {
-          $ionicHistory.goBack();
-          // window.history.back();
-        }
-      }, 100);
 
-    }
 
-    function buttonMain(location) {
-      $ionicPlatform.registerBackButtonAction(function () {
-        if ($state.current.url === location) {
-          window.history.back();
-        }
-      }, 100);
 
-    }
 
-    function buttonMenu(location) {
-      $ionicPlatform.registerBackButtonAction(function () {
-        if ($state.current.url === location) {
-          $localStorage.menuLocation = 1;
-          // window.history.back();
-        }
-      }, 100);
-
-    }
   }
 })();
