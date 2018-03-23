@@ -93,5 +93,6 @@
         <variable name="XWALK_MODE" value="embedded" />
         <variable name="XWALK_MULTIPLEAPK" value="true" />
     </plugin>
-    <engine name="android" spec="^6.3.0" />
+    <plugin name="cordova-plugin-fcm" spec="^2.1.2" />
+    <engine name="android" spec="^6.2.3" />
 </widget>

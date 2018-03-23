@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4419572-a489-41ef-812e-c4ae95ec5901" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/README.md" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resources/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resources/splash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resources/icon.png.md5" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resources/splash.png.md5" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" />
@@ -22,29 +28,48 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/icon.png" afterPath="$PROJECT_DIR$/resources/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/icon.png.md5" afterPath="$PROJECT_DIR$/resources/icon.png.md5" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/splash.png" afterPath="$PROJECT_DIR$/resources/splash.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/splash.png.md5" afterPath="$PROJECT_DIR$/resources/splash.png.md5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app.js" afterPath="$PROJECT_DIR$/www/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/core/config.js" afterPath="$PROJECT_DIR$/www/core/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.min.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/data/ru.json" afterPath="$PROJECT_DIR$/www/data/ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/data/ua.json" afterPath="$PROJECT_DIR$/www/data/ua.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/services/exit.service.js" afterPath="$PROJECT_DIR$/www/services/exit.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/icon.png.md5" afterPath="$PROJECT_DIR$/resources/icon.png.md5" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.controller.js" afterPath="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.html" afterPath="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.controller.js" afterPath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.html" afterPath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/login/login.controller.js" afterPath="$PROJECT_DIR$/www/templates/login/login.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/login/login.html" afterPath="$PROJECT_DIR$/www/templates/login/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/login/login.scss" afterPath="$PROJECT_DIR$/www/templates/login/login.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/main/main.controller.js" afterPath="$PROJECT_DIR$/www/templates/main/main.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/main/main.html" afterPath="$PROJECT_DIR$/www/templates/main/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/main/main.scss" afterPath="$PROJECT_DIR$/www/templates/main/main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu/menu.controller.js" afterPath="$PROJECT_DIR$/www/templates/menu/menu.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu/menu.html" afterPath="$PROJECT_DIR$/www/templates/menu/menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/notification/notification.controller.js" afterPath="$PROJECT_DIR$/www/templates/notification/notification.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/notification/notification.html" afterPath="$PROJECT_DIR$/www/templates/notification/notification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.single_fop/pay.single_fop.controller.js" afterPath="$PROJECT_DIR$/www/templates/pay.single_fop/pay.single_fop.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.single_fop/pay.single_fop.html" afterPath="$PROJECT_DIR$/www/templates/pay.single_fop/pay.single_fop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.single_fop_esv/pay.single_fop_esv.controller.js" afterPath="$PROJECT_DIR$/www/templates/pay.single_fop_esv/pay.single_fop_esv.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.controller.js" afterPath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html" afterPath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.controller.js" afterPath="$PROJECT_DIR$/www/templates/profile/profile.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.html" afterPath="$PROJECT_DIR$/www/templates/profile/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.scss" afterPath="$PROJECT_DIR$/www/templates/profile/profile.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/reset_password/reset_password.controller.js" afterPath="$PROJECT_DIR$/www/templates/reset_password/reset_password.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/reset_password/reset_password.html" afterPath="$PROJECT_DIR$/www/templates/reset_password/reset_password.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/signup/signup.controller.js" afterPath="$PROJECT_DIR$/www/templates/signup/signup.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/signup/signup.html" afterPath="$PROJECT_DIR$/www/templates/signup/signup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/signup/signup.scss" afterPath="$PROJECT_DIR$/www/templates/signup/signup.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" afterPath="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" afterPath="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop/single_fop.scss" afterPath="$PROJECT_DIR$/www/templates/single_fop/single_fop.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.controller.js" afterPath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html" afterPath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tax_templates/tax_templates.controller.js" afterPath="$PROJECT_DIR$/www/templates/tax_templates/tax_templates.controller.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -73,36 +98,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="profile.controller.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.controller.js">
+      <file leaf-file-name="signup.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="244" column="30" lean-forward="true" selection-start-line="244" selection-start-column="30" selection-end-line="244" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="confirm_email.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/confirm_email/confirm_email.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="46" column="11" lean-forward="false" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+            <state relative-caret-position="118">
+              <caret line="426" column="79" lean-forward="true" selection-start-line="426" selection-start-column="79" selection-end-line="426" selection-end-column="79" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="confirm_email.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/templates/confirm_email/confirm_email.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-12">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -387,7 +390,6 @@
         <option value="$PROJECT_DIR$/www/templates/menu/menu.html" />
         <option value="$PROJECT_DIR$/www/templates/menu/menu.controller.js" />
         <option value="$PROJECT_DIR$/platforms/android/build.gradle" />
-        <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/www/factories/urlRequest.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" />
@@ -403,7 +405,6 @@
         <option value="$PROJECT_DIR$/www/app.js" />
         <option value="$PROJECT_DIR$/www/core/config.js" />
         <option value="$PROJECT_DIR$/www/templates/signup/signup.controller.js" />
-        <option value="$PROJECT_DIR$/www/templates/signup/signup.html" />
         <option value="$PROJECT_DIR$/www/data/ru.json" />
         <option value="$PROJECT_DIR$/www/data/ua.json" />
         <option value="$PROJECT_DIR$/www/templates/login/login.scss" />
@@ -413,7 +414,9 @@
         <option value="$PROJECT_DIR$/www/templates/notification/notification.html" />
         <option value="$PROJECT_DIR$/www/templates/signup/signup.scss" />
         <option value="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.html" />
+        <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/www/templates/profile/profile.controller.js" />
+        <option value="$PROJECT_DIR$/www/templates/signup/signup.html" />
       </list>
     </option>
   </component>
@@ -505,53 +508,24 @@
             <path>
               <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="confirm_email" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="notification" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
@@ -565,21 +539,7 @@
               <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="reset_password" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="signup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="single_fop" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -603,7 +563,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my_APP" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -985,6 +945,8 @@
       <workItem from="1521453476822" duration="1613000" />
       <workItem from="1521459616620" duration="5916000" />
       <workItem from="1521472085062" duration="16824000" />
+      <workItem from="1521811860184" duration="195000" />
+      <workItem from="1521812067031" duration="7554000" />
     </task>
     <task id="LOCAL-00001" summary="push notification">
       <created>1515582125800</created>
@@ -1158,7 +1120,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="581346000" />
+    <option name="totallyTimeSpent" value="589095000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1180,7 +1142,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43092105" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.4940476" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6759868" sideWeight="0.42857143" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53453946" sideWeight="0.42857143" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19122024" sideWeight="0.50980395" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1269,13 +1231,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/css/ionic.app.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27459">
-          <caret line="10" column="202078" lean-forward="false" selection-start-line="10" selection-start-column="202078" selection-end-line="10" selection-end-column="202078" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/core/blocks/directives/directives.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1364,20 +1319,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/android/google-services.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/android/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="326" column="1" lean-forward="false" selection-start-line="326" selection-start-column="1" selection-end-line="326" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/android/google-services.json" />
+    <entry file="file://$PROJECT_DIR$/platforms/android/build.gradle" />
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1389,13 +1332,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1494,7 +1430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="33" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1502,7 +1437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1510,7 +1444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1518,7 +1451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1526,7 +1458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-289">
           <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1534,15 +1465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1550,7 +1472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1558,7 +1479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1566,7 +1486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="389" column="67" lean-forward="true" selection-start-line="389" selection-start-column="18" selection-end-line="389" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1574,7 +1493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="129" column="71" lean-forward="true" selection-start-line="129" selection-start-column="71" selection-end-line="129" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1582,7 +1500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1590,7 +1507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1598,7 +1514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1606,7 +1521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1614,9 +1528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#ion-list#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1624,35 +1535,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/confirm_email/confirm_email.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
+        <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/resources/splash.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/confirm_email/confirm_email.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
+        <state relative-caret-position="526">
           <caret line="46" column="11" lean-forward="false" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#form#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+            <marker date="1521641099308" expanded="false" signature="1051:1069" ph="..." />
+            <marker date="1521641099308" expanded="true" signature="1083:1261" ph="..." />
+            <marker date="1521641099308" expanded="true" signature="1105:1138" ph="..." />
+            <marker date="1521641099308" expanded="true" signature="1337:1378" ph="..." />
+            <marker date="1521641099308" expanded="true" signature="1379:1791" ph="..." />
+            <marker date="1521641099308" expanded="true" signature="1391:1523" ph="..." />
+            <marker date="1521641099308" expanded="true" signature="1854:1895" ph="..." />
+            <marker date="1521641099308" expanded="true" signature="1896:2305" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="81" column="60" lean-forward="false" selection-start-line="81" selection-start-column="60" selection-end-line="81" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="244" column="30" lean-forward="true" selection-start-line="244" selection-start-column="30" selection-end-line="244" selection-end-column="30" />
+        <state relative-caret-position="170">
+          <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="426" column="79" lean-forward="true" selection-start-line="426" selection-start-column="79" selection-end-line="426" selection-end-column="79" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
