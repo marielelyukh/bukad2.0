@@ -2,74 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4419572-a489-41ef-812e-c4ae95ec5901" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resources/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resources/splash.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resources/icon.png.md5" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resources/splash.png.md5" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xhdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xhdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xxhdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xxhdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xxxhdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xxxhdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/icon.png" afterPath="$PROJECT_DIR$/resources/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/splash.png" afterPath="$PROJECT_DIR$/resources/splash.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/splash.png.md5" afterPath="$PROJECT_DIR$/resources/splash.png.md5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/icon.png.md5" afterPath="$PROJECT_DIR$/resources/icon.png.md5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.controller.js" afterPath="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.html" afterPath="$PROJECT_DIR$/www/templates/confirm_email/confirm_email.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.controller.js" afterPath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.html" afterPath="$PROJECT_DIR$/www/templates/list_of_staffTax/list_of_staffTax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/login/login.controller.js" afterPath="$PROJECT_DIR$/www/templates/login/login.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/login/login.html" afterPath="$PROJECT_DIR$/www/templates/login/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/login/login.scss" afterPath="$PROJECT_DIR$/www/templates/login/login.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/main/main.controller.js" afterPath="$PROJECT_DIR$/www/templates/main/main.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/main/main.html" afterPath="$PROJECT_DIR$/www/templates/main/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/main/main.scss" afterPath="$PROJECT_DIR$/www/templates/main/main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu/menu.controller.js" afterPath="$PROJECT_DIR$/www/templates/menu/menu.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu/menu.html" afterPath="$PROJECT_DIR$/www/templates/menu/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/notification/notification.controller.js" afterPath="$PROJECT_DIR$/www/templates/notification/notification.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/notification/notification.html" afterPath="$PROJECT_DIR$/www/templates/notification/notification.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.single_fop/pay.single_fop.controller.js" afterPath="$PROJECT_DIR$/www/templates/pay.single_fop/pay.single_fop.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.single_fop/pay.single_fop.html" afterPath="$PROJECT_DIR$/www/templates/pay.single_fop/pay.single_fop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.single_fop_esv/pay.single_fop_esv.controller.js" afterPath="$PROJECT_DIR$/www/templates/pay.single_fop_esv/pay.single_fop_esv.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.controller.js" afterPath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html" afterPath="$PROJECT_DIR$/www/templates/pay.staff_tax/pay.staff_tax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.controller.js" afterPath="$PROJECT_DIR$/www/templates/profile/profile.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.html" afterPath="$PROJECT_DIR$/www/templates/profile/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/profile/profile.scss" afterPath="$PROJECT_DIR$/www/templates/profile/profile.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/reset_password/reset_password.controller.js" afterPath="$PROJECT_DIR$/www/templates/reset_password/reset_password.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/reset_password/reset_password.html" afterPath="$PROJECT_DIR$/www/templates/reset_password/reset_password.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/signup/signup.controller.js" afterPath="$PROJECT_DIR$/www/templates/signup/signup.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/signup/signup.html" afterPath="$PROJECT_DIR$/www/templates/signup/signup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/signup/signup.scss" afterPath="$PROJECT_DIR$/www/templates/signup/signup.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" afterPath="$PROJECT_DIR$/www/templates/single_fop/single_fop.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" afterPath="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop/single_fop.scss" afterPath="$PROJECT_DIR$/www/templates/single_fop/single_fop.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.controller.js" afterPath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html" afterPath="$PROJECT_DIR$/www/templates/single_fop_esv/single_fop_esv.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss" afterPath="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/tax_templates/tax_templates.controller.js" afterPath="$PROJECT_DIR$/www/templates/tax_templates/tax_templates.controller.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -98,14 +32,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="signup.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="signup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="118">
-              <caret line="426" column="79" lean-forward="true" selection-start-line="426" selection-start-column="79" selection-end-line="426" selection-end-column="79" />
+              <caret line="426" column="79" lean-forward="false" selection-start-line="426" selection-start-column="79" selection-end-line="426" selection-end-column="79" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="175" column="27" lean-forward="false" selection-start-line="175" selection-start-column="27" selection-end-line="175" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ru.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/data/ru.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,6 +99,7 @@
       <find>selectedareacha</find>
       <find>selectedAreaChange</find>
       <find>sele</find>
+      <find>spe</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -396,7 +351,6 @@
         <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.html" />
         <option value="$PROJECT_DIR$/www/templates/single_fop/single_fop.scss" />
         <option value="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.scss" />
-        <option value="$PROJECT_DIR$/www/templates/profile/profile.html" />
         <option value="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.controller.js" />
         <option value="$PROJECT_DIR$/www/templates/staff_tax/staff_tax.html" />
         <option value="$PROJECT_DIR$/www/services/exit.service.js" />
@@ -417,6 +371,7 @@
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/www/templates/profile/profile.controller.js" />
         <option value="$PROJECT_DIR$/www/templates/signup/signup.html" />
+        <option value="$PROJECT_DIR$/www/templates/profile/profile.html" />
       </list>
     </option>
   </component>
@@ -496,7 +451,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -514,6 +468,12 @@
               <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bukadd-2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bukadd-2.0" type="b2602c69:ProjectViewProjectNode" />
@@ -545,6 +505,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
@@ -563,7 +524,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my_APP" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../agroApp" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -946,7 +907,8 @@
       <workItem from="1521459616620" duration="5916000" />
       <workItem from="1521472085062" duration="16824000" />
       <workItem from="1521811860184" duration="195000" />
-      <workItem from="1521812067031" duration="7554000" />
+      <workItem from="1521812067031" duration="8249000" />
+      <workItem from="1522057691574" duration="2641000" />
     </task>
     <task id="LOCAL-00001" summary="push notification">
       <created>1515582125800</created>
@@ -1116,11 +1078,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521132808278</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="fix bugs with updating google libraries">
+      <created>1521822803442</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1521822803443</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="589095000" />
+    <option name="totallyTimeSpent" value="592431000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1138,13 +1107,13 @@
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21428572" sideWeight="0.43421054" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19568452" sideWeight="0.56578946" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49702382" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5714286" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43092105" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53453946" sideWeight="0.57366073" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.4940476" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43092105" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53453946" sideWeight="0.42857143" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53453946" sideWeight="0.4263393" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19122024" sideWeight="0.50980395" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1222,7 +1191,9 @@
     <MESSAGE value="changes 12.03" />
     <MESSAGE value="autocomplete update" />
     <MESSAGE value="autocomplete update, button update" />
-    <option name="LAST_COMMIT_MESSAGE" value="autocomplete update, button update" />
+    <MESSAGE value="fix bugs with updating google libraries" />
+    <MESSAGE value="fix bugs 26.03" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs 26.03" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1447,13 +1418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/data/ru.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/data/ua.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-289">
@@ -1479,13 +1443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="389" column="67" lean-forward="true" selection-start-line="389" selection-start-column="18" selection-end-line="389" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1542,7 +1499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1555,16 +1511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
           <caret line="46" column="11" lean-forward="false" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
-          <folding>
-            <marker date="1521641099308" expanded="false" signature="1051:1069" ph="..." />
-            <marker date="1521641099308" expanded="true" signature="1083:1261" ph="..." />
-            <marker date="1521641099308" expanded="true" signature="1105:1138" ph="..." />
-            <marker date="1521641099308" expanded="true" signature="1337:1378" ph="..." />
-            <marker date="1521641099308" expanded="true" signature="1379:1791" ph="..." />
-            <marker date="1521641099308" expanded="true" signature="1391:1523" ph="..." />
-            <marker date="1521641099308" expanded="true" signature="1854:1895" ph="..." />
-            <marker date="1521641099308" expanded="true" signature="1896:2305" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1572,7 +1518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="81" column="60" lean-forward="false" selection-start-line="81" selection-start-column="60" selection-end-line="81" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1580,17 +1525,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/signup/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
-          <caret line="426" column="79" lean-forward="true" selection-start-line="426" selection-start-column="79" selection-end-line="426" selection-end-column="79" />
+          <caret line="426" column="79" lean-forward="false" selection-start-line="426" selection-start-column="79" selection-end-line="426" selection-end-column="79" />
           <folding>
             <element signature="n#style#0;n#div#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/data/ru.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/profile/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="175" column="27" lean-forward="false" selection-start-line="175" selection-start-column="27" selection-end-line="175" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
