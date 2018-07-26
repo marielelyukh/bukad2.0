@@ -107,6 +107,7 @@
             $localStorage.id = res.user_id;
             $localStorage.special_status = res.special_status;
             $localStorage.email = res.email;
+            $localStorage.mobile = res.mobile;
             $ionicPlatform.ready(function () {
               FCMPlugin.getToken(
                 function (token) {

@@ -119,6 +119,19 @@
         </md-input-container>
       </div>
 
+      <div style="margin-top: -25px">
+        <label style="color: #666666; font-size: 1em;">Номер телефону</label>
+        <md-input-container class="md-block" flex>
+          <input style="text-transform: capitalize !important; border-bottom: 1px solid #333; margin-top: -15px" aria-label="123" required  name="phone"
+                 ng-model="vm.data.profile.mobile" type="text">
+          <div class="error-block" ng-messages="vm.form.phone.$error">
+            <div class="error-block" ng-message="required">
+              {{'SignUp.fieldRequired'|translate}}
+            </div>
+          </div>
+        </md-input-container>
+      </div>
+
       <h4>{{'SignUp.address'|translate}}:</h4>
 
 

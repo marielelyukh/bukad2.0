@@ -5,9 +5,9 @@
     .module('app')
     .controller('SingleFopE', SingleFopE);
 
-  SingleFopE.$inject = ['exit', '$translate', '$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group', '$timeout', '$window'];
+  SingleFopE.$inject = ['toastr', '$localStorage', 'exit', '$translate', '$ionicPlatform', '$ionicPopup', '$rootScope', '$state', '$ionicHistory', 'user', '$sessionStorage', '$stateParams', '$scope', 'group', '$timeout', '$window'];
 
-  function SingleFopE(exit, $translate, $ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams, $scope, group, $timeout, $window) {
+  function SingleFopE(toastr, $localStorage, exit, $translate, $ionicPlatform, $ionicPopup, $rootScope, $state, $ionicHistory, user, $sessionStorage, $stateParams, $scope, group, $timeout, $window) {
 
     var vm = this;
     vm.getEsvSum = getEsvSum;
@@ -16,10 +16,40 @@
     vm.changeUrl = changeUrl;
     vm.getMonth = getMonth;
     vm.getYear = getYear;
+    vm.Pay = Pay;
     vm.user_group = $sessionStorage.group;
     vm.data = {};
     vm.group = $stateParams.group;
     vm.data.user = $sessionStorage.id;
+    vm.check_data = {
+      request: {
+        action: 'Check',
+        body: {
+          msisdn: $localStorage.mobile,
+          user_id: $localStorage.id
+        }
+      }
+    };
+    vm.invite_data = {
+      request: {
+        action: 'RegisterByURL',
+        body: {
+          msisdn: $localStorage.mobile,
+          user_id: $localStorage.id,
+          lang: 'ua'
+        }
+      }
+    };
+    vm.list_data = {
+      request: {
+        action: 'List',
+        body: {
+          msisdn: $localStorage.mobile,
+          user_id: $localStorage.id,
+          lang: 'ua'
+        }
+      }
+    };
 
     if (vm.template_data) {
       vm.data = vm.template_data;
@@ -29,6 +59,39 @@
       value: null
     }];
 
+
+    function Pay() {
+      vm.payment_data = {
+        request: {
+          action: 'PaymentCreate',
+          body: {
+            msisdn: $localStorage.mobile,
+            user_id: $localStorage.id,
+            card_alias: vm.card_alias,
+            invoice: vm.data.sum,
+            pmt_desc: vm.data.appointment,
+            pmt_info: {
+              acc: vm.data.account_number,
+              invoice: vm.data.sum
+            }
+          }
+        }
+      };
+      user.iPay(vm.payment_data)
+        .then(function(res) {
+          if(res.pmt_status == 5) {
+            if(vm.language === 'ua'){
+              toastr.success('Оплата пройшла успішно!');
+            }
+            if(vm.language === 'ru'){
+              toastr.success('Оплата прошла успешно!');
+            }
+            $timeout(function() {
+              $state.go('app.main');
+            }, 2000);
+          }
+        });
+    }
 
     // exit.buttonBack($state.current.url);
 
@@ -59,27 +122,30 @@
     }
 
     function paySecondGroup() {
-      return;
+      // return;
       if (vm.form.$invalid) {
         return;
       }
       group.paySecondTax(vm.data)
         .then(function (res) {
           vm.pay_data = res;
-          vm.resUrl = vm.pay_data.uapay.paymentPageUrl;
-          if (vm.resUrl) {
-            var confirmPopup = $ionicPopup.confirm({
-              title: $translate.instant('GotoUaPay'),
-              cancelText: $translate.instant('No'),
-              okText: $translate.instant('Yes'),
-            });
-            confirmPopup.then(function (res) {
-              if (res) {
-                $window.location.href = vm.resUrl;
-                $state.go('app.main');
+          user.iPay(vm.check_data)
+            .then(function (res) {
+              if(res.user_status === "notexists"){
+                user.iPay(vm.invite_data)
+                  .then(function(res){
+                    if(res.url) {
+                      $window.location.href = res.url;
+                    }
+                  });
+              }
+              if(res.user_status === "exists"){
+                user.iPay(vm.list_data)
+                  .then(function (res) {
+                    vm.cards = res;
+                  });
               }
             });
-          }
         });
 
 

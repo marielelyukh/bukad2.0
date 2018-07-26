@@ -33,7 +33,8 @@
       confirm_email: confirm_email,
       resetPassword: resetPassword,
       sendCodeAgain: sendCodeAgain,
-      getNotification: getNotification
+      getNotification: getNotification,
+      iPay: iPay
 
 
     };
@@ -48,6 +49,14 @@
           return res;
         });
     }
+
+    function iPay(data) {
+      return http.post(url.iPay.send, data)
+        .then(function (res) {
+          return res;
+        });
+    }
+
 
     function confirm_email(data) {
       return http.post(url.user.confirm_email, data)

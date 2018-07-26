@@ -231,6 +231,24 @@
         </div>
       </div>
 
+      <div style="margin-top: -25px" ng-if="vm.cards">
+        <label style="color: #666666; font-size: 1em;"> {{'check_card'|translate}}</label>
+        <md-input-container class="md-block" flex>
+          <md-select id="year"
+                     style="border-bottom: 1px solid #333;"
+                     ng-model="vm.card_alias"
+                     aria-label="sort">
+            <md-option ng-value="card.card_alias" ng-repeat="card in vm.cards">{{card.card_alias}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+
+      <div layout="column" ng-if="vm.card_alias" layout-align="center end" class="link" layout-margin>
+        <div class="link" style="color: #039BE5 !important;">
+          <md-button md-no-ink class="md-primary" style="font-size: 17px" ng-click="vm.Pay()"> {{'pay'|translate}}</md-button>
+        </div>
+      </div>
     </form>
 
 

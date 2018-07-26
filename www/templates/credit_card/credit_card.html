@@ -1,0 +1,28 @@
+<ion-view view-title="{{'card_settings'|translate}}" class="main">
+  <ion-content>
+    <ion-list class="item">
+      <div style="margin: 20px; color: #333333" ng-if="vm.cards.length < 1">{{'noCards'|translate}}</div>
+      <ion-item ng-if="vm.cards.length >= 1" ng-repeat="card in vm.cards">
+        <div class="item-icon-left">
+          <i  class="icon ion-card"></i>
+        </div>
+        <div class="item-icon-left pr-30">
+          <p class="text" style="font-size: 1em;">
+            {{card.card_alias}}
+          </p>
+          <p class="pt-5" style="color: grey">
+            {{card.mask}}
+          </p>
+        </div>
+      </ion-item>
+    </ion-list>
+    <div layout="row" ng-if="vm.cards.length >= 1" layout-align="end end" class="link" layout-margin>
+      <md-button class="md-primary"
+                 aria-label="true"
+                 ng-disabled="vm.data.sum"
+                 ng-click="vm.addOneMoreCard();">
+        {{'AddOneMore'|translate}}
+      </md-button>
+    </div>
+  </ion-content>
+</ion-view>

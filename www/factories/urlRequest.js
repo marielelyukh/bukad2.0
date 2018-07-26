@@ -9,7 +9,8 @@
       function () {
 
         // var baseUrl = 'http://192.168.0.161:8000/api/v1/';
-        var baseUrl = 'http://bukad.tk/api/v1/';
+        var baseUrl = 'https://bukad.ga/api/v1/';
+        var iPayUrl = 'https://walletmc.ipay.ua/';
         return {
 
           user: {
@@ -55,6 +56,9 @@
             getStatusWorkers:     baseUrl + '3rdtax/statuses',
             getSalary:            baseUrl + 'get/salary',
             saveWorkers:          baseUrl + 'save/salary'
+          },
+          iPay: {
+            send:                baseUrl + 'ipay'
           }
         };
       }

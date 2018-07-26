@@ -2,7 +2,6 @@
   <ion-content>
     <ion-list class="item">
       <div style="margin: 20px; color: #333333" ng-if="vm.notification_data.length == 0">{{'no_notification'|translate}}</div>
-
       <ion-item  ng-repeat="item in vm.notification_data">
         <div class="item-icon-left">
           <i  style="color: red !important;" class="icon ion-alert-circled"></i>
@@ -15,12 +14,8 @@
             {{item.created_at}}
           </p>
         </div>
-
       </ion-item>
     </ion-list>
-
-
-
   </ion-content>
 </ion-view>
 

@@ -84,6 +84,17 @@
         },
         cache: false
       })
+      .state('app.credit_card', {
+        url: '/credit_card',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/credit_card/credit_card.html',
+            controller: 'CreditCard',
+            controllerAs: 'vm'
+          }
+        },
+        cache: false
+      })
       .state('app.single_fop', {
         url: '/single_fop',
         views: {
